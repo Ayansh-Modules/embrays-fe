@@ -6,9 +6,9 @@ function ClientThought() {
     <div>
       <div
         className="card "
-        class="block max-w-sm p-6  border-2  rounded-2xl border-black hover:bg-gray-100  "
+        class="block max-w-[30vw] p-6  border-2  rounded-2xl border-black hover:bg-gray-100 h-[35vh]  "
       >
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black">
+        <h5 class="mb-5 text-2xl font-bold tracking-tight text-black dark:text-black">
           {data.allReviews[0].company}
         </h5>
         <p class="font-normal text-white-700 dark:text-white-400">

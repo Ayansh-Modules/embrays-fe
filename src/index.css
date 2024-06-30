@@ -1,3 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+/* @layer base {
+    html {
+      font-family:  "Montserrat",
+    }
+  } */
+  .clientReview {
+    padding: 8rem 0 15.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .clientReview .pattern {
+    position: absolute;
+    bottom: -20rem;
+    right: -10rem;
+    width: 39rem;
+    height: 43rem;
+    border-radius: 7rem;
+    border: 20px solid #FCD205;
+    background: transparent;
+  }
+  .clientReview .pattern::before {
+    content: "";
+    position: absolute;
+    bottom: -3.5rem;
+    right: -3rem;
+    width: 46rem;
+    height: 38rem;
+    border-radius: 7rem;
+    border: 20px solid #F72585;
+    background: transparent;
+  }
+  .clientReview .pattern::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: -13rem;
+    width: 45rem;
+    height: 45rem;
+    border-radius: 7rem;
+    border: 20px solid #3A0CA3;
+    background: transparent;
+  }
+
+  /* @media screen and (max-width:768px) {
+
+    .clientReview .pattern::before,
+    .clientReview .pattern,
+    .clientReview .pattern::after {
+        width: 30rem;
+        height: 39rem;
+    }
+  } */

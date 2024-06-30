@@ -1,8 +1,14 @@
 const appData = {
+  companyName: "Embrays Technologies",
+  urls: {
+    website_URL: "https://embraystechnologies.com/",
+    mailto : "mailto:info@embraystechnologies.com?subject=Hello Embrays Technologies &body=Description",
+    cellto:"tel:+919954088224",
+  },
   clientReview: {
-    title: "What our clients think of Embrays Technologies",
+    title: "What our clients think of ",
     subTitle:
-      "We're honest about our skills and abilities - \n and we're delighted that our clients agree.",
+      "We're honest about our skills and abilities - and we're delighted that our clients agree.",
     allReviews: [
       {
         company: "CoachPx",
@@ -46,6 +52,12 @@ const appData = {
       },
     ],
   },
+  contact:{
+    primary : "Contact Us.",
+    secondary : "Let's Create Experiences!",
+    mail:"info@embraystechnologies.com",
+    cell : "+91-9954088224"
+  }
 };
 
-export {appData}
+export { appData };
