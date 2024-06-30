@@ -15,13 +15,13 @@ function App() {
 
   return (
     <>
+       <ClientReview />
        <Header />
        <Aboutus/>
        <Services />
        <Whyus/>
        <HowItWorks />
        <Collaboration />
-       <ClientReview />
        <Partnership />
        <Contact />
        <Footer />

@@ -5,3 +5,5 @@ const layoutColors = {
     blue : "#3A0CA3",
     violet : "#8338BD",
 }
+
+export {layoutColors}

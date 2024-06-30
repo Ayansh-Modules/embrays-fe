@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        Layoutneon :  "#D2FF03",
+        Layoutpink : "#F72585",
+        Layoutyellow : "#FCD205",
+        Layoutblue : "#3A0CA3",
+        Layoutviolet : "#8338BD",
+      }
+    },
   },
   plugins: [],
 }
