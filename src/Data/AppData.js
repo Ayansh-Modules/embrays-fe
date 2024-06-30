@@ -1,5 +1,9 @@
 const appData = {
   companyName: "Embrays Technologies",
+  aboutUs : {
+    title:"Empowering you with sleek user-centered solutions for success",
+    subTitle : "We seamlessly integrate design mastery with cutting-edge technology and strategic intelligence, defining a global creative agency that spans the globe."
+  },
   urls: {
     website_URL: "https://embraystechnologies.com/",
     mailto : "mailto:info@embraystechnologies.com?subject=Hello Embrays Technologies &body=Description",
