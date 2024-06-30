@@ -31,7 +31,7 @@ function Contact() {
               <TbMailFilled color="white" className="h-[25px] w-[25px]  " />
             </div>
             <a className="mt-[5vh] ml-[10px] text-lg" href={urls.mailto}>
-              {" "}
+             
               : {contact.mail}
             </a>
           </div>
