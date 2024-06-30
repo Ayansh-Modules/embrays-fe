@@ -12,6 +12,7 @@ export default {
         Layoutyellow : "#FCD205",
         Layoutblue : "#3A0CA3",
         Layoutviolet : "#8338BD",
+        Layouttrans : "#522AAE",
       }
     },
   },

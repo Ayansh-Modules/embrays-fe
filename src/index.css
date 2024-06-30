@@ -22,6 +22,7 @@
     border-radius: 7rem;
     border: 20px solid #FCD205;
     background: transparent;
+  
   }
   .clientReview .pattern::before {
     content: "";
@@ -33,6 +34,7 @@
     border-radius: 7rem;
     border: 20px solid #F72585;
     background: transparent;
+   
   }
   .clientReview .pattern::after {
     content: "";

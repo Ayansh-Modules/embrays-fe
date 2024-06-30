@@ -21,7 +21,7 @@ function Footer() {
         <div className="t&c text-white text-sm hover:text-Layoutneon">TERMS & CONDITIONS</div>
       </div>
     </div>
-      <div className="copyright mt-[30px] text-gray-400 ">
+      <div className="copyright mt-[20px] mb-[-20px] text-gray-400 ">
       Copyright © 2024, All Right Reserved
       </div>
     </div>

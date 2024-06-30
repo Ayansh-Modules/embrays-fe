@@ -6,7 +6,7 @@ function ClientReview() {
   const compName = appData.companyName;
   return (
     <div
-      className="clientReview flex-col flex items-center justify-center h-[90vh] w-[100vw]"
+      className="clientReview flex-col flex items-center justify-center h-[90vh] w-[100vw] overflow-x-hidden overflow-y-auto"
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-easing="ease"
