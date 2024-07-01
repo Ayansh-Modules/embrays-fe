@@ -13,6 +13,10 @@ export default {
         Layoutblue : "#3A0CA3",
         Layoutviolet : "#8338BD",
         Layouttrans : "#522AAE",
+        Layoutboxone : "#FCD205",
+        Layoutboxtwo : "#B483FF",
+        Layoutboxthree : "#FF6839",
+        Layoutboxfour : "#FF4F70",
       }
     },
   },
