@@ -1,13 +1,61 @@
 const appData = {
   companyName: "Embrays Technologies",
-  aboutUs : {
-    title:"Empowering you with sleek user-centered solutions for success",
-    subTitle : "We seamlessly integrate design mastery with cutting-edge technology and strategic intelligence, defining a global creative agency that spans the globe."
-  },
   urls: {
     website_URL: "https://embraystechnologies.com/",
-    mailto : "mailto:info@embraystechnologies.com?subject=Hello Embrays Technologies &body=Description",
-    cellto:"tel:+919954088224",
+    mailto:
+      "mailto:info@embraystechnologies.com?subject=Hello Embrays Technologies &body=Description",
+    cellto: "tel:+919954088224",
+  },
+  aboutUs: {
+    title: "Empowering you with sleek user-centered solutions for success",
+    subTitle:
+      "We seamlessly integrate design mastery with cutting-edge technology and strategic intelligence, defining a global creative agency that spans the globe.",
+  },
+  services: {
+    title: "MASTERY UNLEASHED",
+    service: [
+      {
+        serviceOne: "UI/UX Design",
+        testimonial  : "Elevate user experiences with our cutting-edge UI/UX design. We seamlessly blend aesthetics and functionality, bringing your brand's digital identity to life."
+      },
+      { serviceTwo: "Website Design & Development",
+        testimonial  : "Revamp your online presence with our bespoke website design. We create captivating, results-driven sites, bringing your brand to life in the digital landscape."
+       },
+      { serviceThree: "Website Design & Development" ,
+        testimonial : "Turn ideas into powerful apps with our experts. Specializing in iOS, Android, and cross-platform development, we craft innovative, scalable solutions tailored to your business goals."
+      },
+      { serviceFour: "Tech Consultation" ,
+        testimonial : "Gain a competitive edge with our tech consultation. Our experts provide strategic guidance on leveraging the latest technologies, ensuring your business always stays ahead."
+      },
+    ],
+  },
+  whyUs:{
+    testimonials:[
+      {
+      title: "Innovative Solutions",
+      subTitle : "Innovate your brand with our cutting-edge touch, merging tech and design for standout, impactful products that redefine standards",
+    },
+      {
+      title: "User-Centric Approach",
+      subTitle : "Prioritize your audience with our user-centric design, crafting experiences that resonate and authentically connect, leaving an indelible mark.",
+    },
+      {
+      title: "Strategic Design Thinking",
+      subTitle : "Elevate your brand with strategic design thinking, aligning every element with your core for purposeful design that ensures overall success.",
+    },
+      {
+      title: "Proven Expertise",
+      subTitle : "Count on our proven expertise in UI/UX, web development, app creation, and tech consultation for high-quality that deliver tangible results.",
+    },
+      {
+      title: "Timely Delivery",
+      subTitle : "Meet deadlines without compromise – our streamlined processes ensure prompt delivery of impactful, brand-transforming projects.",
+    },
+      {
+      title: "Collaborative Partnership",
+      subTitle : "Our collaborative partnership prioritizes transparency, communication, and working closely to transform your brand together.",
+    },
+  ]
   },
   clientReview: {
     title: "What our clients think of ",
@@ -56,12 +104,12 @@ const appData = {
       },
     ],
   },
-  contact:{
-    primary : "Contact Us -->",
-    secondary : "Let's Create Experiences!",
-    mail:"info@embraystechnologies.com",
-    cell : "+91-9954088224"
-  }
+  contact: {
+    primary: "Contact Us -->",
+    secondary: "Let's Create Experiences!",
+    mail: "info@embraystechnologies.com",
+    cell: "+91-9954088224",
+  },
 };
 
 export { appData };
