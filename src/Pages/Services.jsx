@@ -10,7 +10,7 @@ import boxImgFour from "../assets/Images/service_mini_img/img-4.svg"
 function Services() {
  const boxParam = getBoxData()
   return (
-    <div className='h-[250vh] w-full flex-col flex items-center justify-center overflow-x-auto'>
+    <div className='h-[220vh] w-full flex-col flex items-center justify-center overflow-x-auto '>
       <div className='title flex-col items-center justify-center '>
       
      <p className='text-6xl font-semibold flex absolute top-[140vh] left-[35vw]'>MASTERY 
