@@ -2,7 +2,7 @@ import React from 'react'
 
 function Services() {
   return (
-    <div className='h-[100vh] w-[100vw]'>Services</div>
+    <div className='h-[100vh] w-full'>Services</div>
   )
 }
 

@@ -6,7 +6,7 @@ import stripe from "../assets/Images/partners_img/stripe.svg";
 import vercel from "../assets/Images/partners_img/vercel.webp";
 function Partnership() {
   return (
-    <div className="h-[35vh] w-[100vw] bg-Layoutyellow flex items-center justify-center overflow-x-hidden overflow-y-auto">
+    <div className="h-[35vh] w-full bg-Layoutyellow flex items-center justify-center overflow-x-hidden overflow-y-auto">
       
         <div className="container flex-col flex items-center justify-center">
           <div

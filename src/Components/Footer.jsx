@@ -3,7 +3,7 @@ import { GrInstagram } from "react-icons/gr";
 import { TfiLinkedin } from "react-icons/tfi"; // linkedin
 function Footer() {
   return (
-    <div className="footer h-[19vh] w-[100vw] bg-Layoutblue flex-col flex items-center justify-center overflow-x-hidden overflow-y-auto">
+    <div className="footer h-[19vh] w-full bg-Layoutblue flex-col flex items-center justify-center overflow-x-hidden overflow-y-auto">
     <div className=" flex-row flex items-center justify-center">
       
       <div className="socialMedia flex-row flex items-center w-[55vw]">

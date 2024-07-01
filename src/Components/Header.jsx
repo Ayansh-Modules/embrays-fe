@@ -4,7 +4,7 @@ import { IoDownloadOutline } from "react-icons/io5";
 function Header() {
   const company = appData.companyName
   return (
-    <div className="navbar  h-[13vh] w-[100vw] bg-Layoutblue flex items-center justify-center overflow-x-hidden font-semibold">
+    <div className="navbar  h-[13vh] w-full bg-Layoutblue flex items-center justify-center overflow-x-hidden font-semibold">
       <div className="logo flex-row w-[55vw] items-center justify-center text-white text-4xl" >{company}</div>
       <div className="navlink flex-row  items-center justify-center">
         <div className="wrapper bg-Layouttrans h-[8vh] w-[21vw] rounded-xl flex items-center justify-center">

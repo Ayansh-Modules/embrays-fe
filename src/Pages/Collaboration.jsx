@@ -2,7 +2,7 @@ import React from 'react'
 
 function Collaboration() {
   return (
-    <div className='h-[100vh] w-[100vw]'>Collaboration</div>
+    <div className='h-[100vh] w-full'>Collaboration</div>
   )
 }
 
