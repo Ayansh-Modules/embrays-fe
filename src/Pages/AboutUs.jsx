@@ -19,12 +19,12 @@ function AboutUs() {
           <div className="btn">
             <button
               type="button"
-              className="connectbtn h-[3.2rem] w-[10rem]  font-semibold text-white bg-Layoutpink rounded-xl mt-[5vh] focus:ring-2  focus:ring-pink-300 "
+              className="connectbtn  z-10 drop-shadow-lg font-semibold text-white mt-[5vh] focus:ring-2  focus:ring-pink-300 "
             >
-              <span className="flex-row flex items-center justify-center">
+              <span className="flex-row flex items-center justify-center text-sm">
                 {"Let's Connect"}
                 <IoIosArrowRoundForward
-                  style={{ height: "50px", width: "30px" }}
+                  style={{ height: "27px", width: "27px" ,marginLeft:"-10px" }}
                 />
               </span>
             </button>
@@ -33,7 +33,7 @@ function AboutUs() {
         <div className="rocket">
           <img
             src={baseAssets.rocket}
-            className="h-[47rem] w-[40rem]  overflow-y-hidden   "
+            className="h-[47rem] w-[40rem]  overflow-y-hidden "
           />
         </div>
       </div>

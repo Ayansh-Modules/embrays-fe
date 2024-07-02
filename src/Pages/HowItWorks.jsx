@@ -15,7 +15,7 @@ function HowItWorks() {
       </div>
       <div className="content h-[90vh] w-full flex-row flex items-center justify-center mt-[5vh]">
         <div className="h-[50vh] w-[50vw] flex items-center justify-center">
-          <div className="gif rounded-full h-[26rem] w-[26rem] bg-Layoutviolet felx flex items-center justify-center p-[10px] ">
+          <div className="rocketgif rounded-full h-[26rem] w-[26rem] bg-Layoutviolet felx flex items-center justify-center p-[10px] ">
             <img
               src={baseAssets.rocketGif}
               className="rounded-full h-[22rem] w-[22rem] border-[3px] border-Layoutyellow "

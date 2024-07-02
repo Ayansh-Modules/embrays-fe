@@ -11,7 +11,7 @@ import Contact from "./Pages/Contact";
 import HowItWorks from "./Pages/HowItWorks";
 import Services from "./Pages/Services";
 import Whyus from "./Pages/WhyUs";
-
+import TermsAndCondition from "./Pages/TermsAndCondition";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header />
       <Aboutus />
       <Services />
       <Whyus />
@@ -29,7 +29,8 @@ function App() {
       <ClientReview />
       <Partnership />
       <Contact />
-      <Footer />
+      <Footer /> */}
+      <TermsAndCondition />
     </>
   );
 }

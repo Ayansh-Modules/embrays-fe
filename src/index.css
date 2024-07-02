@@ -100,5 +100,52 @@
     font-size: large;
   }
 
+  .connectbtn {
+    z-index: 1;
+    border: 0;
+    height: 3.1rem;
+    width: 10rem;
+    border-radius:1rem;
+  }
+  
+  .connectbtn:hover {
+    box-shadow: 0rem 0rem 0 0 #D2FF03;
+    transition: 0.5s ease;
+  }
+  .connectbtn:hover span:first-child {
+    left: 0rem;
+    top: 0rem;
+    transition: 0.1s ease;
+  }
+  .connectbtn span:first-child {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.1rem;
+    width: 10rem;
+    position: absolute;
+    z-index: 1;
+    left: -0.3rem;
+    top: -0.3rem;
+    background: #F72585;
+    border-radius:1rem;
+    color: #FFFFFF;
+    gap: 0.7rem;
+    transition: 0.1s ease;
+  }
+  .connectbtn {
+    border-radius:1rem ;
+    background: #D2FF03;
+    color: #030303;
+    transition: 0.5S ease;
+   
+  }
+  .connectbtn:hover {
+    background: #FFFFFF;
+    transition: 0.5S ease;
+  }
 
+
+  
   
