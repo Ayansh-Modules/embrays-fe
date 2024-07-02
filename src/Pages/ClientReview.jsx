@@ -10,13 +10,13 @@ function ClientReview() {
 
   return (
     <div
-      className="clientReview flex-col flex items-center justify-center h-[90vh] w-full overflow-x-hidden overflow-y-auto"
+      className="clientReview flex-col flex items-center justify-center h-[100vh] w-full overflow-x-hidden overflow-y-auto"
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-easing="ease"
       data-aos-duration="1000"
     >
-      <div className="title mb-[5rem] flex-col flex items-center justify-center">
+      <div className="title mb-[5rem] flex-col flex items-center justify-center mt-[5rem]">
         <div
           className="title text-5xl font-bold mb-[2rem] text-Layoutblue"
           data-aos="fade-up"
@@ -42,7 +42,7 @@ function ClientReview() {
           modules={[Autoplay]}
           loop={true}
           autoplay={{ delay: 0 }}
-          slidesPerView={5}
+          slidesPerView={4}
           speed={2000}
           spaceBetween={30}
         >

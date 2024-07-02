@@ -19,7 +19,7 @@ function AboutUs() {
           <div className="btn">
             <button
               type="button"
-              className="connectbtn h-[7vh] w-[10vw]  font-semibold text-white bg-Layoutpink rounded-xl mt-[5vh] focus:ring-2  focus:ring-pink-300 "
+              className="connectbtn h-[3.2rem] w-[10rem]  font-semibold text-white bg-Layoutpink rounded-xl mt-[5vh] focus:ring-2  focus:ring-pink-300 "
             >
               <span className="flex-row flex items-center justify-center">
                 {"Let's Connect"}

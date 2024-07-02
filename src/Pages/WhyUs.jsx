@@ -10,15 +10,15 @@ function WhyUs() {
     <div className="h-[200vh] w-full bg-Layoutblack flex">
       <div className="why us h-[50vh] w-[35vw] ml-[5vw] pt-[5rem]">
         <p className="text-l text-Layoutneon ">WHY US?</p>
-        <p className="text-4xl text-white font-semibold w-[20vw]">
+        <p className="text-4xl text-white font-semibold w-[20vw] mt-[1rem]">
           Choose us for{" "}
-          <p className=" bg-Layoutneon text-Layoutblack mb-[2vh] mt-[2vh] w-[10vw] p-[5px] rounded">
+          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] mt-[2vh] w-[10rem] p-[5px] rounded">
             brand-{" "}
           </p>
-          <p className=" bg-Layoutneon text-Layoutblack mb-[2vh] p-[5px] w-[14.5vw] rounded">
+          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[17rem] rounded">
             transforming{" "}
           </p>
-          <p className=" bg-Layoutneon text-Layoutblack mb-[2vh] p-[5px] w-[10vw] rounded">
+          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[12rem] rounded">
             products
           </p>
           <span>and experiences</span>

@@ -7,7 +7,7 @@ function Header() {
     <div className="navbar  h-[13vh] w-full bg-Layoutblue flex items-center justify-center overflow-x-hidden font-semibold">
       <div className="logo flex-row w-[55vw] items-center justify-center text-white text-4xl" >{company}</div>
       <div className="navlink flex-row  items-center justify-center">
-        <div className="wrapper bg-Layouttrans h-[8vh] w-[21vw] rounded-xl flex items-center justify-center">
+        <div className="wrapper bg-Layouttrans h-[8vh] w-[23vw] rounded-xl flex items-center justify-center">
         <a title="About Us" className="about text-white hover:text-black  rounded-xl  hover:bg-Layoutneon p-[15px]">About Us</a>
         <a title="Services" className="service  text-white hover:text-black  rounded-xl  hover:bg-Layoutneon p-[15px]">Services</a>
         <a title="How it works?" className="howitworks text-white hover:text-black  rounded-xl  hover:bg-Layoutneon p-[15px] ">How it works? </a>

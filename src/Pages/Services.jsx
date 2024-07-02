@@ -14,10 +14,10 @@ function Services() {
           MASTERY
           <PiShootingStarFill
             color={layoutColors.yellow}
-            className="h-[12vh] w-[12vw] absolute left-[15vw] top-[-3vh]"
+            className="h-[12vh] w-[12vw] absolute left-[17vw] top-[-4vh]"
           />
         </p>
-        <p className="text-6xl font-semibold text-Layoutpink absolute top-[148vh]  left-[47vw]">
+        <p className="text-6xl font-semibold text-Layoutpink absolute top-[149vh]  left-[48vw]">
           UNLEASHED
         </p>
       </div>
