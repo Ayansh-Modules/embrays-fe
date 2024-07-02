@@ -6,19 +6,17 @@ function ServiceBox(props) {
   const testimonial = props.boxData.testimonial;
   const img = props.boxData.img;
   const color = props.boxData.color;
-  console.log(color);
   const isReversed = id % 2 == 0 ? "flex-col-reverse" : "";
+
   return (
-    <div className="serviceBox ">
+    <div className="serviceBox">
       <div
-        className={`h-[80vh] w-[40vw] flex-col flex items-center  rounded-xl bg-${color} overflow-y-hidden  flex ${isReversed} bg- bg-no-repeat bg-cover`}
-      style={{backgroundImage:`url(${img})`}}
+        className={`h-[35rem] w-[38rem] flex-col flex items-center  rounded-xl overflow-y-hidden  ${isReversed} bg- bg-no-repeat bg-cover relative `}
+        style={{ backgroundColor: color }}
       >
-        <div
-          className=" flex-col  "
-        >
+        <div className="flex-col">
           <div
-            className="number   "
+            className="number"
             style={{
               WebkitTextStrokeWidth: "0.1rem",
               WebkitTextStrokeColor: "#030303",
@@ -29,14 +27,19 @@ function ServiceBox(props) {
           >
             0{id}
           </div>
-          <div className="text  pb-[3vh]">
+          <div className=" pb-[3vh]">
             <p className="role text-4xl font-semibold pb-[2vh]">{service}</p>
             <p className="testimonial text-lg w-[35vw] text-justify ">
               {testimonial}
             </p>
           </div>
         </div>
-        {/* <img src={img} className=" object-cover h-[500px] w-[570px]"  /> */}
+        <img
+          src={img}
+          className={` object-cover h-[500px] w-[570px] absolute z-[2] ${
+            id % 2 == 0 ? "bottom-40" : "top-60"
+          }`}
+        />
       </div>
     </div>
   );

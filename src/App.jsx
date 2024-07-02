@@ -1,16 +1,16 @@
-import  {React,useEffect} from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Header from './Components/Header'
-import Aboutus from './Pages/AboutUs'
-import Services from './Pages/Services'
-import Whyus from './Pages/WhyUs'
-import HowItWorks from './Pages/HowItWorks'
-import Collaboration from './Pages/Collaboration'
-import ClientReview from './Pages/ClientReview'
-import Partnership from './Components/Partnership'
-import Contact from './Pages/Contact'
-import Footer from './Components/Footer'
+import { React, useEffect } from "react";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Partnership from "./Components/Partnership";
+import Aboutus from "./Pages/AboutUs";
+import ClientReview from "./Pages/ClientReview";
+import Collaboration from "./Pages/Collaboration";
+import Contact from "./Pages/Contact";
+import HowItWorks from "./Pages/HowItWorks";
+import Services from "./Pages/Services";
+import Whyus from "./Pages/WhyUs";
 
 function App() {
   useEffect(() => {
@@ -20,18 +20,18 @@ function App() {
 
   return (
     <>
-       <Header />
-       <Aboutus/>
-       <Services />
-       <Whyus/>
-       <HowItWorks />
-       <Collaboration />
-       <ClientReview />
-       <Partnership />
-       <Contact />
-       <Footer />
+      <Header />
+      <Aboutus />
+      <Services />
+      <Whyus />
+      <HowItWorks />
+      <Collaboration />
+      <ClientReview />
+      <Partnership />
+      <Contact />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

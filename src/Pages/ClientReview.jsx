@@ -1,9 +1,13 @@
 import React from "react";
-import { appData } from "../Data/AppData";
+import "swiper/css";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import ClientThought from "../Components/ClientThought";
+import { appData } from "../Data/AppData";
 function ClientReview() {
   const data = appData.clientReview;
   const compName = appData.companyName;
+
   return (
     <div
       className="clientReview flex-col flex items-center justify-center h-[90vh] w-full overflow-x-hidden overflow-y-auto"
@@ -17,16 +21,13 @@ function ClientReview() {
           className="title text-5xl font-bold mb-[2rem] text-Layoutblue"
           data-aos="fade-up"
         >
-          {" "}
           {data.title}
           <span className="text-Layoutpink font-normal">{compName} </span>
         </div>
         <h6 className=" subtitle  text-xl  text-gray-900 dark:text-black text-center w-[35vw]">
-          {" "}
           {data.subTitle}
         </h6>
       </div>
-      <ClientThought />
       <div
         className="pattern "
         data-aos="zoom-in"
@@ -34,6 +35,26 @@ function ClientReview() {
         data-aos-easing="ease"
         data-aos-duration="1000"
       ></div>
+
+      <div className="w-full h-90">
+        <Swiper
+          className="sample-slider"
+          modules={[Autoplay]}
+          loop={true}
+          autoplay={{ delay: 0 }}
+          slidesPerView={5}
+          speed={2000}
+          spaceBetween={30}
+        >
+          {data.allReviews.map((review, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <ClientThought data={review} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
     </div>
   );
 }
