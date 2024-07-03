@@ -24,16 +24,15 @@ function App() {
     <>
       {/* <Testing />
     <Testing /> */}
-      <Header />
-      <AboutUs />
-
-      <Services />
-      <WhyUs />
-      <HowItWorks />
+      {/* <Header /> */}
+      {/* <AboutUs /> */}
+      {/* <Services /> */}
+      {/* <WhyUs /> */}
+      {/* <HowItWorks />
       <Collaboration />
       <ClientReview />
       <Partnership />
-      <Contact />
+      <Contact /> */}
       <Footer />
       {/* <TermsAndCondition /> */}
     </>
