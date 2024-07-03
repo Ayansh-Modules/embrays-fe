@@ -8,7 +8,11 @@ function WhyUs() {
 
   return (
     <div className="h-[200vh] w-full bg-Layoutblack flex">
-      <div className="why us h-[50vh] w-[35vw] ml-[5vw] pt-[5rem]">
+      <div className="why us h-[50vh] w-[35vw] ml-[5vw] pt-[5rem]"
+       data-aos="fade-right"
+       data-aos-offset="200"
+       data-aos-easing="ease"
+       data-aos-duration="1000">
         <p className="text-l text-Layoutneon ">WHY US?</p>
         <p className="text-4xl text-white font-semibold w-[20vw] mt-[1rem]">
           Choose us for{" "}

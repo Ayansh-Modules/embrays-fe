@@ -2,7 +2,7 @@
 import rocket from "./images/about_us/banner.webp";
 import lower_banner_desktop from "./images/about_us/lower_banner_desktop.svg";
 import lower_banner_mobile from "./images/about_us/lower_banner_mobile.png";
-
+import connect_form from "./images/lets_connect/bg_form.webp";
 // Partners
 import amazon from "./images/partners/amazon.webp";
 import googleCloud from "./images/partners/google_cloud.svg";
@@ -96,6 +96,7 @@ const baseAssets = {
   rocket: rocket,
   lower_banner_desktop: lower_banner_desktop,
   lower_banner_mobile: lower_banner_mobile,
+  connect_form : connect_form ,
   //partners
   amazon: amazon,
   googleCloud: googleCloud,

@@ -8,8 +8,9 @@ import baseAssets from "../assets/baseAssets";
 function Services() {
   const boxParam = getBoxData();
   return (
-    <div className="h-[220vh] w-full flex-col flex items-center justify-center overflow-x-auto ">
-      <div className="title flex-col items-center justify-center ">
+    <div className=" flex-col flex items-center justify-center "style={{height:"250vh",width:"100vw"}}>
+      <div className="title flex-col items-center justify-center "
+      >
         <p className="text-6xl font-semibold flex absolute top-[140vh] left-[35vw]">
           MASTERY
           <PiShootingStarFill
@@ -23,20 +24,28 @@ function Services() {
       </div>
 
       <div className="services">
-        <div className="rowone flex-row flex items-center justify-center absolute top-[155vh] left-[10vw]">
+        <div className="rowone flex-row flex items-center justify-center absolute top-[155vh] left-[10vw]"
+         data-aos="fade-up"
+         data-aos-offset="200"
+         data-aos-easing="ease"
+         data-aos-duration="1000">
           <div className="boxone">
             <ServiceBox boxData={boxParam[0]} />
           </div>
 
-          <div className="boxtwo ml-[1vw] mt-[10rem]">
+          <div className="boxtwo ml-[1vw] mt-[8rem]">
             <ServiceBox boxData={boxParam[1]} />
           </div>
         </div>
-        <div className="rowtwo flex-row flex items-center justify-center absolute top-[237vh] left-[10vw]">
-          <div className="boxthree">
+        <div className="rowtwo flex-row flex items-center justify-center absolute top-[239vh] left-[10vw]"
+         data-aos="fade-up"
+         data-aos-offset="200"
+         data-aos-easing="ease"
+         data-aos-duration="1000">
+          <div className="boxthree ">
             <ServiceBox boxData={boxParam[2]} />
           </div>
-          <div className="boxfour ml-[1vw] mt-[10rem]">
+          <div className="boxfour ml-[1vw] mt-[7rem]">
             <ServiceBox boxData={boxParam[3]} />
           </div>
         </div>

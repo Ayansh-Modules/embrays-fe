@@ -147,5 +147,29 @@
   }
 
 
-  
+  /* .rocketgif::before { 
+    content: "";
+     position: absolute;
+    left: 0;
+    top: 0;
+    width: 46.2rem;
+    height: 46.2rem;
+    border-radius: 100rem; 
+    background: rgba(255, 255, 255, 0.06);
+    transform: scale(1.2);
+    z-index: 0;
+    box-shadow: 0 0 0 0 rgba(239, 94, 216, 0.78);
+   } */
+  /* .rocketgif::after {
+    content: "";
+    position: relative;
+     
+    left: 0;
+    top: 0;
+    width: 46.2rem;
+    height: 46.2rem; 
+    z-index: 0;
+    box-shadow: -9rem 0 60rem 17rem rgba(175, 69, 201, 0.88);
+     border-radius: 50rem; 
+  } */
   

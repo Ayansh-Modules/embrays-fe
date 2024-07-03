@@ -15,6 +15,7 @@ export default {
         Layoutboxthree: "#FF6839",
         Layoutboxfour: "#FF4F70",
         Layoutblack: "#101010",
+        Layoutring :"#9333C0"
       },
     },
   },

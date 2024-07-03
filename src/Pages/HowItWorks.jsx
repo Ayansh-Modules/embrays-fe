@@ -9,13 +9,13 @@ function HowItWorks() {
     <div className="h-[115vh] w-full bg-Layoutblue flex-col flex items-center justify-center">
       <div
         className="title text-7xl font-semibold flex-col flex items-center justify-center text-Layoutneon "
-        style={{ textShadow: "gray -5px -5px" }}
+        style={{ textShadow: "gray -5px -5px",}}
       >
         {data.title}
       </div>
       <div className="content h-[90vh] w-full flex-row flex items-center justify-center mt-[5vh]">
         <div className="h-[50vh] w-[50vw] flex items-center justify-center">
-          <div className="rocketgif rounded-full h-[26rem] w-[26rem] bg-Layoutviolet felx flex items-center justify-center p-[10px] ">
+          <div className="rocketgif rounded-full h-[26rem] w-[26rem] bg-Layoutring felx flex items-center justify-center p-[10px] " style={{ boxShadow: "0rem 0 60rem 6rem rgba(175, 69, 201, 0.88)"}}>
             <img
               src={baseAssets.rocketGif}
               className="rounded-full h-[22rem] w-[22rem] border-[3px] border-Layoutyellow "

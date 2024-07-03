@@ -12,7 +12,7 @@ function Collaboration() {
   const collabCompanyParam = getCollabData();
   return (
     <div
-      className="h-[110vh] w-full bg-no-repeat bg-cover flex-col flex items-center justify-center overflow-x-hidden"
+      className="h-[110vh] w-full bg-no-repeat bg-cover flex-col flex items-center justify-center "
       style={{
         backgroundImage: `url(${baseAssets.collaborationBackgroundImage})`,
       }}

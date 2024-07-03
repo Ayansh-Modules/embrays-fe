@@ -11,7 +11,9 @@ import Contact from "./Pages/Contact";
 import HowItWorks from "./Pages/HowItWorks";
 import Services from "./Pages/Services";
 import Whyus from "./Pages/WhyUs";
-import TermsAndCondition from "./Pages/TermsAndCondition";
+// import Testing from "./Pages/Testing.jsx";
+
+// import TermsAndCondition from "./Pages/TermsAndCondition";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -20,8 +22,11 @@ function App() {
 
   return (
     <>
-      {/* <Header />
+    {/* <Testing />
+    <Testing /> */}
+      <Header />
       <Aboutus />
+    
       <Services />
       <Whyus />
       <HowItWorks />
@@ -29,8 +34,8 @@ function App() {
       <ClientReview />
       <Partnership />
       <Contact />
-      <Footer /> */}
-      <TermsAndCondition />
+      <Footer />
+      {/* <TermsAndCondition /> */}
     </>
   );
 }

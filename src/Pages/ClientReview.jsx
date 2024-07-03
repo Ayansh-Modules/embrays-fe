@@ -10,7 +10,7 @@ function ClientReview() {
 
   return (
     <div
-      className="clientReview flex-col flex items-center justify-center h-[100vh] w-full overflow-x-hidden overflow-y-auto"
+      className="clientReview flex-col flex items-center justify-center h-[100vh] w-full"
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-easing="ease"
