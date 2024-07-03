@@ -161,7 +161,7 @@ const appData = {
       ]
   },
   contact: {
-    primary: "Contact Us -->",
+    primary: "Contact Us.",
     secondary: "Let's Create Experiences!",
     mail: "info@embraystechnologies.com",
     cell: "+91-9954088224",
