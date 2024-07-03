@@ -8,6 +8,10 @@
   scrollbar-width: thin;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .clientReview {
   padding: 8rem 0 15.5rem;
   overflow: hidden;
@@ -55,99 +59,99 @@
         height: 39rem;
     }
   } */
-  .collabcard {
-    position: relative;
-   
-  }
-  
-  .collabcard .image {
-    display: block;
-    width: 100%;
-    height: auto;
-  
-  }
-  
-  .collabcard .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 0%;
-    transition: .25s ease;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) -11.1%, rgba(1, 1, 1, 0.61) 53.11%, #000 101.56%);
-    box-shadow: 0 0 76.8px 0.4rem rgba(0, 0, 0, 0.4);
-    
-  }
-  
-  .collabcard:hover .overlay {
-    height: 100%;
-    border-radius: 20px;
-  }
-  
-  .collabcard .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    text-align: justify;
-    font-size: large;
-  }
+.collabcard {
+  position: relative;
+}
 
-  .connectbtn {
-    z-index: 1;
-    border: 0;
-    height: 3.1rem;
-    width: 10rem;
-    border-radius:1rem;
-  }
-  
-  .connectbtn:hover {
-    box-shadow: 0rem 0rem 0 0 #D2FF03;
-    transition: 0.5s ease;
-  }
-  .connectbtn:hover span:first-child {
-    left: 0rem;
-    top: 0rem;
-    transition: 0.1s ease;
-  }
-  .connectbtn span:first-child {
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3.1rem;
-    width: 10rem;
-    position: absolute;
-    z-index: 1;
-    left: -0.3rem;
-    top: -0.3rem;
-    background: #F72585;
-    border-radius:1rem;
-    color: #FFFFFF;
-    gap: 0.7rem;
-    transition: 0.1s ease;
-  }
-  .connectbtn {
-    border-radius:1rem ;
-    background: #D2FF03;
-    color: #030303;
-    transition: 0.5S ease;
-   
-  }
-  .connectbtn:hover {
-    background: #FFFFFF;
-    transition: 0.5S ease;
-  }
+.collabcard .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
+.collabcard .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0%;
+  transition: 0.25s ease;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) -11.1%,
+    rgba(1, 1, 1, 0.61) 53.11%,
+    #000 101.56%
+  );
+  box-shadow: 0 0 76.8px 0.4rem rgba(0, 0, 0, 0.4);
+}
 
-  /* .rocketgif::before { 
+.collabcard:hover .overlay {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.collabcard .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-align: justify;
+  font-size: large;
+}
+
+.connectbtn {
+  z-index: 1;
+  border: 0;
+  height: 3.1rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+
+.connectbtn:hover {
+  box-shadow: 0rem 0rem 0 0 #d2ff03;
+  transition: 0.5s ease;
+}
+.connectbtn:hover span:first-child {
+  left: 0rem;
+  top: 0rem;
+  transition: 0.1s ease;
+}
+.connectbtn span:first-child {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.1rem;
+  width: 10rem;
+  position: absolute;
+  z-index: 1;
+  left: -0.3rem;
+  top: -0.3rem;
+  background: #f72585;
+  border-radius: 1rem;
+  color: #ffffff;
+  gap: 0.7rem;
+  transition: 0.1s ease;
+}
+.connectbtn {
+  border-radius: 1rem;
+  background: #d2ff03;
+  color: #030303;
+  transition: 0.5s ease;
+}
+.connectbtn:hover {
+  background: #ffffff;
+  transition: 0.5s ease;
+}
+
+/* .rocketgif::before { 
     content: "";
      position: absolute;
     left: 0;
@@ -160,7 +164,7 @@
     z-index: 0;
     box-shadow: 0 0 0 0 rgba(239, 94, 216, 0.78);
    } */
-  /* .rocketgif::after {
+/* .rocketgif::after {
     content: "";
     position: relative;
      
@@ -172,4 +176,3 @@
     box-shadow: -9rem 0 60rem 17rem rgba(175, 69, 201, 0.88);
      border-radius: 50rem; 
   } */
-  

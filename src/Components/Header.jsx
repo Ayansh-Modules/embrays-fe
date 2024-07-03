@@ -14,12 +14,14 @@ function Header() {
             <div className="wrapper bg-Layouttrans h-[3.5rem] w-[25rem] rounded-xl flex items-center justify-center mr-[20px]">
               <a
                 title="About Us"
+                href="#aboutus"
                 className="about text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3.5rem] w-[7rem] flex items-center justify-center"
               >
                 About Us
               </a>
               <a
                 title="Services"
+                href="#services"
                 className="service  text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3.5rem] w-[8rem] flex items-center justify-center"
               >
                 Services
@@ -48,4 +50,3 @@ function Header() {
 }
 
 export default Header;
-

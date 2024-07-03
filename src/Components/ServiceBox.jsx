@@ -1,5 +1,3 @@
-import React from "react";
-
 function ServiceBox(props) {
   const id = props.boxData.id;
   const service = props.boxData.service;
@@ -11,7 +9,7 @@ function ServiceBox(props) {
   return (
     <div className="serviceBox">
       <div
-        className={`h-[35rem] w-[38rem] flex-col flex items-center  rounded-xl overflow-y-hidden  ${isReversed} bg- bg-no-repeat bg-cover relative `}
+        className={`h-[60vh] w-[40vw] max-md:h-[30vh] max-md:w-[90vw] flex-col flex items-center  rounded-xl overflow-y-hidden ${isReversed} bg- bg-no-repeat bg-cover relative`}
         style={{ backgroundColor: color }}
       >
         <div className="flex-col">

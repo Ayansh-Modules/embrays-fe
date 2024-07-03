@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "425px",
+      },
       colors: {
         Layoutneon: "#D2FF03",
         Layoutpink: "#F72585",
@@ -15,7 +18,7 @@ export default {
         Layoutboxthree: "#FF6839",
         Layoutboxfour: "#FF4F70",
         Layoutblack: "#101010",
-        Layoutring :"#9333C0"
+        Layoutring: "#9333C0",
       },
     },
   },
