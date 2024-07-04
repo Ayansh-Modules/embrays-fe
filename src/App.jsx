@@ -30,7 +30,7 @@ function App() {
       {/* <Collaboration /> */}
       {/* <ClientReview /> */}
       {/* <Partnership /> */}
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
       {/* <TermsAndCondition /> */}
     </>
