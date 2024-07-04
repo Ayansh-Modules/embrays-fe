@@ -23,7 +23,7 @@ function Collaboration() {
       >
         {data.title}
       </div>
-      <div className="cards h-[80vh] w-[100vw]" >
+      <div className="cards h-[80vh] w-[100vw]">
         <Swiper
           className="sample-slider"
           modules={[Autoplay]}

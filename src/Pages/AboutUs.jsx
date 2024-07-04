@@ -12,7 +12,7 @@ function AboutUs() {
     setOpen(false);
   }
   return (
-    <div className="about bg-Layoutblue relative  w-[100vw] pt-20">
+    <div id="aboutus" className="about bg-Layoutblue relative  w-[100vw] pt-20">
       <div className="flex-row pl-[19px] max-md:flex-col flex  justify-center overflow-x-hidden overflow-y-auto   ">
         <div
           className="titleTexts flex-col  text-white  "
@@ -22,15 +22,11 @@ function AboutUs() {
           data-aos-duration="1000"
         >
           <div className="title text-5xl  font-semibold  max-md:w-[90vw] mb-[5vh] max-md:text-2xl">
-            Empowering you with sleek {" "} {" "} {" "} {" "}
-            <span className="text-Layoutneon font-light">
-            {" "}user-centered{" "} 
-            </span>
+            Empowering you with sleek{" "}
+            <span className="text-Layoutneon font-light"> user-centered </span>
             solutions for success
           </div>
-          <div className="subTitle text-lg  font-light ">
-            {data.subTitle}
-          </div>
+          <div className="subTitle text-lg  font-light ">{data.subTitle}</div>
           <div className="btn">
             <button
               // onClick={handleClickOpen()}
