@@ -15,7 +15,7 @@ function WhyUs() {
         data-aos-duration="1000"
       >
         <p className="text-3xl text-white font-semibold mt-[1rem] max-md:text-center">
-        <p className=" text-sm text-Layoutneon  text-start">WHY US?</p>
+          <p className=" text-sm text-Layoutneon  text-start">WHY US?</p>
           <p className="text-start">Choose us for</p>
           <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] mt-[2vh] w-[10rem] max-md:w-[15rem] p-[5px] rounded">
             brand-
@@ -31,7 +31,7 @@ function WhyUs() {
       </div>
       <div className="sectiongrid flex-col w-[70vw] ">
         <div className="gridsrowone  flex justify-evenly max-lg:flex-col  max-md:w-[100vw] max-md:items-center ">
-          <TestimonialBox  data={TestimonialBoxParams[0]} />
+          <TestimonialBox data={TestimonialBoxParams[0]} />
           <TestimonialBox data={TestimonialBoxParams[1]} />
         </div>
         <div className="gridsrowtwo  flex justify-evenly max-lg:flex-col max-md:w-[100vw] max-md:items-center">

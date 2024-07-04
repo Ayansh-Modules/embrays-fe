@@ -3,12 +3,12 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Header from "./Components/Header";
 import AboutUs from "./Pages/AboutUs";
-import Services from "./Pages/Services";
-// import Partnership from "./Components/Partnership";
-// import ClientReview from "./Pages/ClientReview";
-// import Collaboration from "./Pages/Collaboration";
-// import Contact from "./Pages/Contact";
 // import HowItWorks from "./Pages/HowItWorks";
+import Partnership from "./Components/Partnership";
+import ClientReview from "./Pages/ClientReview";
+import Collaboration from "./Pages/Collaboration";
+import Services from "./Pages/Services";
+// import Contact from "./Pages/Contact";
 // import WhyUs from "./Pages/WhyUs";
 // import Testing from "./Pages/Testing.jsx";
 // import Footer from "./Components/Footer";
@@ -25,9 +25,14 @@ function App() {
       <Header />
       <AboutUs />
       <Services />
+      {/* <WhyUs /> */}
+      <Collaboration />
+      <ClientReview />
+      <Partnership />
+      {/* <HowItWorks /> */}
       {/* 
-      <WhyUs />
-      <HowItWorks />
+  
+
       <Collaboration />
       <ClientReview />
       <Partnership />

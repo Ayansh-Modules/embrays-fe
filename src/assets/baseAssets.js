@@ -89,6 +89,10 @@ import whyUsCardImgTwo from "../assets/images/why_us/card/two.png";
 
 //extra
 import favicon from "./icons/favicon.ico";
+//arrow-left.svg
+import arrowLeft from "./icons/arrow-left.svg";
+//arrow-right.svg
+import arrowRight from "./icons/arrow-right.svg";
 import embraystechnologyPdf from "./pdf/embraystechnology.pdf";
 
 const baseAssets = {
@@ -96,7 +100,7 @@ const baseAssets = {
   rocket: rocket,
   lower_banner_desktop: lower_banner_desktop,
   lower_banner_mobile: lower_banner_mobile,
-  connect_form : connect_form ,
+  connect_form: connect_form,
   //partners
   amazon: amazon,
   googleCloud: googleCloud,
@@ -179,5 +183,7 @@ const baseAssets = {
   //extra
   embraystechnologyPdf: embraystechnologyPdf,
   favicon: favicon,
+  arrowLeft: arrowLeft,
+  arrowRight: arrowRight,
 };
 export default baseAssets;

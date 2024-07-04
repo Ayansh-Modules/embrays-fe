@@ -9,7 +9,7 @@ function ServiceBox(props) {
   return (
     <div className="serviceBox">
       <div
-        className={`h-[70vh] w-[40vw] max-md:h-[40vh] max-md:w-[90vw] flex-col flex items-center max-md:items-start rounded-xl overflow-y-hidden ${isReversed} bg- bg-no-repeat bg-cover relative`}
+        className={`h-[60vh] w-[40vw] max-md:h-[34vh] max-md:w-[90vw] flex-col flex items-center max-md:items-start rounded-xl overflow-y-hidden ${isReversed} bg- bg-no-repeat bg-cover relative`}
         style={{ backgroundColor: color }}
       >
         <div className="flex-col">
@@ -26,7 +26,9 @@ function ServiceBox(props) {
             0{id}
           </div>
           <div className="">
-            <p className="role text-2xl max-md:text-lg font-semibold pl-[20px]">{service}</p>
+            <p className="role text-3xl max-md:text-lg font-semibold pl-[20px]">
+              {service}
+            </p>
             <p className="testimonial text-lg p-[20px] text-justify max-md:text-sm  ">
               {testimonial}
             </p>
@@ -35,7 +37,7 @@ function ServiceBox(props) {
         <img
           src={img}
           className={` object-cover h-[500px] w-[570px] absolute z-[2] ${
-            id % 2 == 0 ? "bottom-40" : "top-60"
+            id % 2 == 0 ? "bottom-40 max-md:bottom-0" : "top-60 max-md:top-0"
           }`}
         />
       </div>

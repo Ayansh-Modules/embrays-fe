@@ -12,17 +12,20 @@ function AboutUs() {
     setOpen(false);
   }
   return (
-    <div id="aboutus" className="about bg-Layoutblue relative  w-[100vw] pt-20">
-      <div className="flex-row pl-[19px] max-md:flex-col flex  justify-center overflow-x-hidden overflow-y-auto   ">
+    <div
+      id="aboutus"
+      className="about bg-Layoutblue relative  w-[100vw] pt-28 h-[100vh] flex flex-col items-start overflow-hidden "
+    >
+      <div className="flex-row max-md:flex-col flex overflow-x-hidden overflow-y-hidden justify-between pl-[10vw] pr-[0vw]">
         <div
-          className="titleTexts flex-col  text-white  "
+          className="titleTexts flex-col  text-white w-[70vw] "
           data-aos="fade-right"
           data-aos-offset="200"
           data-aos-easing="ease"
           data-aos-duration="1000"
         >
           <div className="title text-5xl  font-semibold  max-md:w-[90vw] mb-[5vh] max-md:text-2xl">
-            Empowering you with sleek{" "}
+            Empowering you with sleek
             <span className="text-Layoutneon font-light"> user-centered </span>
             solutions for success
           </div>
@@ -48,17 +51,17 @@ function AboutUs() {
           </div>
         </div>
         <div
-          className="rocket max-lg:pl-[50px]"
+          className="max-md:pr-[80px] max-md:pt-[80px]"
           data-aos="fade-left"
           data-aos-offset="200"
           data-aos-easing="ease"
           data-aos-duration="1000"
         >
-          <img src={baseAssets.rocket} className="pr-10" />
+          <img src={baseAssets.rocket} className="" />
         </div>
       </div>
 
-      <div className="lowerbanner  absolute z-2  bg-Layoutblue pt-[10px] ">
+      <div className="lowerbanner  absolute z-2  bg-Layoutblue pt-[10px] bottom-0">
         <img src={baseAssets.lower_banner_desktop} className="w-[100vw] " />
       </div>
     </div>
