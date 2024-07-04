@@ -6,39 +6,39 @@ function WhyUs() {
   const TestimonialBoxParams = getTestimonials();
 
   return (
-    <div className=" w-full bg-Layoutblack flex flex-row max-md:flex-col justify-between pb-20">
+    <div className=" w-full bg-Layoutblack flex  max-md:flex-col max-md:justify-center justify-evenly  pb-20">
       <div
-        className="why us h-[50vh]  ml-[5vw] pt-[5rem]"
+        className="why us ml-[5vw] pt-[5rem] sticky max-md:w-[100vw] max-md:flex max-md:items-center max-md:justify-center"
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <p className="text-l text-Layoutneon ">WHY US?</p>
-        <p className="text-4xl text-white font-semibold mt-[1rem]">
-          Choose us for
-          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] mt-[2vh] w-[10rem] p-[5px] rounded">
+        <p className="text-3xl text-white font-semibold mt-[1rem] max-md:text-center">
+        <p className=" text-sm text-Layoutneon  text-start">WHY US?</p>
+          <p className="text-start">Choose us for</p>
+          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] mt-[2vh] w-[10rem] max-md:w-[15rem] p-[5px] rounded">
             brand-
           </p>
-          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[17rem] rounded">
+          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[14rem] max-md:w-[15rem] rounded">
             transforming
           </p>
-          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[12rem] rounded">
+          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[12rem] max-md:w-[15rem] rounded">
             products
           </p>
           <span>and experiences</span>
         </p>
       </div>
-      <div className="sectiongrid flex-col">
-        <div className="gridsrowone w-[60vw] flex justify-evenly max-lg:flex-col">
-          <TestimonialBox data={TestimonialBoxParams[0]} />
+      <div className="sectiongrid flex-col w-[70vw] ">
+        <div className="gridsrowone  flex justify-evenly max-lg:flex-col  max-md:w-[100vw] max-md:items-center ">
+          <TestimonialBox  data={TestimonialBoxParams[0]} />
           <TestimonialBox data={TestimonialBoxParams[1]} />
         </div>
-        <div className="gridsrowtwo w-[60vw] flex justify-evenly max-lg:flex-col">
+        <div className="gridsrowtwo  flex justify-evenly max-lg:flex-col max-md:w-[100vw] max-md:items-center">
           <TestimonialBox data={TestimonialBoxParams[2]} />
           <TestimonialBox data={TestimonialBoxParams[3]} />
         </div>
-        <div className="gridsrowthree w-[60vw] flex justify-evenly max-lg:flex-col">
+        <div className="gridsrowthree  flex justify-evenly max-lg:flex-col max-md:w-[100vw] max-md:items-center">
           <TestimonialBox data={TestimonialBoxParams[4]} />
           <TestimonialBox data={TestimonialBoxParams[5]} />
         </div>

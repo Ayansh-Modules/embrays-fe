@@ -26,11 +26,10 @@ function App() {
       <AboutUs />
       <Services />
       <WhyUs />
-      <HowItWorks />
-      <Collaboration />
+      {/* <HowItWorks /> */}
+      {/* <Collaboration /> */}
       <ClientReview />
       <Partnership />
-      
        <Contact />
       <Footer />
       {/* <TermsAndCondition /> */}

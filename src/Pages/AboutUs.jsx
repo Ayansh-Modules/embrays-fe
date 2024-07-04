@@ -13,22 +13,22 @@ function AboutUs() {
   }
   return (
     <div className="about bg-Layoutblue relative  w-[100vw] pt-20">
-      <div className="flex-row max-lg:flex-col flex items-center justify-center overflow-x-hidden overflow-y-auto   ">
+      <div className="flex-row pl-[19px] max-md:flex-col flex  justify-center overflow-x-hidden overflow-y-auto   ">
         <div
-          className="titleTexts flex-col w-[60vw] h-[90vh] text-white ml-[100px]"
+          className="titleTexts flex-col  text-white  "
           data-aos="fade-right"
           data-aos-offset="200"
           data-aos-easing="ease"
           data-aos-duration="1000"
         >
-          <div className="title text-6xl font-normal w-[55vw]  mb-[5vh]">
-            Empowering you with sleek
+          <div className="title text-5xl  font-semibold  max-md:w-[90vw] mb-[5vh] max-md:text-2xl">
+            Empowering you with sleek {" "} {" "} {" "} {" "}
             <span className="text-Layoutneon font-light">
-              user-centered
-            </span>{" "}
+            {" "}user-centered{" "} 
+            </span>
             solutions for success
           </div>
-          <div className="subTitle text-lg w-[45vw] font-light ">
+          <div className="subTitle text-lg  font-light ">
             {data.subTitle}
           </div>
           <div className="btn">
@@ -52,7 +52,7 @@ function AboutUs() {
           </div>
         </div>
         <div
-          className="rocket"
+          className="rocket max-lg:pl-[50px]"
           data-aos="fade-left"
           data-aos-offset="200"
           data-aos-easing="ease"
@@ -62,8 +62,8 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="lowerbanner  absolute z-2 bottom-0">
-        <img src={baseAssets.lower_banner_desktop} className="w-[100vw]" />
+      <div className="lowerbanner  absolute z-2  bg-Layoutblue pt-[10px] ">
+        <img src={baseAssets.lower_banner_desktop} className="w-[100vw] " />
       </div>
     </div>
   );

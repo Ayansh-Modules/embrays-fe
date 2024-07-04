@@ -8,6 +8,7 @@ function Contact() {
   const contact = appData.contact;
   return (
     <div
+    id="contactus"
       className=" flex items-center justify-evenly max-md:flex-col max-sm:flex-col w-[100vw] p-[20px]"
       data-aos="fade-up"
     >

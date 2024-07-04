@@ -10,39 +10,39 @@ function ClientReview() {
 
   return (
     <div
-      className="clientReview flex-col flex items-center justify-center h-[100vh] w-full"
+      className="clientReview flex-col flex items-center justify-center w-full overflow-x-hidden "
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-easing="ease"
       data-aos-duration="1000"
     >
-      <div className="title mb-[5rem] flex-col flex items-center justify-center mt-[5rem]">
+      <div className="title  flex-col flex items-center justify-center pt-[3rem] ">
         <div
-          className="title text-5xl font-bold mb-[2rem] text-Layoutblue"
+          className="title  text-4xl max-md:text-2xl text-center font-bold mb-[2rem] text-Layoutblue "
           data-aos="fade-up"
         >
           {data.title}
-          <span className="text-Layoutpink font-normal">{compName} </span>
+          <span className="company text-Layoutpink font-normal">{compName} </span>
         </div>
-        <h6 className=" subtitle  text-xl  text-gray-900 dark:text-black text-center w-[35vw]">
+        <h6 className="  subtitle text-gray-900 dark:text-black text-center  max-md:text-sm">
           {data.subTitle}
         </h6>
       </div>
-      <div
+      {/* <div
         className="pattern "
         data-aos="zoom-in"
         data-aos-offset="200"
         data-aos-easing="ease"
         data-aos-duration="1000"
-      ></div>
+      ></div>  */}
 
-      <div className="w-full h-90">
+      <div className="w-[95vw] pt-[3rem] pb-[3rem]">
         <Swiper
           className="sample-slider"
           modules={[Autoplay]}
           loop={true}
           autoplay={{ delay: 0 }}
-          slidesPerView={4}
+          slidesPerView={1}
           speed={2000}
           spaceBetween={30}
         >

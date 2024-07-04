@@ -6,7 +6,7 @@ function HowItWorks() {
   const data = appData.how_it_works;
   const content = data.content;
   return (
-    <div className="h-[115vh] w-full bg-Layoutblue flex-col flex items-center justify-center">
+    <div id="howitworks" className="h-[115vh] w-full bg-Layoutblue flex-col flex items-center justify-center">
       <div
         className="title text-7xl font-semibold flex-col flex items-center justify-center text-Layoutneon "
         style={{ textShadow: "gray -5px -5px" }}

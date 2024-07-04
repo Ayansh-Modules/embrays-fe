@@ -9,6 +9,7 @@ import { BiSolidPhoneCall } from "react-icons/bi"; // call
 import { TfiLinkedin } from "react-icons/tfi"; // linkedin
 import { GrInstagram } from "react-icons/gr"; // instagram
 import { FaRegCopyright } from "react-icons/fa6"; // copyright
+import { IoMenu } from "react-icons/io5"; // menu
 function icons() {
   return (
     <div>

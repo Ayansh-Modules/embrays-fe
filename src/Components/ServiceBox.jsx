@@ -9,12 +9,12 @@ function ServiceBox(props) {
   return (
     <div className="serviceBox">
       <div
-        className={`h-[60vh] w-[40vw] max-md:h-[30vh] max-md:w-[90vw] flex-col flex items-center  rounded-xl overflow-y-hidden ${isReversed} bg- bg-no-repeat bg-cover relative`}
+        className={`h-[70vh] w-[40vw] max-md:h-[40vh] max-md:w-[90vw] flex-col flex items-center max-md:items-start rounded-xl overflow-y-hidden ${isReversed} bg- bg-no-repeat bg-cover relative`}
         style={{ backgroundColor: color }}
       >
         <div className="flex-col">
           <div
-            className="number"
+            className="number pl-[20px]"
             style={{
               WebkitTextStrokeWidth: "0.1rem",
               WebkitTextStrokeColor: "#030303",
@@ -25,9 +25,9 @@ function ServiceBox(props) {
           >
             0{id}
           </div>
-          <div className=" pb-[3vh]">
-            <p className="role text-4xl font-semibold pb-[2vh]">{service}</p>
-            <p className="testimonial text-lg w-[35vw] text-justify ">
+          <div className="">
+            <p className="role text-2xl max-md:text-lg font-semibold pl-[20px]">{service}</p>
+            <p className="testimonial text-lg p-[20px] text-justify max-md:text-sm  ">
               {testimonial}
             </p>
           </div>

@@ -9,11 +9,15 @@ function Services() {
   return (
     <div
       id="services"
-      className="flex-col flex items-center justify-start  w-[100vw] pt-10 pb-20 "
+      className="flex-col flex items-center justify-center  w-[100vw] pt-[10rem] max-md:pt-[10vh] pb-20 "
     >
-      <div className="title flex-col items-center justify-center pb-20">
-        <div className="flex flex-row items-baseline">
-          <p className="text-6xl max-md:text-4xl font-semibold flex ">
+      <div className="title flex-col items-center justify-center pb-10"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-easing="ease"
+      data-aos-duration="1000">
+        <div className="flex flex-row items-baseline justify-center">
+          <p className="text-6xl max-md:text-3xl font-semibold flex ">
             MASTERY
           </p>
           <PiShootingStarFill
@@ -21,7 +25,7 @@ function Services() {
             className="h-20 w-20 max-md:h-14 max-md:w-14"
           />
         </div>
-        <p className="text-6xl max-md:text-4xl font-semibold text-Layoutpink pl-40">
+        <p className="text-6xl max-md:text-3xl font-semibold text-Layoutpink pl-28">
           UNLEASHED
         </p>
       </div>
@@ -42,7 +46,7 @@ function Services() {
         </div>
 
         <div
-          className="flex-row max-md:flex-col flex items-center justify-center max-md:mt-10"
+          className="flex-row max-md:flex-col flex items-center justify-center max-md:mt-10 mt-[0]"
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
