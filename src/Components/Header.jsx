@@ -58,12 +58,12 @@ function Header() {
             key={index}
             title={option.title}
             href={option.href}
-            className="about text-sm text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center"
+            className="about text-sm font-semibold text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center"
           >
             {option.title}
           </a>
         ))}
-        {PortfolioButton()}
+        <div className="flex items-center justify-center w-full">{PortfolioButton()}</div>
       </Drawer>
     </>
   );

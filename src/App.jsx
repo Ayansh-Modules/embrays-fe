@@ -7,11 +7,11 @@ import Services from "./Pages/Services";
 // import Partnership from "./Components/Partnership";
 // import ClientReview from "./Pages/ClientReview";
 // import Collaboration from "./Pages/Collaboration";
-// import Contact from "./Pages/Contact";
+import Contact from "./Pages/Contact";
 // import HowItWorks from "./Pages/HowItWorks";
-// import WhyUs from "./Pages/WhyUs";
+import WhyUs from "./Pages/WhyUs";
 // import Testing from "./Pages/Testing.jsx";
-// import Footer from "./Components/Footer";
+import Footer from "./Components/Footer";
 
 // import TermsAndCondition from "./Pages/TermsAndCondition";
 function App() {
@@ -25,14 +25,13 @@ function App() {
       <Header />
       <AboutUs />
       <Services />
-      {/* 
       <WhyUs />
-      <HowItWorks />
-      <Collaboration />
-      <ClientReview />
-      <Partnership />
+      {/* <HowItWorks /> */}
+      {/* <Collaboration /> */}
+      {/* <ClientReview /> */}
+      {/* <Partnership /> */}
       <Contact />
-      <Footer /> */}
+      <Footer />
       {/* <TermsAndCondition /> */}
     </>
   );
