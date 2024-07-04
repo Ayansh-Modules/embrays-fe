@@ -5,6 +5,8 @@ const appData = {
     mailto:
       "mailto:info@embraystechnologies.com?subject=Hello Embrays Technologies &body=Description",
     cellto: "tel:+919954088224",
+     linkedin:"https://www.linkedin.com/in/embrays-technologies-124270229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+     instagram : "https://www.instagram.com/embrays_technologies?igsh=czV0a3NzeHo4bW54"
   },
   aboutUs: {
     title: "Empowering you with sleek user-centered solutions for success",
