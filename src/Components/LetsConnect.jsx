@@ -1,6 +1,7 @@
 import React from 'react'
 import baseAssets from '../assets/baseAssets'
-function LetsConnect() {
+function LetsConnect(open , setOpen) {
+
   return (
     <div className="connectbox h-[80vh] w-[25vw]  " style={{backgroundImage:`url(${baseAssets.connect_form})`, backgroundPosition: "center",
     backgroundRepeat:" no-repeat",

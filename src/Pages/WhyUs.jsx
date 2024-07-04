@@ -6,17 +6,17 @@ function WhyUs() {
   const TestimonialBoxParams = getTestimonials();
 
   return (
-    <div className=" w-full bg-Layoutblack flex  max-md:flex-col max-md:justify-center justify-evenly  pb-20">
+    <div className=" w-full bg-Layoutblack flex  max-md:flex-col max-md:justify-start justify-between px-[10vw] pb-20">
       <div
-        className="why us ml-[5vw] pt-[5rem] sticky max-md:w-[100vw] max-md:flex max-md:items-center max-md:justify-center"
+        className="whyus pt-[5rem] max-md:w-full max-md:flex max-md:items-center "
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <p className="text-3xl text-white font-semibold mt-[1rem] max-md:text-center">
+        <p className="text-3xl text-white font-semibold mt-[1rem] max-md:text-center  sticky top-28 ">
           <p className=" text-sm text-Layoutneon  text-start">WHY US?</p>
-          <p className="text-start">Choose us for</p>
+          <p className="text-start ">Choose us for</p>
           <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] mt-[2vh] w-[10rem] max-md:w-[15rem] p-[5px] rounded">
             brand-
           </p>
@@ -29,17 +29,22 @@ function WhyUs() {
           <span>and experiences</span>
         </p>
       </div>
-      <div className="sectiongrid flex-col w-[70vw] ">
-        <div className="gridsrowone  flex justify-evenly max-lg:flex-col  max-md:w-[100vw] max-md:items-center ">
+      <div className="sectiongrid flex-col">
+        <div className="gridsrowone  flex justify-evenly max-lg:flex-col  max-md:w-[100vw]  ">
           <TestimonialBox data={TestimonialBoxParams[0]} />
+          <div className="w-12"></div>
           <TestimonialBox data={TestimonialBoxParams[1]} />
         </div>
-        <div className="gridsrowtwo  flex justify-evenly max-lg:flex-col max-md:w-[100vw] max-md:items-center">
+        <div className="gridsrowtwo  flex justify-evenly max-lg:flex-col max-md:w-[100vw] ">
           <TestimonialBox data={TestimonialBoxParams[2]} />
+          <div className="w-12"></div>
+
           <TestimonialBox data={TestimonialBoxParams[3]} />
         </div>
-        <div className="gridsrowthree  flex justify-evenly max-lg:flex-col max-md:w-[100vw] max-md:items-center">
+        <div className="gridsrowthree  flex justify-evenly max-lg:flex-col max-md:w-[100vw] ">
           <TestimonialBox data={TestimonialBoxParams[4]} />
+          <div className="w-12"></div>
+
           <TestimonialBox data={TestimonialBoxParams[5]} />
         </div>
       </div>

@@ -2,14 +2,12 @@ import { useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import baseAssets from "../assets/baseAssets";
 import { appData } from "../Data/AppData";
+import LetsConnect from "../Components/LetsConnect";
 function AboutUs() {
   const data = appData.aboutUs;
   const [open, setOpen] = useState(false);
-  function handleClickOpen() {
-    setOpen(true);
-  }
-  function handleClickClose() {
-    setOpen(false);
+  function handleclick(){
+    setOpen(!open)
   }
   return (
     <div
@@ -32,7 +30,7 @@ function AboutUs() {
           <div className="subTitle text-lg  font-light ">{data.subTitle}</div>
           <div className="btn">
             <button
-              // onClick={handleClickOpen()}
+              onClick={()=>{handleclick()}}
               type="button"
               className="connectbtn  z-10 drop-shadow-lg font-semibold text-white mt-[5vh] focus:ring-2  focus:ring-pink-300 "
             >
@@ -47,7 +45,7 @@ function AboutUs() {
                 />
               </span>
             </button>
-            {/* {open== true ? <LetsConnect /> : <></>} */}
+             {/* <LetsConnect open={open} setOpen={setOpen}/>  */}
           </div>
         </div>
         <div

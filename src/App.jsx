@@ -1,17 +1,17 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import AboutUs from "./Pages/AboutUs";
-// import HowItWorks from "./Pages/HowItWorks";
 import Partnership from "./Components/Partnership";
+import AboutUs from "./Pages/AboutUs";
 import ClientReview from "./Pages/ClientReview";
 import Collaboration from "./Pages/Collaboration";
+import Contact from "./Pages/Contact";
+import HowItWorks from "./Pages/HowItWorks";
 import Services from "./Pages/Services";
-// import Contact from "./Pages/Contact";
-// import WhyUs from "./Pages/WhyUs";
+import WhyUs from "./Pages/WhyUs";
 // import Testing from "./Pages/Testing.jsx";
-// import Footer from "./Components/Footer";
 
 // import TermsAndCondition from "./Pages/TermsAndCondition";
 function App() {
@@ -25,19 +25,13 @@ function App() {
       <Header />
       <AboutUs />
       <Services />
-      {/* <WhyUs /> */}
-      <Collaboration />
-      <ClientReview />
-      <Partnership />
-      {/* <HowItWorks /> */}
-      {/* 
-  
-
+      <HowItWorks />
+      <WhyUs />
       <Collaboration />
       <ClientReview />
       <Partnership />
       <Contact />
-      <Footer /> */}
+      <Footer />
       {/* <TermsAndCondition /> */}
     </>
   );
