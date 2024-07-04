@@ -9,21 +9,21 @@ function Contact() {
   return (
     <div
     id="contactus"
-      className=" flex items-center justify-evenly max-md:flex-col max-sm:flex-col w-[100vw] p-[20px]"
+      className=" flex items-center justify-evenly max-md:flex-col max-sm:flex-col w-full "
       data-aos="fade-up"
     >
       <div
-        className="contactDetails  "
+        className="contactDetails   "
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <div>
+        <div className="pt-[10px]">
           <p className=" text-xl font-medium dark:text-Layoutblue text-left mb-[5vh]">
             {data.primary}
           </p>
-          <p className="text-5xl font-semibold  dark:text-black w-[10vw] text-left mb-[5vh]">
+          <p className="text-5xl max-md:text-3xl font-semibold  dark:text-black w-[10vw] text-left mb-[5vh]">
             {data.secondary}
           </p>
         </div>
@@ -37,7 +37,7 @@ function Contact() {
               : {contact.mail}
             </a>
           </div>
-          <div className="flex-row flex items-center font-medium ">
+          <div className="flex-row flex items-center font-medium pb-5">
             <div className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
               <BiSolidPhoneCall color="white" className="h-[25px] w-[25px]  " />
             </div>
@@ -55,48 +55,48 @@ function Contact() {
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <div className="Name mb-[5vh]">
+        <div className="Name ">
           <label
             for="default-input"
-            class="block mb-2 text-sm font-medium  text-black"
+            class="block mb-[10px] mt-[10px] text-sm font-medium  text-black"
           >
             Your Name
           </label>
           <input
             type="text"
             id="default-input"
-            className="bg-black border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block max-md:w-[90vw] w-[35vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="mb-[10px] bg-black border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block max-md:w-[80vw] w-[35vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
-        <div className="Mail mb-[5vh]">
+        <div className="Mail ">
           <label
             for="default-input"
-            className="block mb-2 text-sm font-medium  text-black"
+            className="block mb-[10px] text-sm font-medium  text-black"
           >
             Your Mail id
           </label>
           <input
             type="text"
             id="default-input"
-            className="bg-black border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[35vw] max-md:w-[90vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-black mb-[10px] border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[35vw] max-md:w-[80vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
-        <div className="Message mb-[5vh]">
+        <div className="Message ">
           <label
             for="message"
-            className="block mb-2 text-sm font-medium  text-black"
+            className="mb-[10px] block  text-sm font-medium  text-black"
           >
             Message for Us
           </label>
           <textarea
             id="message"
             rows="4"
-            className="w-[35vw] max-md:w-[90vw] bg-black border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="mb-[10px] w-[35vw] max-md:w-[80vw] bg-black border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           ></textarea>
         </div>
         <button
           type="button"
-          className="text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 max-md:w-[90vw] w-[35vw]"
+          className="mb-[10px] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2  max-md:w-[80vw] w-[35vw]"
         >
           Submit
         </button>

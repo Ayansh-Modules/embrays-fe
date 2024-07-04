@@ -36,7 +36,7 @@ function Header() {
         </div>
         <div className=" flex  justify-end max-md:hidden max-md:overflow-x-hidden">
           <div className=" flex items-center justify-end ">
-            <div className="wrapper  bg-Layouttrans h-[3.3rem]  rounded-xl flex items-center justify-center mr-[20px]">
+            <div className="wrapper  bg-Layouttrans h-[3.3rem]   rounded-xl flex items-center justify-center mr-[20px]">
               {headerOptions.map((option, index) => (
                 <a
                   key={index}

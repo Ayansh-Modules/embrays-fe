@@ -42,7 +42,7 @@ function AboutUs() {
                 />
               </span>
             </button>
-             <LetsConnect open={open} setOpen={setOpen}/> 
+             {/* <LetsConnect open={open} setOpen={setOpen}/>  */}
           </div>
         </div>
         <div
