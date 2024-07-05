@@ -8,7 +8,7 @@ import Header from "./Components/Header";
 import Root from "./Root";
 // import Testing from "./Pages/Testing.jsx";
 
-// import TermsAndCondition from "./Pages/TermsAndCondition";
+import TermsAndCondition from "./Pages/TermsAndCondition";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -17,15 +17,15 @@ function App() {
 
   return (
     <>
-     {/* <BrowserRouter>
-     <Routes>
-     <Route path="/" element={}></Route>
-     </Routes>
-     </BrowserRouter> */}
+     <BrowserRouter>
      <Header />  
-     <Root />
+     <Routes>
+     <Route path="/" element={<Root/>} ></Route>
+     </Routes>
      <Footer />
-      {/* <TermsAndCondition /> */}
+     <Route path="/termsandcondition" element={<TermsAndCondition />}></Route>
+     </BrowserRouter>
+      {/*  */}
     </>
   );
 }
