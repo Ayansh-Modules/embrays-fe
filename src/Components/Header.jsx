@@ -52,7 +52,7 @@ function Header() {
           {PortfolioButton()}
         </div>
       </div>
-      <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+      <Drawer isOpen={isOpen} setIsOpen={setIsOpen}  >
         {headerOptions.map((option, index) => (
           <a
             key={index}

@@ -8,7 +8,7 @@ function Drawer({ children, isOpen, setIsOpen }) {
     }
   }
   return (
-    <main onclick ={closeDrawer}
+    <main ref={drawerRef} onClick ={closeDrawer} 
       className={ 
         " fixed overflow-hidden z-10 bg-Layoutblue bg-opacity-90 inset-0 transform ease-in-out " +
         (isOpen
