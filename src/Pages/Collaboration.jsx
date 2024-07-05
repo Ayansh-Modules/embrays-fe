@@ -3,10 +3,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CollabCompany from "../Components/CollabCompany";
-import { appData } from "../Data/AppData";
 import baseAssets from "../assets/baseAssets";
 import CollabCardModal from "../Components/CollabCardModal";
+import CollabCompany from "../Components/CollabCompany";
+import { appData } from "../Data/AppData";
 function Collaboration() {
   const data = appData.collaboration;
 
@@ -19,7 +19,6 @@ function Collaboration() {
         backgroundImage: `url(${baseAssets.collaborationBackgroundImage})`,
       }}
     >
-     
       <div
         className="tile text-6xl max-md:text-4xl py-20  font-semibold text-Layoutblue  flex-row flex items-center justify-center text-center"
         style={{ textShadow: "white 5px 5px" }}
@@ -54,7 +53,6 @@ function Collaboration() {
             },
           }}
         >
-           
           {collabCompanyParam.map((content, index) => {
             return (
               <SwiperSlide key={index}>
@@ -80,7 +78,7 @@ function Collaboration() {
           </div>
         </Swiper>
       </div>
-      {/* <CollabCardModal /> */}
+      <CollabCardModal />
     </div>
   );
 }
