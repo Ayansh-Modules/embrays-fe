@@ -10,6 +10,7 @@ function CollabCardModal({ onClose, data }) {
     }
   };
   return (
+    //
     <div
       ref={modalRef}
       onClick={closeModal}
