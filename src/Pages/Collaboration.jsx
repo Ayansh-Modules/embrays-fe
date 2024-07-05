@@ -14,7 +14,7 @@ function Collaboration() {
   const collabCompanyParam = getCollabData();
   return (
     <div
-      className="h-[90vh] w-[100vw] bg-no-repeat bg-cover flex-col flex items-center justify-center "
+      className=" w-[100vw] bg-no-repeat bg-cover flex-col flex items-center justify-center "
       style={{
         backgroundImage: `url(${baseAssets.collaborationBackgroundImage})`,
       }}
@@ -25,14 +25,14 @@ function Collaboration() {
       >
         {data.title}
       </div>
-      <div className="cards h-[80vh] w-[100vw]">
+      <div className="cards h-[80vh]  w-[100vw]">
         <Swiper
           className="sample-slider"
           modules={[Navigation, Autoplay]}
           loop={true}
           autoplay={{ delay: 3000 }}
           slidesPerView={2.8}
-          speed={4000}
+          speed={2000}
           spaceBetween={80}
           navigation={true}
           onSwiper={(swiper) => {
