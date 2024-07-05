@@ -32,7 +32,7 @@ function Collaboration() {
           loop={true}
           autoplay={{ delay: 3000 }}
           slidesPerView={2.8}
-          speed={4000}
+          speed={3000}
           spaceBetween={80}
           navigation={true}
           onSwiper={(swiper) => {

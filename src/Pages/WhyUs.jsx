@@ -6,9 +6,9 @@ function WhyUs() {
   const TestimonialBoxParams = getTestimonials();
 
   return (
-    <div className=" w-full bg-Layoutblack flex  max-md:flex-col max-md:justify-start justify-between px-[10vw] pb-20">
+    <div className=" w-full bg-Layoutblack flex  max-md:flex-col max-md:justify-center justify-between pb-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-0">
       <div
-        className="whyus pt-[5rem] max-md:w-full max-md:flex max-md:items-center "
+        className="whyus pt-[5rem] max-md:w-full max-md:flex max-md:items-center max-md:pl-[10vw]"
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-easing="ease"
@@ -29,19 +29,19 @@ function WhyUs() {
           <span>and experiences</span>
         </p>
       </div>
-      <div className="sectiongrid flex-col">
-        <div className="gridsrowone  flex justify-evenly max-lg:flex-col  max-md:w-[100vw]  ">
+      <div className="sectiongrid flex-col max-md:w-[100vw] ">
+        <div className="gridsrowone  flex justify-evenly max-lg:flex-col max-md:items-center">
           <TestimonialBox data={TestimonialBoxParams[0]} />
           <div className="w-12"></div>
           <TestimonialBox data={TestimonialBoxParams[1]} />
         </div>
-        <div className="gridsrowtwo  flex justify-evenly max-lg:flex-col max-md:w-[100vw] ">
+        <div className="gridsrowtwo  flex justify-evenly max-lg:flex-col max-md:items-center ">
           <TestimonialBox data={TestimonialBoxParams[2]} />
           <div className="w-12"></div>
 
           <TestimonialBox data={TestimonialBoxParams[3]} />
         </div>
-        <div className="gridsrowthree  flex justify-evenly max-lg:flex-col max-md:w-[100vw] ">
+        <div className="gridsrowthree  flex justify-evenly max-lg:flex-col max-md:items-center ">
           <TestimonialBox data={TestimonialBoxParams[4]} />
           <div className="w-12"></div>
 

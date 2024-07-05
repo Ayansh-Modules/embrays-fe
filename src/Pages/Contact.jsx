@@ -9,11 +9,11 @@ function Contact() {
   return (
     <div
       id="contactus"
-      className="px-[10vw] flex items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[96vw] pb-20 "
+      className="flex items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[90vw] py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-10"
       data-aos="fade-up"
     >
       <div
-        className="contactDetails"
+        className="contactDetails "
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-easing="ease"

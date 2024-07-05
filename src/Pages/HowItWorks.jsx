@@ -7,7 +7,7 @@ function HowItWorks() {
   return (
     <div
       id="howitworks"
-      className=" w-[100vw] bg-Layoutblue flex-col flex items-center justify-center py-[10vh]"
+      className="  bg-Layoutblue flex-col flex items-center justify-center py-[10vh]"
     >
       <div
         className="title max-md:text-4xl text-6xl py-[10px] font-semibold flex-col flex items-center justify-center text-Layoutneon "
@@ -15,7 +15,7 @@ function HowItWorks() {
       >
         {data.title}
       </div>
-      <div className="content my-[3rem]  flex-row max-md:flex-col flex items-center justify-between  w-[100vw] ">
+      <div className="content my-[3rem]  flex-row max-md:flex-col flex items-center justify-between  w-[100vw] lg:px-[10vw] max-lg:px-[5vw] max-md:px-0">
         <div className="flex items-center justify-center ">
           <div
             className="rocketgif rounded-full h-[23rem] w-[23rem] bg-Layoutring felx flex items-center justify-center p-[10px] 
