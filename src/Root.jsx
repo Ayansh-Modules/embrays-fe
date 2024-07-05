@@ -10,14 +10,14 @@ import WhyUs from "./Pages/WhyUs";
 function Root() {
   return (
     <div>
-      <AboutUs />
+      {/* <AboutUs />
       <Services />
       <HowItWorks />
-      <WhyUs />
+      <WhyUs /> */}
       <Collaboration />
-      <ClientReview />
+      {/* <ClientReview />
       <Partnership />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 }
