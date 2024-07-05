@@ -22,8 +22,8 @@ function App() {
      <Routes>
      <Route path="/" element={<Root/>} ></Route>
      </Routes>
+     {/* <Route path="/termsandcondition" element={<TermsAndCondition />}></Route> */}
      <Footer />
-     <Route path="/termsandcondition" element={<TermsAndCondition />}></Route>
      </BrowserRouter>
       {/*  */}
     </>
