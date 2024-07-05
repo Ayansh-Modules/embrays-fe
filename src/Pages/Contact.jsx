@@ -67,7 +67,7 @@ function Contact() {
           <input
             type="text"
             id="default-input"
-            className="mb-[10px] bg-black border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block max-md:w-[80vw] w-[35vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="mb-[10px] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block max-md:w-[80vw] w-[35vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
         <div className="Mail ">
@@ -80,7 +80,7 @@ function Contact() {
           <input
             type="text"
             id="default-input"
-            className="bg-black mb-[10px] border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[35vw] max-md:w-[80vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-black mb-[10px] border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[35vw] max-md:w-[80vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
         <div className="Message ">
@@ -93,7 +93,7 @@ function Contact() {
           <textarea
             id="message"
             rows="4"
-            className="mb-[10px] w-[35vw] max-md:w-[80vw] bg-black border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="mb-[10px] w-[35vw] max-md:w-[80vw] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           ></textarea>
         </div>
         <button

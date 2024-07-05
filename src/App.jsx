@@ -1,5 +1,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -22,16 +24,22 @@ function App() {
 
   return (
     <>
-      {/* <Header /> */}
-      {/* <AboutUs /> */}
-      {/* <Services /> */}
-      <HowItWorks />
-      {/* <WhyUs /> */}
-      {/* <Collaboration /> */}
-      {/* <ClientReview /> */}
-      {/* <Partnership /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+     {/* <BrowserRouter>
+     <Routes>
+     <Route path="/" element={}></Route>
+     </Routes>
+     </BrowserRouter> */}
+      <Header />
+      
+      <AboutUs />
+     <Services />
+      {/* <HowItWorks /> */}
+      <WhyUs />
+      <Collaboration />
+      <ClientReview />
+      <Partnership />
+      <Contact />
+      <Footer />
       {/* <TermsAndCondition /> */}
     </>
   );

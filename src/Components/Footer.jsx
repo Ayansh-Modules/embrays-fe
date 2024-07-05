@@ -23,24 +23,24 @@ function Footer() {
         </div>
         <div className="pageLink  flex-row flex items-center  justify-evenly   max-md:w-full ">
           <div className="flex  max-sm:flex-col max-md:flex-col  max-md:w-[50vw] ">
-            <div
+            <a
               href="#aboutus"
               className="home text-white text-sm ]  hover:text-Layoutneon pr-[20px]"
             >
               HOME
-            </div>
+            </a>
             <div className="portfolio text-white text-sm ] hover:text-Layoutneon pr-[20px]">
               PORTFOLIO
             </div>
           </div>
 
           <div className="flex  max-sm:flex-col max-md:flex-col  max-md:w-[50vw] ">
-            <div
+            <a
               href="#contactus"
               className="contact text-white text-sm ] hover:text-Layoutneon pr-[20px]"
             >
               CONTACT
-            </div>
+            </a>
             <div className="t&c text-white text-sm hover:text-Layoutneon text-start pr-[20px] max-md:p-[0]">
               TERMS & CONDITIONS
             </div>
