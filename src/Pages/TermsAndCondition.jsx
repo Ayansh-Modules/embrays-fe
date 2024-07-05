@@ -2,7 +2,7 @@ import React from "react";
 import termsAndCondition from "../Data/Terms&Condition";
 function TermsAndCondition() {
   return (
-    <div className="h-[200vh] w-full ">
+    <div className=" w-full ">
       <div className="title text-4xl font-semibold px-[10vw] mt-[50px] max-md:text-2xl">
         {termsAndCondition.title}
       </div>
@@ -19,7 +19,7 @@ function TermsAndCondition() {
             );
           }
         })}
-        <div className="subtitleTwelve m-[5vh]">
+        <div className="subtitleTwelve ">
           <div className="subtitle font-semibold text-lg">12. Contact Us</div>
           <div className="testimonial text-base">
             If you have any questions or concerns about these Terms and
@@ -29,7 +29,7 @@ function TermsAndCondition() {
               className="text-Layoutblue"
             >
               info@embraystechnologies.com
-            </span>
+            </span> <br />
             By accessing or using our services, you acknowledge that you have
             read, understood, and agree to be bound by these Terms and
             Conditions.

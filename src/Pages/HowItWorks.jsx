@@ -12,10 +12,14 @@ function HowItWorks() {
       <div
         className="title max-md:text-4xl text-6xl py-[10px] font-semibold flex-col flex items-center justify-center text-Layoutneon "
         style={{ textShadow: "gray -5px -5px" }}
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="ease"
+        data-aos-duration="1000"
       >
         {data.title}
       </div>
-      <div className="content my-[3rem]  flex-row max-md:flex-col flex items-center justify-between  w-[100vw] lg:px-[10vw] max-lg:px-[5vw] max-md:px-0">
+      <div className="content my-[3rem]  flex-row max-lg:flex-col flex items-center justify-between  w-[100vw] lg:px-[10vw] max-lg:px-[5vw] max-md:px-0">
         <div className="flex items-center justify-center ">
           <div
             className="rocketgif rounded-full h-[23rem] w-[23rem] bg-Layoutring felx flex items-center justify-center p-[10px] 
@@ -30,16 +34,19 @@ function HowItWorks() {
               "
             />
           </div>
-          <img
+          {/* <img
             src={baseAssets.ring}
             className="absolute left-[25rem] h-[40rem] max-md:hidden"
-          />
+          /> */}
         </div>
 
-        <div className="max-md:pt-[20vw]">
+        <div className="max-md:pt-[20vw]"  >
           {content.map((content, index) => {
             return (
-              <div className="flex mb-10" key={index}>
+              <div className="flex mb-10" key={index} data-aos="fade-left"
+              data-aos-offset="200"
+              data-aos-easing="ease"
+              data-aos-duration="1000">
                 <div className="flex">
                   <div className="point one mr-6 text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">
                     {index + 1}

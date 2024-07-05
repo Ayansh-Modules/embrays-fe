@@ -10,6 +10,7 @@ function Services() {
     <div
       id="services"
       className="flex-col flex items-center justify-center  w-[100vw] pt-[10rem] max-md:pt-[10vh] pb-20 "
+    
     >
       <div
         className="title flex-col items-center justify-center pb-10 max-md:pr-5"
