@@ -37,7 +37,7 @@ function ServiceBox(props) {
         <img
           src={img}
           className={` object-cover h-[500px] w-[570px] absolute z-[0] ${
-            id % 2 == 0 ? "bottom-40 max-md:bottom-0" : "top-60 max-md:top-0"
+            id % 2 == 0 ? "bottom-20 max-md:bottom-0" : "top-60 max-md:top-0"
           }`}
         />
       </div>

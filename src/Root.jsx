@@ -12,12 +12,12 @@ function Root() {
     <div>
       <AboutUs />
       <Services />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
       <WhyUs />
       <Collaboration />
       <ClientReview />
       <Partnership />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 }

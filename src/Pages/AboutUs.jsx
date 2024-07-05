@@ -10,7 +10,7 @@ function AboutUs() {
   return (
     <div
       id="aboutus"
-      className="about bg-Layoutblue relative  w-[100vw] pt-28 h-[100vh] flex flex-col items-start overflow-hidden "
+      className="about bg-Layoutblue relative  w-[100vw] pt-28  flex flex-col items-start overflow-hidden "
     >
       <div className="flex-row max-md:flex-col flex overflow-x-hidden overflow-y-hidden justify-between pl-[10vw] pr-[0vw]">
         <div
@@ -46,7 +46,7 @@ function AboutUs() {
           </div>
         </div>
         <div
-          className="max-md:pr-[80px] max-md:pt-[80px]"
+          className=""
           data-aos="fade-left"
           data-aos-offset="200"
           data-aos-easing="ease"
@@ -56,7 +56,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="lowerbanner  absolute z-2  bg-Layoutblue pt-[10px] bottom-0">
+      <div className="lowerbanner  absolute z-2  bg-Layoutblue  bottom-0">
         <img src={baseAssets.lower_banner_desktop} className="w-[100vw] " />
       </div>
       {open == true && (
