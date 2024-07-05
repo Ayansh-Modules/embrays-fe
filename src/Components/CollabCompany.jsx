@@ -1,5 +1,4 @@
 import React from "react";
-
 function CollabCompany(props) {
   const company = props.data.company;
   const testimonial = props.data.testimonial;
@@ -35,6 +34,7 @@ function CollabCompany(props) {
           <p className="text-xs">{testimonial}</p>
         </div>
       </div>
+     
     </div>
     </>
   );
