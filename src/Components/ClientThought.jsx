@@ -3,11 +3,11 @@ function ClientThought(props) {
   const data = props.data;
   return (
     <div>
-      <div className="block max-w-[26rem] max-md:w-[20rem] h-[15rem] max-md:text-xs overflow-x-clip p-5 border-2  rounded-2xl border-black hover:bg-gray-100 bg-white ">
-        <h5 className="mb-5 text-lg font-semibold tracking-tight text-black ">
+      <div className="max-md:ml-[12vw] block min-w-[250px] w-[26vw] max-md:w-[20rem] h-[16rem] max-md:text-xs overflow-x-clip p-5 border-2  rounded-2xl border-black hover:bg-gray-100 bg-white ">
+        <h5 className="mb-[0.7vh] text-lg font-semibold tracking-tight text-black ">
           {data.company}
         </h5>
-        <p className="font-normal  text-justify text-sm max-md:text-xs">
+        <p className="font-normal  text-start text-sm max-md:text-xs lg:text-sm md:text-xs">
           {data.review}
         </p>
       </div>

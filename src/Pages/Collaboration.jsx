@@ -1,24 +1,26 @@
+import { useRef } from "react";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
+import "swiper/css/navigation";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CollabCompany from "../Components/CollabCompany";
 import { appData } from "../Data/AppData";
 import baseAssets from "../assets/baseAssets";
 
-// import { IoRemoveOutline } from "react-icons/io5";
 function Collaboration() {
   const data = appData.collaboration;
 
+  const swiperRef = useRef();
   const collabCompanyParam = getCollabData();
   return (
     <div
-      className="h-[110vh] w-full bg-no-repeat bg-cover flex-col flex items-center justify-center "
+      className="h-[90vh] w-[100vw] bg-no-repeat bg-cover flex-col flex items-center justify-center "
       style={{
         backgroundImage: `url(${baseAssets.collaborationBackgroundImage})`,
       }}
     >
       <div
-        className="tile text-6xl font-semibold text-Layoutblue m-[5rem] flex-row flex items-center justify-center"
+        className="tile text-6xl max-md:text-4xl py-20  font-semibold text-Layoutblue  flex-row flex items-center justify-center text-center"
         style={{ textShadow: "white 5px 5px" }}
       >
         {data.title}
@@ -26,12 +28,30 @@ function Collaboration() {
       <div className="cards h-[80vh] w-[100vw]">
         <Swiper
           className="sample-slider"
-          modules={[Autoplay]}
+          modules={[Navigation, Autoplay]}
           loop={true}
-          autoplay={{ delay: 0 }}
-          slidesPerView={2.5}
-          speed={2000}
+          autoplay={{ delay: 3000 }}
+          slidesPerView={2.8}
+          speed={4000}
           spaceBetween={80}
+          navigation={true}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 1.5,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 2.5,
+            },
+          }}
         >
           {collabCompanyParam.map((content, index) => {
             return (
@@ -40,6 +60,22 @@ function Collaboration() {
               </SwiperSlide>
             );
           })}
+          <div
+            className="swiper-button-next h-16 w-16 bg-no-repeat bg-cover bg-center cursor-pointer bg-gray-400 backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
+            onClick={() => {
+              swiperRef.current.slideNext();
+            }}
+          >
+            <img src={baseAssets.arrowRight} alt="next" className="h-8" />
+          </div>
+          <div
+            className="swiper-button-prev h-16 w-16 bg-no-repeat bg-cover bg-center cursor-pointer bg-gray-400 backdrop-filter backdrop-blur-md bg-opacity-20 rounded-full"
+            onClick={() => {
+              swiperRef.current.slidePrev();
+            }}
+          >
+            <img src={baseAssets.arrowLeft} alt="prev" className="h-8" />
+          </div>
         </Swiper>
       </div>
     </div>

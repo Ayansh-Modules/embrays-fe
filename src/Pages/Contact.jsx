@@ -8,12 +8,12 @@ function Contact() {
   const contact = appData.contact;
   return (
     <div
-    id="contactus"
-      className=" flex items-center justify-evenly max-md:flex-col max-sm:flex-col w-full "
+      id="contactus"
+      className="px-[10vw] flex items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-full pb-20 "
       data-aos="fade-up"
     >
       <div
-        className="contactDetails   "
+        className="contactDetails"
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-easing="ease"
@@ -33,23 +33,25 @@ function Contact() {
             <div className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
               <TbMailFilled color="white" className="h-[25px] w-[25px]  " />
             </div>
-            <a className="mt-[5vh] ml-[5px]  text-base font-medium" href={urls.mailto}>
-              : {contact.mail}
+            <a
+              className="mt-[5vh]  pl-2 text-base font-medium"
+              href={urls.mailto}
+            >
+              {contact.mail}
             </a>
           </div>
           <div className="flex-row flex items-center font-medium pb-5">
             <div className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
               <BiSolidPhoneCall color="white" className="h-[25px] w-[25px]  " />
             </div>
-            <a className="mt-[5vh] ml-[5px] text-base" href={urls.cellto}>
-            
-              : {contact.cell}
+            <a className="mt-[5vh] pl-2 text-base" href={urls.cellto}>
+              {contact.cell}
             </a>
           </div>
         </div>
       </div>
-      <div 
-        className="form p-[15px] "
+      <div
+        className="form "
         data-aos="fade-left"
         data-aos-offset="200"
         data-aos-easing="ease"
@@ -57,8 +59,8 @@ function Contact() {
       >
         <div className="Name ">
           <label
-            for="default-input"
-            class="block mb-[10px] mt-[10px] text-sm font-medium  text-black"
+            htmlFor="default-input"
+            className="block mb-[10px] mt-[10px] text-sm font-medium  text-black"
           >
             Your Name
           </label>
@@ -70,7 +72,7 @@ function Contact() {
         </div>
         <div className="Mail ">
           <label
-            for="default-input"
+            htmlFor="default-input"
             className="block mb-[10px] text-sm font-medium  text-black"
           >
             Your Mail id
@@ -83,7 +85,7 @@ function Contact() {
         </div>
         <div className="Message ">
           <label
-            for="message"
+            htmlFor="message"
             className="mb-[10px] block  text-sm font-medium  text-black"
           >
             Message for Us

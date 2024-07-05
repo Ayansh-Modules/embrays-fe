@@ -11,11 +11,13 @@ function Services() {
       id="services"
       className="flex-col flex items-center justify-center  w-[100vw] pt-[10rem] max-md:pt-[10vh] pb-20 "
     >
-      <div className="title flex-col items-center justify-center pb-10"
-      data-aos="fade-up"
-      data-aos-offset="200"
-      data-aos-easing="ease"
-      data-aos-duration="1000">
+      <div
+        className="title flex-col items-center justify-center pb-10 max-md:pr-5"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="ease"
+        data-aos-duration="1000"
+      >
         <div className="flex flex-row items-baseline justify-center">
           <p className="text-6xl max-md:text-3xl font-semibold flex ">
             MASTERY

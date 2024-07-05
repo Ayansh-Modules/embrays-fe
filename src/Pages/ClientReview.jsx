@@ -10,7 +10,7 @@ function ClientReview() {
 
   return (
     <div
-      className="clientReview flex-col flex items-center justify-center w-full overflow-x-hidden "
+      className="clientReview flex-col flex items-center justify-center w-full overflow-x-hidden pb-28"
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-easing="ease"
@@ -22,29 +22,44 @@ function ClientReview() {
           data-aos="fade-up"
         >
           {data.title}
-          <span className="company text-Layoutpink font-normal">{compName} </span>
+          <span className="company text-Layoutpink font-normal">
+            {compName}{" "}
+          </span>
         </div>
         <h6 className="  subtitle text-gray-900 dark:text-black text-center  max-md:text-sm">
           {data.subTitle}
         </h6>
       </div>
-      {/* <div
-        className="pattern "
+      <div
+        className="pattern  "
         data-aos="zoom-in"
         data-aos-offset="200"
         data-aos-easing="ease"
         data-aos-duration="1000"
-      ></div>  */}
+      ></div>
 
-      <div className="w-[95vw] pt-[3rem] pb-[3rem]">
+      <div className="w-full pt-[3rem] pb-[3rem] ">
         <Swiper
-          className="sample-slider"
           modules={[Autoplay]}
           loop={true}
           autoplay={{ delay: 0 }}
-          slidesPerView={1}
           speed={2000}
-          spaceBetween={30}
+          centeredSlides={true}
+          centeredSlidesBounds={true}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 3.5,
+            },
+          }}
         >
           {data.allReviews.map((review, index) => {
             return (
