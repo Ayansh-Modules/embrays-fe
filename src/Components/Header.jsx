@@ -24,7 +24,7 @@ function Header() {
     <>
       <div className="navbar py-[20px]  w-[100%] bg-Layoutblue flex-row flex items-center justify-between font-semibold sticky top-0 z-10 px-[10vw]">
         <div className="max-md:text-xl flex items-center justify-between text-3xl font-semibold text-white max-lg:text-base">
-          {company}
+          <a href="/"> {company}</a>
         </div>
         <div className=" max-md:visible md:hidden ">
           <IoMenu
@@ -52,17 +52,19 @@ function Header() {
           {PortfolioButton()}
         </div>
       </div>
-      <Drawer isOpen={isOpen} setIsOpen={setIsOpen}  >
-        {headerOptions.map((option, index) => (
-          <a
-            key={index}
-            title={option.title}
-            href={option.href}
-            className="about text-sm font-semibold text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center"
-          >
-            {option.title}
-          </a>
-        ))}
+      <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+        <div className="bg-Layouttrans  rounded-xl mb-10 mx-10">
+          {headerOptions.map((option, index) => (
+            <a
+              key={index}
+              title={option.title}
+              href={option.href}
+              className="about text-sm font-semibold text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center"
+            >
+              {option.title}
+            </a>
+          ))}
+        </div>
         <div className="flex items-center justify-center w-full">
           {PortfolioButton()}
         </div>
@@ -78,7 +80,7 @@ function PortfolioButton() {
         type="button"
         className="h-[3rem] w-[8rem] text-sm focus:ring-2  focus:ring-white  text-black bg-Layoutneon hover:bg-white  rounded-xl  flex items-center justify-center "
       >
-        <IoDownloadOutline style={{ height: "25px", width: "25px" }} />{" "}
+        <IoDownloadOutline className="h-[25px] w-[25px] mr-2" />
         <span> Portfolio</span>
       </button>
     </div>
