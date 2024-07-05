@@ -22,16 +22,16 @@ function App() {
 
   return (
     <>
-      <Header />
-      <AboutUs />
-      <Services />
+      {/* <Header /> */}
+      {/* <AboutUs /> */}
+      {/* <Services /> */}
       <HowItWorks />
-      <WhyUs />
-      <Collaboration />
-      <ClientReview />
-      <Partnership />
-      <Contact />
-      <Footer />
+      {/* <WhyUs /> */}
+      {/* <Collaboration /> */}
+      {/* <ClientReview /> */}
+      {/* <Partnership /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
       {/* <TermsAndCondition /> */}
     </>
   );
