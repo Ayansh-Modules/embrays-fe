@@ -13,7 +13,7 @@ function TestimonialBox(props) {
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="icon p-[30px]">
-        <img src={image} />
+        <img src={image} alt="whyUsBoxbg"/>
       </div>
       <div className="title pl-[20px] text-2xl font-semibold">{title}</div>
       <div className="testimonial text-justify ml-[10px] mr-[10px] p-[10px] text-sm">

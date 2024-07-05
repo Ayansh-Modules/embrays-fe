@@ -34,13 +34,7 @@ function AboutUs() {
             >
               <span className="flex-row flex items-center justify-center text-sm">
                 {"Let's Connect"}
-                <IoIosArrowRoundForward
-                  style={{
-                    height: "27px",
-                    width: "27px",
-                    marginLeft: "-10px",
-                  }}
-                />
+                <IoIosArrowRoundForward className="h-[27px] w-[27px] ml-[-10px]" />
               </span>
             </button>
           </div>
@@ -52,12 +46,16 @@ function AboutUs() {
           data-aos-easing="ease"
           data-aos-duration="1000"
         >
-          <img src={baseAssets.rocket} className="" />
+          <img src={baseAssets.rocket} alt="rocket" />
         </div>
       </div>
 
       <div className="lowerbanner  absolute z-2  bg-Layoutblue  bottom-0">
-        <img src={baseAssets.lower_banner_desktop} className="w-[100vw] " />
+        <img
+          src={baseAssets.lower_banner_desktop}
+          alt="lowerbanner"
+          className="w-[100vw] "
+        />
       </div>
       {open == true && (
         <LetsConnect

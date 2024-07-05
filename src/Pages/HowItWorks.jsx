@@ -28,12 +28,17 @@ function HowItWorks() {
             style={{ boxShadow: "0rem 0 10rem 6rem rgba(175, 69, 201, 0.88)" }}
           >
             <img
+              alt="rocketgif"
               src={baseAssets.rocketGif}
               className="rounded-full h-[20rem] w-[20rem] border-[3px] border-Layoutyellow 
               max-md:h-[15rem] max-md:w-[15rem]
               "
             />
           </div>
+          {/* <img alt="ring"
+            src={baseAssets.ring}
+            className="absolute left-[25rem] h-[40rem] max-md:hidden"
+          /> */}
         </div>
 
         <div className="max-md:pt-[20vw]">

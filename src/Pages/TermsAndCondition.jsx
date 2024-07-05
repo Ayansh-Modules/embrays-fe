@@ -27,9 +27,12 @@ function TermsAndCondition() {
             <span
               href="mailto:info@embraystechnologies.com?subject=Hello%20Embrays%20Technologies&body=Description"
               className="text-Layoutblue"
+              aria-label="email"
+              rel="email"
             >
               info@embraystechnologies.com
-            </span> <br />
+            </span>
+            <br />
             By accessing or using our services, you acknowledge that you have
             read, understood, and agree to be bound by these Terms and
             Conditions.

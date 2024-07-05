@@ -14,12 +14,22 @@ function Footer() {
       <div className=" flex  justify-between w-full  max-md:flex-col">
         <div className="socialMedia flex-row flex items-center justify-start max-md:pb-8">
           <div className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center mr-[2vw]">
-            <a href={linkedin} target="_blank" rel="linkedin">
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="linkedin"
+              aria-label="linkedin"
+            >
               <TfiLinkedin color="white" />
             </a>
           </div>
           <div className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center ">
-            <a href={instagram} target="_blank" rel="instagram">
+            <a
+              href={instagram}
+              target="_blank"
+              rel="instagram"
+              aria-label="instagram"
+            >
               <GrInstagram color="white" />
             </a>
           </div>
