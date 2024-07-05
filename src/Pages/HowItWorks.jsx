@@ -1,5 +1,4 @@
 import React from "react";
-import { CgBorderStyleDotted } from "react-icons/cg";
 import { appData } from "../Data/AppData";
 import baseAssets from "../assets/baseAssets";
 function HowItWorks() {
@@ -8,7 +7,7 @@ function HowItWorks() {
   return (
     <div
       id="howitworks"
-      className=" w-[100vw] bg-Layoutblue flex-col flex items-center justify-center"
+      className=" w-[100vw] bg-Layoutblue flex-col flex items-center justify-center py-[10vh]"
     >
       <div
         className="title max-md:text-4xl text-6xl py-[10px] font-semibold flex-col flex items-center justify-center text-Layoutneon "
@@ -16,7 +15,7 @@ function HowItWorks() {
       >
         {data.title}
       </div>
-      <div className="content my-[3rem]  flex-row max-md:flex-col flex items-center justify-evenly  ">
+      <div className="content my-[3rem]  flex-row max-md:flex-col flex items-center justify-between  w-[100vw] ">
         <div className="flex items-center justify-center ">
           <div
             className="rocketgif rounded-full h-[23rem] w-[23rem] bg-Layoutring felx flex items-center justify-center p-[10px] 
@@ -31,33 +30,33 @@ function HowItWorks() {
               "
             />
           </div>
-          {/* <img
+          <img
             src={baseAssets.ring}
-            className="absolute left-[25rem] h-[40rem]"
-          /> */}
+            className="absolute left-[25rem] h-[40rem] max-md:hidden"
+          />
         </div>
-       
-        {content.map((content, index) => {
-         
-           return ( <div className=" flex">
-              <div className="flex">
-                <div className="point one text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">
-                {index+1}
-                </div>
-              </div>
-              <CgBorderStyleDotted color="white" className="h-10 w-24" />
 
-              <div className="one">
-                <div className="title text-Layoutyellow font-semibold">
-                  {content.title}
+        <div className="max-md:pt-[20vw]">
+          {content.map((content, index) => {
+            return (
+              <div className="flex mb-10" key={index}>
+                <div className="flex">
+                  <div className="point one mr-6 text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">
+                    {index + 1}
+                  </div>
                 </div>
-                <div className="testimonial text-white text-sm w-[40vw]">
-                  {content.testimonial}
+                <div className="one">
+                  <div className="title text-Layoutyellow font-semibold text-3xl mb-2">
+                    {content.title}
+                  </div>
+                  <div className="testimonial text-white text-base w-[40vw] max-md:w-[80vw]">
+                    {content.testimonial}
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

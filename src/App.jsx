@@ -1,14 +1,13 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Root from "./Root";
 // import Testing from "./Pages/Testing.jsx";
-
 import TermsAndCondition from "./Pages/TermsAndCondition";
+
 function App() {
   useEffect(() => {
     AOS.init();
@@ -17,15 +16,15 @@ function App() {
 
   return (
     <>
-     <BrowserRouter>
-     <Header />  
-     <Routes>
-     <Route path="/" element={<Root/>} ></Route>
-     </Routes>
-     {/* <Route path="/termsandcondition" element={<TermsAndCondition />}></Route> */}
-     <Footer />
-     </BrowserRouter>
-      {/*  */}
+      <Header />
+      <Routes>
+        <Route path="/" element={<Root />}></Route>
+        <Route
+          path="/terms-and-conditions"
+          element={<TermsAndCondition />}
+        ></Route>
+      </Routes>
+      <Footer />
     </>
   );
 }

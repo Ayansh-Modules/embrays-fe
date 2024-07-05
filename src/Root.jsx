@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Partnership from "./Components/Partnership";
 import AboutUs from "./Pages/AboutUs";
 import ClientReview from "./Pages/ClientReview";
@@ -10,17 +10,16 @@ import WhyUs from "./Pages/WhyUs";
 function Root() {
   return (
     <div>
-   
       <AboutUs />
-     <Services />
-      {/* <HowItWorks /> */}
+      <Services />
+      <HowItWorks />
       <WhyUs />
       <Collaboration />
       <ClientReview />
       <Partnership />
       <Contact />
     </div>
-  )
+  );
 }
 
-export default Root
+export default Root;

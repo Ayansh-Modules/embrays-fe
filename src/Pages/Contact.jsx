@@ -9,7 +9,7 @@ function Contact() {
   return (
     <div
       id="contactus"
-      className="px-[10vw] flex items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-full pb-20 "
+      className="px-[10vw] flex items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[96vw] pb-20 "
       data-aos="fade-up"
     >
       <div
@@ -51,23 +51,23 @@ function Contact() {
         </div>
       </div>
       <div
-        className="form "
+        className="form"
         data-aos="fade-left"
         data-aos-offset="200"
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <div className="Name ">
+        <div className="Name">
           <label
             htmlFor="default-input"
-            className="block mb-[10px] mt-[10px] text-sm font-medium  text-black"
+            className="block my-[10px] text-sm font-medium  text-black"
           >
             Your Name
           </label>
           <input
             type="text"
             id="default-input"
-            className="mb-[10px] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block max-md:w-[80vw] w-[35vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="mb-[10px] max-md:w-[80vw] w-[35vw] p-2.5 bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
         <div className="Mail ">
@@ -96,6 +96,7 @@ function Contact() {
             className="mb-[10px] w-[35vw] max-md:w-[80vw] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           ></textarea>
         </div>
+
         <button
           type="button"
           className="mb-[10px] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2  max-md:w-[80vw] w-[35vw]"
