@@ -47,7 +47,7 @@ function AboutUs() {
         </div>
         <div
           className=""
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
           data-aos-duration="1000"

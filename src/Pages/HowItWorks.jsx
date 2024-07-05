@@ -34,19 +34,19 @@ function HowItWorks() {
               "
             />
           </div>
-          {/* <img
-            src={baseAssets.ring}
-            className="absolute left-[25rem] h-[40rem] max-md:hidden"
-          /> */}
         </div>
 
-        <div className="max-md:pt-[20vw]"  >
+        <div className="max-md:pt-[20vw]">
           {content.map((content, index) => {
             return (
-              <div className="flex mb-10" key={index} data-aos="fade-left"
-              data-aos-offset="200"
-              data-aos-easing="ease"
-              data-aos-duration="1000">
+              <div
+                className="flex mb-10"
+                key={index}
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-easing="ease"
+                data-aos-duration="1000"
+              >
                 <div className="flex">
                   <div className="point one mr-6 text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">
                     {index + 1}

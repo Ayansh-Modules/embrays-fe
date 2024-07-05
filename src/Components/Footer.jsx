@@ -29,19 +29,19 @@ function Footer() {
           <div className="flex  max-sm:flex-col max-md:flex-col  max-md:w-[50vw] ">
             <a
               href="/"
-              className="home text-white text-sm ]  hover:text-Layoutneon pr-[20px]"
+              className="home text-white text-sm  hover:text-Layoutneon pr-[20px]"
             >
               HOME
             </a>
-            <div className="portfolio text-white text-sm ] hover:text-Layoutneon pr-[20px]">
+            <div className="portfolio text-white text-sm  hover:text-Layoutneon pr-[20px]">
               PORTFOLIO
             </div>
           </div>
 
           <div className="flex  max-sm:flex-col max-md:flex-col  max-md:w-[50vw] ">
             <a
-              href="#contactus"
-              className="contact text-white text-sm ] hover:text-Layoutneon pr-[20px]"
+              href="/#contactus"
+              className="contact text-white text-sm  hover:text-Layoutneon pr-[20px]"
             >
               CONTACT
             </a>

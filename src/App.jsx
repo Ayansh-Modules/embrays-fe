@@ -4,11 +4,7 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import AboutUs from "./Pages/AboutUs";
-import Services from "./Pages/Services";
-import HowItWorks from "./Pages/HowItWorks";
-import Root from "./Root";
-// import Testing from "./Pages/Testing.jsx";
+import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 
 function App() {
@@ -21,11 +17,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Root />}>
-          <Route path="/#aboutus" element={<AboutUs />}></Route >
-          <Route path="/#services" element={<Services />}></Route >
-          <Route path="/#howitworks" element={<HowItWorks />}></Route >
-        </Route>
+        <Route path="/" element={<Root />}></Route>
         <Route
           path="/terms-and-conditions"
           element={<TermsAndCondition />}
