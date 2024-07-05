@@ -16,33 +16,13 @@ function Partnership() {
 
         <div className=" flex-row flex items-center justify-evenly  mt-[20px] max-md:flex-col w-full">
           <div className="flex items-center justify-evenly w-[50vw] max-md:w-full  max-md:pt-[20px]  max-md:pb-[20px]">
-            <img
-              src={baseAssets.stripe}
-              alt="stripe"
-              className="h-[60px] w-[100px] "
-            />
-            <img
-              src={baseAssets.vercel}
-              alt="vercel"
-              className="h-[30px] w-[120px] "
-            />
+            <img src={baseAssets.stripe} alt="stripe" />
+            <img src={baseAssets.vercel} alt="vercel" />
           </div>
-          <img
-            src={baseAssets.razorpay}
-            alt="razorpay"
-            className="h-[35px] w-[150px]  "
-          />
+          <img src={baseAssets.razorpay} alt="razorpay" />
           <div className="flex items-center justify-evenly w-[50vw] max-md:w-full max-md:pt-[20px]">
-            <img
-              src={baseAssets.amazon}
-              alt="amazon"
-              className="h-[60px] w-[120px]  mt-[20px] "
-            />
-            <img
-              src={baseAssets.googleCloud}
-              alt="google cloud"
-              className=" h-[40px] w-[100px] "
-            />
+            <img src={baseAssets.amazon} alt="amazon" className=" mt-[20px] " />
+            <img src={baseAssets.googleCloud} alt="google cloud" />
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
-import React from "react";
 import { GrInstagram } from "react-icons/gr";
-import { TfiLinkedin } from "react-icons/tfi"; // linkedin
+import { TfiLinkedin } from "react-icons/tfi";
 import { useNavigate } from "react-router-dom";
 import { appData } from "../Data/AppData";
 function Footer() {
@@ -15,12 +14,12 @@ function Footer() {
       <div className=" flex  justify-between w-full  max-md:flex-col">
         <div className="socialMedia flex-row flex items-center justify-start max-md:pb-8">
           <div className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center mr-[2vw]">
-            <a href={linkedin} target="_blank">
+            <a href={linkedin} target="_blank" rel="linkedin">
               <TfiLinkedin color="white" />
             </a>
           </div>
           <div className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center ">
-            <a href={instagram} target="_blank">
+            <a href={instagram} target="_blank" rel="instagram">
               <GrInstagram color="white" />
             </a>
           </div>

@@ -4,11 +4,11 @@ import lower_banner_desktop from "./images/about_us/lower_banner_desktop.svg";
 import lower_banner_mobile from "./images/about_us/lower_banner_mobile.png";
 import connect_form from "./images/lets_connect/bg_form.webp";
 // Partners
-import amazon from "./images/partners/amazon.webp";
+import amazon from "./images/partners/amazon.svg";
 import googleCloud from "./images/partners/google_cloud.svg";
-import razorpay from "./images/partners/razorpay.webp";
+import razorpay from "./images/partners/razorpay.svg";
 import stripe from "./images/partners/stripe.svg";
-import vercel from "./images/partners/vercel.webp";
+import vercel from "./images/partners/vercel.svg";
 
 //collaboration
 import collaborationBackgroundImage from "../assets/images/collaboration/bg.webp";
@@ -88,7 +88,6 @@ import whyUsCardImgThree from "../assets/images/why_us/card/three.png";
 import whyUsCardImgTwo from "../assets/images/why_us/card/two.png";
 
 //extra
-import favicon from "./icons/favicon.ico";
 //arrow-left.svg
 import arrowLeft from "./icons/arrow-left.svg";
 //arrow-right.svg
@@ -182,7 +181,6 @@ const baseAssets = {
 
   //extra
   embraystechnologyPdf: embraystechnologyPdf,
-  favicon: favicon,
   arrowLeft: arrowLeft,
   arrowRight: arrowRight,
 };

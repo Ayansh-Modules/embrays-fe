@@ -4,7 +4,6 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import baseAssets from "../assets/baseAssets";
-import CollabCardModal from "../Components/CollabCardModal";
 import CollabCompany from "../Components/CollabCompany";
 import { appData } from "../Data/AppData";
 function Collaboration() {
@@ -78,7 +77,7 @@ function Collaboration() {
           </div>
         </Swiper>
       </div>
-      <CollabCardModal />
+      {/* <CollabCardModal /> */}
     </div>
   );
 }
