@@ -5,14 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Partnership from "./Components/Partnership";
-import AboutUs from "./Pages/AboutUs";
-import ClientReview from "./Pages/ClientReview";
-import Collaboration from "./Pages/Collaboration";
-import Contact from "./Pages/Contact";
-import HowItWorks from "./Pages/HowItWorks";
-import Services from "./Pages/Services";
-import WhyUs from "./Pages/WhyUs";
+import Root from "./Root";
 // import Testing from "./Pages/Testing.jsx";
 
 // import TermsAndCondition from "./Pages/TermsAndCondition";
@@ -29,17 +22,9 @@ function App() {
      <Route path="/" element={}></Route>
      </Routes>
      </BrowserRouter> */}
-      <Header />
-      
-      <AboutUs />
-     <Services />
-      {/* <HowItWorks /> */}
-      <WhyUs />
-      <Collaboration />
-      <ClientReview />
-      <Partnership />
-      <Contact />
-      <Footer />
+     <Header />  
+     <Root />
+     <Footer />
       {/* <TermsAndCondition /> */}
     </>
   );
