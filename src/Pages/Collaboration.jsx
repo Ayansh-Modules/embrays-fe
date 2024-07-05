@@ -1,9 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import baseAssets from "../assets/baseAssets";
+import CollabCardModal from "../Components/CollabCardModal";
 import CollabCompany from "../Components/CollabCompany";
 import { appData } from "../Data/AppData";
 function Collaboration() {
@@ -11,6 +12,10 @@ function Collaboration() {
 
   const swiperRef = useRef();
   const collabCompanyParam = getCollabData();
+  const [open, setOpen] = useState(false);
+  //current index of the swiper
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <div
       className=" w-[100vw] bg-no-repeat bg-cover flex-col flex items-center justify-center "
@@ -54,7 +59,13 @@ function Collaboration() {
         >
           {collabCompanyParam.map((content, index) => {
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide
+                key={index}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setOpen(true);
+                }}
+              >
                 <CollabCompany data={content} />
               </SwiperSlide>
             );
@@ -77,7 +88,15 @@ function Collaboration() {
           </div>
         </Swiper>
       </div>
-      {/* <CollabCardModal /> */}
+
+      {open == true && (
+        <CollabCardModal
+          onClose={() => {
+            setOpen(false);
+          }}
+          data={collabCompanyParam[currentIndex]}
+        />
+      )}
     </div>
   );
 }
@@ -87,6 +106,7 @@ function getCollabData() {
   const collabData = [
     {
       company: content[0].company,
+      link: content[0].company,
       testimonial: content[0].testimonial,
       background: baseAssets.collaborationCoachpxMain,
       previewImages: [
