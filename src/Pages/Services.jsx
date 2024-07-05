@@ -9,7 +9,7 @@ function Services() {
   return (
     <div
       id="services"
-      className="flex-col flex items-center justify-center  w-[100vw]  max-md:pt-[10vh] pb-20 "
+      className="flex-col flex items-center justify-center  w-[100vw]  max-md:pt-[10vh] py-20"
     
     >
       <div
@@ -17,7 +17,7 @@ function Services() {
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-easing="ease"
-        data-aos-duration="1000"
+        data-aos-duration="2000"
       >
         <div className="flex flex-row items-baseline justify-center">
           <p className="text-6xl max-md:text-3xl font-semibold flex ">
@@ -33,13 +33,15 @@ function Services() {
         </p>
       </div>
 
-      <div className="services">
+      <div className="services pt-20">
         <div
           className="flex-row max-md:flex-col flex "
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
-          data-aos-duration="2000"
+          data-aos-duration="3000"
+          data-aos-anchor-placement="center-bottom"
+          
         >
           <ServiceBox boxData={boxParam[0]} />
 
@@ -53,7 +55,8 @@ function Services() {
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
-          data-aos-duration="2000"
+          data-aos-duration="3000"
+          data-aos-anchor-placement="center-bottom"
         >
           <ServiceBox boxData={boxParam[2]} />
 
