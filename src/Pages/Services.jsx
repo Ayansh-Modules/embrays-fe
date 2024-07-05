@@ -9,7 +9,7 @@ function Services() {
   return (
     <div
       id="services"
-      className="flex-col flex items-center justify-center  w-[100vw] pt-[10rem] max-md:pt-[10vh] pb-20 "
+      className="flex-col flex items-center justify-center  w-[100vw]  max-md:pt-[10vh] pb-20 "
     
     >
       <div
@@ -35,29 +35,29 @@ function Services() {
 
       <div className="services">
         <div
-          className="flex-row max-md:flex-col flex items-center justify-center"
+          className="flex-row max-md:flex-col flex "
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
-          data-aos-duration="1000"
+          data-aos-duration="2000"
         >
           <ServiceBox boxData={boxParam[0]} />
 
-          <div className="mt-28 ml-10 max-md:mt-10 max-md:ml-0">
+          <div className="mt-10 ml-10 max-md:mt-10 max-md:ml-0">
             <ServiceBox boxData={boxParam[1]} />
           </div>
         </div>
 
         <div
-          className="flex-row max-md:flex-col flex items-center justify-center max-md:mt-10 mt-[0]"
+          className="flex-row max-md:flex-col flex  max-md:mt-10 mt-[0]"
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
-          data-aos-duration="1000"
+          data-aos-duration="2000"
         >
           <ServiceBox boxData={boxParam[2]} />
 
-          <div className="mt-28 ml-10 max-md:mt-10 max-md:ml-0">
+          <div className="mt-10 ml-10 max-md:mt-10 max-md:ml-0">
             <ServiceBox boxData={boxParam[3]} />
           </div>
         </div>
