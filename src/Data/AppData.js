@@ -88,35 +88,45 @@ const appData = {
       content: [
         {
           company: "CoachPx",
-          testimonial: "Advanced AI simulator with life like customer interactions. Helps improve your sales, client support or any other customer facing team's skills using AI-guided learning."
+          testimonial: "Advanced AI simulator with life like customer interactions. Helps improve your sales, client support or any other customer facing team's skills using AI-guided learning.",
+          comp_url: "https://www.coachpx.com/",
         },
         {
           company: "Compliant Labs",
-          testimonial: "Compliant Labs transforms trade finance for the modern era with AI. It is Saas which can be deployed within minutes and uses ai to speed up financing and reduce manual work."
+          testimonial: "Compliant Labs transforms trade finance for the modern era with AI. It is Saas which can be deployed within minutes and uses ai to speed up financing and reduce manual work.",
+  
+          comp_url: "https://www.figma.com/design/7bYEetwxc3ztX3pgYZtkX1/Compliant-Labs?node-id=0-1",
         },
         {
           company: "TrueUser",
-          "testimonial": "TrueUser is a platform that instantly spot scammers and bots. We allow users to send verification requests to individuals to verify if the user is genuine."
+          testimonial: "TrueUser is a platform that instantly spot scammers and bots. We allow users to send verification requests to individuals to verify if the user is genuine."
+          ,comp_url: "https://www.trueuser.io/",
         },
         {
           company: "SkillMitra",
           testimonial: "SkillMithra is an online learning portal. Our goal is to help people everywhere learn new things. We make learning easy and fun."
+          ,comp_url: "https://skillmithra.com/",
+          
         },
         {
           company: "StockDaddy",
           testimonial: "StockDaddy is the ultimate application offering best stock market courses in India where users can gain an understanding of fundamental analysis of stocks. We were responsible for building the mobile application, i.e, User Interface (UI) and backend integration. The mobile application contained 40+ unique screens and over 50 integrations."
+          ,comp_url: "https://play.google.com/store/apps/details?id=com.easemytrades.stockdaddy&hl=en&gl=US",
         },
         {
           company: "Settlrs",
           "testimonial": "Settlrs is an IIMB incubated startup company, dealing in rental services company for furniture, home appliances, electronic and IT infrastructure. We indulged in providing an informational website that enhanced the reach to get better business opportunities."
+          ,comp_url: "https://www.settlrs.com/",
         },
         {
           company: "TuitionBud",
           testimonial: "TuitionBud aims to offer the most impactful courses by onboarding the best tutors from across India and sharing their knowledge and expertise with students for their holistic development. It is an edTech platform where in teacher can schedule/conduct online classes, create courses, share course material, conduct online/offline quizes, view student reports and attendance."
+          ,comp_url: "https://www.linkedin.com/company/tuitionbud/about/",
         },
         {
           company: "IamRapid",
           testimonial: "IamRapid is a one-stop solution for all your 3D printing requirements. It's a multi-vendor web application where customers can upload 3D files to be printed and receive instant quotes based on our 3D software integrations. Our proprietary algorithm allowed for automatic vendor (single/multiple) selection for a given order."
+          ,comp_url: "https://iamrapid.com/",
         }
       ]
     },

@@ -14,19 +14,19 @@ function WhyUs() {
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <p className="text-3xl text-white font-semibold mt-[1rem] max-md:text-center  sticky top-28 ">
-          <p className=" text-sm text-Layoutneon  text-start">WHY US?</p>
-          <p className="text-start ">Choose us for</p>
-          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] mt-[2vh] w-[10rem] max-md:w-[15rem] p-[5px] rounded">
+        <p className="text-3xl text-white font-semibold mt-[1rem] max-md:text-center sticky top-28 ">
+          <p className=" text-sm text-Layoutneon max-md:w-[19rem] text-start max-md:text-center">WHY US?</p>
+          <p className="text-start max-md:text-center max-md:w-[19rem]">Choose us for</p>
+          <p className="max-md:text-center bg-Layoutneon text-Layoutblack mb-[1rem] mt-[2vh] w-[10rem] max-md:w-[19rem] p-[5px] rounded">
             brand-
           </p>
-          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[14rem] max-md:w-[15rem] rounded">
+          <p className="max-md:text-center bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[14rem] max-md:w-[19rem] rounded">
             transforming
           </p>
-          <p className=" bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[12rem] max-md:w-[15rem] rounded">
+          <p className=" max-md:text-center bg-Layoutneon text-Layoutblack mb-[1rem] p-[5px] w-[12rem] max-md:w-[19rem] rounded">
             products
           </p>
-          <span>and experiences</span>
+          <span className="max-md:text-center">and experiences</span>
         </p>
       </div>
       <div className="sectiongrid flex-col max-md:w-[100vw] ">
