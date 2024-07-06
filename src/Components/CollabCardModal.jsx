@@ -15,7 +15,7 @@ function CollabCardModal({ onClose, data }) {
       onClick={closeModal}
       className="connectbox h-full z-20 bg-black w-full flex flex-col fixed inset-0 bg-opacity-60 backdrop-blur-sm justify-center items-center"
     >
-      <div className="bg-white mt-[10vh]  w-[800px] max-md:h-[400px] max-md:w-[90vw] z-[2] rounded-2xl flex flex-col items-center justify-start ">
+      <div data-aos="zoom-in" className="bg-white mt-[10vh]  w-[800px] max-md:h-[400px] max-md:w-[90vw] z-[2] rounded-2xl flex flex-col items-center justify-start ">
         <div className="collabModal flex items-end pb-6 pt-14 max-md:pt-8 max-md-pb-2 font-semibold  w-[800px] max-md:w-[90vw] justify-between max-md:px-8 px-14 lg:text-4xl md:text-3xl max-md:text-2xl">
           <div className="flex flex-row items-center justify-center">
             <h6 className="">{data.company}</h6>
@@ -26,7 +26,7 @@ function CollabCardModal({ onClose, data }) {
               }}
             />
           </div>
-          <RxCross2 onClick={onClose} className="cursor-pointer" />
+          <RxCross2 onClick={onClose} className="cursor-pointer"  />
         </div>
 
         <img

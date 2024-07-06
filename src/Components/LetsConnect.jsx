@@ -38,7 +38,7 @@ function LetsConnect({ onClose }) {
           <div className="text-black text-4xl w-full font-semibold flex justify-between ">
             <span className="p-5">{"Let's get in touch"}</span>
             <span className=" p-5">
-              <RxCross2 onClick={onClose} />
+              <RxCross2 onClick={onClose} className="cursor-pointer"/>
             </span>
           </div>
           <div className="Name px-5 py-2">
