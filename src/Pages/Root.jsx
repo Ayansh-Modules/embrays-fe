@@ -20,7 +20,7 @@ function Root() {
 
   return (
     <div>
-      {/* {openSnackbar && <Snackbar />} */}
+     
       <AboutUs />
       <Services />
       <HowItWorks />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { TbMailFilled } from "react-icons/tb";
 import { appData } from "../Data/AppData";
@@ -10,15 +10,13 @@ function Contact(props) {
 
   // open = props.OpenSnackbar
   // close = props.onClose
-  
+
   return (
- 
     <div
       id="contactus"
       className="flex  items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[90vw] py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-10"
       data-aos="fade-up"
     >
-      
       <div
         className="contactDetails "
         data-aos="fade-right"
@@ -57,64 +55,77 @@ function Contact(props) {
           </div>
         </div>
       </div>
-      <div
-        className="form"
-        data-aos="fade-up"
-        data-aos-offset="200"
-        data-aos-easing="ease"
-        data-aos-duration="1000"
+      <form
+        name="contact"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        hidden
       >
-        <div className="Name">
-          <label
-            htmlFor="default-input"
-            className="block my-[10px] text-sm font-medium  text-black"
-          >
-            Your Name
-          </label>
-          <input
-            type="text"
-            id="default-input"
-            className="mb-[10px] max-md:w-[80vw] w-[35vw] p-2.5 bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          />
-        </div>
-        <div className="Mail ">
-          <label
-            htmlFor="default-input"
-            className="block mb-[10px] text-sm font-medium  text-black"
-          >
-            Your Mail id
-          </label>
-          <input
-            type="text"
-            id="default-input"
-            className="bg-black mb-[10px] border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[35vw] max-md:w-[80vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          />
-        </div>
-        <div className="Message ">
-          <label
-            htmlFor="message"
-            className="mb-[10px] block  text-sm font-medium  text-black"
-          >
-            Message for Us
-          </label>
-          <textarea
-            id="message"
-            rows="4"
-            className="mb-[10px] w-[35vw] max-md:w-[80vw] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          ></textarea>
-        </div>
-
-        <button
-        onClick={()=>{handleClick()}}
-          type="button"
-          className="mb-[10px] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2  max-md:w-[80vw] w-[35vw]"
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+      <form action="" name="contact" method="POST">
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-easing="ease"
+          data-aos-duration="1000"
         >
-          Submit
-        </button>
-      </div>
+          <div name="name">
+            <label
+              htmlFor="default-input"
+              className="block my-[10px] text-sm font-medium  text-black"
+            >
+              Your Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              value="contact"
+              id="default-input"
+              className="mb-[10px] max-md:w-[80vw] w-[35vw] p-2.5 bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+          <div className="Mail ">
+            <label
+              htmlFor="default-input"
+              className="block mb-[10px] text-sm font-medium  text-black"
+            >
+              Your Mail id
+            </label>
+            <input
+              type="text"
+              name="email"
+              id="default-input"
+              className="bg-black mb-[10px] border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[35vw] max-md:w-[80vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+          <div className="Message ">
+            <label
+              htmlFor="message"
+              className="mb-[10px] block  text-sm font-medium  text-black"
+            >
+              Message for Us
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              className="mb-[10px] w-[35vw] max-md:w-[80vw] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            ></textarea>
+          </div>
+
+          <button
+            type="button"
+            name="submit"
+            className="mb-[10px] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2  max-md:w-[80vw] w-[35vw]"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
-   
-   
   );
 }
 
