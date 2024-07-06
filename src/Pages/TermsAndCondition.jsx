@@ -24,14 +24,14 @@ function TermsAndCondition() {
           <div className="testimonial text-base w-[80vw]">
             If you have any questions or concerns about these Terms and
             Conditions, contact 
-            <span
+            <a
               href="mailto:info@embraystechnologies.com?subject=Hello%20Embrays%20Technologies&body=Description"
               className="text-Layoutblue"
               aria-label="email"
               rel="email"
             >
               info@embraystechnologies.com
-            </span>
+            </a>
             <br />
             By accessing or using our services, you acknowledge that you have
             read, understood, and agree to be bound by these Terms and
