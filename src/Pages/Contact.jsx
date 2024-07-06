@@ -14,7 +14,7 @@ function Contact(props) {
   return (
     <div
       id="contactus"
-      className="flex  items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[90vw] py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-10"
+      className="flex overflow-hidden items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[90vw] py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-10"
       data-aos="fade-up"
     >
       <div
@@ -65,17 +65,17 @@ function Contact(props) {
         <input type="email" name="email" />
         <textarea name="message"></textarea>
       </form>
-      <form  name="contact" method="POST">
-        <div
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-easing="ease"
-          data-aos-duration="1000"
-        >
-          <div >
+      <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="ease"
+        data-aos-duration="1000"
+      >
+        <form name="contact" method="POST">
+          <div className="Name px-5 py-2">
             <label
               htmlFor="default-input"
-              className="block my-[10px] text-sm font-medium  text-black"
+              className="block mb-2 text-sm font-medium  text-black"
             >
               Your Name
             </label>
@@ -83,14 +83,13 @@ function Contact(props) {
               type="text"
               name="name"
               id="default-input"
-              required
-              className="mb-[10px] max-md:w-[80vw] w-[35vw] p-2.5 bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-black border max-md:w-[80vw] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
-          <div >
+          <div className="Mail px-5 py-2">
             <label
               htmlFor="default-input"
-              className="block mb-[10px] text-sm font-medium  text-black"
+              className="block mb-2 text-sm font-medium  text-black"
             >
               Your Mail id
             </label>
@@ -98,35 +97,33 @@ function Contact(props) {
               type="text"
               name="email"
               id="default-input"
-              required
-              className="bg-black mb-[10px] border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[35vw] max-md:w-[80vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-black border max-md:w-[80vw] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
-          <div >
+          <div className="Message px-5 py-2">
             <label
-              htmlFor="message"
-              className="mb-[10px] block  text-sm font-medium  text-black"
+              htmlFor="default-input"
+              className="block mb-2 text-sm font-medium  text-black"
             >
               Message for Us
             </label>
             <textarea
-              id="message"
               name="message"
-              required
+              id="message"
               rows="4"
-              className="mb-[10px] w-[35vw] max-md:w-[80vw] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="mb-[10px] w-[30vw] max-md:w-[80vw] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             ></textarea>
           </div>
-
-          <button
-            type="button"
-            name="submit"
-            className="mb-[10px] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2  max-md:w-[80vw] w-[35vw]"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+          <div className=" p-5 flex items-center justify-center">
+            <button
+              type="button "
+              className=" max-md:w-[75vw] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[30vw]"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

@@ -12,7 +12,7 @@ function LetsConnect({ onClose }) {
     <div
       ref={modalRef}
       onClick={closeModal}
-      className="connectbox h-full bg-black w-full flex flex-col items-center fixed inset-0 bg-opacity-30 backdrop-blur-sm"
+      className=" overflow-x-hidden connectbox h-full bg-black w-full flex flex-col items-center fixed inset-0 bg-opacity-30 backdrop-blur-sm"
     >
        <form
         name="contact"
@@ -85,7 +85,7 @@ function LetsConnect({ onClose }) {
         <div className=" p-5 flex items-center justify-center">
           <button
             type="button "
-            className=" text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[30vw]"
+            className=" max-md:w-[75vw] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[30vw]"
           >
             Submit
           </button>

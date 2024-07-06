@@ -6,7 +6,7 @@ function WhyUs() {
   const TestimonialBoxParams = getTestimonials();
 
   return (
-    <div className=" w-full bg-Layoutblack flex  max-md:flex-col max-md:justify-center justify-between pb-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-0">
+    <div className=" w-full bg-Layoutblack flex  max-md:flex-col max-md:justify-center justify-between pb-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-0 overflow-x-hidden">
       <div
         className="whyus pt-[5rem] max-md:w-full max-md:flex max-md:items-center max-md:pl-[10vw]"
         data-aos="fade-right"

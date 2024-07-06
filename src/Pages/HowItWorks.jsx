@@ -7,7 +7,7 @@ function HowItWorks() {
   return (
     <div
       id="howitworks"
-      className="  bg-Layoutblue flex-col flex items-center justify-center py-[10vh]"
+      className="  bg-Layoutblue flex-col flex items-center justify-center py-[10vh] overflow-hidden"
     >
       <div
         className="title max-md:text-4xl text-6xl py-[50px] font-semibold flex-col flex items-center justify-center text-Layoutneon "

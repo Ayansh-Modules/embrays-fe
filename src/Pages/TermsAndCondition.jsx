@@ -2,8 +2,8 @@ import React from "react";
 import termsAndCondition from "../Data/Terms&Condition";
 function TermsAndCondition() {
   return (
-    <div className=" w-full ">
-      <div className="title text-4xl font-semibold px-[10vw] mt-[50px] max-md:text-2xl">
+    <div className=" w-full overflow-hidden">
+      <div className="title text-4xl font-semibold px-[10vw] mt-[50px] max-md:text-2xl ">
         {termsAndCondition.title}
       </div>
       <div className="pl-[10vw]  text-justify pb-[5vh]">
@@ -20,10 +20,10 @@ function TermsAndCondition() {
           }
         })}
         <div className="subtitleTwelve ">
-          <div className="subtitle font-semibold text-lg">12. Contact Us</div>
-          <div className="testimonial text-base">
+          <div className="subtitle font-semibold text-lg ">12. Contact Us</div>
+          <div className="testimonial text-base w-[80vw]">
             If you have any questions or concerns about these Terms and
-            Conditions, please contact us at
+            Conditions, contact 
             <span
               href="mailto:info@embraystechnologies.com?subject=Hello%20Embrays%20Technologies&body=Description"
               className="text-Layoutblue"
