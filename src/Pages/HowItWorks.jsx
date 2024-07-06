@@ -10,12 +10,12 @@ function HowItWorks() {
       className="  bg-Layoutblue flex-col flex items-center justify-center py-[10vh]"
     >
       <div
-        className="title max-md:text-4xl text-6xl py-[10px] font-semibold flex-col flex items-center justify-center text-Layoutneon "
+        className="title max-md:text-4xl text-6xl py-[50px] font-semibold flex-col flex items-center justify-center text-Layoutneon "
         style={{ textShadow: "gray -5px -5px" }}
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-easing="ease"
-        data-aos-duration="1000"
+        data-aos-duration="3000"
       >
         {data.title}
       </div>
@@ -41,7 +41,7 @@ function HowItWorks() {
           /> */}
         </div>
 
-        <div className="max-md:pt-[20vw]">
+        <div className="max-md:pt-[20vw] ">
           {content.map((content, index) => {
             return (
               <div
@@ -50,7 +50,9 @@ function HowItWorks() {
                 data-aos="fade-up"
                 data-aos-offset="200"
                 data-aos-easing="ease"
-                data-aos-duration="1000"
+                data-aos-duration="3000"
+          data-aos-anchor-placement="center-bottom"
+
               >
                 <div className="flex">
                   <div className="point one mr-6 text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">

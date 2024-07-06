@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { TbMailFilled } from "react-icons/tb";
 import { appData } from "../Data/AppData";
-function Contact() {
+
+function Contact(props) {
   const data = appData.contact;
   const urls = appData.urls;
   const contact = appData.contact;
+
+  // open = props.OpenSnackbar
+  // close = props.onClose
+  
   return (
+ 
     <div
       id="contactus"
-      className="flex items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[90vw] py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-10"
+      className="flex  items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[90vw] py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-10"
       data-aos="fade-up"
     >
+      
       <div
         className="contactDetails "
         data-aos="fade-right"
@@ -98,6 +105,7 @@ function Contact() {
         </div>
 
         <button
+        onClick={()=>{handleClick()}}
           type="button"
           className="mb-[10px] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2  max-md:w-[80vw] w-[35vw]"
         >
@@ -105,6 +113,8 @@ function Contact() {
         </button>
       </div>
     </div>
+   
+   
   );
 }
 

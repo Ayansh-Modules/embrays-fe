@@ -34,7 +34,7 @@ function Collaboration() {
           className="sample-slider"
           modules={[Navigation, Autoplay]}
           loop={true}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 1000 }}
           slidesPerView={2.8}
           speed={3000}
           spaceBetween={80}
