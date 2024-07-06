@@ -14,50 +14,29 @@ import vercel from "./images/partners/vercel.svg";
 import collaborationBackgroundImage from "../assets/images/collaboration/bg.webp";
 //collaboration
 //coachpx
-import collaborationCoachpxOne from "./images/collaboration/companies/coachpx/coachpx_1.webp";
-import collaborationCoachpxTwo from "./images/collaboration/companies/coachpx/coachpx_2.webp";
 import collaborationCoachpxMain from "./images/collaboration/companies/coachpx/coachpx_main.webp";
 //compliant_labs
-import collaborationCompliantLabsOne from "./images/collaboration/companies/compliant_labs/compliant_labs_1.webp";
-import collaborationCompliantLabsTwo from "./images/collaboration/companies/compliant_labs/compliant_labs_2.webp";
-import collaborationCompliantLabsThree from "./images/collaboration/companies/compliant_labs/compliant_labs_3.webp";
-import collaborationCompliantLabsFour from "./images/collaboration/companies/compliant_labs/compliant_labs_4.webp";
 import collaborationCompliantLabsMain from "./images/collaboration/companies/compliant_labs/compliant_labs_main.webp";
+import collaborationCompliantLabsPopUp from "./images/collaboration/companies/compliant_labs/compliant_labs_pop_up.png";
 // iamrapid
-import collaborationIamrapidOne from "./images/collaboration/companies/iamrapid/iamrapid_1.webp";
-import collaborationIamrapidTwo from "./images/collaboration/companies/iamrapid/iamrapid_2.webp";
-import collaborationIamrapidThree from "./images/collaboration/companies/iamrapid/iamrapid_3.webp";
-import collaborationIamrapidFour from "./images/collaboration/companies/iamrapid/iamrapid_4.webp";
 import collaborationIamrapidMain from "./images/collaboration/companies/iamrapid/iamrapid_main.webp";
+import collaborationIamrapidPopUp from "./images/collaboration/companies/iamrapid/iamrapid_pop_up.png";
 //settlers
-import collaborationSettlersOne from "./images/collaboration/companies/settlers/settlers_1.webp";
-import collaborationSettlersTwo from "./images/collaboration/companies/settlers/settlers_2.webp";
-import collaborationSettlersThree from "./images/collaboration/companies/settlers/settlers_3.webp";
 import collaborationSettlersMain from "./images/collaboration/companies/settlers/settlers_main.webp";
+import collaborationSettlersPopUp from "./images/collaboration/companies/settlers/settlers_pop_up.png";
 //skillmitra
-import collaborationSkillmitraOne from "./images/collaboration/companies/skillmitra/skillmitra_1.webp";
-import collaborationSkillmitraTwo from "./images/collaboration/companies/skillmitra/skillmitra_2.webp";
-import collaborationSkillmitraThree from "./images/collaboration/companies/skillmitra/skillmitra_3.webp";
 import collaborationSkillmitraMain from "./images/collaboration/companies/skillmitra/skillmitra_main.webp";
+import collaborationSkillmitraPopUp from "./images/collaboration/companies/skillmitra/skillmitra_pop_up.png";
 
 //stockdaddy
-import collaborationStockdaddyOne from "./images/collaboration/companies/stockdaddy/stockdaddy_1.webp";
-import collaborationStockdaddyTwo from "./images/collaboration/companies/stockdaddy/stockdaddy_2.webp";
-import collaborationStockdaddyThree from "./images/collaboration/companies/stockdaddy/stockdaddy_3.webp";
-import collaborationStockdaddyFour from "./images/collaboration/companies/stockdaddy/stockdaddy_4.webp";
 import collaborationStockdaddyMain from "./images/collaboration/companies/stockdaddy/stockdaddy_main.webp";
+import collaborationStockdaddyPopUp from "./images/collaboration/companies/stockdaddy/stockdaddy_pop_up.png";
 //trueuser
-import collaborationTrueuserOne from "./images/collaboration/companies/trueuser/trueuser_1.webp";
-import collaborationTrueuserTwo from "./images/collaboration/companies/trueuser/trueuser_2.webp";
-import collaborationTrueuserThree from "./images/collaboration/companies/trueuser/trueuser_3.webp";
 import collaborationTrueuserMain from "./images/collaboration/companies/trueuser/trueuser_main.webp";
+import collaborationTrueuserPopUp from "./images/collaboration/companies/trueuser/trueuser_pop_up.png";
 //tutionbud
-import collaborationTutionbudOne from "./images/collaboration/companies/tutionbud/tutionbud_1.webp";
-import collaborationTutionbudTwo from "./images/collaboration/companies/tutionbud/tutionbud_2.webp";
-import collaborationTutionbudThree from "./images/collaboration/companies/tutionbud/tutionbud_3.webp";
-import collaborationTutionbudFour from "./images/collaboration/companies/tutionbud/tutionbud_4.webp";
-import collaborationTutionbudFive from "./images/collaboration/companies/tutionbud/tutionbud_5.webp";
 import collaborationTutionbudMain from "./images/collaboration/companies/tutionbud/tutionbud_main.webp";
+import collaborationTutionbudPopUp from "./images/collaboration/companies/tutionbud/tutionbud_pop_up.png";
 
 //how_it_works
 import ring from "./images/how_it_works/half_circle.svg";
@@ -110,48 +89,29 @@ const baseAssets = {
   collaborationBackgroundImage: collaborationBackgroundImage,
   //coachpx
   collaborationCoachpxMain: collaborationCoachpxMain,
-  collaborationCoachpxOne: collaborationCoachpxOne,
-  collaborationCoachpxTwo: collaborationCoachpxTwo,
+  collaborationCoachpxPopUp: collaborationCoachpxMain,
   //compliant_labs
   collaborationCompliantLabsMain: collaborationCompliantLabsMain,
-  collaborationCompliantLabsOne: collaborationCompliantLabsOne,
-  collaborationCompliantLabsTwo: collaborationCompliantLabsTwo,
-  collaborationCompliantLabsThree: collaborationCompliantLabsThree,
-  collaborationCompliantLabsFour: collaborationCompliantLabsFour,
+  collaborationCompliantLabsPopUp: collaborationCompliantLabsPopUp,
   // iamrapid
   collaborationIamrapidMain: collaborationIamrapidMain,
-  collaborationIamrapidOne: collaborationIamrapidOne,
-  collaborationIamrapidTwo: collaborationIamrapidTwo,
-  collaborationIamrapidThree: collaborationIamrapidThree,
-  collaborationIamrapidFour: collaborationIamrapidFour,
+  collaborationIamrapidPopUp: collaborationIamrapidPopUp,
   //settlers
   collaborationSettlersMain: collaborationSettlersMain,
-  collaborationSettlersOne: collaborationSettlersOne,
-  collaborationSettlersTwo: collaborationSettlersTwo,
-  collaborationSettlersThree: collaborationSettlersThree,
+  collaborationSettlersPopUp: collaborationSettlersPopUp,
   //skillmitra
   collaborationSkillmitraMain: collaborationSkillmitraMain,
-  collaborationSkillmitraOne: collaborationSkillmitraOne,
-  collaborationSkillmitraTwo: collaborationSkillmitraTwo,
-  collaborationSkillmitraThree: collaborationSkillmitraThree,
+  collaborationSkillmitraPopUp: collaborationSkillmitraPopUp,
+
   //stockdaddy
   collaborationStockdaddyMain: collaborationStockdaddyMain,
-  collaborationStockdaddyOne: collaborationStockdaddyOne,
-  collaborationStockdaddyTwo: collaborationStockdaddyTwo,
-  collaborationStockdaddyThree: collaborationStockdaddyThree,
-  collaborationStockdaddyFour: collaborationStockdaddyFour,
+  collaborationStockdaddyPopUp: collaborationStockdaddyPopUp,
   //trueuser
   collaborationTrueuserMain: collaborationTrueuserMain,
-  collaborationTrueuserOne: collaborationTrueuserOne,
-  collaborationTrueuserTwo: collaborationTrueuserTwo,
-  collaborationTrueuserThree: collaborationTrueuserThree,
+  collaborationTrueuserPopUp: collaborationTrueuserPopUp,
   //tutionbud
   collaborationTutionbudMain: collaborationTutionbudMain,
-  collaborationTutionbudOne: collaborationTutionbudOne,
-  collaborationTutionbudTwo: collaborationTutionbudTwo,
-  collaborationTutionbudThree: collaborationTutionbudThree,
-  collaborationTutionbudFour: collaborationTutionbudFour,
-  collaborationTutionbudFive: collaborationTutionbudFive,
+  collaborationTutionbudPopUp: collaborationTutionbudPopUp,
 
   //how_it_works
   ring: ring,

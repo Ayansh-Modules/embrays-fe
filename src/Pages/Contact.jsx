@@ -14,7 +14,7 @@ function Contact(props) {
   return (
     <div
       id="contactus"
-      className="flex overflow-hidden items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[90vw] py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-10"
+      className="flex overflow-hidden items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[95vw] py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-10"
       data-aos="fade-up"
     >
       <div
@@ -35,8 +35,8 @@ function Contact(props) {
 
         <div className="contactid ">
           <div className="flex-row flex items-center ">
-            <div className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
-              <TbMailFilled color="white" className="h-[25px] w-[25px]  " />
+            <div title="Email" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
+              <TbMailFilled color="white" title="Email" className="h-[25px] w-[25px]  " />
             </div>
             <a
               className="mt-[5vh]  pl-2 text-base font-medium"
@@ -45,8 +45,8 @@ function Contact(props) {
               {contact.mail}
             </a>
           </div>
-          <div className="flex-row flex items-center font-medium pb-5">
-            <div className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
+          <div className="flex-row flex items-center font-medium pb-5" title="Mobile">
+            <div title="Mobile" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
               <BiSolidPhoneCall color="white" className="h-[25px] w-[25px]  " />
             </div>
             <a className="mt-[5vh] pl-2 text-base" href={urls.cellto}>
@@ -83,7 +83,7 @@ function Contact(props) {
               type="text"
               name="name"
               id="default-input"
-              className="bg-black border max-md:w-[80vw] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-black border-2 max-md:w-[80vw] border-black text-black text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
           <div className="Mail px-5 py-2">
@@ -97,7 +97,7 @@ function Contact(props) {
               type="text"
               name="email"
               id="default-input"
-              className="bg-black border max-md:w-[80vw] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-black border-2 max-md:w-[80vw] border-black text-black text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
           <div className="Message px-5 py-2">
@@ -111,7 +111,7 @@ function Contact(props) {
               name="message"
               id="message"
               rows="4"
-              className="mb-[10px] w-[30vw] max-md:w-[80vw] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="mb-[10px] w-[30vw]  max-md:w-[80vw] bg-black border-2 border-black text-black text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             ></textarea>
           </div>
           <div className=" p-5 flex items-center justify-center">

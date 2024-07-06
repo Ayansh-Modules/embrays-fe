@@ -39,6 +39,7 @@ function Collaboration() {
           speed={3000}
           spaceBetween={80}
           navigation={true}
+          centeredSlides={true}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -60,6 +61,7 @@ function Collaboration() {
           {collabCompanyParam.map((content, index) => {
             return (
               <SwiperSlide
+                className="cursor-pointer max-md:pl-[14vw]"
                 key={index}
                 onClick={() => {
                   setCurrentIndex(index);
@@ -106,87 +108,59 @@ function getCollabData() {
   const collabData = [
     {
       company: content[0].company,
-      link: content[0].company,
+      link: content[0].comp_url,
       testimonial: content[0].testimonial,
       background: baseAssets.collaborationCoachpxMain,
-      previewImages: [
-        baseAssets.collaborationCoachpxOne,
-        baseAssets.collaborationCoachpxTwo,
-      ],
+      popUpImage: baseAssets.collaborationCoachpxPopUp,
     },
     {
       company: content[1].company,
       testimonial: content[1].testimonial,
+      link: content[1].comp_url,
       background: baseAssets.collaborationCompliantLabsMain,
-      previewImages: [
-        baseAssets.collaborationCompliantLabsOne,
-        baseAssets.collaborationCompliantLabsTwo,
-        baseAssets.collaborationCompliantLabsThree,
-        baseAssets.collaborationCompliantLabsFour,
-      ],
+      popUpImage: baseAssets.collaborationCompliantLabsPopUp,
     },
     {
       company: content[2].company,
       testimonial: content[2].testimonial,
+      link: content[2].comp_url,
       background: baseAssets.collaborationTrueuserMain,
-      previewImages: [
-        baseAssets.collaborationTrueuserOne,
-        baseAssets.collaborationTrueuserTwo,
-        baseAssets.collaborationTrueuserThree,
-      ],
+      popUpImage: baseAssets.collaborationTrueuserPopUp,
     },
     {
       company: content[3].company,
       testimonial: content[3].testimonial,
+      link: content[3].comp_url,
       background: baseAssets.collaborationSkillmitraMain,
-      previewImages: [
-        baseAssets.collaborationSkillmitraOne,
-        baseAssets.collaborationSkillmitraTwo,
-        baseAssets.collaborationSkillmitraThree,
-      ],
+      popUpImage: baseAssets.collaborationSkillmitraPopUp,
     },
     {
       company: content[4].company,
       testimonial: content[4].testimonial,
+      link: content[4].comp_url,
       background: baseAssets.collaborationStockdaddyMain,
-      previewImages: [
-        baseAssets.collaborationStockdaddyOne,
-        baseAssets.collaborationStockdaddyTwo,
-        baseAssets.collaborationStockdaddyThree,
-        baseAssets.collaborationStockdaddyFour,
-      ],
+      popUpImage: baseAssets.collaborationStockdaddyPopUp,
     },
     {
       company: content[5].company,
       testimonial: content[5].testimonial,
+      link: content[5].comp_url,
       background: baseAssets.collaborationSettlersMain,
-      previewImages: [
-        baseAssets.collaborationSettlersOne,
-        baseAssets.collaborationSettlersTwo,
-        baseAssets.collaborationSettlersThree,
-      ],
+      popUpImage: baseAssets.collaborationSettlersPopUp,
     },
     {
       company: content[6].company,
       testimonial: content[6].testimonial,
+      link: content[6].comp_url,
       background: baseAssets.collaborationTutionbudMain,
-      previewImages: [
-        baseAssets.collaborationTutionbudOne,
-        baseAssets.collaborationTutionbudTwo,
-        baseAssets.collaborationTutionbudThree,
-        baseAssets.collaborationTutionbudFour,
-      ],
+      popUpImage: baseAssets.collaborationTutionbudPopUp,
     },
     {
       company: content[7].company,
+      link: content[7].comp_url,
       testimonial: content[7].testimonial,
       background: baseAssets.collaborationIamrapidMain,
-      previewImages: [
-        baseAssets.collaborationIamrapidOne,
-        baseAssets.collaborationIamrapidTwo,
-        baseAssets.collaborationIamrapidThree,
-        baseAssets.collaborationIamrapidFour,
-      ],
+      popUpImage: baseAssets.collaborationIamrapidPopUp,
     },
   ];
   return collabData;

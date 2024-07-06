@@ -14,7 +14,7 @@ function WhyUs() {
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <p className="text-3xl text-white font-semibold mt-[1rem] max-md:text-center sticky top-28 ">
+        <p className="text-3xl text-white font-semibold mt-[1rem] max-md:text-center  sticky top-28">
           <p className=" text-sm text-Layoutneon max-md:w-[19rem] text-start max-md:text-center">WHY US?</p>
           <p className="text-start max-md:text-center max-md:w-[19rem]">Choose us for</p>
           <p className="max-md:text-center bg-Layoutneon text-Layoutblack mb-[1rem] mt-[2vh] w-[10rem] max-md:w-[19rem] p-[5px] rounded">

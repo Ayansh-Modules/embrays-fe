@@ -10,20 +10,30 @@ function CollabCardModal({ onClose, data }) {
     }
   };
   return (
-    //
     <div
       ref={modalRef}
       onClick={closeModal}
       className="connectbox h-full z-20 bg-black w-full flex flex-col fixed inset-0 bg-opacity-60 backdrop-blur-sm justify-center items-center"
     >
-      <div className="bg-LayoutCream mt-[10vh] h-[50vh] w-[50vw] z-[2] rounded-2xl flex-col items-center justify-center">
-        <div className="collabModal flex items-center font-semibold text-2xl h-36 w-[50vw] justify-between px-20">
+      <div className="bg-white mt-[10vh]  w-[800px] max-md:h-[400px] max-md:w-[90vw] z-[2] rounded-2xl flex flex-col items-center justify-start ">
+        <div className="collabModal flex items-end pb-6 pt-14 max-md:pt-8 max-md-pb-2 font-semibold  w-[800px] max-md:w-[90vw] justify-between max-md:px-8 px-14 lg:text-4xl md:text-3xl max-md:text-2xl">
           <div className="flex flex-row items-center justify-center">
-            <h6 className="text-4xl">{data.company}</h6>
-            <FaExternalLinkAlt className="ml-6 text-3xl" />
+            <h6 className="">{data.company}</h6>
+            <FaExternalLinkAlt
+              className="ml-6 "
+              onClick={() => {
+                window.open(data.link, "_blank");
+              }}
+            />
           </div>
-          <RxCross2 onClick={onClose} className="text-4xl cursor-pointer" />
+          <RxCross2 onClick={onClose} className="cursor-pointer" />
         </div>
+
+        <img
+          src={data.popUpImage}
+          alt="company_website_images"
+          className="max-md:h-[300px] max-md:px-8 px-14 max-h-[500px] pb-10"
+        />
       </div>
     </div>
   );

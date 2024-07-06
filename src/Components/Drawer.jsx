@@ -27,13 +27,15 @@ function Drawer({ children, isOpen, setIsOpen }) {
           (isOpen ? " translate-x-0 " : " -translate-x-full ")
         }
       >
-        <article className="relative w-80 pb-10 flex flex-col space-y-6 overflow-y-scroll h-full">
-          <RxCross2
-            onClick={() => {
-              setIsOpen(false);
-            }}
-            className="m-[20px] h-[20px] w-[20px] text-white "
-          />
+        <article className="relative w-80 pb-10 flex flex-col space-y-6 overflow-y-scroll h-full ">
+          <div className="flex justify-end p-4">
+            <RxCross2
+              onClick={() => {
+                setIsOpen(false);
+              }}
+              className="h-[20px] w-[20px] text-white cursor-pointer"
+            />
+          </div>
           {children}
         </article>
       </section>
