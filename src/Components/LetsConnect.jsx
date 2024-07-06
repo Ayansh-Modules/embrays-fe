@@ -14,6 +14,17 @@ function LetsConnect({ onClose }) {
       onClick={closeModal}
       className="connectbox h-full bg-black w-full flex flex-col items-center fixed inset-0 bg-opacity-30 backdrop-blur-sm"
     >
+       <form
+        name="contact"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        hidden
+      >
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+      <form name="contact" method="POST">
       <div
         className="form  mt-[7rem] rounded-2xl"
         style={{
@@ -38,8 +49,9 @@ function LetsConnect({ onClose }) {
           </label>
           <input
             type="text"
+            name="name"
             id="default-input"
-            className="bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-black border max-md:w-[80vw] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
         <div className="Mail px-5 py-2">
@@ -51,8 +63,9 @@ function LetsConnect({ onClose }) {
           </label>
           <input
             type="text"
+            name="email"
             id="default-input"
-            className="bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-black border max-md:w-[80vw] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
         <div className="Message px-5 py-2">
@@ -63,6 +76,7 @@ function LetsConnect({ onClose }) {
             Message for Us
           </label>
           <textarea
+          name="message"
             id="message"
             rows="4"
             className="mb-[10px] w-[30vw] max-md:w-[80vw] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -77,6 +91,8 @@ function LetsConnect({ onClose }) {
           </button>
         </div>
       </div>
+      </form>
+      
     </div>
   );
 }
