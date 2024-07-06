@@ -65,14 +65,14 @@ function Contact(props) {
         <input type="email" name="email" />
         <textarea name="message"></textarea>
       </form>
-      <form action="" name="contact" method="POST">
+      <form  name="contact" method="POST">
         <div
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
           data-aos-duration="1000"
         >
-          <div name="name">
+          <div >
             <label
               htmlFor="default-input"
               className="block my-[10px] text-sm font-medium  text-black"
@@ -82,12 +82,12 @@ function Contact(props) {
             <input
               type="text"
               name="name"
-              value="contact"
               id="default-input"
+              required
               className="mb-[10px] max-md:w-[80vw] w-[35vw] p-2.5 bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
-          <div className="Mail ">
+          <div >
             <label
               htmlFor="default-input"
               className="block mb-[10px] text-sm font-medium  text-black"
@@ -98,10 +98,11 @@ function Contact(props) {
               type="text"
               name="email"
               id="default-input"
+              required
               className="bg-black mb-[10px] border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[35vw] max-md:w-[80vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
-          <div className="Message ">
+          <div >
             <label
               htmlFor="message"
               className="mb-[10px] block  text-sm font-medium  text-black"
@@ -111,6 +112,7 @@ function Contact(props) {
             <textarea
               id="message"
               name="message"
+              required
               rows="4"
               className="mb-[10px] w-[35vw] max-md:w-[80vw] bg-black border border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh]p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
             ></textarea>
