@@ -61,7 +61,7 @@ function Collaboration() {
           {collabCompanyParam.map((content, index) => {
             return (
               <SwiperSlide
-                className="cursor-pointer max-md:pl-[16vw]"
+                className="cursor-pointer max-md:pl-[14vw]"
                 key={index}
                 onClick={() => {
                   setCurrentIndex(index);
@@ -108,7 +108,7 @@ function getCollabData() {
   const collabData = [
     {
       company: content[0].company,
-      link: content[0].company,
+      link: content[0].comp_url,
       testimonial: content[0].testimonial,
       background: baseAssets.collaborationCoachpxMain,
       popUpImage: baseAssets.collaborationCoachpxPopUp,
@@ -116,41 +116,48 @@ function getCollabData() {
     {
       company: content[1].company,
       testimonial: content[1].testimonial,
+      link: content[1].comp_url,
       background: baseAssets.collaborationCompliantLabsMain,
       popUpImage: baseAssets.collaborationCompliantLabsPopUp,
     },
     {
       company: content[2].company,
       testimonial: content[2].testimonial,
+      link: content[2].comp_url,
       background: baseAssets.collaborationTrueuserMain,
       popUpImage: baseAssets.collaborationTrueuserPopUp,
     },
     {
       company: content[3].company,
       testimonial: content[3].testimonial,
+      link: content[3].comp_url,
       background: baseAssets.collaborationSkillmitraMain,
       popUpImage: baseAssets.collaborationSkillmitraPopUp,
     },
     {
       company: content[4].company,
       testimonial: content[4].testimonial,
+      link: content[4].comp_url,
       background: baseAssets.collaborationStockdaddyMain,
       popUpImage: baseAssets.collaborationStockdaddyPopUp,
     },
     {
       company: content[5].company,
       testimonial: content[5].testimonial,
+      link: content[5].comp_url,
       background: baseAssets.collaborationSettlersMain,
       popUpImage: baseAssets.collaborationSettlersPopUp,
     },
     {
       company: content[6].company,
       testimonial: content[6].testimonial,
+      link: content[6].comp_url,
       background: baseAssets.collaborationTutionbudMain,
       popUpImage: baseAssets.collaborationTutionbudPopUp,
     },
     {
       company: content[7].company,
+      link: content[7].comp_url,
       testimonial: content[7].testimonial,
       background: baseAssets.collaborationIamrapidMain,
       popUpImage: baseAssets.collaborationIamrapidPopUp,
