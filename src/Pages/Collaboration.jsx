@@ -39,6 +39,7 @@ function Collaboration() {
           speed={3000}
           spaceBetween={80}
           navigation={true}
+          centeredSlides={true}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -60,6 +61,7 @@ function Collaboration() {
           {collabCompanyParam.map((content, index) => {
             return (
               <SwiperSlide
+                className="cursor-pointer max-md:pl-[16vw]"
                 key={index}
                 onClick={() => {
                   setCurrentIndex(index);
@@ -109,84 +111,49 @@ function getCollabData() {
       link: content[0].company,
       testimonial: content[0].testimonial,
       background: baseAssets.collaborationCoachpxMain,
-      previewImages: [
-        baseAssets.collaborationCoachpxOne,
-        baseAssets.collaborationCoachpxTwo,
-      ],
+      popUpImage: baseAssets.collaborationCoachpxPopUp,
     },
     {
       company: content[1].company,
       testimonial: content[1].testimonial,
       background: baseAssets.collaborationCompliantLabsMain,
-      previewImages: [
-        baseAssets.collaborationCompliantLabsOne,
-        baseAssets.collaborationCompliantLabsTwo,
-        baseAssets.collaborationCompliantLabsThree,
-        baseAssets.collaborationCompliantLabsFour,
-      ],
+      popUpImage: baseAssets.collaborationCompliantLabsPopUp,
     },
     {
       company: content[2].company,
       testimonial: content[2].testimonial,
       background: baseAssets.collaborationTrueuserMain,
-      previewImages: [
-        baseAssets.collaborationTrueuserOne,
-        baseAssets.collaborationTrueuserTwo,
-        baseAssets.collaborationTrueuserThree,
-      ],
+      popUpImage: baseAssets.collaborationTrueuserPopUp,
     },
     {
       company: content[3].company,
       testimonial: content[3].testimonial,
       background: baseAssets.collaborationSkillmitraMain,
-      previewImages: [
-        baseAssets.collaborationSkillmitraOne,
-        baseAssets.collaborationSkillmitraTwo,
-        baseAssets.collaborationSkillmitraThree,
-      ],
+      popUpImage: baseAssets.collaborationSkillmitraPopUp,
     },
     {
       company: content[4].company,
       testimonial: content[4].testimonial,
       background: baseAssets.collaborationStockdaddyMain,
-      previewImages: [
-        baseAssets.collaborationStockdaddyOne,
-        baseAssets.collaborationStockdaddyTwo,
-        baseAssets.collaborationStockdaddyThree,
-        baseAssets.collaborationStockdaddyFour,
-      ],
+      popUpImage: baseAssets.collaborationStockdaddyPopUp,
     },
     {
       company: content[5].company,
       testimonial: content[5].testimonial,
       background: baseAssets.collaborationSettlersMain,
-      previewImages: [
-        baseAssets.collaborationSettlersOne,
-        baseAssets.collaborationSettlersTwo,
-        baseAssets.collaborationSettlersThree,
-      ],
+      popUpImage: baseAssets.collaborationSettlersPopUp,
     },
     {
       company: content[6].company,
       testimonial: content[6].testimonial,
       background: baseAssets.collaborationTutionbudMain,
-      previewImages: [
-        baseAssets.collaborationTutionbudOne,
-        baseAssets.collaborationTutionbudTwo,
-        baseAssets.collaborationTutionbudThree,
-        baseAssets.collaborationTutionbudFour,
-      ],
+      popUpImage: baseAssets.collaborationTutionbudPopUp,
     },
     {
       company: content[7].company,
       testimonial: content[7].testimonial,
       background: baseAssets.collaborationIamrapidMain,
-      previewImages: [
-        baseAssets.collaborationIamrapidOne,
-        baseAssets.collaborationIamrapidTwo,
-        baseAssets.collaborationIamrapidThree,
-        baseAssets.collaborationIamrapidFour,
-      ],
+      popUpImage: baseAssets.collaborationIamrapidPopUp,
     },
   ];
   return collabData;
