@@ -54,7 +54,7 @@ function AboutUs() {
         <img
           src={baseAssets.lower_banner_desktop}
           alt="lowerbanner"
-          className="w-[100vw] "
+          className="w-full "
         />
       </div>
       {open == true && (
