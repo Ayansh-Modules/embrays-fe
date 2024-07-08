@@ -9,7 +9,7 @@ function Services() {
   return (
     <div
       id="services"
-      className="flex-col flex items-center justify-center  w-[100vw]  max-md:pt-[10vh] py-20 overflow-hidden"
+      className="flex-col flex items-center justify-center  w-full  max-md:pt-[10vh] py-20 overflow-hidden"
     
     >
       <div

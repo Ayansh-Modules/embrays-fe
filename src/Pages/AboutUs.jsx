@@ -3,6 +3,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import baseAssets from "../assets/baseAssets";
 import LetsConnect from "../Components/LetsConnect";
 import { appData } from "../Data/AppData";
+import { Helmet } from "react-helmet";
 function AboutUs() {
   const data = appData.aboutUs;
   const [open, setOpen] = useState(false);
@@ -10,8 +11,9 @@ function AboutUs() {
   return (
     <div
       id="aboutus"
-      className="about bg-Layoutblue relative  w-[100vw] pt-28  flex flex-col items-start overflow-hidden "
+      className="about bg-Layoutblue relative  w-full pt-28  flex flex-col items-start overflow-hidden "
     >
+    
       <div className="flex-row max-md:flex-col flex overflow-x-hidden overflow-y-hidden justify-between pl-[10vw] pr-[0vw]">
         <div
           className="titleTexts flex-col  text-white w-[70vw] "

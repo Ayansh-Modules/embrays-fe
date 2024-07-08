@@ -17,6 +17,8 @@ function Contact(props) {
       className="flex overflow-hidden items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col w-[95vw] py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-5"
       data-aos="fade-up"
     >
+      
+    
       <div
         className="contactDetails "
         data-aos="fade-right"

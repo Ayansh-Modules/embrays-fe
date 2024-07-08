@@ -18,7 +18,7 @@ function Collaboration() {
 
   return (
     <div
-      className=" w-[100vw] bg-no-repeat bg-cover flex-col flex items-center justify-center overflow-hidden "
+      className=" w-full bg-no-repeat bg-cover flex-col flex items-center justify-center overflow-hidden "
       style={{
         backgroundImage: `url(${baseAssets.collaborationBackgroundImage})`,
       }}
@@ -29,7 +29,7 @@ function Collaboration() {
       >
         {data.title}
       </div>
-      <div className="cards h-[80vh]  w-[100vw]">
+      <div className="cards h-[80vh]  w-full">
         <Swiper
           className="sample-slider"
           modules={[Navigation, Autoplay]}

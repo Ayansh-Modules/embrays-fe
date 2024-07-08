@@ -4,6 +4,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ClientThought from "../Components/ClientThought";
 import { appData } from "../Data/AppData";
+
 function ClientReview() {
   const data = appData.clientReview;
   const compName = appData.companyName;
@@ -16,6 +17,7 @@ function ClientReview() {
       data-aos-easing="ease"
       data-aos-duration="1000"
     >
+       
       <div className="title  flex-col flex items-center justify-center pt-[3rem] ">
         <div
           className="title  text-4xl max-md:text-2xl text-center font-bold mb-[2rem] text-Layoutblue "
