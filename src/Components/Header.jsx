@@ -19,6 +19,11 @@ function Header() {
       title: "How it works?",
       href: "#howitworks",
     },
+    {
+      title: "Blogs",
+      href: "/blog",
+    },
+   
   ];
   return (
     <>

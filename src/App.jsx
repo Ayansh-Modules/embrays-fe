@@ -9,6 +9,8 @@ import Header from "./Components/Header";
 import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import BlogPage from "./Pages/Blogs/BlogPage";
+import Test from "./Pages/Blogs/Test";
+import ViewAllBlog from "./Pages/Blogs/ViewAllBlog";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -19,16 +21,20 @@ function App() {
     <>
       <Embrays_Helmet />
       <Header />
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Root />}></Route>
         <Route
           path="/terms-and-conditions"
           element={<TermsAndCondition />}
-        ></Route>
-      </Routes>
-      {/* <BlogPage /> */}
-      <Footer />
-      {/* <Footer2/> */}
+        >
+
+        </Route>
+      </Routes> */}
+      <BlogPage />
+      {/* <ViewAllBlog /> */}
+      {/* <Test /> */}
+      {/* <Footer /> */}
+      <Footer2/>
     </>
   );
 }

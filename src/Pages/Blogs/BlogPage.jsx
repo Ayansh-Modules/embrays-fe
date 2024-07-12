@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BlogCard from './BlogCard'
 import Button from '../../Components/Button'
+import ViewAllBlog from './ViewAllBlog'
 function BlogPage() {
+  const [viewAll , setviewAll] = useState(false)
   return (
     <div className='h-auto  w-full    '>
         <p className='px-10 py-5  '>
@@ -11,16 +13,17 @@ function BlogPage() {
 
         <div className=''>
 
-        <div className='flex items-center justify-evenly mb-10'>
+        {!viewAll && <div className='flex items-center justify-evenly mb-10'>
         <BlogCard />
         <BlogCard />
         <BlogCard />
-        </div>
+        </div>}
+       {viewAll && <ViewAllBlog />}
         </div>
 
-        <div className='flex justify-end mx-6 mb-5'>
-            <Button text={"VIEW ALL POSTS"} />
-            </div>
+     {  !viewAll && <div className='flex justify-end mx-6 mb-5'>
+            <Button text={"VIEW ALL POSTS"} onClick={()=>{return setviewAll(true) }}/>
+            </div>}
        
     </div>
   )
