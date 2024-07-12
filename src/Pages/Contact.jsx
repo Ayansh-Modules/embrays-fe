@@ -1,63 +1,17 @@
 import React from "react";
-import { BiSolidPhoneCall } from "react-icons/bi";
-import { TbMailFilled } from "react-icons/tb";
-import { appData } from "../Data/AppData";
 import Button from "../Components/Button";
-function Contact() {
-  const data = appData.contact;
-  const urls = appData.urls;
-  const contact = appData.contact;
+import BlogCard from "./Blogs/BlogCard";
 
+function Contact() {
   // open = props.OpenSnackbar
   // close = props.onClose
 
   return (
-    <div 
+    <div
       id="contactus"
-      className="bg-Layoutblue w-full flex overflow-hidden items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  pt-10 lg:px-[10vw] max-lg:px-[5vw] max-md:px-5"
+      className=" w-full flex overflow-hidden items-center justify-evenly max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  pt-5   max-md:px-5"
     >
-      
-    
-      <div
-        className="contactDetails "
-        data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-easing="ease"
-        data-aos-duration="1000"
-      >
-        <div className="pt-[10px]">
-          <p className=" text-xl font-medium dark:text-Layoutyellow text-left mb-[5vh]">
-            {data.primary}
-          </p>
-          <p className="text-5xl max-md:text-3xl font-semibold  text-white w-[10vw] text-left mb-[5vh]">
-            {data.secondary}
-          </p>
-        </div>
-
-        <div className="contactid text-white">
-          <div className="flex-row flex items-center ">
-            <div title="Email" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
-              <TbMailFilled color="white" title="Email" size={25} />
-            </div>
-            <a
-              className="mt-[5vh]  pl-2 text-base font-medium"
-              href={urls.mailto}
-              target="_blank"
-            >
-              {contact.mail}
-            </a>
-          </div>
-          <div className="flex-row flex items-center font-medium pb-5" title="Mobile">
-            <div title="Mobile" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
-              <BiSolidPhoneCall color="white"  size={25} />
-            </div>
-            <a className="mt-[5vh] pl-2 text-base" href={urls.cellto} target="_blank">
-              {contact.cell}
-            </a>
-          </div>
-        </div>
-      </div>
-      <form
+      {/* <form
         name="contact"
         data-netlify="true"
         netlify-honeypot="bot-field"
@@ -66,13 +20,13 @@ function Contact() {
         <input type="text" name="name" />
         <input type="email" name="email" />
         <textarea name="message"></textarea>
-      </form>
+      </form> */}
       <div
+        className=" flex-col flex items-center  justify-evenly"
         data-aos="fade-left"
-         data-aos-easing="ease"
-        
+        data-aos-easing="ease"
       >
-        <form name="contact" method="POST">
+        {/* <form name="contact" method="POST">
           <div className="flex max-md:flex-col ">
           <div className="Name pr-3 py-2">
           <label
@@ -121,15 +75,32 @@ function Contact() {
             ></textarea>
           </div>
           <div className=" ml-1 flex items-center">
-            {/* <button
+            <button
               type="button "
               className=" max-md:w-[75vw] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[30vw]"
             >
               Submit
-            </button> */}
+            </button>
             <Button text={"LET'S CONNECT"}/>
           </div>
-        </form>
+        </form> */}
+        <div className="flex">
+          <span className="m-5">
+            <BlogCard />
+          </span>
+          <span className="m-5">
+            <BlogCard />
+          </span>
+          <span className="m-5">
+            <BlogCard />
+          </span>
+        </div>
+
+        <div className="flex justify-end w-[95vw] pb-5 ">
+          <a href="/blog">
+            <Button text={"VIEW ALL POSTS"} />
+          </a>
+        </div>
       </div>
     </div>
   );

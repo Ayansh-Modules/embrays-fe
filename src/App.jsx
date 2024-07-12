@@ -2,7 +2,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import Footer from "./Components/Footer";
 import Footer2 from "./Components/Footer2";
 import Header from "./Components/Header";
 import BlogPage from "./Pages/Blogs/BlogPage";
@@ -21,34 +20,15 @@ function App() {
       <Embrays_Helmet />
       <Header />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Root /> <Footer />
-            </>
-          }
-        ></Route>
+        <Route path="/" element={<Root />}></Route>
         <Route
           path="/terms-and-conditions"
-          element={
-            <>
-              <TermsAndCondition />
-              <Footer />{" "}
-            </>
-          }
+          element={<TermsAndCondition />}
         ></Route>
 
-        <Route
-          path="/blog"
-          element={
-            <>
-              <BlogPage />
-              <Footer2 />
-            </>
-          }
-        ></Route>
+        <Route path="/blog" element={<BlogPage />}></Route>
       </Routes>
+      <Footer2 />
     </>
   );
 }

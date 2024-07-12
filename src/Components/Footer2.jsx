@@ -7,30 +7,67 @@ import { TbMailFilled } from "react-icons/tb";
 import Button from "../Components/Button"
 
 function Footer2() {
-  const data = appData.aboutUs.title + appData.aboutUs.subTitle;
+  const data = appData.contact;
+  const urls = appData.urls;
+  const contact = appData.contact;
   const linkedin = appData.urls.linkedin;
   const instagram = appData.urls.instagram;
   const mail = appData.urls.mailto;
   const cell = appData.urls.cellto;
   return (
     <div className="bg-Layoutblue w-full text-xs">
-      <div className=" flex text-white justify-evenly p-10">
+      <div className=" flex text-white justify-evenly items-start p-10">
       
-      <div className="text-justify w-[25vw] ">
-        <p className="text-2xl font-semibold mb-5"><a href="/">ET</a></p>
-        {data}
+       <div
+        className="contactDetails "
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-easing="ease"
+        data-aos-duration="1000"
+      >
+        <div className="pt-[10px]">
+          <p className=" text-xl font-medium dark:text-Layoutyellow text-left mb-[5vh]">
+            {data.primary}
+          </p>
+          <p className="text-5xl max-md:text-3xl font-semibold  text-white w-[10vw] text-left mb-[5vh]">
+            {data.secondary}
+          </p>
+        </div>
+
+        <div className="contactid text-white">
+          <div className="flex-row flex items-center ">
+            <div title="Email" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
+              <TbMailFilled color="white" title="Email" size={25} />
+            </div>
+            <a
+              className="mt-[5vh]  pl-2 text-base font-medium"
+              href={urls.mailto}
+              target="_blank"
+            >
+              {contact.mail}
+            </a>
+          </div>
+          <div className="flex-row flex items-center font-medium pb-5" title="Mobile">
+            <div title="Mobile" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
+              <BiSolidPhoneCall color="white"  size={25} />
+            </div>
+            <a className="mt-[5vh] pl-2 text-base" href={urls.cellto} target="_blank">
+              {contact.cell}
+            </a>
+          </div>
+        </div>
       </div>
-      <div className="flex-col  ">
-        <p className=" font-semibold mb-5">EXPLORE</p>
-        <p className="mb-5"><a href="/">HOME</a></p>
-        <p className="mb-5"><a href="">PORTFOLIO</a></p>
-        <p className="mb-5"><a  href="/#contactus">CONTACT US</a></p>
+      <div className="flex-col h-[11rem]  flex justify-evenly ">
+        <p className=" font-semibold ">EXPLORE</p>
+        <p className=""><a href="/">HOME</a></p>
+        <p className=""><a href="">PORTFOLIO</a></p>
+        <p className=""><a  href="/#contactus">CONTACT US</a></p>
         <p><a href="">TERMS & CONDITION </a></p>
       </div>
 
-      <div className="flex-col flex justify-evenly">
-        <p className="font-semibold ml-5">CONTACT US</p>
-        <p title="EMAIL" className="flex items-center ">
+      <div className="flex-col  ">
+        <p className="font-semibold m-5 ">CONTACT US</p>
+        {/* <p title="EMAIL" className="flex items-center ">
           <a  href={mail} target="_blank" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2">   <TbMailFilled color="white" title="Email" size={25} /></a>
           EMAIL
         </p>
@@ -40,7 +77,7 @@ function Footer2() {
               <BiSolidPhoneCall color="white"  size={20} />
               </a>
           MOBILE
-        </p>
+        </p> */}
         <p className="flex items-center ">
           <a  href={linkedin} target="_blank" title="LINKEDIN" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2"> <TfiLinkedin color="white" size={15} /></a>
           LINKEDIN
@@ -67,24 +104,24 @@ function Footer2() {
       >
         <form name="contact" method="POST">
           <div className="flex">
-          <div className="Name pr-3 py-2">
+          <div className="Name mr-5 py-5">
            
             <input
             placeholder="Your Name"
               type="text"
               name="name"
               id="default-input"
-              className="bg-white  max-md:w-[80vw]  text-black text-sm rounded-lg   block w-[15vw] p-2.5 "
+              className="bg-white  max-md:w-[80vw]  text-black text-sm rounded-lg   block w-[15vw] p-[15px] "
             />
           </div>
-          <div className="Mail py-2">
+          <div className="Mail py-5 ">
             
             <input
             placeholder="Your Mail id"
               type="text"
               name="email"
               id="default-input"
-              className="  max-md:w-[80vw]  text-black text-sm rounded-lg  w-[15vw] p-2.5 "
+              className="  max-md:w-[80vw]  text-black text-sm rounded-lg  w-[15vw] p-[15px] "
             />
           </div>
           </div>
@@ -95,10 +132,10 @@ function Footer2() {
               name="message"
               id="message"
               rows="4"
-              className=" w-[31vw]  max-md:w-[80vw] p-2  text-black text-sm rounded-lg  h-[20vh]p-2.5   "
+              className=" w-[31vw]  max-md:w-[80vw]   text-black text-sm rounded-lg  h-[20vh] p-[15px]   "
             ></textarea>
           </div>
-          <div className=" mt-[-15px] flex items-center">
+          <div className=" mt-[-10px] flex items-center">
             {/* <button
               type="button "
               className=" max-md:w-[75vw] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[30vw]"
