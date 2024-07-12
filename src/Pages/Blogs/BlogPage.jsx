@@ -1,6 +1,6 @@
 import React from 'react'
 import BlogCard from './BlogCard'
-import Button from '../Components/Button'
+import Button from '../../Components/Button'
 function BlogPage() {
   return (
     <div className='h-auto  w-full    '>

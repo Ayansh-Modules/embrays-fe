@@ -1,5 +1,5 @@
 import React from "react";
-import baseAssets from "../assets/baseAssets";
+import baseAssets from "../../assets/baseAssets";
 import { MdOutlineArrowOutward } from "react-icons/md";
 function BlogCard() {
   const background = baseAssets.collaborationCoachpxMain;
@@ -13,7 +13,7 @@ function BlogCard() {
             alt=""
           />
         </a>
-        <div className="h-[60px] w-full bg-BlogCard opacity-90 z-1 mt-[-60px] text-white text-sm font-semibold flex-col flex justify-center ">
+        <div className="h-[60px] w-full backdrop-blur-3xl  bg-BlogCard opacity-90 z-1 mt-[-60px] text-white text-sm font-semibold flex-col flex justify-center ">
           <p className="px-5">
             Olivia Rhye
             <p>12 July 2024</p>
