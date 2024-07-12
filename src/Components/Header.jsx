@@ -22,7 +22,7 @@ function Header() {
   ];
   return (
     <>
-      <div className="navbar py-[20px]  w-[100%] bg-Layoutblue flex-row flex items-center justify-between font-semibold sticky top-0 z-10 px-[10vw]">
+      <div className="navbar py-[20px]  w-full bg-Layoutblue flex-row flex items-center justify-between font-semibold sticky top-0 z-10 px-[10vw]">
         <div className="max-md:text-xl flex items-center justify-between text-3xl font-semibold text-white max-lg:text-base">
           <a href="/" title="Embrys Technology.Com"> {company}</a>
         </div>
@@ -47,6 +47,7 @@ function Header() {
                   {option.title}
                 </a>
               ))}
+              
             </div>
           </div>
           {PortfolioButton()}

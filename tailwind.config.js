@@ -20,6 +20,7 @@ export default {
         Layoutblack: "#101010",
         Layoutring: "#9333C0",
         LayoutCream: "#fff8ec",
+        BlogCard : "#A5ACCB"
       },
     },
   },

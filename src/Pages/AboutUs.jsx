@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { IoIosArrowRoundForward } from "react-icons/io";
+// import { IoIosArrowRoundForward } from "react-icons/io";
 import baseAssets from "../assets/baseAssets";
 import LetsConnect from "../Components/LetsConnect";
 import { appData } from "../Data/AppData";
-import { Helmet } from "react-helmet";
+import Button from "../Components/Button";
 function AboutUs() {
   const data = appData.aboutUs;
   const [open, setOpen] = useState(false);
@@ -28,7 +28,7 @@ function AboutUs() {
             solutions for success
           </div>
           <div className="subTitle text-lg  font-light ">{data.subTitle}</div>
-          <div className="btn">
+          {/* <div className="btn">
             <button
               onClick={() => setOpen(true)}
               type="button"
@@ -39,7 +39,8 @@ function AboutUs() {
                 <IoIosArrowRoundForward className="h-[27px] w-[27px] ml-[-10px]" />
               </span>
             </button>
-          </div>
+          </div> */}
+          <Button  text={"LET'S CONNECT"}  onClick={() => setOpen(true)} />
         </div>
         <div
           className=""
