@@ -12,10 +12,10 @@ function Footer2() {
   const contact = appData.contact;
   const linkedin = appData.urls.linkedin;
   const instagram = appData.urls.instagram;
-  const mail = appData.urls.mailto;
-  const cell = appData.urls.cellto;
+  // const mail = appData.urls.mailto;
+  // const cell = appData.urls.cellto;
   return (
-    <div className="bg-Layoutblue w-full text-xs">
+    <div className="bg-Layoutblue w-full text-xs shadow">
       <div className=" flex text-white justify-evenly items-start p-10">
       
        <div

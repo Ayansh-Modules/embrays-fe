@@ -9,8 +9,12 @@ function Contact() {
   return (
     <div
       id="contactus"
-      className=" w-full flex overflow-hidden items-center justify-evenly max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  pt-5   max-md:px-5"
+      className=" w-full flex-col flex overflow-hidden items-center justify-evenly max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  pt-5   max-md:px-5"
     >
+      <p className='w-[95vw] flex-col flex justify-start  '>
+            <p className='text-3xl font-semibold text-Layoutblue'>Latest Blog</p>
+            <p className='text-base py-5'>The latest industry news , interviews , tecnologies and resources</p>
+        </p>
       {/* <form
         name="contact"
         data-netlify="true"
