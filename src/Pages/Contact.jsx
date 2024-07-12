@@ -14,7 +14,7 @@ function Contact() {
   return (
     <div 
       id="contactus"
-      className="bg-Layoutblue w-full flex overflow-hidden items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  py-20 lg:px-[10vw] max-lg:px-[5vw] max-md:px-5"
+      className="bg-Layoutblue w-full flex overflow-hidden items-center justify-between max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  pt-10 lg:px-[10vw] max-lg:px-[5vw] max-md:px-5"
     >
       
     
@@ -42,6 +42,7 @@ function Contact() {
             <a
               className="mt-[5vh]  pl-2 text-base font-medium"
               href={urls.mailto}
+              target="_blank"
             >
               {contact.mail}
             </a>
@@ -50,7 +51,7 @@ function Contact() {
             <div title="Mobile" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
               <BiSolidPhoneCall color="white"  size={25} />
             </div>
-            <a className="mt-[5vh] pl-2 text-base" href={urls.cellto}>
+            <a className="mt-[5vh] pl-2 text-base" href={urls.cellto} target="_blank">
               {contact.cell}
             </a>
           </div>
@@ -67,55 +68,59 @@ function Contact() {
         <textarea name="message"></textarea>
       </form>
       <div
-        data-aos="fade-up"
-        data-aos-offset="200"
-        data-aos-easing="ease"
-        data-aos-duration="1000"
+        data-aos="fade-left"
+         data-aos-easing="ease"
+        
       >
         <form name="contact" method="POST">
-          <div className="Name px-5 py-2">
-            <label
+          <div className="flex max-md:flex-col ">
+          <div className="Name pr-3 py-2">
+          <label
               htmlFor="default-input"
-              className="block mb-2 text-sm font-medium  text-white"
+              className="block m-2 text-sm font-medium  text-white "
             >
               Your Name
             </label>
             <input
+          
               type="text"
               name="name"
               id="default-input"
-              className="bg-white  max-md:w-[80vw]  text-black text-sm rounded-xl   block w-[30vw] p-2.5 "
+              className="bg-white  max-md:w-[80vw]  text-black text-sm rounded-xl   block w-[15vw] p-2.5 "
             />
           </div>
-          <div className="Mail px-5 py-2">
-            <label
+          <div className="Mail py-2">
+          <label
               htmlFor="default-input"
-              className="block mb-2 text-sm font-medium  text-white"
+              className="block m-2 text-sm font-medium  text-white"
             >
-              Your Mail id
+              Your Email
             </label>
             <input
+           
               type="text"
               name="email"
               id="default-input"
-              className="  max-md:w-[80vw]  text-black text-sm rounded-xl  w-[30vw] p-2.5 "
+              className="  max-md:w-[80vw]  text-black text-sm rounded-xl  w-[15vw] p-2.5 "
             />
           </div>
-          <div className="Message px-5 py-2">
-            <label
+          </div>
+          <div  className="Message  pt-1">
+          <label
               htmlFor="default-input"
-              className="block mb-2 text-sm font-medium  text-white"
+              className="block m-2 text-sm font-medium  text-white"
             >
-              Message for Us
+            Message For Us
             </label>
-            <textarea
+            <textarea 
+          
               name="message"
               id="message"
               rows="4"
-              className="mb-[10px] w-[30vw]  max-md:w-[80vw] p-2  text-black text-sm rounded-xl  h-[20vh]p-2.5   "
+              className=" w-[31vw]  max-md:w-[80vw] p-2  text-black text-sm rounded-xl  h-[20vh]p-2.5   "
             ></textarea>
           </div>
-          <div className="  ml-6 flex items-center">
+          <div className=" ml-1 flex items-center">
             {/* <button
               type="button "
               className=" max-md:w-[75vw] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[30vw]"

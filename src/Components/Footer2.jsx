@@ -8,43 +8,46 @@ import Button from "../Components/Button"
 
 function Footer2() {
   const data = appData.aboutUs.title + appData.aboutUs.subTitle;
-
+  const linkedin = appData.urls.linkedin;
+  const instagram = appData.urls.instagram;
+  const mail = appData.urls.mailto;
+  const cell = appData.urls.cellto;
   return (
     <div className="bg-Layoutblue w-full text-xs">
       <div className=" flex text-white justify-evenly p-10">
       
       <div className="text-justify w-[25vw] ">
-        <p className="text-2xl font-semibold mb-5">ET</p>
+        <p className="text-2xl font-semibold mb-5"><a href="/">ET</a></p>
         {data}
       </div>
       <div className="flex-col  ">
         <p className=" font-semibold mb-5">EXPLORE</p>
-        <p className="mb-5">HOME</p>
-        <p className="mb-5">PORTFOLIO</p>
-        <p className="mb-5">CONTACT US</p>
-        <p>TERMS & CONDITION </p>
+        <p className="mb-5"><a href="/">HOME</a></p>
+        <p className="mb-5"><a href="">PORTFOLIO</a></p>
+        <p className="mb-5"><a  href="/#contactus">CONTACT US</a></p>
+        <p><a href="">TERMS & CONDITION </a></p>
       </div>
 
       <div className="flex-col flex justify-evenly">
         <p className="font-semibold ml-5">CONTACT US</p>
         <p title="EMAIL" className="flex items-center ">
-          <span className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2">   <TbMailFilled color="white" title="Email" size={25} /></span>
+          <a  href={mail} target="_blank" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2">   <TbMailFilled color="white" title="Email" size={25} /></a>
           EMAIL
         </p>
         <p className="flex items-center ">
              
-              <span title="MOBILE" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2">
+              <a href={cell} target="_blank" title="MOBILE" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2">
               <BiSolidPhoneCall color="white"  size={20} />
-              </span>
+              </a>
           MOBILE
         </p>
         <p className="flex items-center ">
-          <span title="LINKEDIN" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2"> <TfiLinkedin color="white" /></span>
+          <a  href={linkedin} target="_blank" title="LINKEDIN" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2"> <TfiLinkedin color="white" size={15} /></a>
           LINKEDIN
         
         </p>
         <p className="flex items-center ">
-          <span title="INSTAGRAM" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2"> <GrInstagram color="white" /></span>
+          <a href={instagram} target="_blank" title="INSTAGRAM" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2"> <GrInstagram color="white" size={18} /></a>
           INSTAGRAM
         </p>
       </div>

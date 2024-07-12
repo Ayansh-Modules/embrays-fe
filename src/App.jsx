@@ -19,16 +19,16 @@ function App() {
     <>
       <Embrays_Helmet />
       <Header />
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Root />}></Route>
         <Route
           path="/terms-and-conditions"
           element={<TermsAndCondition />}
         ></Route>
-      </Routes> */}
-      <BlogPage />
-      {/* <Footer /> */}
-      <Footer2/>
+      </Routes>
+      {/* <BlogPage /> */}
+      <Footer />
+      {/* <Footer2/> */}
     </>
   );
 }
