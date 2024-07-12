@@ -9,11 +9,11 @@ function Header() {
   const headerOptions = [
     {
       title: "About Us",
-      href: "#aboutus",
+      href: "/#aboutus",
     },
     {
       title: "Services",
-      href: "#services",
+      href: "/#services",
     },
     {
       title: "How it works?",
@@ -23,13 +23,15 @@ function Header() {
       title: "Blogs",
       href: "/blog",
     },
-   
   ];
   return (
     <>
       <div className="navbar py-[20px]  w-full bg-Layoutblue flex-row flex items-center justify-between font-semibold sticky top-0 z-10 px-[10vw]">
         <div className="max-md:text-xl flex items-center justify-between text-3xl font-semibold text-white max-lg:text-base">
-          <a href="/" title="Embrys Technology.Com"> {company}</a>
+          <a href="/" title="Embrys Technology.Com">
+            {" "}
+            {company}
+          </a>
         </div>
         <div className=" max-md:visible md:hidden ">
           <IoMenu
@@ -52,7 +54,6 @@ function Header() {
                   {option.title}
                 </a>
               ))}
-              
             </div>
           </div>
           {PortfolioButton()}
@@ -81,7 +82,10 @@ function Header() {
 
 function PortfolioButton() {
   return (
-    <div className="flex items-center justify-start" title="Click to get Portfolio">
+    <div
+      className="flex items-center justify-start"
+      title="Click to get Portfolio"
+    >
       <button
         type="button"
         className="h-[3rem] w-[8rem] text-sm focus:ring-2  focus:ring-white  text-black bg-Layoutneon hover:bg-white  rounded-xl  flex items-center justify-center "
