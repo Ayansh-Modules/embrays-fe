@@ -21,7 +21,7 @@ function Header() {
     },
     {
       title: "Blogs",
-      href: "/blog",
+      href: "/#blogs",
     },
   ];
   return (

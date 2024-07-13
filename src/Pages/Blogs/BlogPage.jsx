@@ -6,7 +6,7 @@ function BlogPage() {
   const [viewAll , setviewAll] = useState(false)
   return (
     <div className='h-auto  w-full    '>
-        <p className='px-10 py-5  '>
+        <p className='px-20 py-5 '>
             <p className='text-3xl font-semibold text-Layoutblue'>Latest Blog</p>
             <p className='text-sm pt-5'>The latest industry news , interviews , tecnologies and resources</p>
         </p>
@@ -18,7 +18,7 @@ function BlogPage() {
         <BlogCard />
         <BlogCard />
         </div>}
-       {viewAll && <ViewAllBlog />}
+       {viewAll && <div className='flex items-center justify-evenly mb-20 mt-10'><ViewAllBlog /></div>}
         </div>
 
      {  !viewAll && <div className='flex justify-end mx-6 mb-5'>

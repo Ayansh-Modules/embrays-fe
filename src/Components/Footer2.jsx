@@ -25,48 +25,48 @@ function Footer2() {
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <div className="pt-[10px]">
-          <p className=" text-xl font-medium dark:text-Layoutyellow text-left mb-[5vh]">
+        <div className="pt-[10px] mb-5">
+          <p className=" text-xl font-medium dark:text-Layoutyellow text-left mb-5">
             {data.primary}
           </p>
-          <p className="text-5xl max-md:text-3xl font-semibold  text-white w-[10vw] text-left mb-[5vh]">
+          <p className="text-5xl max-md:text-3xl font-semibold  text-white w-[10vw] text-left ">
             {data.secondary}
           </p>
         </div>
 
         <div className="contactid text-white">
           <div className="flex-row flex items-center ">
-            <div title="Email" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
+            <div title="Email" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center my-5">
               <TbMailFilled color="white" title="Email" size={25} />
             </div>
             <a
-              className="mt-[5vh]  pl-2 text-base font-medium"
+              className="  pl-2 text-base font-medium hover:text-Layoutneon"
               href={urls.mailto}
               target="_blank"
             >
               {contact.mail}
             </a>
           </div>
-          <div className="flex-row flex items-center font-medium pb-5" title="Mobile">
-            <div title="Mobile" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center mt-[5vh]">
+          <div className="flex-row flex items-center font-medium " title="Mobile">
+            <div title="Mobile" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center ">
               <BiSolidPhoneCall color="white"  size={25} />
             </div>
-            <a className="mt-[5vh] pl-2 text-base" href={urls.cellto} target="_blank">
+            <a className=" pl-2 text-base hover:text-Layoutneon" href={urls.cellto} target="_blank">
               {contact.cell}
             </a>
           </div>
         </div>
       </div>
       <div className="flex-col h-[11rem]  flex justify-evenly ">
-        <p className=" font-semibold ">EXPLORE</p>
-        <p className=""><a href="/">HOME</a></p>
-        <p className=""><a href="">PORTFOLIO</a></p>
-        <p className=""><a  href="/#contactus">CONTACT US</a></p>
-        <p><a href="">TERMS & CONDITION </a></p>
+        <p className=" font-semibold hover:text-Layoutneon">EXPLORE</p>
+        <p className="hover:text-Layoutneon"><a href="/">HOME</a></p>
+        <p className="hover:text-Layoutneon"><a href="">PORTFOLIO</a></p>
+        <p className="hover:text-Layoutneon"><a  href="/#contactus">CONTACT US</a></p>
+        <p className="hover:text-Layoutneon"><a href="/terms-and-conditions">TERMS & CONDITION </a></p>
       </div>
 
       <div className="flex-col  ">
-        <p className="font-semibold m-5 ">CONTACT US</p>
+        <p className="font-semibold m-4 hover:text-Layoutneon">CONTACT US</p>
         {/* <p title="EMAIL" className="flex items-center ">
           <a  href={mail} target="_blank" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2">   <TbMailFilled color="white" title="Email" size={25} /></a>
           EMAIL
@@ -79,13 +79,14 @@ function Footer2() {
           MOBILE
         </p> */}
         <p className="flex items-center ">
-          <a  href={linkedin} target="_blank" title="LINKEDIN" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2"> <TfiLinkedin color="white" size={15} /></a>
-          LINKEDIN
+          <a  href={linkedin} target="_blank" title="LINKEDIN" className="flex-row flex items-center border h-[40px] w-[40px] hover:text-Layoutneon hover:bg-indigo-600 rounded-full justify-center m-2"> <TfiLinkedin color="white" size={15} /></a>
+         <a href={linkedin} target="_blank" className="hover:text-Layoutneon">LINKEDIN</a> 
         
         </p>
         <p className="flex items-center ">
-          <a href={instagram} target="_blank" title="INSTAGRAM" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2"> <GrInstagram color="white" size={18} /></a>
-          INSTAGRAM
+          <a href={instagram} target="_blank" title="INSTAGRAM" className="flex-row flex items-center border h-[40px] w-[40px] hover:text-Layoutneon hover:bg-indigo-600 rounded-full justify-center m-2"> <GrInstagram color="white" size={18} /></a>
+         <a href={instagram} target="_blank" className="hover:text-Layoutneon"> INSTAGRAM</a> 
+         
         </p>
       </div>
       <div>
@@ -104,7 +105,7 @@ function Footer2() {
       >
         <form name="contact" method="POST">
           <div className="flex">
-          <div className="Name mr-5 py-5">
+          <div className="Name mr-5 py-4">
            
             <input
             placeholder="Your Name"
@@ -114,7 +115,7 @@ function Footer2() {
               className="bg-white  max-md:w-[80vw]  text-black text-sm rounded-lg   block w-[15vw] p-[15px] "
             />
           </div>
-          <div className="Mail py-5 ">
+          <div className="Mail py-4 ">
             
             <input
             placeholder="Your Mail id"

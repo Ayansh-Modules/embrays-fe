@@ -5,12 +5,12 @@ function BlogCard() {
   const background = baseAssets.collaborationCoachpxMain;
   return (
   
-      <div class="w-[30vw] bg-white border border-black rounded-2xl shadow ">
+      <div class="w-[27vw] bg-white border border-black rounded-2xl shadow ">
         <a href="#">
           <img
             class="rounded-t-2xl  z-[-1px] h-[200px]  w-full "
             src={background}
-            alt=""
+            alt="Post Image"
           />
         </a>
         <div className="h-[60px] w-full backdrop-blur-3xl  bg-BlogCard opacity-90 z-1 mt-[-60px] text-white text-sm font-semibold flex-col flex justify-center ">

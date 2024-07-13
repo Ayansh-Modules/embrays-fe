@@ -8,7 +8,7 @@ function Contact() {
 
   return (
     <div
-      id="contactus"
+      id="blogs"
       className=" w-full flex-col flex overflow-hidden items-center justify-evenly max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  pt-5   max-md:px-5"
     >
       <p className='w-[95vw] flex-col flex justify-start  '>
@@ -88,7 +88,7 @@ function Contact() {
             <Button text={"LET'S CONNECT"}/>
           </div>
         </form> */}
-        <div className="flex">
+        <div className="flex items-center justify-evenly w-full">
           <span className="m-5">
             <BlogCard />
           </span>
