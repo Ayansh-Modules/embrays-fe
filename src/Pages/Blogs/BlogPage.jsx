@@ -14,9 +14,9 @@ function BlogPage() {
         <div className=''>
 
         {!viewAll && <div className='flex items-center justify-evenly mb-10'>
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {/* <BlogCard /> */}
+        {/* <BlogCard /> */}
+        {/* <BlogCard /> */}
         </div>}
        {viewAll && <div className='flex items-center justify-evenly mb-20 mt-10'><ViewAllBlog /></div>}
         </div>

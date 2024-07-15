@@ -8,15 +8,17 @@ import BlogPage from "./Pages/Blogs/BlogPage";
 import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
-import BlogContextProvider from "./Context/BlogContext"
+import {useBlogContext}  from "./Context/BlogContext"
 function App() {
+  const {getBlogs} = useBlogContext()
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+    getBlogs()
   }, []);
 
   return (
-    <BlogContextProvider>
+    <>
 
       <Embrays_Helmet />
       <Header />
@@ -30,7 +32,7 @@ function App() {
         <Route path="/blog" element={<BlogPage />}></Route>
       </Routes>
       <Footer2 /> 
-    </BlogContextProvider>
+    </>
   );
 }
 

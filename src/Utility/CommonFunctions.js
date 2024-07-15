@@ -1,12 +1,12 @@
 
-function cleanString(input) {
+export function cleanString(input) {
     let cleaned = input.replace(/\n+/g, ' ');
     cleaned = cleaned.replace(/[^\w\s.,!?]/g, '');
 
     return cleaned;
 }
 
-export default cleanString
+ 
 
 
 

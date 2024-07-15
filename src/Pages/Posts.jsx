@@ -90,13 +90,13 @@ function Posts() {
         </form> */}
         <div className="flex items-center justify-evenly w-full">
           <span className="m-5">
-            <BlogCard name={result}/>
+            {/* <BlogCard name={result}/> */}
           </span>
           <span className="m-5">
-            <BlogCard />
+            {/* <BlogCard /> */}
           </span>
           <span className="m-5">
-            <BlogCard />
+            {/* <BlogCard /> */}
           </span>
         </div>
 
