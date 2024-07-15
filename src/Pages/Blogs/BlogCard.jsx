@@ -2,8 +2,8 @@ import React from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 function BlogCard({data}) {
 console.log (data)
-//  const coverImage=props.data.coverImage
- const user=data.user
+ const coverImage=data.coverImage
+//  const user=data.user
  const userName=data.userName
  const postDate=data.postDate
  const postTitle=data.postTitle
@@ -17,7 +17,7 @@ console.log (data)
         <a >
           <img
             class="rounded-t-2xl  z-[-1px] h-[200px]  w-full "
-            // src= {coverImage}
+            src= {coverImage}
             alt="Post Image"
           />
         </a>

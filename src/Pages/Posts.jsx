@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "../Components/Button";
-import BlogCard from "./Blogs/BlogCard";
-import {useBlogContext}  from "../Context/BlogContext"
+// import BlogCard from "./Blogs/BlogCard";
+// import {useBlogContext}  from "../Context/BlogContext"
 function Posts() {
   // open = props.OpenSnackbar
   // close = props.onClose
-  const {result} = useBlogContext()
+  // const {result} = useBlogContext()
   return (
     <div
       id="blogs"
@@ -101,7 +101,7 @@ function Posts() {
         </div>
 
         <div className="flex justify-end w-[95vw] pb-5 ">
-          <a href="/blog">
+          <a href="/allblog">
             <Button text={"VIEW ALL POSTS"} />
           </a>
         </div>

@@ -1,40 +1,56 @@
-import { createContext, useContext , useState } from "react";
 import axios from "axios";
+import { createContext, useContext, useState } from "react";
 const BlogsContext = createContext();
 export const useBlogContext = () => {
   return useContext(BlogsContext);
 };
 
 function BlogContextProvider({ children }) {
-  const [posts,setPosts] = useState([])
+  const [posts, setPosts] = useState([]);
   const HASHNODE_URL = "https://gql.hashnode.com";
   async function getBlogs() {
     try {
-      const response = await axios.post(HASHNODE_URL , {
+      const response = await axios.post(HASHNODE_URL, {
         query,
         variables: { first: 12, after: "" },
       });
-      const data = []
+      const data = [];
       response.data.data.feed.edges.map((edge) => {
-        data.push({
-          id :edge.node._id,
-          coverImage :edge.node.coverImage.url ,
-               user : edge.node.photo,
-               userName :edge.node.author.name,
-               postDate :edge.node.dateAdded,
-               postTitle :edge.node.title,
-               postBrief :edge.node.brief,
-               postUrl :edge.node.url
-        })
+        let blogData = {};
+
+        if (edge.node._id) {
+          blogData["id"] = edge.node._id;
+        }
+        if (edge.node.coverImage && edge.node.coverImage.url) {
+
+          blogData["coverImage"] = edge.node.coverImage.url;
+        }
+        if (edge.node.author.name) {
+          blogData["userName"] = edge.node.author.name;
+        }
+        if (edge.node.dateAdded) {
+          blogData["postDate"] = edge.node.dateAdded;
+        }
+        if (edge.node.title) {
+          blogData[" postTitle "] = edge.node.title;
+        }
+        if (edge.node.brief) {
+          blogData["postBrief"] = edge.node.brief;
+        }
+        if (edge.node.url) {
+          blogData["postUrl"] = edge.node.url;
+        }
+
+        data.push(blogData);
       });
-      setPosts(data)
-      console.log (data)
+      setPosts(data);
+      console.log(data);
       return data; //it will have all the blogs
     } catch (error) {
-      console.log("error");
+      console.log(error);
     }
   }
-  
+
   const query = `query Feed($first: Int!, $filter: FeedFilter, $after: String) {
    feed(first: $first, filter: $filter, after: $after) {
      edges {
@@ -72,10 +88,10 @@ function BlogContextProvider({ children }) {
    }
   }
   `;
-  
+
   let value = {
     getBlogs,
-    posts
+    posts,
   };
 
   return (
