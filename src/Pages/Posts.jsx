@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "../Components/Button";
 import BlogCard from "./Blogs/BlogCard";
-
-function Contact() {
+import {useBlogContext}  from "../Context/BlogContext"
+function Posts() {
   // open = props.OpenSnackbar
   // close = props.onClose
-
+  const {result} = useBlogContext()
   return (
     <div
       id="blogs"
@@ -90,7 +90,7 @@ function Contact() {
         </form> */}
         <div className="flex items-center justify-evenly w-full">
           <span className="m-5">
-            <BlogCard />
+            <BlogCard name={result}/>
           </span>
           <span className="m-5">
             <BlogCard />
@@ -110,4 +110,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Posts;

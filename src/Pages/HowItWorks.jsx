@@ -51,8 +51,7 @@ function HowItWorks() {
                 data-aos-offset="200"
                 data-aos-easing="ease"
                 data-aos-duration="3000"
-          data-aos-anchor-placement="center-bottom"
-
+                data-aos-anchor-placement="center-bottom"
               >
                 <div className="flex">
                   <div className="point one mr-6 text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">

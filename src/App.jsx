@@ -8,7 +8,7 @@ import BlogPage from "./Pages/Blogs/BlogPage";
 import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
-
+import BlogContextProvider from "./Context/BlogContext"
 function App() {
   useEffect(() => {
     AOS.init();
@@ -16,7 +16,8 @@ function App() {
   }, []);
 
   return (
-    <>
+    <BlogContextProvider>
+
       <Embrays_Helmet />
       <Header />
       <Routes>
@@ -28,8 +29,8 @@ function App() {
 
         <Route path="/blog" element={<BlogPage />}></Route>
       </Routes>
-      <Footer2 />
-    </>
+      <Footer2 /> 
+    </BlogContextProvider>
   );
 }
 

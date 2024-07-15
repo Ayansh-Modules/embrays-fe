@@ -4,7 +4,7 @@ import Partnership from "../Components/Partnership";
 import AboutUs from "./AboutUs";
 import ClientReview from "./ClientReview";
 import Collaboration from "./Collaboration";
-import Contact from "./Contact";
+import Posts from "./Posts";
 import HowItWorks from "./HowItWorks";
 import Services from "./Services";
 import WhyUs from "./WhyUs";
@@ -28,7 +28,7 @@ function Root() {
       <Collaboration />
       <ClientReview />
       <Partnership />
-      <Contact />
+      <Posts />
     </div>
   );
 }

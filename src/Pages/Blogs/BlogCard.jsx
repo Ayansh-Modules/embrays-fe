@@ -1,12 +1,13 @@
 import React from "react";
 import baseAssets from "../../assets/baseAssets";
 import { MdOutlineArrowOutward } from "react-icons/md";
-function BlogCard() {
+function BlogCard(props) {
   const background = baseAssets.collaborationCoachpxMain;
+  const   name = props.name
   return (
   
-      <div class="w-[27vw] bg-white border border-black rounded-2xl shadow ">
-        <a href="#">
+      <div class="w-[27vw] bg-white border border-black rounded-2xl shadow " >
+        <a >
           <img
             class="rounded-t-2xl  z-[-1px] h-[200px]  w-full "
             src={background}
@@ -15,12 +16,12 @@ function BlogCard() {
         </a>
         <div className="h-[60px] w-full backdrop-blur-3xl  bg-BlogCard opacity-90 z-1 mt-[-60px] text-white text-sm font-semibold flex-col flex justify-center ">
           <p className="px-5">
-            Olivia Rhye
+            {name}
             <p>12 July 2024</p>
           </p>
         </div>
         <div class="px-5 py-2 hover:bg-violet-100 hover:rounded-b-2xl">
-          <a href="#">
+          <a >
             <h5 class="text-sm font-bold tracking-tight text-gray-900 ">
               Noteworthy technology acquisitions 2021
             </h5>
@@ -30,7 +31,7 @@ function BlogCard() {
             far, in reverse chronological order.
           </p>
           <a
-            href="#"
+            
             class="inline-flex items-center  py-2 text-sm font-semibold text-center text-Layoutblue  "
           >
             Read Post
