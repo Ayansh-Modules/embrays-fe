@@ -15,7 +15,10 @@ function Footer2() {
   // const mail = appData.urls.mailto;
   // const cell = appData.urls.cellto;
   return (
-    <div className="bg-Layoutblue w-full text-xs shadow">
+    <div className="bg-Layoutblue w-full text-xs rounded-md " 
+    style={{ boxShadow: " 0px -4px 8px,0px 0px 0px #ffffff" }}
+    
+    >
       <div className=" flex text-white justify-evenly items-start p-10">
       
        <div

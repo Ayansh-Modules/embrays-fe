@@ -10,7 +10,10 @@ function Footer() {
     navigate("/terms-and-conditions");
   }
   return (
-    <div className="footer pt-[25px] pb-[10px] w-full bg-Layoutblue flex-col flex items-center justify-center px-[10vw]">
+    <div className="footer pt-[25px] pb-[10px] w-full bg-Layoutblue flex-col flex items-center justify-center px-[10vw]"
+    style={{ boxShadow: " 9px -9px 18px #898989,-9px 9px 18px #ffffff" }}
+    
+    >
       <div className=" flex  justify-between w-full  max-md:flex-col">
         <div className="socialMedia flex-row flex items-center justify-start max-md:pb-8">
           <div title="Linkedin" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center mr-[2vw]">

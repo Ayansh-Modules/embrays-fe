@@ -7,9 +7,11 @@ export const useBlogContext = () => {
 };
 
 function BlogContextProvider({ children }) {
+  const [loading , setLoading]= useState(false)
   const [posts, setPosts] = useState([]);
   const HASHNODE_URL = "https://gql.hashnode.com";
   async function getBlogs() {
+    setLoading(true)
     try {
       const response = await axios.post(HASHNODE_URL, {
         query,
@@ -49,15 +51,17 @@ function BlogContextProvider({ children }) {
         if (edge.node.url) {
           blogData["postUrl"] = edge.node.url;
         }
-
         data.push(blogData);
       });
+      setLoading(false)
       setPosts(data);
       console.log(data);
       return data; //it will have all the blogs
     } catch (error) {
       console.log(error);
     }
+    setLoading(false)
+
   }
 
   const query = `query Feed($first: Int!, $filter: FeedFilter, $after: String) {
@@ -101,6 +105,7 @@ function BlogContextProvider({ children }) {
   let value = {
     getBlogs,
     posts,
+    loading,
   };
 
   return (
