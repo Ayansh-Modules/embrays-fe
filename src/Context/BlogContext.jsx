@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createContext, useContext, useState } from "react";
+import baseAssets from "../assets/baseAssets"
 const BlogsContext = createContext();
 export const useBlogContext = () => {
   return useContext(BlogsContext);
@@ -25,8 +26,16 @@ function BlogContextProvider({ children }) {
 
           blogData["coverImage"] = edge.node.coverImage.url;
         }
+        else {
+          blogData["coverImage"] = baseAssets.defaultCover;
+
+        }
+
         if (edge.node.author.name) {
           blogData["userName"] = edge.node.author.name;
+        }
+        if (edge.node.author.photo) {
+          blogData["userPhoto"] = edge.node.author.photo;
         }
         if (edge.node.dateAdded) {
           blogData["postDate"] = edge.node.dateAdded;

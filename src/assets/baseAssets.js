@@ -73,6 +73,9 @@ import arrowLeft from "./icons/arrow-left.svg";
 import arrowRight from "./icons/arrow-right.svg";
 import embraystechnologyPdf from "./pdf/embraystechnology.pdf";
 
+//blog
+import defaultCover from "../assets/images/Blog/defaultCover.png"
+
 const baseAssets = {
   //about us
   rocket: rocket,
@@ -143,5 +146,6 @@ const baseAssets = {
   embraystechnologyPdf: embraystechnologyPdf,
   arrowLeft: arrowLeft,
   arrowRight: arrowRight,
+  defaultCover:defaultCover,
 };
 export default baseAssets;
