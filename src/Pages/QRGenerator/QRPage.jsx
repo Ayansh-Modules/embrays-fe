@@ -23,8 +23,16 @@ function QRPage() {
   ];
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <div className="text-4xl font-semibold text-Layoutblue mt-5">QR GENERATOR </div>
-      <div className="w-[70vw]  border-2 border-black rounded-lg flex my-10">
+      <div className="text-4xl font-semibold text-Layoutblue mt-5">
+        QR GENERATOR{" "}
+      </div>
+      <div
+        className="w-[70vw]  border-2 border-black rounded-lg flex my-10"
+        style={{
+          boxShadow:
+            "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+        }}
+      >
         <div className="w-[50vw] border-2 rounded-l-lg m-5 mr-0">
           {/* tools */}
           <div className="Tools flex items-center justify-evenly p-5 border-b-2 bg-gray-100">

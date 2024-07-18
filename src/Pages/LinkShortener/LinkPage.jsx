@@ -3,12 +3,18 @@ import { RiLinkM } from "react-icons/ri";
 import Button from "../../Components/Button";
 function LinkPage() {
   return (
-    <div className="w-full flex flex-col items-center justify-center">
-      <div className="text-4xl font-semibold text-Layoutblue mt-5">
+    <div className="w-full flex flex-col items-center justify-center" 
+    >
+      <div className="text-4xl font-semibold text-Layoutblue mt-5"
+      
+      >
         {" "}
         Link Shortener{" "}
       </div>
-      <div className=" w-[70vw]  border-2 border-black rounded-lg flex my-10">
+      <div className=" w-[70vw]  border-2 border-black rounded-lg flex my-10"
+    style={{  boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px" }}
+      
+      >
         <div className="border-2 rounded-lg m-5 w-full">
           <div className="btnshortURL flex items-center border-b-2 bg-gray-200">
             <div className="btn p-2 rounded-md bg-gray-300 m-5 ml-10 border-2 hover:border-Layoutblue flex items-center justify-center text-sm font-semibold hover:text-Layoutblue focus:ring-Layoutblue ">

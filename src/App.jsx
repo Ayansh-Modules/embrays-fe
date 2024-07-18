@@ -33,8 +33,8 @@ function App() {
         ></Route>
         <Route path="/allblog" element={<ViewAllBlog />}></Route>
       </Routes> */}
-        {/* <QRPage /> */}
-        <LinkPage />
+        <QRPage />
+        {/* <LinkPage /> */}
       <Footer2 /> 
     </>
   );
