@@ -22,7 +22,8 @@ function QRPage() {
     { color: "#285F2F" },
   ];
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center">
+      <div className="text-4xl font-semibold text-Layoutblue mt-5">QR GENERATOR </div>
       <div className="w-[70vw]  border-2 border-black rounded-lg flex my-10">
         <div className="w-[50vw] border-2 rounded-l-lg m-5 mr-0">
           {/* tools */}
