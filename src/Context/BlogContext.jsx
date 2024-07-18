@@ -43,7 +43,7 @@ function BlogContextProvider({ children }) {
           blogData["postDate"] = edge.node.dateAdded;
         }
         if (edge.node.title) {
-          blogData[" postTitle "] = edge.node.title;
+          blogData["postTitle"] = edge.node.title;
         }
         if (edge.node.brief) {
           blogData["postBrief"] = edge.node.brief;
@@ -52,6 +52,7 @@ function BlogContextProvider({ children }) {
           blogData["postUrl"] = edge.node.url;
         }
         data.push(blogData);
+     
       });
       setLoading(false)
       setPosts(data);

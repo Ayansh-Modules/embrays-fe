@@ -10,6 +10,7 @@ import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
 import {useBlogContext}  from "./Context/BlogContext"
+import QRPage from "./Pages/QRGenerator/QRPage";
 function App() {
   const {getBlogs} = useBlogContext()
   useEffect(() => {
@@ -23,16 +24,15 @@ function App() {
 
       <Embrays_Helmet />
       <Header />
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Root />}></Route>
         <Route
           path="/terms-and-conditions"
           element={<TermsAndCondition />}
         ></Route>
-
-        {/* <Route path="/blog" element={<BlogPage />}></Route> */}
         <Route path="/allblog" element={<ViewAllBlog />}></Route>
-      </Routes>
+      </Routes> */}
+        <QRPage />
       <Footer2 /> 
     </>
   );
