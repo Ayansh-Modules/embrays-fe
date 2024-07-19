@@ -108,7 +108,7 @@ function QRPage() {
             value="https://connect.jayshree.tech/"
             className="my-5"
           />
-          <button class="bg-Layoutblue hover:bg-gray-400 text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between">
+       <button class="bg-Layoutblue hover:bg-gray-400 text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between">
             <span>Download QR</span>
             <IoDownloadOutline className="size-[20px] ml-2 stroke-2" />
           </button>
@@ -142,3 +142,51 @@ function QRPageColorPalette({ color, index }) {
 }
 
 export default QRPage;
+
+
+/*
+
+{ ES6 }
+import * as htmlToImage from 'html-to-image';
+import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
+
+
+import React, { useRef } from 'react';
+import { QRCodeSVG } from 'react-qrcode-svg';
+import { IoDownloadOutline } from 'react-icons/io5';
+import htmlToImage from 'html-to-image';
+
+const DownloadQRCode = () => {
+  const qrRef = useRef();
+
+  const downloadQR = async () => {
+    const dataUrl = await htmlToImage.toPng(qrRef.current);
+    const link = document.createElement('a');
+    link.href = dataUrl;
+    link.download = 'qrcode.png';
+    link.click();
+  };
+
+  return (
+    <div>
+      <div ref={qrRef} className="my-5">
+        <QRCodeSVG
+          fgColor="blue"
+          size={200}
+          value="https://connect.jayshree.tech/"
+        />
+      </div>
+      <button
+        onClick={downloadQR}
+        className="bg-Layoutblue hover:bg-gray-400 text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between"
+      >
+        <span>Download QR</span>
+        <IoDownloadOutline className="size-[20px] ml-2 stroke-2" />
+      </button>
+    </div>
+  );
+};
+
+export default DownloadQRCode;
+
+*/
