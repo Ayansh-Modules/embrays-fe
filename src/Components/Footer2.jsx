@@ -32,7 +32,7 @@ function Footer2() {
           <p className=" text-xl font-medium dark:text-Layoutyellow text-left mb-5">
             {data.primary}
           </p>
-          <p className="text-5xl max-md:text-3xl font-semibold  text-white w-[10vw] text-left ">
+          <p className="text-4xl max-md:text-3xl font-semibold  text-white w-[10vw] text-left ">
             {data.secondary}
           </p>
         </div>

@@ -25,15 +25,15 @@ function App() {
 
       <Embrays_Helmet />
       <Header />
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Root />}></Route>
         <Route
           path="/terms-and-conditions"
           element={<TermsAndCondition />}
         ></Route>
         <Route path="/allblog" element={<ViewAllBlog />}></Route>
-      </Routes> */}
-        <QRPage />
+      </Routes>
+        {/* <QRPage /> */}
         {/* <LinkPage /> */}
       <Footer2 /> 
     </>

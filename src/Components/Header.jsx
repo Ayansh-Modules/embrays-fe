@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoDownloadOutline, IoMenu } from "react-icons/io5";
+import { RiArrowDownSLine } from "react-icons/ri";
 import { appData } from "../Data/AppData";
 import Drawer from "./Drawer";
-import { RiArrowDownSLine } from "react-icons/ri";
+import Tools from "./Tools"
 function Header() {
   const company = appData.companyName;
   const [isOpen, setIsOpen] = React.useState(false);
+  const [openTools , setOpenTools] = useState(false)
   const headerOptions = [
     {
       title: "About Us",
@@ -23,7 +25,6 @@ function Header() {
       title: "Blogs",
       href: "/#blogs",
     },
-    
   ];
   return (
     <>
@@ -55,9 +56,17 @@ function Header() {
                   {option.title}
                 </a>
               ))}
-            <button type="button" className=" text-sm h-[3rem] px-6 hover:bg-Layoutneon rounded-xl text-white hover:text-black flex items-center justify-center">Tools <RiArrowDownSLine size={20} className="ml-1" /></button>
-              
+              <button
+                type="button"
+                className=" text-sm h-[3rem] px-6 hover:bg-Layoutneon rounded-xl text-white hover:text-black flex items-center justify-center"
+                      
+                      >
+                Tools
+                <RiArrowDownSLine size={20} className="ml-1" />
+                
+              </button>
             </div>
+          
           </div>
           {PortfolioButton()}
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useBlogContext } from "../../Context/BlogContext";
 import BlogCard from "./BlogCard";
+import Pagination from "./Pagination";
 function ViewAllBlog() {
   const { posts } = useBlogContext();
   return (
@@ -16,6 +17,7 @@ function ViewAllBlog() {
     className="grid grid-cols-2 md:grid-cols-3 gap-14  items-center justify-center mx-20 mt-10 mb-20">
       {posts.map((data) => {return (<BlogCard  data = {data}/>)})}  
     </div>
+    <div className="my-10"><Pagination/></div>
     </>
   );
 }

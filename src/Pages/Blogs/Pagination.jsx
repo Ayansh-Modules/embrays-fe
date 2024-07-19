@@ -1,20 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
-import ReactPaginate from 'react-paginate';
-
-
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-function Pagination({ currentItems }) {
+import { TbPlayerTrackNextFilled } from "react-icons/tb";
+import { TbPlayerTrackPrevFilled } from "react-icons/tb";
+function Pagination() {
   return (
-    <div>
-        {currentItems &&
-        currentItems.map((item) => (
-          <div>
-            <h3>Item #{item}</h3>
-          </div>
-        ))}
+    <div className="flex justify-center items-center ">
+      <nav className="bg-gray-200 rounded-full px-4 ">
+        <ul className="flex text-gray-600 gap-4 font-medium py-2">
+          <li>
+            <a href="#" className="rounded-full px-4 py-2 hover:bg-white text-gray-600 flex items-center justify-center"> 
+            <TbPlayerTrackPrevFilled  className="mr-2"/> Previous
+            </a>
+          </li>
+         
+          <li>
+            <a
+              href="#"
+              className="rounded-full px-4 py-2 hover:bg-white hover:text-gray-600 transition duration-300 ease-in-out flex items-center justify-center"
+            >
+              1
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="rounded-full px-8 py-2 hover:bg-white hover:text-gray-600 transition duration-300 ease-in-out flex items-center justify-center"
+            >
+              Next <TbPlayerTrackNextFilled  className="ml-2"/>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  )
+  );
 }
 
-export default Pagination
+export default Pagination;

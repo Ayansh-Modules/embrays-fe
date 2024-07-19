@@ -32,7 +32,7 @@ function BlogCard({ data }) {
           <p>{postDate}</p>
         </p>
       </div>
-      <div class="px-5 py-2 hover:bg-violet-100 hover:rounded-b-2xl">
+      <div class="px-5 py-2 hover:bg-violet-100 hover:rounded-b-2xl h-[180px] flex-col flex justify-between">
         <a>
           <h5 class="text-sm font-bold tracking-tight text-gray-900 ">
             {postTitle}
@@ -44,7 +44,7 @@ function BlogCard({ data }) {
         <a
           href={postUrl}
           target="_blank"
-          class="inline-flex items-center text-sm font-semibold text-center text-Layoutblue py-2 "
+          className="inline-flex items-center  text-sm font-semibold text-center text-Layoutblue py-2 "
         >
           Read Post
           <MdOutlineArrowOutward size={15} stroke="60px" className="mx-1" />
