@@ -19,31 +19,31 @@ function Footer2() {
     style={{ boxShadow: " 0px -4px 8px,0px 0px 0px #ffffff" }}
     
     >
-      <div className=" flex text-white justify-evenly items-start p-10">
+      <div className=" flex text-white justify-evenly items-start p-10 max-md:flex-col ">
       
        <div
-        className="contactDetails "
+        className="contactDetails max-md:w-full"
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-easing="ease"
         data-aos-duration="1000"
       >
-        <div className="pt-[10px] mb-5">
-          <p className=" text-xl font-medium dark:text-Layoutyellow text-left mb-5">
+        <div className="pt-[10px] mb-5 max-md:flex-col max-md:flex max-md:w-full  max-md:justify-center">
+          <p className=" text-xl font-medium dark:text-Layoutyellow text-left mb-5 ">
             {data.primary}
           </p>
-          <p className="text-4xl max-md:text-3xl font-semibold  text-white w-[10vw] text-left ">
+          <p className="text-4xl max-md:text-3xl font-semibold text-white w-[10vw] max-md:w-full text-left ">
             {data.secondary}
           </p>
         </div>
 
-        <div className="contactid text-white">
-          <div className="flex-row flex items-center ">
+        <div className="contactid text-white max-md:w-full">
+          <div className="flex-row flex items-center">
             <div title="Email" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center my-5">
               <TbMailFilled color="white" title="Email" size={25} />
             </div>
             <a
-              className="  pl-2 text-base font-medium hover:text-Layoutneon"
+              className=" ml-1 text-base max-md:text-xs font-medium hover:text-Layoutneon"
               href={urls.mailto}
               target="_blank"
             >
@@ -54,12 +54,14 @@ function Footer2() {
             <div title="Mobile" className="outercircle h-[40px] w-[40px] bg-Layoutpink hover:bg-pink-600 rounded-full flex items-center justify-center ">
               <BiSolidPhoneCall color="white"  size={25} />
             </div>
-            <a className=" pl-2 text-base hover:text-Layoutneon" href={urls.cellto} target="_blank">
+            <a className=" pl-2 text-base max-md:text-xs  hover:text-Layoutneon " href={urls.cellto} target="_blank">
               {contact.cell}
             </a>
           </div>
         </div>
       </div>
+
+      <div className="flex justify-between max-md:my-5 max-md:w-full">
       <div className="flex-col h-[11rem]  flex justify-evenly ">
         <p className=" font-semibold hover:text-Layoutneon">EXPLORE</p>
         <p className="hover:text-Layoutneon"><a href="/">HOME</a></p>
@@ -68,7 +70,7 @@ function Footer2() {
         <p className="hover:text-Layoutneon"><a href="/terms-and-conditions">TERMS & CONDITION </a></p>
       </div>
 
-      <div className="flex-col  ">
+      <div className="flex-col  mx-10 ">
         <p className="font-semibold m-4 hover:text-Layoutneon">CONTACT US</p>
         {/* <p title="EMAIL" className="flex items-center ">
           <a  href={mail} target="_blank" className="flex-row flex items-center border h-[40px] w-[40px]  hover:bg-indigo-600 rounded-full justify-center m-2">   <TbMailFilled color="white" title="Email" size={25} /></a>
@@ -92,6 +94,9 @@ function Footer2() {
          
         </p>
       </div>
+
+      </div>
+      
       <div>
       <form
         name="contact"
@@ -107,7 +112,7 @@ function Footer2() {
        
       >
         <form name="contact" method="POST">
-          <div className="flex">
+          <div className="flex max-md:flex-col">
           <div className="Name mr-5 py-4">
            
             <input
