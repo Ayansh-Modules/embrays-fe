@@ -46,6 +46,7 @@ import rocketGif from "./images/how_it_works/how-it-works.webp";
 import formBackgroundImage from "./images/lets_connect/bg_form.webp";
 
 //services
+import pattern from "./images/services/pattern.webp";
 import serviceImgOne from "./images/services/service_1.svg";
 import serviceImgTwo from "./images/services/service_2.svg";
 import serviceImgThree from "./images/services/service_3.svg";
@@ -122,6 +123,7 @@ const baseAssets = {
   //lets connect
   formBackgroundImage: formBackgroundImage,
   //services
+  pattern:pattern,
   serviceImgOne: serviceImgOne,
   serviceImgTwo: serviceImgTwo,
   serviceImgThree: serviceImgThree,

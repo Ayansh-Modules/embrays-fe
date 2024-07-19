@@ -8,7 +8,6 @@ import Drawer from "./Drawer";
 function Header() {
   const company = appData.companyName;
   const [isOpen, setIsOpen] = React.useState(false);
-  const [openTools, setOpenTools] = useState(false);
   const navigate = useNavigate();
   const headerOptions = [
     {
@@ -59,7 +58,7 @@ function Header() {
                 </a>
               ))}
 
-              <div className="text-sm h-[3rem] px-6  rounded-xl text-white hover:text-black flex items-center justify-center">
+              <div className="text-sm h-[3rem] rounded-xl text-white hover:text-black flex items-center justify-center">
                 <div className="relative inline-block text-left">
                   <div className="group">
                     <button
@@ -70,13 +69,14 @@ function Header() {
                       <RiArrowDownSLine size={20} className="ml-1" />
                     </button>
 
-                    <div className="absolute left-0 w-40 mt-1 origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
+                    <div className="absolute left-0 w-40 mt-1 origin-top-left bg-slate-200 divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
                       <div className="py-1">
-                        <a
+                        <a 
+                          
                           onClick={() => {
                             navigate("/link-shortener");
                           }}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
                         >
                           Link shortener
                         </a>
@@ -84,8 +84,8 @@ function Header() {
                           onClick={() => {
                             navigate("/qr-generator");
                           }}
-                          href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
                         >
                           QR Generator
                         </a>
