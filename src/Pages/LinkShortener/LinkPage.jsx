@@ -9,6 +9,8 @@ function LinkPage() {
     <div className="w-full flex flex-col items-center justify-center">
       <div className="text-4xl font-semibold text-Layoutblue mt-5 ">
        <img src={pattern} alt="" srcset="" className="absolute top-24 left-0 size-24" />
+      <img src={pattern} alt="" srcset="" className="absolute bottom-32 right-0 size-24" />
+
         Link Shortener
       </div>
       <div
@@ -62,7 +64,7 @@ function LinkPage() {
                 <input
                   type="text"
                   id="success"
-                  className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[97%] p-3 "
+                  className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[95%] p-3 "
                 />
                 <p className="mt-2 text-sm text-green-600 dark:text-green-500">
                   <span className="font-medium">Well done!</span> Some success
@@ -79,7 +81,6 @@ function LinkPage() {
           )}
         </div>
       </div>
-      <img src={pattern} alt="" srcset="" className="absolute top-24 right-0 size-24" />
 
     </div>
   );
