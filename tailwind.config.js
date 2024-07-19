@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}" , "node_modules/flowbite-react/lib/esm/**/*.js"],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+
   theme: {
     extend: {
       screens: {
@@ -20,11 +21,8 @@ export default {
         Layoutblack: "#101010",
         Layoutring: "#9333C0",
         LayoutCream: "#fff8ec",
-        BlogCard : "#A5ACCB"
+        BlogCard: "#A5ACCB",
       },
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
 };
