@@ -3,17 +3,17 @@ import { RiLinkM } from "react-icons/ri";
 import Button from "../../Components/Button";
 function LinkPage() {
   return (
-    <div className="w-full flex flex-col items-center justify-center" 
-    >
-      <div className="text-4xl font-semibold text-Layoutblue mt-5"
-      
-      >
+    <div className="w-full flex flex-col items-center justify-center">
+      <div className="text-4xl font-semibold text-Layoutblue mt-5">
         {" "}
         Link Shortener{" "}
       </div>
-      <div className=" w-[70vw]  border-2 border-black rounded-lg flex my-10"
-    style={{  boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px" }}
-      
+      <div
+        className=" w-[70vw]  border-2 border-black rounded-lg flex my-10"
+        style={{
+          boxShadow:
+            "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
+        }}
       >
         <div className="border-2 rounded-lg m-5 w-full">
           <div className="btnshortURL flex items-center border-b-2 bg-gray-200">
@@ -25,18 +25,19 @@ function LinkPage() {
 
           <div className="longurl p-5 ml-5">
             <label
-              for="success"
-              class="block mb-2 text-sm text-Layoutblue font-semibold"
+              htmlFor="success"
+              className="block mb-2 text-sm text-Layoutblue font-semibold"
             >
               Long URL
             </label>
             <input
               type="text"
               id="success"
-              class="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue focus:border-Layoutblue block w-[97%] p-3 "
+              className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue focus:border-Layoutblue block w-[97%] p-3 "
             />
-            <p class="mt-2 text-sm text-green-600 dark:text-green-500">
-              <span class="font-medium">Well done!</span> Some success message.
+            <p className="mt-2 text-sm text-green-600 dark:text-green-500">
+              <span className="font-medium">Well done!</span> Some success
+              message.
             </p>
             <Button text={"Shorten URL"} />
           </div>
@@ -44,22 +45,21 @@ function LinkPage() {
           <div className="shortURL border-t-2">
             <div className="container p-5 ml-5 ">
               <label
-                for="success"
-                class="block mb-2 text-sm text-Layoutblue font-semibold"
+                htmlFor="success"
+                className="block mb-2 text-sm text-Layoutblue font-semibold"
               >
                 Short URL
               </label>
               <input
                 type="text"
                 id="success"
-                class="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[97%] p-3 "
+                className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[97%] p-3 "
               />
-              <p class="mt-2 text-sm text-green-600 dark:text-green-500">
-                <span class="font-medium">Well done!</span> Some success
+              <p className="mt-2 text-sm text-green-600 dark:text-green-500">
+                <span className="font-medium">Well done!</span> Some success
                 message.
               </p>
               <div className="flex items-center">
-                {" "}
                 <Button text={"Copy URL"} />{" "}
                 <span className="ml-5">
                   <Button text={"Generate QR"} />

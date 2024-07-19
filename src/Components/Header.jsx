@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { IoDownloadOutline, IoMenu } from "react-icons/io5";
 import { RiArrowDownSLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 import { appData } from "../Data/AppData";
 import Drawer from "./Drawer";
-import Tools from "./Tools"
+
 function Header() {
   const company = appData.companyName;
   const [isOpen, setIsOpen] = React.useState(false);
-  const [openTools , setOpenTools] = useState(false)
+  const [openTools, setOpenTools] = useState(false);
+  const navigate = useNavigate();
   const headerOptions = [
     {
       title: "About Us",
@@ -51,22 +53,48 @@ function Header() {
                   key={index}
                   title={option.title}
                   href={option.href}
-                  className="about text-sm text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center "
+                  className="about text-sm text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center"
                 >
                   {option.title}
                 </a>
               ))}
-              <button
-                type="button"
-                className=" text-sm h-[3rem] px-6 hover:bg-Layoutneon rounded-xl text-white hover:text-black flex items-center justify-center"
-                      
-                      >
-                Tools
-                <RiArrowDownSLine size={20} className="ml-1" />
-                
-              </button>
+
+              <div className="text-sm h-[3rem] px-6  rounded-xl text-white hover:text-black flex items-center justify-center">
+                <div className="relative inline-block text-left">
+                  <div className="group">
+                    <button
+                      type="button"
+                      className="inline-flex justify-center items-center w-full py-2font-medium  focus:outline-none  text-sm h-[3rem] px-6 hover:bg-Layoutneon rounded-xl text-white hover:text-black"
+                    >
+                      Tools
+                      <RiArrowDownSLine size={20} className="ml-1" />
+                    </button>
+
+                    <div className="absolute left-0 w-40 mt-1 origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
+                      <div className="py-1">
+                        <a
+                          onClick={() => {
+                            navigate("/link-shortener");
+                          }}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          Link shortener
+                        </a>
+                        <a
+                          onClick={() => {
+                            navigate("/qr-generator");
+                          }}
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          QR Generator
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          
           </div>
           {PortfolioButton()}
         </div>

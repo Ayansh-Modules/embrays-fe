@@ -5,24 +5,23 @@ import { Route, Routes } from "react-router-dom";
 import Footer2 from "./Components/Footer2";
 import Header from "./Components/Header";
 // import BlogPage from "./Pages/Blogs/BlogPage";
+import { useBlogContext } from "./Context/BlogContext";
 import ViewAllBlog from "./Pages/Blogs/ViewAllBlog";
+import LinkPage from "./Pages/LinkShortener/LinkPage";
+import QRPage from "./Pages/QRGenerator/QRPage";
 import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
-import {useBlogContext}  from "./Context/BlogContext"
-import QRPage from "./Pages/QRGenerator/QRPage";
-import LinkPage from "./Pages/LinkShortener/LinkPage";
 function App() {
-  const {getBlogs} = useBlogContext()
+  const { getBlogs } = useBlogContext();
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-    getBlogs()
+    getBlogs();
   }, []);
 
   return (
     <>
-
       <Embrays_Helmet />
       <Header />
       <Routes>
@@ -32,10 +31,10 @@ function App() {
           element={<TermsAndCondition />}
         ></Route>
         <Route path="/allblog" element={<ViewAllBlog />}></Route>
+        <Route path="/qr-generator" element={<QRPage />}></Route>
+        <Route path="/link-shortener" element={<LinkPage />}></Route>
       </Routes>
-        {/* <QRPage /> */}
-        {/* <LinkPage /> */}
-      <Footer2 /> 
+      <Footer2 />
     </>
   );
 }

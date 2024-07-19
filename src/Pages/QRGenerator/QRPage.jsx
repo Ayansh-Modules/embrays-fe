@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegFilePdf } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { GrDocumentText } from "react-icons/gr";
 import { IoIosGlobe } from "react-icons/io";
 import { MdOutlineTextsms } from "react-icons/md";
+import Email from "./Email";
 import PDF from "./PDF";
+import SMS from "./SMS";
+import Text from "./Text";
+import URL from "./URL";
 function QRPage() {
   const tabItems = [
     { text: "URL", icon: <IoIosGlobe size={20} className="mr-2" /> },
@@ -13,6 +17,7 @@ function QRPage() {
     { text: "SMS", icon: <MdOutlineTextsms size={16} className="mr-2" /> },
     { text: "PDF", icon: <FaRegFilePdf className="mr-2" /> },
   ];
+  const [currentTab, setCurrentTab] = useState(0);
 
   const colorPalette = [
     { color: "#000000" },
@@ -24,7 +29,7 @@ function QRPage() {
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <div className="text-4xl font-semibold text-Layoutblue mt-5">
-        QR GENERATOR{" "}
+        QR GENERATOR
       </div>
       <div
         className="w-[70vw]  border-2 border-black rounded-lg flex my-10"
@@ -40,7 +45,7 @@ function QRPage() {
               return (
                 <QRPageButton
                   key={index}
-                  index={index}
+                  onClick={() => setCurrentTab(index)}
                   text={value.text}
                   icon={value.icon}
                 />
@@ -50,7 +55,17 @@ function QRPage() {
 
           {/* ToolComponents */}
           <div className="ToolComponents">
-            <PDF />
+            {currentTab === 0 ? (
+              <URL />
+            ) : currentTab === 1 ? (
+              <Email />
+            ) : currentTab === 2 ? (
+              <Text />
+            ) : currentTab === 3 ? (
+              <SMS />
+            ) : currentTab === 4 ? (
+              <PDF />
+            ) : null}
           </div>
 
           {/* colorComponents */}
@@ -58,7 +73,7 @@ function QRPage() {
             <span className="ml-10 ">Appearance</span> <br />
             <span className="text-xs font-normal ml-10 ">
               Choose Your Colors
-            </span>{" "}
+            </span>
           </p>
           <div className="colorComponents flex items-center ml-5 pb-3">
             {colorPalette.map((value, index) => {
@@ -75,9 +90,12 @@ function QRPage() {
   );
 }
 
-function QRPageButton({ text, icon, index }) {
+function QRPageButton({ text, icon, onClick }) {
   return (
-    <div className="url h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue">
+    <div
+      onClick={onClick}
+      className="url h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue"
+    >
       {icon}
       {text}
     </div>
