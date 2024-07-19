@@ -4,13 +4,22 @@ import Button from "../../Components/Button";
 import baseAssets from "../../assets/baseAssets";
 function LinkPage() {
   const [openShortURL, setOpenShortURL] = useState(false);
-  const pattern =baseAssets.pattern
+  const pattern = baseAssets.pattern;
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <div className="text-4xl font-semibold text-Layoutblue mt-5 ">
-       <img src={pattern} alt="" srcset="" className="absolute top-24 left-0 size-24" />
-      <img src={pattern} alt="" srcset="" className="absolute bottom-32 right-0 size-24" />
-
+        <img
+          src={pattern}
+          alt=""
+          srcset=""
+          className="absolute top-24 left-0 size-24"
+        />
+        <img
+          src={pattern}
+          alt=""
+          srcset=""
+          className="absolute bottom-32 right-0 size-24"
+        />
         Link Shortener
       </div>
       <div
@@ -81,7 +90,6 @@ function LinkPage() {
           )}
         </div>
       </div>
-
     </div>
   );
 }

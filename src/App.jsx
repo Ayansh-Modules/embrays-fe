@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer2 from "./Components/Footer2";
 import Header from "./Components/Header";
-// import BlogPage from "./Pages/Blogs/BlogPage";
 import { useBlogContext } from "./Context/BlogContext";
 import ViewAllBlog from "./Pages/Blogs/ViewAllBlog";
 import LinkPage from "./Pages/LinkShortener/LinkPage";

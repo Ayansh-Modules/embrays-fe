@@ -7,7 +7,6 @@ import BlogContextProvider  from "./Context/BlogContext"
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
   <BlogContextProvider>
-
     <App />
   </BlogContextProvider>
   </BrowserRouter>

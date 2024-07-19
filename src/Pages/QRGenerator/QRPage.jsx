@@ -1,10 +1,13 @@
+import { QRCodeSVG } from "qrcode.react";
 import React, { useState } from "react";
 import { FaRegFilePdf } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { GrDocumentText } from "react-icons/gr";
 import { IoIosGlobe } from "react-icons/io";
+import { IoDownloadOutline } from "react-icons/io5";
 import { MdOutlineTextsms } from "react-icons/md";
 import baseAssets from "../../assets/baseAssets";
+
 import Email from "./Email";
 import PDF from "./PDF";
 import SMS from "./SMS";
@@ -18,7 +21,7 @@ function QRPage() {
     { text: "SMS", icon: <MdOutlineTextsms size={16} className="mr-2" /> },
     { text: "PDF", icon: <FaRegFilePdf className="mr-2" /> },
   ];
-  const pattern =baseAssets.pattern
+  const pattern = baseAssets.pattern;
   const [currentTab, setCurrentTab] = useState(0);
 
   const colorPalette = [
@@ -30,8 +33,18 @@ function QRPage() {
   ];
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <img src={pattern} alt="" srcset="" className="absolute top-28 left-0 size-24" />
-      <img src={pattern} alt="" srcset="" className="absolute bottom-0 right-0 size-24" />
+      <img
+        src={pattern}
+        alt=""
+        srcset=""
+        className="absolute top-28 left-0 size-24"
+      />
+      <img
+        src={pattern}
+        alt=""
+        srcset=""
+        className="absolute bottom-0 right-0 size-24"
+      />
       <div className="text-4xl font-semibold text-Layoutblue mt-5">
         QR GENERATOR
       </div>
@@ -88,7 +101,18 @@ function QRPage() {
 
         {/* QR */}
 
-        <div className="w-[20vw] border-2 rounded-r-lg m-5 ml-0 border-l-0"></div>
+        <div className=" QR w-[20vw] border-2 rounded-r-lg m-5 ml-0 border-l-0 flex-col flex items-center justify-center">
+          <QRCodeSVG
+            fgColor="blue"
+            size={200}
+            value="https://connect.jayshree.tech/"
+            className="my-5"
+          />
+          <button class="bg-Layoutblue hover:bg-gray-400 text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between">
+            <span>Download QR</span>
+            <IoDownloadOutline className="size-[20px] ml-2 stroke-2" />
+          </button>
+        </div>
       </div>
     </div>
   );

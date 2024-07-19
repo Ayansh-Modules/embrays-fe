@@ -130,7 +130,7 @@ function PortfolioButton() {
         type="button"
         className="h-[3rem] w-[8rem] text-sm focus:ring-2  focus:ring-white  text-black bg-Layoutneon hover:bg-white  rounded-xl  flex items-center justify-center "
       >
-        <IoDownloadOutline className="h-[25px] w-[25px] mr-2" />
+        <IoDownloadOutline className="size-[25px] mr-2" />
         <span> Portfolio</span>
       </button>
     </div>

@@ -75,7 +75,7 @@ import arrowRight from "./icons/arrow-right.svg";
 import embraystechnologyPdf from "./pdf/embraystechnology.pdf";
 
 //blog
-import defaultCover from "../assets/images/Blog/defaultCover.png"
+import defaultCover from "../assets/images/Blog/defaultCover.png";
 
 const baseAssets = {
   //about us
@@ -123,7 +123,7 @@ const baseAssets = {
   //lets connect
   formBackgroundImage: formBackgroundImage,
   //services
-  pattern:pattern,
+  pattern: pattern,
   serviceImgOne: serviceImgOne,
   serviceImgTwo: serviceImgTwo,
   serviceImgThree: serviceImgThree,
@@ -148,6 +148,6 @@ const baseAssets = {
   embraystechnologyPdf: embraystechnologyPdf,
   arrowLeft: arrowLeft,
   arrowRight: arrowRight,
-  defaultCover:defaultCover,
+  defaultCover: defaultCover,
 };
 export default baseAssets;
