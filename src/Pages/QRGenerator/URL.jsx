@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../Components/Button";
+import { useQRContext } from "../../Context/QRContext";
+import { validateURL } from "../../Utility/CommonFunctions";
 function URL() {
+  const { generateQRLink,setQRColor } = useQRContext();
+  const [value, setValue] = useState("");
+  const [error,setError]= useState(false)
+  function generateFinalURL() {
+    let result = validateURL(value);
+    if (result == true) {
+      generateQRLink(value);
+      setError (false)
+
+    }
+    else {
+      setError (true)
+      setQRColor("gray")
+    }
+  }
   return (
     <>
       <div className="p-5 ml-5 ">
@@ -13,10 +30,29 @@ function URL() {
         <input
           type="text"
           id="success"
+          onChange={(e) => {
+            setValue(e.target.value)
+            let result = validateURL(value);
+            if (result == true) {
+            setError (false)     
+            }
+            else {
+              setError (true)
+            }
+          }}
           class="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue block w-[97%] p-3 "
         />
-        <p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Well done!</span> Some success message.</p>
-      <Button text={"Generate QR"} />
+        {error && (
+          <p class="mt-2 text-sm text-green-600 dark:text-green-500">
+            <span class="font-medium">Paste a Valid URL </span>
+          </p>
+        )}{" "}
+        <Button
+          text={"Generate QR"}
+          onClick={() => {
+            generateFinalURL();
+          }}
+        />
       </div>
     </>
   );

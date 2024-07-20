@@ -7,13 +7,14 @@ import { IoIosGlobe } from "react-icons/io";
 import { IoDownloadOutline } from "react-icons/io5";
 import { MdOutlineTextsms } from "react-icons/md";
 import baseAssets from "../../assets/baseAssets";
-
 import Email from "./Email";
 import PDF from "./PDF";
 import SMS from "./SMS";
 import Text from "./Text";
 import URL from "./URL";
+import { useQRContext } from "../../Context/QRContext";
 function QRPage() {
+  const {QRlink,QRColor, setQRColor} = useQRContext()
   const tabItems = [
     { text: "URL", icon: <IoIosGlobe size={20} className="mr-2" /> },
     { text: "Email", icon: <FiMail size={16} className="mr-2" /> },
@@ -23,7 +24,6 @@ function QRPage() {
   ];
   const pattern = baseAssets.pattern;
   const [currentTab, setCurrentTab] = useState(0);
-
   const colorPalette = [
     { color: "#000000" },
     { color: "#18417E" },
@@ -31,6 +31,7 @@ function QRPage() {
     { color: "#E83224" },
     { color: "#285F2F" },
   ];
+
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <img
@@ -92,9 +93,19 @@ function QRPage() {
               Choose Your Colors
             </span>
           </p>
-          <div className="colorComponents flex items-center ml-5 pb-3">
+          <div className="colorComponents flex items-center ml-5 pb-3 ">
             {colorPalette.map((value, index) => {
-              return <QRPageColorPalette key={index} color={value.color} />;
+              return (
+                <QRPageColorPalette
+                  key={index}
+                  color={value.color}
+                  onClick={() => {
+                    if(QRColor !="gray"){
+                      setQRColor(value.color);
+                    }
+                  }}
+                />
+              );
             })}
           </div>
         </div>
@@ -103,12 +114,12 @@ function QRPage() {
 
         <div className=" QR w-[20vw] border-2 rounded-r-lg m-5 ml-0 border-l-0 flex-col flex items-center justify-center">
           <QRCodeSVG
-            fgColor="blue"
+            fgColor={QRColor}
             size={200}
-            value="https://connect.jayshree.tech/"
+            value={QRlink}
             className="my-5"
           />
-       <button class="bg-Layoutblue hover:bg-gray-400 text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between">
+          <button class="bg-Layoutblue focus:ring-2 focus:ring-Layoutpink hover:bg-Layoutneon text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between">
             <span>Download QR</span>
             <IoDownloadOutline className="size-[20px] ml-2 stroke-2" />
           </button>
@@ -120,29 +131,31 @@ function QRPage() {
 
 function QRPageButton({ text, icon, onClick }) {
   return (
-    <div
+    <button
       onClick={onClick}
-      className="url cursor-pointer h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue"
+      className="url focus:ring-2 focus:ring-Layoutblue cursor-pointer h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue"
     >
       {icon}
       {text}
-    </div>
+    </button>
   );
 }
 
-function QRPageColorPalette({ color, index }) {
+function QRPageColorPalette({ color, onClick }) {
   return (
-    <div className="h-12 w-12 rounded-full m-3  hover:border-2 hover:border-black flex justify-center items-center">
+    <button
+      onClick={onClick}
+      className="h-12 w-12 rounded-full m-3 cursor-pointer  focus:ring-2 focus:ring-black hover:border-2 hover:border-black flex justify-center items-center"
+    >
       <div
         style={{ backgroundColor: `${color}` }}
         className="h-10 w-10 rounded-full"
       ></div>
-    </div>
+    </button>
   );
 }
 
 export default QRPage;
-
 
 /*
 

@@ -11,6 +11,7 @@ import QRPage from "./Pages/QRGenerator/QRPage";
 import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
+import QRContextProvider from "./Context/QRContext"
 function App() {
   const { getBlogs } = useBlogContext();
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+    <QRContextProvider>
       <Embrays_Helmet />
       <Header />
       <Routes>
@@ -34,6 +36,7 @@ function App() {
         <Route path="/link-shortener" element={<LinkPage />}></Route>
       </Routes>
       <Footer2 />
+      </QRContextProvider>
     </>
   );
 }

@@ -6,7 +6,7 @@ export const useBlogContext = () => {
   return useContext(BlogsContext);
 };
 
-function BlogContextProvider({ children }) {
+function BlogContextProvider({children}) {
   const [loading , setLoading]= useState(false)
   const [posts, setPosts] = useState([]);
   const HASHNODE_URL = "https://gql.hashnode.com";
