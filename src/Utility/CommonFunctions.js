@@ -14,6 +14,16 @@ export function validateContactNumber(number) {
     const numberRegex = /^\+?[1-9]\d{1,14}$/;
     return numberRegex.test(number);
 }
+
+export function validateMessage(message) {
+    message = message.trim();
+    
+    if (message.length < 2) {
+        return false;
+    }
+    
+    return true;
+}
  
 
 
