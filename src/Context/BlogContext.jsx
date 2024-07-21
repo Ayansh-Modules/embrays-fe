@@ -11,6 +11,7 @@ function BlogContextProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
   const HASHNODE_URL = "https://gql.hashnode.com";
+  const [after, setAfter] = useState("");
 
   function handleNext() {
     setCount(count + 1);
@@ -21,8 +22,6 @@ function BlogContextProvider({ children }) {
       setCount(count - 1);
     }
   }
-
-  let after = "";
 
   async function getBlogs() {
     setLoading(true);
@@ -67,9 +66,9 @@ function BlogContextProvider({ children }) {
         data.push(blogData);
       });
       if (response.data.data.feed.pageInfo.hasNextPage) {
-        after = response.data.data.feed.pageInfo.endCursor;
+        setAfter(response.data.data.feed.pageInfo.endCursor);
       } else {
-        after = "";
+        setAfter("");
       }
 
       // making 2D array
