@@ -3,6 +3,7 @@ import Button from "../Components/Button";
 import BlogCard from "./Blogs/BlogCard";
 import {useBlogContext}  from "../Context/BlogContext"
 import { useNavigate } from "react-router-dom";
+import BlogCardSkeleton from "./Blogs/BlogCardSkeleton";
 function Posts() {
   const navigate = useNavigate()
   const { posts, loading } = useBlogContext();
@@ -40,7 +41,7 @@ function Posts() {
           <span className="mr-14">
             <BlogCard  data = {posts[0][3]}/>
           </span>
-        </div>): <p>Loading....</p>}
+        </div>): <BlogCardSkeleton/>}
         
 
         <div className="flex justify-end w-[95vw] pb-5 ">

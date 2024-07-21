@@ -12,6 +12,7 @@ import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
 import QRContextProvider from "./Context/QRContext"
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 function App() {
   const { getBlogs } = useBlogContext();
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <>
+     <SkeletonTheme baseColor="#000000" highlightColor="#444">
     <QRContextProvider>
       <Embrays_Helmet />
       <Header />
@@ -37,6 +39,7 @@ function App() {
       </Routes>
       <Footer2 />
       </QRContextProvider>
+      </SkeletonTheme>
     </>
   );
 }

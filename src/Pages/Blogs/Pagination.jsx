@@ -12,14 +12,18 @@ function Pagination() {
         <ul className="flex text-gray-600 gap-4 font-medium py-2">
           <li>
             {count > 0 && (
-              <button
-                onClick={() => {
-                  handlePrevious();
-                }}
-                className="rounded-full px-4 py-2 hover:bg-white text-gray-600 flex items-center justify-center"
-              >
-                <TbPlayerTrackPrevFilled className="mr-2" /> Previous
-              </button>
+<a href="#">
+<button
+              
+              onClick={() => {
+                handlePrevious();
+              }}
+              className="rounded-full px-4 py-2 hover:bg-white text-gray-600 flex items-center justify-center"
+            >
+              <TbPlayerTrackPrevFilled className="mr-2" /> Previous
+            </button>
+</a>
+              
             )}
           </li>
 
@@ -31,7 +35,8 @@ function Pagination() {
             )}
           </li>
           <li>
-            <button
+          <a href="#">
+          <button
               onClick={() => {
                 handleNext()
               }}
@@ -39,6 +44,7 @@ function Pagination() {
             >
               Next <TbPlayerTrackNextFilled className="ml-2" />
             </button>
+          </a>
           </li>
         </ul>
       </nav>
