@@ -46,7 +46,7 @@ function Posts() {
 
         <div className="flex justify-end w-[95vw] pb-5 ">
          
-            <Button text={"ALL POSTS"} onClick={()=>{navigate("/allblog")}} />
+          <a href="#"><Button text={"ALL POSTS"} onClick={()=>{navigate("/allblog")}} /></a>  
         
         </div>
       </div>

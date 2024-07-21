@@ -17,16 +17,18 @@ const appData = {
     title: "MASTERY UNLEASHED",
     ourService: [
       { id:1,
-        serviceOne: "UI/UX Design",
-        testimonial  : "Elevate user experiences with our cutting-edge UI/UX design. We seamlessly blend aesthetics and functionality, bringing your brand's digital identity to life."
+        serviceOne: "Digital Marketing",
+        testimonial  : "Empowering Business through Innovative and Strategic digital marketing solutions that drive growth , enhance brand visibility and foster meaningful customer engagement."
       },
+      
+
       {  id:2,
-        serviceTwo: "Website Design & Development",
+        serviceTwo: " App & Website Development",
         testimonial  : "Revamp your online presence with our bespoke website design. We create captivating, results-driven sites, bringing your brand to life in the digital landscape."
        },
       {  id:3,
-        serviceThree: "App Development" ,
-        testimonial : "Turn ideas into powerful apps with our experts. Specializing in iOS, Android, and cross-platform development, we craft innovative, scalable solutions tailored to your business goals."
+        serviceThree: "UI/UX Design" ,
+        testimonial : "Elevate user experiences with our cutting-edge UI/UX design. We seamlessly blend aesthetics and functionality, \n bringing your brand's digital identity to life."
       },
       {  id:4,
         serviceFour: "Tech Consultation" ,
