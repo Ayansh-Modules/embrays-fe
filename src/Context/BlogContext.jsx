@@ -1,21 +1,37 @@
 import axios from "axios";
 import { createContext, useContext, useState } from "react";
-import baseAssets from "../assets/baseAssets"
+import baseAssets from "../assets/baseAssets";
 const BlogsContext = createContext();
 export const useBlogContext = () => {
   return useContext(BlogsContext);
 };
 
-function BlogContextProvider({children}) {
-  const [loading , setLoading]= useState(false)
+function BlogContextProvider({ children }) {
+  const [count, setCount] = useState(0);
+  const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
   const HASHNODE_URL = "https://gql.hashnode.com";
+
+  function handleNext() {
+    setCount(count + 1);
+    getBlogs();
+  }
+  function handlePrevious() {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  }
+
+  let after = "";
+
   async function getBlogs() {
-    setLoading(true)
+    setLoading(true);
     try {
+      console.log(after);
       const response = await axios.post(HASHNODE_URL, {
         query,
-        variables: { first: 12, after: "" },
+
+        variables: { first: 12, after: after },
       });
       const data = [];
       response.data.data.feed.edges.map((edge) => {
@@ -25,12 +41,9 @@ function BlogContextProvider({children}) {
           blogData["id"] = edge.node._id;
         }
         if (edge.node.coverImage && edge.node.coverImage.url) {
-
           blogData["coverImage"] = edge.node.coverImage.url;
-        }
-        else {
+        } else {
           blogData["coverImage"] = baseAssets.defaultCover;
-
         }
 
         if (edge.node.author.name) {
@@ -52,17 +65,27 @@ function BlogContextProvider({children}) {
           blogData["postUrl"] = edge.node.url;
         }
         data.push(blogData);
-     
       });
-      setLoading(false)
-      setPosts(data);
-      console.log(data);
-      return data; //it will have all the blogs
+      if (response.data.data.feed.pageInfo.hasNextPage) {
+        after = response.data.data.feed.pageInfo.endCursor;
+      } else {
+        after = "";
+      }
+
+      // making 2D array
+      let finalData = posts;
+      finalData.push(data);
+      setPosts(finalData);
+      setLoading(false);
+      console.log(finalData);
+      console.log(loading);
+
+      //it will have all the blogs
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
-    setLoading(false)
-
+    setLoading(false);
   }
 
   const query = `query Feed($first: Int!, $filter: FeedFilter, $after: String) {
@@ -107,6 +130,10 @@ function BlogContextProvider({children}) {
     getBlogs,
     posts,
     loading,
+    count,
+    setCount,
+    handleNext,
+    handlePrevious,
   };
 
   return (
@@ -115,35 +142,3 @@ function BlogContextProvider({children}) {
 }
 
 export default BlogContextProvider;
-// Posts : [
-//   {
-//      coverImage : "",
-//      postTitle :"",
-//      userName :"",
-//      postDate :"",
-//      postTitle :"",
-//      postBrief :"",
-//      postUrl :""
-//  } ]
-//-----------------------------------------------------------------------------
-
-// {
-//   "node": {
-//     "_id": "6694e7695dcfe4eff3cf16ea",
-//     "title": "Mastering Laravel job batching Pt. 1: An overview",
-//     "coverImage": null,
-//     "readTime": 21,
-//     "brief": "Introduction\nIn this series of articles, we'll take a look at Laravel job batches and how to take the most out of it.\nYou can jump to other parts via the links below:\n\nLaravel batches exploration Pt. 2: Digging deeper and discover the pain point\n\nLar...",
-//     "subtitle": null,
-//     "views": 0,
-//     "url": "https://dominique-vassard.hashnode.dev/mastering-laravel-job-batching-pt-1-an-overview",
-//     "dateAdded": "2024-07-15T09:10:01.770Z",
-//     "author": {
-//       "_id": "665406ef4692c94570d00aa6",
-//       "name": "Dominique VASSARD",
-//       "photo": "https://cdn.hashnode.com/res/hashnode/image/upload/v1721034300895/Ry5Y8XUe3.png",
-//       "isPro": false,
-//       "username": "domvas"
-//     }
-//   }
-// },

@@ -6,9 +6,8 @@ function LinkPage() {
   const [openShortURL, setOpenShortURL] = useState(false);
   const pattern = baseAssets.pattern;
   return (
-    <div className="w-full flex flex-col items-center justify-center">
-      <div className="text-4xl font-semibold text-Layoutblue mt-5 ">
-        <img
+    <div className="w-full h-[110vh] flex flex-col items-center justify-center">
+       <img
           src={pattern}
           alt=""
           srcset=""
@@ -18,12 +17,14 @@ function LinkPage() {
           src={pattern}
           alt=""
           srcset=""
-          className="absolute bottom-32 right-0 size-24"
+          className="absolute bottom-0 right-0 size-24"
         />
+      <div className="text-4xl font-semibold text-Layoutblue mt-5 ">
+       
         Link Shortener
       </div>
       <div
-        className=" w-[70vw]  border-2 border-black rounded-lg flex my-10"
+        className=" w-[70vw]  border-2 border-black rounded-lg flex my-10 "
         style={{
           boxShadow:
             "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",

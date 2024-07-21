@@ -1,7 +1,6 @@
 import React from "react";
 import { MdOutlineArrowOutward } from "react-icons/md";
 function BlogCard({ data }) {
-  console.log(data);
   const coverImage = data.coverImage;
   const userPhoto = data.userPhoto;
   const userName = data.userName;

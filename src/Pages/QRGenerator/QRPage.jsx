@@ -14,7 +14,7 @@ import SMS from "./SMS";
 import Text from "./Text";
 import URL from "./URL";
 function QRPage() {
-  const { QRlink, QRColor, setQRColor , downloadQrCode } = useQRContext();
+  const { QRlink, QRColor, setQRColor, downloadQrCode } = useQRContext();
   const tabItems = [
     { text: "URL", icon: <IoIosGlobe size={20} className="mr-2" /> },
     { text: "Email", icon: <FiMail size={16} className="mr-2" /> },
@@ -33,7 +33,7 @@ function QRPage() {
   ];
 
   return (
-    <div className="w-full h-[100vh] flex flex-col items-center justify-center">
+    <div className="w-full  flex flex-col items-center justify-center">
       <img
         src={pattern}
         alt=""
@@ -114,15 +114,18 @@ function QRPage() {
 
         <div className=" QR w-[20vw] border-2 rounded-r-lg m-5 ml-0 border-l-0 flex-col flex items-center justify-center">
           <QRCodeSVG
-          id="qr-code-download"
+            id="qr-code-download"
             fgColor={QRColor}
             size={200}
             value={QRlink}
             className="my-5"
           />
           <button
-          onClick={()=>{downloadQrCode()}}
-          class="bg-Layoutblue focus:ring-2 focus:ring-Layoutpink hover:bg-Layoutneon text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between">
+            onClick={() => {
+              downloadQrCode();
+            }}
+            class="bg-Layoutblue focus:ring-2 focus:ring-Layoutpink hover:bg-Layoutneon text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between"
+          >
             <span>Download QR</span>
             <IoDownloadOutline className="size-[20px] ml-2 stroke-2" />
           </button>

@@ -2,10 +2,13 @@ import React from "react";
 import Button from "../Components/Button";
 import BlogCard from "./Blogs/BlogCard";
 import {useBlogContext}  from "../Context/BlogContext"
+import { useNavigate } from "react-router-dom";
 function Posts() {
+  const navigate = useNavigate()
   const { posts, loading } = useBlogContext();
   console.log (!loading )
   console.log (posts.length >= 3)
+
   return (
     <div
       id="blogs"
@@ -20,7 +23,7 @@ function Posts() {
         className=" flex-col flex items-center  justify-evenly"
        
       >
-       {!loading && posts.length >= 3 ?(<div 
+       {!loading && posts[0] ?(<div 
        
        data-aos="zoom-in"
        data-aos-duration="1000"
@@ -28,22 +31,22 @@ function Posts() {
 
        className="flex items-center my-5  ">
           <span className="ml-14 ">
-            <BlogCard data = {posts[0]}/>
+            <BlogCard data = {posts[0][0]}/>
             
           </span>
           <span className="mx-14">
-            <BlogCard data = {posts[1]}/>
+            <BlogCard data = {posts[0][1]}/>
           </span>
           <span className="mr-14">
-            <BlogCard  data = {posts[3]}/>
+            <BlogCard  data = {posts[0][3]}/>
           </span>
         </div>): <p>Loading....</p>}
         
 
         <div className="flex justify-end w-[95vw] pb-5 ">
-          <a href="/allblog">
-            <Button text={"ALL POSTS"} />
-          </a>
+         
+            <Button text={"ALL POSTS"} onClick={()=>{navigate("/allblog")}} />
+        
         </div>
       </div>
     </div>
