@@ -1,53 +1,70 @@
 import React from "react";
-import Button from "../Components/Button";
-import BlogCard from "./Blogs/BlogCard";
-import {useBlogContext}  from "../Context/BlogContext"
 import { useNavigate } from "react-router-dom";
+import Button from "../Components/Button";
+import { useBlogContext } from "../Context/BlogContext";
+import BlogCard from "./Blogs/BlogCard";
 import BlogCardSkeleton from "./Blogs/BlogCardSkeleton";
 function Posts() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { posts, loading } = useBlogContext();
-  console.log (!loading )
-  console.log (posts.length >= 3)
+  console.log(!loading);
+  console.log(posts.length >= 3);
 
   return (
     <div
       id="blogs"
       className=" w-full flex-col flex overflow-hidden items-center justify-evenly max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  pt-5   max-md:px-5"
     >
-      <p className='w-[95vw] flex-col flex justify-start px-10 mt-5'>
-            <p className='text-3xl font-bold text-Layoutblue '>Latest Blog</p>
-            <p className='text-base py-5'>The latest industry news , interviews , tecnologies and resources</p>
+      <p className="w-[95vw] flex-col flex justify-start px-10 mt-5">
+        <p className="text-3xl font-bold text-Layoutblue ">Latest Blog</p>
+        <p className="text-base py-5">
+          The latest industry news , interviews , tecnologies and resources
         </p>
-     
-      <div
-        className=" flex-col flex items-center  justify-evenly"
-       
-      >
-       {!loading && posts[0] ?(<div 
-       
-       data-aos="zoom-in"
-       data-aos-duration="1000"
-       data-aos-easing="ease"
+      </p>
 
-       className="flex items-center my-5  ">
-          <span className="ml-14 ">
-            <BlogCard data = {posts[0][0]}/>
-            
-          </span>
-          <span className="mx-14">
-            <BlogCard data = {posts[0][1]}/>
-          </span>
-          <span className="mr-14">
-            <BlogCard  data = {posts[0][3]}/>
-          </span>
-        </div>): <BlogCardSkeleton/>}
-        
+      <div className=" flex-col flex items-center  justify-evenly">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-easing="ease"
+          className="flex items-center my-5  "
+        >
+          {!loading && posts[0] ? (
+            <>
+              <span className="ml-14 ">
+                <BlogCard data={posts[0][0]} />
+              </span>
+              <span className="mx-14">
+                <BlogCard data={posts[0][1]} />
+              </span>
+              <span className="mr-14">
+                <BlogCard data={posts[0][3]} />
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="ml-14 ">
+                <BlogCardSkeleton />
+              </span>
+              <span className="mx-14">
+                <BlogCardSkeleton />
+              </span>
+              <span className="mr-14">
+                <BlogCardSkeleton />
+              </span>
+            </>
+          )}
+        </div>
 
         <div className="flex justify-end w-[95vw] pb-5 ">
-         
-          <a href="#"><Button text={"ALL POSTS"} onClick={()=>{navigate("/allblog")}} /></a>  
-        
+          <a href="#">
+            <Button
+              text={"ALL POSTS"}
+              onClick={() => {
+                navigate("/allblog");
+              }}
+            />
+          </a>
         </div>
       </div>
     </div>

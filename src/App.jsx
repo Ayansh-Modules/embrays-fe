@@ -12,7 +12,8 @@ import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
 import QRContextProvider from "./Context/QRContext"
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import { SkeletonTheme } from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 function App() {
   const { getBlogs } = useBlogContext();
   useEffect(() => {
