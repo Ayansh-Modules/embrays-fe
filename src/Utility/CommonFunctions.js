@@ -25,5 +25,12 @@ export function validateMessage(message) {
     return true;
 }
  
-
+export const formatDate = (isoString) => {
+    const date = new Date(isoString);
+    const day = date.getUTCDate();
+    const month = date.getUTCMonth() + 1; // getUTCMonth() returns month from 0-11
+    const year = date.getUTCFullYear();
+    
+    return `${day}-${month}-${year}`;
+  };
 

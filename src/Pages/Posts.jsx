@@ -15,41 +15,41 @@ function Posts() {
       id="blogs"
       className=" w-full flex-col flex overflow-hidden items-center justify-evenly max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  pt-5   max-md:px-5"
     >
-      <p className="w-[95vw] flex-col flex justify-start px-10 mt-5">
+      <p className="w-[95vw] flex-col flex justify-start px-10 mt-5  max-md:text-center max-md:w-full max-md:px-5">
         <p className="text-3xl font-bold text-Layoutblue ">Latest Blog</p>
-        <p className="text-base py-5">
+        <p className="text-base py-5 max-md:py-0 max-md:pt-2 ">
           The latest industry news , interviews , tecnologies and resources
         </p>
       </p>
 
-      <div className=" flex-col flex items-center  justify-evenly">
+      <div className=" flex-col flex items-center  justify-evenly max-md:w-full">
         <div
           data-aos="zoom-in"
           data-aos-duration="1000"
           data-aos-easing="ease"
-          className="flex items-center my-5  "
+          className="flex items-center my-5 max-md:flex-col max-md:justify-evenly "
         >
           {!loading && posts[0] ? (
             <>
-              <span className="ml-14 ">
+              <span className="ml-14 max-md:ml-0">
                 <BlogCard data={posts[0][0]} />
               </span>
-              <span className="mx-14">
+              <span className="mx-14 max-md:mt-8">
                 <BlogCard data={posts[0][1]} />
               </span>
-              <span className="mr-14">
+              <span className="mr-14 max-md:mr-0 max-md:mt-8">
                 <BlogCard data={posts[0][3]} />
               </span>
             </>
           ) : (
             <>
-              <span className="ml-14 ">
+              <span className="ml-14 max-md:ml-0">
                 <BlogCardSkeleton />
               </span>
-              <span className="mx-14">
+              <span className="mx-14 max-md:mt-8">
                 <BlogCardSkeleton />
               </span>
-              <span className="mr-14">
+              <span className="mr-14 max-md:mr-0 max-md:mt-8">
                 <BlogCardSkeleton />
               </span>
             </>

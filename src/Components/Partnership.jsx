@@ -11,7 +11,7 @@ function Partnership() {
           data-aos-easing="ease"
           data-aos-duration="1000"
         >
-          <h2 className="title text-2xl font-semibold">Our Top Partners</h2>
+          <h2 className="title text-2xl font-bold">Our Top Partners</h2>
         </div>
 
         <div className=" flex-row flex items-center justify-evenly  mt-[20px] max-md:flex-col w-full">
@@ -21,7 +21,7 @@ function Partnership() {
           </div>
           <img src={baseAssets.razorpay} alt="razorpay" />
           <div className="flex items-center justify-evenly w-[50vw] max-md:w-full max-md:pt-[20px]">
-            <img src={baseAssets.amazon} alt="amazon" className=" mt-[20px] " />
+            <img src={baseAssets.amazon} alt="amazon" className=" mt-[35px] " />
             <img src={baseAssets.googleCloud} alt="google cloud" />
           </div>
         </div>

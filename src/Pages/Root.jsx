@@ -21,13 +21,13 @@ function Root() {
   return (
     <div>
      
-      <AboutUs />
+     <AboutUs />
       <Services />
       <HowItWorks />
       <WhyUs />
       <Collaboration />
       <ClientReview />
-      <Partnership />
+      <Partnership />  
       <Posts />
     </div>
   );

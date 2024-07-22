@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useState } from "react";
 import baseAssets from "../assets/baseAssets";
+import {formatDate} from "../Utility/CommonFunctions"
 const BlogsContext = createContext();
 export const useBlogContext = () => {
   return useContext(BlogsContext);
@@ -52,7 +53,7 @@ function BlogContextProvider({ children }) {
           blogData["userPhoto"] = edge.node.author.photo;
         }
         if (edge.node.dateAdded) {
-          blogData["postDate"] = edge.node.dateAdded;
+          blogData["postDate"] = formatDate(edge.node.dateAdded);
         }
         if (edge.node.title) {
           blogData["postTitle"] = edge.node.title;

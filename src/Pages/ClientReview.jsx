@@ -20,11 +20,11 @@ function ClientReview() {
        
       <div className="title  flex-col flex items-center justify-center pt-[3rem] ">
         <div
-          className="title  text-4xl max-md:text-2xl text-center font-bold mb-[2rem] text-Layoutblue "
+          className="title  text-4xl max-md:text-xl  text-center font-bold mb-[2rem] text-Layoutblue "
           data-aos="fade-up"
         >
           {data.title}
-          <span className="company text-Layoutpink font-normal">
+          <span className="company text-Layoutpink font-semibold">
             {compName}{" "}
           </span>
         </div>

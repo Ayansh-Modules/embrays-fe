@@ -18,7 +18,7 @@ function Pagination() {
               onClick={() => {
                 handlePrevious();
               }}
-              className="rounded-full px-4 py-2 hover:bg-white text-gray-600 flex items-center justify-center"
+              className="rounded-full px-4 max-md:px-3 py-2 hover:bg-white text-gray-600 flex items-center justify-center"
             >
               <TbPlayerTrackPrevFilled className="mr-2" /> Previous
             </button>
@@ -29,7 +29,7 @@ function Pagination() {
 
           <li>
             {count >= 0 && (
-              <div className="rounded-full px-4 py-2 hover:bg-white hover:text-gray-600 transition duration-300 ease-in-out flex items-center justify-center">
+              <div className="rounded-full px-4 max-md:py-2  py-2 hover:bg-white hover:text-gray-600 transition duration-300 ease-in-out flex items-center justify-center">
                 {count+1}
               </div>
             )}
@@ -40,7 +40,7 @@ function Pagination() {
               onClick={() => {
                 handleNext()
               }}
-              className="rounded-full px-8 py-2 hover:bg-white hover:text-gray-600 transition duration-300 ease-in-out flex items-center justify-center"
+              className="rounded-full px-8 max-md:px-3 py-2 hover:bg-white hover:text-gray-600 transition duration-300 ease-in-out flex items-center justify-center"
             >
               Next <TbPlayerTrackNextFilled className="ml-2" />
             </button>

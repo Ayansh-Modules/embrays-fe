@@ -24,7 +24,7 @@ function Collaboration() {
       }}
     >
       <div
-        className="tile text-6xl max-md:text-4xl py-20  font-semibold text-Layoutblue  flex-row flex items-center justify-center text-center"
+        className="tile text-6xl max-md:text-3xl py-20 max-md:font-bold  font-semibold text-Layoutblue  flex-row flex items-center justify-center text-center"
         style={{ textShadow: "white 5px 5px" }}
       >
         {data.title}

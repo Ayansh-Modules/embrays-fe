@@ -9,7 +9,7 @@ function TestimonialBox(props) {
   console.log(background);
   return (
     <div
-      className={`grid h-[22rem] w-[25vw] max-lg:w-[25rem] max-md:w-[20rem] mt-[3rem] rounded-2xl text-white bg-cover bg-center bg-no-repeat`}
+      className={`grid h-[22rem] w-[25vw] max-lg:w-[25rem] max-md:w-[90vw] mt-[3rem] rounded-2xl text-white bg-cover bg-center bg-no-repeat`}
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="icon p-[30px]">

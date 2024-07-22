@@ -9,7 +9,7 @@ function ServiceBox(props) {
   return (
     <div className="serviceBox">
       <div
-        className={`h-[65vh] w-[40vw] max-md:h-[40vh] max-md:w-[90vw] flex-col flex items-center max-md:items-start rounded-xl overflow-y-hidden ${isReversed} bg- bg-no-repeat bg-cover relative`}
+        className={`h-[65vh] w-[40vw] max-md:h-[46vh] max-md:w-[90vw] flex-col flex items-center max-md:items-start rounded-xl overflow-y-hidden ${isReversed} bg- bg-no-repeat bg-cover relative`}
         style={{ backgroundColor: color }}
       >
         <div className="flex-col z-[2]">

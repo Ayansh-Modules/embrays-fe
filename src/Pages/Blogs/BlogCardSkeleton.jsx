@@ -4,7 +4,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 function BlogCardSkeleton() {
   return (
     <div
-      className=" w-[25vw] border-black rounded-2xl shadow "
+      className=" w-[25vw] max-lg:w-[10vw]  max-md:w-[80vw] border-black rounded-2xl shadow "
       style={{ boxShadow: " 20px 20px 60px #acacac, -20px -20px 60px #ffffff" }}
     >
       <div className='image h-[150px]  w-full'>

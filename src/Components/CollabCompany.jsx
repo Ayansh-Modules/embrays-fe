@@ -23,10 +23,10 @@ function CollabCompany(props) {
     </div>
 
     <div className=" secondcard block md:hidden">
-      <div className="collabcard  w-[20rem] bg-white rounded-t-2xl">
+      <div className="collabcard  w-[80vw] bg-white rounded-t-2xl">
         <img className="rounded-2xl" src={background} alt='collabCardBg' />
       </div>
-      <div className="Mobile bg-Layoutblue w-[20rem] h-[15rem] flex items-center justify-center rounded-b-2xl">
+      <div className="Mobile bg-Layoutblue w-[80vw] h-[16rem] flex items-center justify-center rounded-b-2xl">
         <div className="text w-[80%] text-white">
           <p className="font-semibold text-2xl text-center pb-[10px]">
             {company}

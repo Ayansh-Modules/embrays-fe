@@ -8,9 +8,9 @@ function ViewAllBlog() {
 
   return (
     <>
-      <p className=" flex-col flex justify-start px-20 mt-5">
-        <p className="text-3xl font-bold text-Layoutblue ">Latest Blog</p>
-        <p className="text-base pt-5">
+      <p className=" flex-col flex justify-start px-20 mt-5 max-md:w-full  max-md:items-center max-md:justify-center">
+        <p className="text-3xl font-bold text-Layoutblue max-md:w-[90vw] max-md:text-center">Latest Blog</p>
+        <p className="text-base pt-5 max-md:w-[100vw] max-md:text-center">
           The latest industry news , interviews , tecnologies and resources
         </p>
       </p>
@@ -19,7 +19,7 @@ function ViewAllBlog() {
         data-aos="zoom-in"
         data-aos-duration="1000"
         data-aos-easing="ease"
-        className="grid grid-cols-2 md:grid-cols-3 gap-14  items-center justify-center mx-20 mt-10 mb-20"
+        className="grid grid-cols-1 md:grid-cols-3 gap-14  items-center justify-center mx-20 mt-10 mb-20 max-md:mx-[10vw]"
       >
         {!loading && posts.length > 0 ? (
           <>

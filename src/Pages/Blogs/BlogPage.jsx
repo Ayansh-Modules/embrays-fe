@@ -6,8 +6,8 @@ function BlogPage() {
   const [viewAll, setviewAll] = useState(false);
   return (
     <div className="h-auto  w-full    ">
-      <p className="px-20 py-5 ">
-        <p className="text-3xl font-semibold text-Layoutblue">Latest Blog</p>
+      <p className="w-full flex-col flex items-center justify-center  ">
+        <p className="text-3xl font-semibold text-Layoutblue ">Latest Blog</p>
         <p className="text-sm pt-5">
           The latest industry news , interviews , tecnologies and resources
         </p>
