@@ -33,7 +33,7 @@ function Header() {
         <div className="max-md:text-xl flex items-center justify-between text-3xl font-semibold text-white max-lg:text-base">
           <a href="/" title="Embrys Technology.Com">
             {" "}
-            {company}
+           ET
           </a>
         </div>
         <div className=" max-md:visible md:hidden ">

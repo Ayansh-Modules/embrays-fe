@@ -34,7 +34,7 @@ function QRPage() {
 
   return (
     <div className="w-full  flex flex-col items-center justify-center">
-      <img
+      {/* <img
         src={pattern}
         alt=""
         srcset=""
@@ -45,20 +45,22 @@ function QRPage() {
         alt=""
         srcset=""
         className="absolute bottom-0 right-0 size-24"
-      />
-      <div className="text-4xl font-semibold text-Layoutblue mt-5">
+      /> */}
+      <div className="text-4xl max-md:text-3xl font-semibold text-Layoutblue mt-5">
         QR GENERATOR
       </div>
+      
+      
       <div
-        className="w-[70vw]  border-2 border-black rounded-lg flex my-10"
+        className="w-[75vw] max-md:w-full max-md:border-none max-md:items-center max-md:justify-center border-2 border-black rounded-lg flex my-10 max-md:flex-col-reverse"
         style={{
           boxShadow:
             "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
         }}
       >
-        <div className="w-[50vw] border-2 rounded-l-lg m-5 mr-0">
+        <div className="w-[50vw] border-2 rounded-l-lg m-5 max-md:m-0 mr-0 max-md:w-[90vw] max-md:mb-10">
           {/* tools */}
-          <div className="Tools flex items-center justify-evenly p-5 border-b-2 bg-gray-100">
+          <div className="Tools max-md:grid-cols-2 max-md:gap-5 max-md:grid flex items-center justify-evenly p-5 border-b-2 bg-gray-100">
             {tabItems.map((value, index) => {
               return (
                 <QRPageButton
@@ -112,11 +114,10 @@ function QRPage() {
 
         {/* QR */}
 
-        <div className=" QR w-[20vw] border-2 rounded-r-lg m-5 ml-0 border-l-0 flex-col flex items-center justify-center">
+        <div className=" QR w-[20vw] max-md:w-[90vw] max-md:border-none max-md:m-0 max-md:mb-6 border-2 rounded-r-lg m-5 ml-0 border-l-0 flex-col flex items-center justify-center">
           <QRCodeSVG
             id="qr-code-download"
             fgColor={QRColor}
-            size={200}
             value={QRlink}
             className="my-5"
           />
@@ -126,7 +127,7 @@ function QRPage() {
             }}
             class="bg-Layoutblue focus:ring-2 focus:ring-Layoutpink hover:bg-Layoutneon text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between"
           >
-            <span>Download QR</span>
+            <span className="text-sm">Download QR</span>
             <IoDownloadOutline className="size-[20px] ml-2 stroke-2" />
           </button>
         </div>
@@ -139,7 +140,7 @@ function QRPageButton({ text, icon, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="url focus:ring-2 focus:ring-Layoutblue cursor-pointer h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue"
+      className="url focus:ring-2  focus:ring-Layoutblue cursor-pointer h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue"
     >
       {icon}
       {text}
@@ -151,11 +152,11 @@ function QRPageColorPalette({ color, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="h-12 w-12 rounded-full m-3 cursor-pointer  focus:ring-2 focus:ring-black hover:border-2 hover:border-black flex justify-center items-center"
+      className="size-12 max-md:size-7  rounded-full m-3 cursor-pointer  focus:ring-2 focus:ring-black hover:border-2 hover:border-black flex justify-center items-center"
     >
       <div
         style={{ backgroundColor: `${color}` }}
-        className="h-10 w-10 rounded-full"
+        className="size-10 max-md:size-5 rounded-full"
       ></div>
     </button>
   );

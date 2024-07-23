@@ -28,7 +28,7 @@ function Services() {
             className="h-20 w-20 max-md:h-14 max-md:w-14"
           />
         </div>
-        <p className="text-6xl max-md:text-3xl font-semibold text-Layoutpink pl-28">
+        <p className="text-6xl max-md:text-3xl font-semibold text-Layoutpink pl-[20rem] max-md:pl-[5rem]">
           UNLEASHED
         </p>
       </div>

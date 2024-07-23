@@ -59,7 +59,7 @@ function Email() {
           class="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue block w-[97%] p-3 "
         />
         {errorEmail && (
-          <p class="mt-2 text-sm text-green-600 dark:text-green-500">
+          <p class="mt-2 text-sm text-red-600 dark:text-red-600">
             <span class="font-medium">Not a Email</span>
           </p>
         )}
@@ -78,7 +78,7 @@ function Email() {
           class="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue block w-[97%] p-3 "
         />
         {errorSubject && (
-          <p class="mt-2 text-sm text-green-600 dark:text-green-500">
+          <p class="mt-2 text-sm text-red-600 dark:text-red-600">
             <span class="font-medium">Not Valid Subject</span>
           </p>
         )}
@@ -97,7 +97,7 @@ function Email() {
           class="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue block w-[97%] p-3 "
         />
         {errorMessage && (
-          <p class="mt-2 text-sm text-green-600 dark:text-green-500">
+          <p class="mt-2 text-sm text-red-600 dark:text-red-600">
             <span class="font-medium">Not Valid Message</span>
           </p>
         )}

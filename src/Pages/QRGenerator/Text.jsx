@@ -32,7 +32,7 @@ else {
           onChange={(e)=>{setMessage(e.target.value)}}
           class="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue block w-[97%] p-3 "
         />
-        {error && <p class="mt-2 text-sm text-green-600 dark:text-green-500"><span class="font-medium">Not a Valid Message</span></p> }
+        {error && <p class="mt-2 text-sm text-red-600 dark:text-red-600"><span class="font-medium">Not a Valid Message</span></p> }
       <Button text={"Generate QR"} onClick={()=>{getFinalMessage()}}/>
     </div>
   )

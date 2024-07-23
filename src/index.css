@@ -6,6 +6,8 @@
 * {
   font-family: "Montserrat", sans-serif;
   scrollbar-width: thin;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  
 }
 
 html {

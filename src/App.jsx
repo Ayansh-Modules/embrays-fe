@@ -12,6 +12,7 @@ import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
 import QRContextProvider from "./Context/QRContext"
+import LinkShortContextProvider from "./Context/LinkShortContext"
 import { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <>
      <SkeletonTheme baseColor="#000000" highlightColor="#444">
     <QRContextProvider>
+    <LinkShortContextProvider />
       <Embrays_Helmet />
       <Header />
       <Routes>
@@ -39,6 +41,7 @@ function App() {
         <Route path="/link-shortener" element={<LinkPage />}></Route>
       </Routes>
       <Footer2 />
+      <LinkShortContextProvider />
       </QRContextProvider>
       </SkeletonTheme>
     </>
