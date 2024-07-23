@@ -28,9 +28,17 @@ export function validateMessage(message) {
 export const formatDate = (isoString) => {
     const date = new Date(isoString);
     const day = date.getUTCDate();
-    const month = date.getUTCMonth() + 1; // getUTCMonth() returns month from 0-11
+    const monthIndex = date.getUTCMonth(); // getUTCMonth() returns month from 0-11
     const year = date.getUTCFullYear();
     
-    return `${day}-${month}-${year}`;
-  };
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+    
+    const month = monthNames[monthIndex];
+    
+    return `${day} ${month} ${year}`;
+};
+
 
