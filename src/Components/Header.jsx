@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoDownloadOutline, IoMenu } from "react-icons/io5";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
@@ -33,7 +33,7 @@ function Header() {
         <div className="max-md:text-xl flex items-center justify-between text-3xl font-semibold text-white max-lg:text-base">
           <a href="/" title="Embrys Technology.Com">
             {" "}
-           ET
+            ET
           </a>
         </div>
         <div className=" max-md:visible md:hidden ">
@@ -84,7 +84,6 @@ function Header() {
                           onClick={() => {
                             navigate("/qr-generator");
                           }}
-                        
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
                         >
                           QR Generator
@@ -126,13 +125,18 @@ function PortfolioButton() {
       className="flex items-center justify-start"
       title="Click to get Portfolio"
     >
-      <button
-        type="button"
-        className="h-[3rem] w-[8rem] text-sm focus:ring-2  focus:ring-white  text-black bg-Layoutneon hover:bg-white  rounded-xl  flex items-center justify-center "
+      <a
+        href="https://drive.google.com/file/d/18h3hVuQdIT1MQV0vWzqDUvj03J1yIx9D/view?usp=drive_link"
+        target="_blank"
       >
-        <IoDownloadOutline className="size-[25px] mr-2" />
-        <span> Portfolio</span>
-      </button>
+        <button
+          type="button"
+          className="h-[3rem] w-[8rem] text-sm focus:ring-2  focus:ring-white  text-black bg-Layoutneon hover:bg-white  rounded-xl  flex items-center justify-center "
+        >
+          <IoDownloadOutline className="size-[25px] mr-2" />
+          <span> Portfolio</span>
+        </button>
+      </a>
     </div>
   );
 }
