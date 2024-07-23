@@ -11,7 +11,7 @@ function AboutUs() {
   return (
     <div
       id="aboutus"
-      className="about bg-Layoutblue relative  w-full pt-28  flex flex-col items-start overflow-hidden "
+      className="about bg-Layoutblue relative  w-full pt-28 max-lg:pt-20  flex flex-col items-start overflow-hidden "
     >
       <div className="flex-row max-md:flex-col flex overflow-x-hidden overflow-y-hidden justify-between pl-[10vw] pr-[0vw]">
         <div
@@ -21,7 +21,7 @@ function AboutUs() {
           data-aos-easing="ease"
           data-aos-duration="1000"
         >
-          <div className="title text-5xl font-semibold  max-md:w-[90vw] mb-[5vh] max-md:text-2xl">
+          <div className="title text-5xl font-semibold max-lg:text-3xl  max-md:w-[90vw] mb-[5vh] max-md:text-2xl">
             Empowering you with sleek
             <span className="text-Layoutneon font-light"> user-centered </span>
             solutions for success
