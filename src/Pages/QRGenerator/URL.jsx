@@ -29,6 +29,7 @@ function URL() {
         </label>
         <input
           type="text"
+          placeholder="https://embraystechnology.com"
           id="success"
           onChange={(e) => {
             setValue(e.target.value)

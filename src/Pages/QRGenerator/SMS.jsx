@@ -43,6 +43,7 @@ function SMS() {
       </label>
       <input
         type="text"
+        placeholder="ex:78258****"
         id="success"
         onChange={(e) => {
           setNumber(e.target.value);
@@ -62,6 +63,7 @@ function SMS() {
       </label>
       <textarea
         type="text"
+        placeholder="your message"
         id="success"
         onChange={(e) => {
           setMessage(e.target.value);

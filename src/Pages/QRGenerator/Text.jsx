@@ -29,6 +29,7 @@ else {
         <textarea
           type="text"
           id="success"
+          placeholder='your message here'
           onChange={(e)=>{setMessage(e.target.value)}}
           class="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue block w-[97%] p-3 "
         />

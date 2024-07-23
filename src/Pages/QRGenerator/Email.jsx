@@ -52,6 +52,7 @@ function Email() {
         </label>
         <input
           type="text"
+          placeholder="ex: embrays123@gmail.com"
           id="success"
           onChange={(e) => {
             setEmail(e.target.value);
@@ -71,6 +72,7 @@ function Email() {
         </label>
         <input
           type="text"
+          placeholder="your subject"
           id="success"
           onChange={(e) => {
             setSubject(e.target.value);
@@ -91,6 +93,7 @@ function Email() {
         <textarea
           type="text"
           id="success"
+          placeholder="your message here"
           onChange={(e) => {
             setMessage(e.target.value);
           }}
