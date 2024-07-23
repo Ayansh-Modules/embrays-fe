@@ -71,7 +71,7 @@ function Header() {
 
                     <div className="absolute left-0 w-40 mt-1 origin-top-left bg-slate-200 divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
                       <div className="py-1">
-                        <a 
+                        {/* <a 
                           
                           onClick={() => {
                             navigate("/link-shortener");
@@ -79,7 +79,7 @@ function Header() {
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
                         >
                           Link shortener
-                        </a>
+                        </a> */}
                         <a
                           onClick={() => {
                             navigate("/qr-generator");
