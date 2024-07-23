@@ -11,12 +11,12 @@ function BlogCard({ data }) {
 
   return (
     <div
-      className=" w-[27rem] border-black rounded-2xl shadow hover:translate-y-1 max-md:w-[80vw] "
+      className=" min-w-[25vw] border-black rounded-2xl shadow hover:translate-y-1 max-md:w-[80vw] "
       style={{ boxShadow: " 20px 20px 60px #acacac, -20px -20px 60px #ffffff" }}
     >
       <a>
         <img
-          class="rounded-t-2xl  z-[-1px] h-[200px]  w-full bg-cover "
+          class="rounded-t-2xl  z-[-1px] h-[150px]  w-full bg-cover "
           src={coverImage}
           alt="Post Image"
         />
@@ -31,13 +31,13 @@ function BlogCard({ data }) {
           <p>{postDate}</p>
         </p>
       </div>
-      <div class="px-5 py-2 hover:bg-violet-100 hover:rounded-b-2xl h-[190px] max-md:h-auto flex-col flex justify-between">
+      <div class="px-5 py-2 hover:bg-violet-100 hover:rounded-b-2xl h-[180px] max-md:h-auto flex-col flex justify-between">
         <a>
-          <h5 class="text-sm font-bold tracking-tight text-gray-900 ">
+          <h5 class="text-sm font-bold tracking-tight text-gray-900 overflow-hidden">
             {postTitle}
           </h5>
         </a>
-        <p class=" font-normal text-xs text-gray-400 text-justify">
+        <p class=" font-normal text-[10px] text-gray-700 text-justify overflow-hidden">
           {postBrief}
         </p>
         <a

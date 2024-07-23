@@ -37,7 +37,7 @@ function Posts() {
               <span className="mx-14 max-md:mt-8">
                 <BlogCard data={posts[0][1]} />
               </span>
-              <span className="mr-14 max-md:mr-0 max-md:mt-8">
+              <span className="mr-14 max-md:mr-0   max-md:mt-8 ">
                 <BlogCard data={posts[0][3]} />
               </span>
             </>
