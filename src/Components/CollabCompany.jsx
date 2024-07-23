@@ -7,7 +7,7 @@ function CollabCompany(props) {
 
   return (
     <>
-    <div className="hidden md:block  collabcard h-[25rem] min-w-[400px] w-[35vw] bg-white rounded-2xl max-md:ml-[20vw]">
+    <div className=" collabcard  h-[25rem] min-w-[400px] w-[35vw] overflow-hidden bg-white rounded-2xl max-md:ml-[20vw]">
       <img alt="collabCardBg"
         className="rounded-2xl min-w-[400px] w-[35vw] h-[25rem] object-cover"
         src={background}
