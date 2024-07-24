@@ -1,14 +1,12 @@
 import React from "react";
 import { IoDownloadOutline, IoMenu } from "react-icons/io5";
-import { RiArrowDownSLine } from "react-icons/ri";
-import { useNavigate } from "react-router-dom";
-import { appData } from "../Data/AppData";
-import Drawer from "./Drawer";
 
+import Drawer from "./Drawer";
+import Tools from "../Components/Tools"
 function Header() {
-  const company = appData.companyName;
+
   const [isOpen, setIsOpen] = React.useState(false);
-  const navigate = useNavigate();
+
   const headerOptions = [
     {
       title: "About Us",
@@ -29,8 +27,8 @@ function Header() {
   ];
   return (
     <>
-      <div className="navbar py-[20px]  w-full bg-Layoutblue flex-row flex items-center justify-between font-semibold sticky top-0 z-10 px-[10vw]">
-        <div className="max-md:text-xl flex items-center justify-between text-3xl font-semibold text-white max-lg:text-base">
+      <div className="navbar py-[20px]  w-full bg-Layoutblue flex-row flex items-center justify-between font-semibold sticky top-0 z-10  ">
+        <div className="max-md:text-xl ml-[10vw]  flex items-center justify-between text-3xl font-semibold text-white max-lg:text-base">
           <a href="/" title="Embrys Technology.Com">
             {" "}
             ET
@@ -38,7 +36,7 @@ function Header() {
         </div>
         <div className=" max-md:visible md:hidden ">
           <IoMenu
-            className="text-white text-3xl"
+            className="text-white text-3xl mx-[10vw]"
             onClick={() => {
               setIsOpen(true);
             }}
@@ -52,47 +50,13 @@ function Header() {
                   key={index}
                   title={option.title}
                   href={option.href}
-                  className="about text-sm text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center"
+                  className="about text-sm text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 max-lg:px-3 flex items-center justify-center"
                 >
                   {option.title}
                 </a>
               ))}
 
-              <div className="text-sm h-[3rem] rounded-xl text-white hover:text-black flex items-center justify-center">
-                <div className="relative inline-block text-left">
-                  <div className="group">
-                    <button
-                      type="button"
-                      className="inline-flex justify-center items-center w-full py-2font-medium  focus:outline-none  text-sm h-[3rem] px-6 hover:bg-Layoutneon rounded-xl text-white hover:text-black"
-                    >
-                      Tools
-                      <RiArrowDownSLine size={20} className="ml-1" />
-                    </button>
-
-                    <div className="absolute left-0 w-40 mt-1 origin-top-left bg-slate-200 divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
-                      <div className="py-1">
-                        {/* <a 
-                          
-                          onClick={() => {
-                            navigate("/link-shortener");
-                          }}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-                        >
-                          Link shortener
-                        </a> */}
-                        <a
-                          onClick={() => {
-                            navigate("/qr-generator");
-                          }}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-                        >
-                          QR Generator
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Tools/>
 
             </div>
           </div>
@@ -111,41 +75,7 @@ function Header() {
               {option.title}
             </a>
           ))}
-           <div className="text-sm h-[3rem] rounded-xl text-white hover:text-black flex items-center justify-center">
-                <div className="relative inline-block text-left">
-                  <div className="group">
-                    <button
-                      type="button"
-                      className="inline-flex font-semibold justify-center items-center w-full py-2font-medium  focus:outline-none  text-sm h-[3rem] px-6 hover:bg-Layoutneon rounded-xl text-white hover:text-black"
-                    >
-                      Tools
-                      <RiArrowDownSLine size={20} className="ml-1" />
-                    </button>
-
-                    <div className="absolute left-0 w-40 mt-1 origin-top-left bg-slate-200 divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
-                      <div className="py-1">
-                        {/* <a 
-                          
-                          onClick={() => {
-                            navigate("/link-shortener");
-                          }}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-                        >
-                          Link shortener
-                        </a> */}
-                        <a
-                          onClick={() => {
-                            navigate("/qr-generator");
-                          }}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-                        >
-                          QR Generator
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+           <div className="ml-6"><Tools/></div>
         </div>
         <div className="flex items-center justify-center w-full">
           {PortfolioButton()}
@@ -158,7 +88,7 @@ function Header() {
 function PortfolioButton() {
   return (
     <div
-      className="flex items-center justify-start"
+      className="flex items-center justify-start mr-[5vw]"
       title="Click to get Portfolio"
     >
       <a
