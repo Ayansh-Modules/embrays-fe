@@ -46,12 +46,12 @@ const Tools = () => {
             <div className="absolute left-0 w-40 mt-1 origin-top-left bg-slate-200 divide-y divide-gray-100 rounded-md shadow-lg transition duration-600">
               <div className="py-1">
                 {/* Uncomment and add more links as needed */}
-                {/* <a 
+                <a 
                   onClick={() => handleNavigate("/link-shortener")}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
                 >
                   Link shortener
-                </a> */}
+                </a> 
                 <a
                   onClick={() => handleNavigate("/qr-generator")}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"

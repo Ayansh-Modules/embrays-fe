@@ -11,7 +11,7 @@ function BlogCard({ data }) {
 
   return (
     <div
-      className=" min-w-[25vw] border-black rounded-2xl shadow hover:translate-y-1 max-md:w-[80vw] "
+      className=" lg:w-[25vw] md:w-[40vw] border-black rounded-2xl shadow hover:translate-y-1 max-md:w-[80vw] "
       style={{ boxShadow: " 20px 20px 60px #acacac, -20px -20px 60px #ffffff" }}
     >
       <a>

@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import Button from "../../Components/Button";
+import { useLinkShortContext } from "../../Context/LinkShortContext";
 import { useQRContext } from "../../Context/QRContext";
 import { validateURL } from "../../Utility/CommonFunctions";
 function URL() {
-  const { generateQRLink,setQRColor } = useQRContext();
-  const [value, setValue] = useState("");
-  const [error,setError]= useState(false)
+  const { generateQRLink, setQRColor, urlValue, setUrlValue } = useQRContext();
+  const { generateShortLinkQR, shortUrl } = useLinkShortContext;
+  const [error, setError] = useState(false);
   function generateFinalURL() {
-    let result = validateURL(value);
+    let result = validateURL(urlValue);
     if (result == true) {
-      generateQRLink(value);
-      setError (false)
-
-    }
-    else {
-      setError (true)
-      setQRColor("gray")
+      generateQRLink(urlValue);
+      setError(false);
+    } else {
+      setError(true);
+      setQRColor("gray");
     }
   }
+
   return (
     <>
       <div className="p-5 ml-5 ">
@@ -32,15 +32,15 @@ function URL() {
           placeholder="https://embraystechnology.com"
           id="success"
           onChange={(e) => {
-            setValue(e.target.value)
-            let result = validateURL(value);
+            setUrlValue(e.target.value);
+            let result = validateURL(urlValue);
             if (result == true) {
-            setError (false)     
-            }
-            else {
-              setError (true)
+              setError(false);
+            } else {
+              setError(true);
             }
           }}
+          value={urlValue}
           class="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue block w-[97%] p-3 "
         />
         {error && (

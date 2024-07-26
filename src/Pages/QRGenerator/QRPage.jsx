@@ -49,8 +49,7 @@ function QRPage() {
       <div className="text-4xl max-md:text-3xl font-semibold text-Layoutblue mt-5">
         QR GENERATOR
       </div>
-      
-      
+
       <div
         className="w-[75vw] max-md:w-full max-md:border-none max-md:items-center max-md:justify-center border-2 border-black rounded-lg flex my-10 max-md:flex-col-reverse"
         style={{

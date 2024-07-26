@@ -33,7 +33,7 @@ function Services() {
         </p>
       </div>
 
-      <div className="services pt-20">
+      <div className="services pt-20 ">
         <div
           className="flex-row max-md:flex-col flex "
           data-aos="fade-up"
@@ -55,7 +55,7 @@ function Services() {
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
-          data-aos-duration="2500"
+          data-aos-duration="2000"
           data-aos-anchor-placement="center-bottom"
         >
           <ServiceBox boxData={boxParam[2]} />

@@ -7,6 +7,7 @@ export const useQRContext = () => {
 
 function QRContextProvider({ children }) {
   const [QRlink, setQRlink] = useState("");
+  const [urlValue, setUrlValue] = useState("");
   const [QRColor, setQRColor] = useState("gray");
 
   function generateQRLink(value) {
@@ -66,6 +67,8 @@ function QRContextProvider({ children }) {
     setQRColor,
     generateQRLink,
     downloadQrCode,
+    urlValue,
+    setUrlValue,
   };
   return (
     <QRLinkContext.Provider value={value}>{children}</QRLinkContext.Provider>

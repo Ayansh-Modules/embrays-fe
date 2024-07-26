@@ -5,6 +5,7 @@ import { TbMailFilled } from "react-icons/tb";
 import { TfiLinkedin } from "react-icons/tfi";
 import Button from "../Components/Button";
 import { appData } from "../Data/AppData";
+import { useNavigate } from "react-router-dom";
 
 function Footer2() {
   const data = appData.contact;
@@ -14,6 +15,10 @@ function Footer2() {
   const instagram = appData.urls.instagram;
   // const mail = appData.urls.mailto;
   // const cell = appData.urls.cellto;
+  // const navigate = useNavigate()
+  // function termsAndCondition(){
+  //   navigate("/terms-and-conditions")
+  // }
   return (
     <div
       className="bg-Layoutblue w-full text-xs rounded-t-md overflow-hidden"
@@ -73,20 +78,25 @@ function Footer2() {
             </div>
           </div>
 
-          <div className="flex justify-between max-md:my-5 max-md:w-full">
+          <div className="flex justify-between max-md:my-5 max-md:w-[90vw]">
             <div className="flex-col h-[11rem]  flex justify-evenly ">
               <p className=" font-semibold hover:text-Layoutneon">EXPLORE</p>
               <p className="hover:text-Layoutneon">
                 <a href="/">HOME</a>
               </p>
               <p className="hover:text-Layoutneon">
-                <a href="">PORTFOLIO</a>
+                <a
+                  href="https://drive.google.com/file/d/18h3hVuQdIT1MQV0vWzqDUvj03J1yIx9D/view?usp=drive_link"
+                  target="_blank"
+                >
+                  PORTFOLIO
+                </a>
+              </p>
+              <p className="hover:text-Layoutneon w-[5rem]">
+                <a href={urls.mailto} target="_blank">CONTACT US</a>
               </p>
               <p className="hover:text-Layoutneon">
-                <a href="/#contactus">CONTACT US</a>
-              </p>
-              <p className="hover:text-Layoutneon">
-                <a href="/terms-and-conditions">TERMS & CONDITION </a>
+                <a href="/terms-and-conditions" className="leading-relaxed">TERMS & CONDITION </a>
               </p>
             </div>
 

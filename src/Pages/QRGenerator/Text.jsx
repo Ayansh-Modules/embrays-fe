@@ -35,6 +35,7 @@ else {
         />
         {error && <p class="mt-2 text-sm text-red-600 dark:text-red-600"><span class="font-medium">Not a Valid Message</span></p> }
       <Button text={"Generate QR"} onClick={()=>{getFinalMessage()}}/>
+     
     </div>
   )
 }
