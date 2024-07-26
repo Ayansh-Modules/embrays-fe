@@ -8,7 +8,7 @@ function BlogCardSkeleton() {
       style={{ boxShadow: " 20px 20px 60px #acacac, -20px -20px 60px #ffffff" }}
     >
       <div className='image h-[150px]  w-full'>
-      <Skeleton  height={90} width="25vw" className='rounded-t-2xl p-2' baseColor='#AEB4D0'/>
+      <Skeleton  height={90}   className='rounded-t-2xl p-2 w-[25vw] max-md:w-[80vw]' baseColor='#AEB4D0'/>
       </div>
       <div className="h-[60px] w-full backdrop-blur-3xl  bg-BlogCard opacity-90 z-1 mt-[-60px]  flex justify-start items-center">
       <Skeleton height={40} width={40} baseColor='#AEB4D0' circle className='mx-10'/>

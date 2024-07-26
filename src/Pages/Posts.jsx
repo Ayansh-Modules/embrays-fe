@@ -16,8 +16,8 @@ function Posts() {
       className=" w-full flex-col flex overflow-hidden items-center justify-evenly max-md:justify-start max-md:items-start max-md:flex-col max-sm:flex-col  pt-5   max-md:px-5"
     >
       <p className="w-[95vw] flex-col flex justify-start px-10 mt-5  max-md:text-center max-md:w-full max-md:px-5">
-        <p className="text-3xl font-bold text-Layoutblue ">Latest Blog</p>
-        <p className="text-base py-5 max-md:py-0 max-md:pt-2 ">
+        <p className="text-3xl font-bold text-Layoutblue  text-center">Latest Blog</p>
+        <p className="font-semibold py-5 max-md:py-0 max-md:pt-2 text-center">
           The latest industry news , interviews , tecnologies and resources
         </p>
       </p>
@@ -27,7 +27,7 @@ function Posts() {
           data-aos="zoom-in"
           data-aos-duration="1000"
           data-aos-easing="ease"
-          className="flex items-center my-5 max-md:flex-col max-md:justify-evenly "
+          className="flex items-center my-10 max-md:flex-col  max-md:justify-evenly "
         >
           {!loading && posts[0] ? (
             <>

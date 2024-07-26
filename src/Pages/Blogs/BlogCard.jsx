@@ -11,7 +11,7 @@ function BlogCard({ data }) {
 
   return (
     <div
-      className=" lg:w-[25vw] md:w-[40vw] border-black rounded-2xl shadow hover:translate-y-1 max-md:w-[80vw] "
+      className=" lg:w-[25vw] md:w-[40vw] border-black rounded-2xl shadow hover:translate-y-1 max-md:w-[80vw]  "
       style={{ boxShadow: " 20px 20px 60px #acacac, -20px -20px 60px #ffffff" }}
     >
       <a>
@@ -31,7 +31,7 @@ function BlogCard({ data }) {
           <p>{postDate}</p>
         </p>
       </div>
-      <div class="px-5 py-2 hover:bg-violet-100 hover:rounded-b-2xl h-[180px] max-md:h-auto flex-col flex justify-between">
+      <div class="px-5 py-2 hover:bg-violet-100 hover:rounded-b-2xl h-[180px] max-md:h-[200px] flex-col flex justify-between">
         <a>
           <h5 class="text-sm font-bold tracking-tight text-gray-900 overflow-hidden">
             {postTitle}
