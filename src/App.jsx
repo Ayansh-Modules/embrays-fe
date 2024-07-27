@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Footer2 from "./Components/Footer2";
 import Header from "./Components/Header";
 import { useBlogContext } from "./Context/BlogContext";
@@ -17,11 +17,15 @@ import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
 function App() {
   const { getBlogs } = useBlogContext();
+  const location = useLocation();
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+    if (location.hash) {
+      window.location.href = location.hash;
+    }
     getBlogs();
-  }, []);
+  }, [location]);
 
   return (
     <>

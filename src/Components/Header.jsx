@@ -64,14 +64,17 @@ function Header() {
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
         <div className="bg-Layouttrans  rounded-xl mb-10 mx-10">
           {headerOptions.map((option, index) => (
-            <a
+            <div
               key={index}
               title={option.title}
-              href={option.href}
+              onClick={() => {
+                setIsOpen(false);
+                window.location.href = option.href;
+              }}
               className="about text-sm font-semibold text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center"
             >
               {option.title}
-            </a>
+            </div>
           ))}
           <div className="ml-6">
             <Tools />
