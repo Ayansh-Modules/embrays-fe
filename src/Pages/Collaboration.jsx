@@ -47,6 +47,7 @@ function Collaboration() {
             0: {
               slidesPerView: 1,
             },
+
             640: {
               slidesPerView: 1.5,
             },

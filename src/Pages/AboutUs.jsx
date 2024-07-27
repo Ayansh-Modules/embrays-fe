@@ -11,7 +11,7 @@ function AboutUs() {
   return (
     <div
       id="aboutus"
-      className="about bg-Layoutblue relative  w-full pt-28 max-lg:pt-20  flex flex-col items-start overflow-hidden "
+      className="about bg-Layoutblue relative  w-full py-28 max-lg:py-20  flex flex-col items-start overflow-hidden "
     >
       <div className="flex-row max-md:flex-col flex overflow-x-hidden overflow-y-hidden justify-between pl-[10vw] pr-[0vw]">
         <div
@@ -51,14 +51,16 @@ function AboutUs() {
           <img src={baseAssets.rocket} alt="rocket" />
         </div>
       </div>
-
-      <div className="lowerbanner  absolute z-2  bg-Layoutblue  bottom-0">
-        <img
+      <img
           src={baseAssets.lower_banner_desktop}
           alt="lowerbanner"
-          className="w-full "
-        />
-      </div>
+          className="w-full absolute z-2 bottom-0 "
+          style={{marginBottom:"-3px"}}
+        /> 
+      {/* <div className="lowerbanner  w-full   bottom-[0%]" style={{marginBottom:"-10px"}}>
+        
+        
+      </div> */}
       {open == true && (
         <LetsConnect
           onClose={() => {

@@ -52,7 +52,7 @@ function ClientReview() {
             0: {
               slidesPerView: 1,
             },
-            640: {
+            611: {
               slidesPerView: 2,
             },
             768: {

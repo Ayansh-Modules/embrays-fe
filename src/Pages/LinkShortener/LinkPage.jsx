@@ -17,7 +17,7 @@ function LinkPage() {
   const pattern = baseAssets.pattern;
 
   return (
-    <div className="w-full  flex flex-col items-center justify-center">
+    <div className="w-full  flex flex-col items-center justify-center ">
      {/*  <img
         src={pattern}
         alt=""
@@ -34,18 +34,15 @@ function LinkPage() {
         Link Shortener
       </div>
       <div
-        className=" w-[70vw] max-md:w-full max-md:border-none border-2 border-black rounded-lg flex my-10 "
-        style={{
-          boxShadow:
-            "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
-        }}
+        className=" w-[80vw] max-md:w-full shadow-custom max-md:shadow-none max-md:border-none border-2 border-black rounded-lg flex my-10 "
+        
       >
-        <div className="border-2 rounded-lg m-5 w-full">
-          <div className="btnshortURL flex  items-center  border-b-2 bg-gray-200">
+        <div className="border-2 rounded-lg m-5 w-full flex-col flex max-md:items-center max-md:justify-center">
+          <div className="btnshortURL flex max-md:justify-center  items-center  max-md:w-full border-b-2 bg-gray-200">
             <a
               href={shortUrl}
               target="_blank"
-              className="btn p-2 rounded-md bg-gray-300 m-5 ml-10 border-2 hover:border-Layoutblue flex items-center justify-center text-sm font-semibold hover:text-Layoutblue focus:ring-Layoutblue cursor-pointer"
+              className="btn p-2 max-md:px-5 rounded-md   bg-gray-300 m-5 ml-10 max-md:ml-0 border-2 hover:border-Layoutblue flex items-center justify-center text-sm font-semibold hover:text-Layoutblue focus:ring-Layoutblue cursor-pointer"
             >
               <RiLinkM size={20} className="mr-2" />
               Short URL
@@ -57,7 +54,7 @@ function LinkPage() {
             )}
           </div>
 
-          <div className="longurl p-5 ml-5">
+          <div className="longurl p-5 ml-5 max-md:ml-0">
             <label
               htmlFor="success"
               className="block mb-2 text-sm text-Layoutblue font-semibold"
@@ -71,7 +68,7 @@ function LinkPage() {
               onChange={(e) => {
                 setUserUrl(e.target.value);
               }}
-              className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue focus:border-Layoutblue block w-[97%] p-3 "
+              className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue focus:border-Layoutblue block w-[60vw] p-3 "
             />
             {error && (
               <p className="mt-2 text-sm text-red-600 dark:text-red-600">
@@ -100,7 +97,7 @@ function LinkPage() {
                   id="success"
                   value={shortUrl}
                   readOnly
-                  className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[95%] p-3 "
+                  className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[60vw] p-3 "
                 />
                 {
                   <p className="mt-2 text-sm text-green-600 dark:text-green-600">
