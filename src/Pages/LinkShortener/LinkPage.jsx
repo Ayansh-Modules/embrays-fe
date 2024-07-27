@@ -12,6 +12,7 @@ function LinkPage() {
     copyShortURL,
     copied,
     generateShortLinkQR,
+    loading
   } = useLinkShortContext();
 
   const pattern = baseAssets.pattern;
@@ -47,6 +48,7 @@ function LinkPage() {
               <RiLinkM size={20} className="mr-2" />
               Short URL
             </a>
+         
             {shortUrl && (
               <p className="mt-2 text-sm text-Layoutblue font-semibold dark:text-Layoutblue ">
                 <span className="font-medium">Click To Visit !</span>
@@ -82,7 +84,7 @@ function LinkPage() {
               }}
             />
           </div>
-
+               {loading && <div className="flex items-center justify-center p-2">Loading...</div>}
           {shortUrl !== "" && (
             <div className="shortURL border-t-2">
               <div className="container p-5 ml-5 ">

@@ -18,7 +18,7 @@ function Collaboration() {
 
   return (
     <div
-      className=" w-full bg-no-repeat bg-cover flex-col flex items-center justify-center overflow-hidden "
+      className=" w-full bg-no-repeat bg-cover flex-col flex items-center justify-center"
       style={{
         backgroundImage: `url(${baseAssets.collaborationBackgroundImage})`,
       }}

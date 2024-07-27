@@ -15,10 +15,12 @@ function LinkShortContextProvider({ children }) {
   const [openShortURL, setOpenShortURL] = useState(false);
   const [error, setError] = useState(false);
   const [copied, setCopied] = useState(false);
+  const[loading,setLoading] = useState(false)
   const BASE_URL =
     "https://gnc114i9rg.execute-api.ap-south-1.amazonaws.com/dev/api/v1/shrink";
 
   async function LinkShortener() {
+    setLoading(true)
     let body = {
       url: `${userUrl}`,
     };
@@ -33,9 +35,12 @@ function LinkShortContextProvider({ children }) {
         const shortURLLink = `${BASE_URL}/go/${urlId}`;
         console.log(shortURLLink);
         setShortUrl(shortURLLink);
+       setLoading(false)
       }
     } catch (error) {}
+    setLoading(false)
   }
+
   function handleClick() {
     const result = validateURL(userUrl);
     if (result == true) {
@@ -68,6 +73,7 @@ function LinkShortContextProvider({ children }) {
     copyShortURL,
     copied,
     generateShortLinkQR,
+    loading
   };
   return (
     <LinkShortenerContext.Provider value={value}>
