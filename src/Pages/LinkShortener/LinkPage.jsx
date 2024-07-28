@@ -56,7 +56,7 @@ function LinkPage() {
             )}
           </div>
 
-          <div className="longurl p-5 ml-5 max-md:ml-0">
+          <div className="longurl p-5 ml-5 max-md:ml-0 max-md:pl-0">
             <label
               htmlFor="success"
               className="block mb-2 text-sm text-Layoutblue font-semibold"
@@ -70,7 +70,7 @@ function LinkPage() {
               onChange={(e) => {
                 setUserUrl(e.target.value);
               }}
-              className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue focus:border-Layoutblue block w-[60vw] p-3 "
+              className="bg-gray-200 border max-md:w-[70vw]  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue focus:border-Layoutblue block w-[60vw] p-3 "
             />
             {error && (
               <p className="mt-2 text-sm text-red-600 dark:text-red-600">
@@ -87,7 +87,7 @@ function LinkPage() {
                {loading && <div className="flex items-center justify-center p-2">Loading...</div>}
           {shortUrl !== "" && (
             <div className="shortURL border-t-2">
-              <div className="container p-5 ml-5 ">
+              <div className="container p-5 ml-5 max-md:ml-0  max-md:pl-0 ">
                 <label
                   htmlFor="success"
                   className="block mb-2 text-sm text-Layoutblue font-semibold"
@@ -99,7 +99,7 @@ function LinkPage() {
                   id="success"
                   value={shortUrl}
                   readOnly
-                  className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[60vw] p-3 "
+                  className="bg-gray-200 border max-md:w-[70vw] text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[60vw] p-3 "
                 />
                 {
                   <p className="mt-2 text-sm text-green-600 dark:text-green-600">

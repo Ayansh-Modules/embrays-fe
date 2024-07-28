@@ -7,7 +7,7 @@ function ServiceBox(props) {
   const isReversed = id % 2 == 0 ? "flex-col-reverse" : "";
 
   return (
-    <div className="serviceBox">
+    <div className="serviceBox ">
       <div
         className={`h-[30rem] w-[40vw] max-md:h-[46vh] max-md:w-[90vw] flex-col flex items-center max-md:items-start rounded-xl overflow-y-hidden ${isReversed} bg- bg-no-repeat bg-cover relative`}
         style={{ backgroundColor: color }}
