@@ -64,6 +64,7 @@ function QRPage() {
                   onClick={() => setCurrentTab(index)}
                   text={value.text}
                   icon={value.icon}
+                  isSelect={currentTab === index}
                 />
               );
             })}
@@ -132,11 +133,14 @@ function QRPage() {
   );
 }
 
-function QRPageButton({ text, icon, onClick }) {
+function QRPageButton({ text, icon, onClick, isSelect }) {
   return (
     <button
       onClick={onClick}
-      className="url focus:ring-2  focus:ring-Layoutblue cursor-pointer h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue"
+      style={{
+        borderColor: `${isSelect ? "#3A0CA3" : ""}`,
+      }}
+      className="url  cursor-pointer h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue"
     >
       {icon}
       {text}
