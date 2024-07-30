@@ -1,10 +1,9 @@
 import React from "react";
 import { IoDownloadOutline, IoMenu } from "react-icons/io5";
 
+import Tools from "../Components/Tools";
 import Drawer from "./Drawer";
-import Tools from "../Components/Tools"
 function Header() {
-
   const [isOpen, setIsOpen] = React.useState(false);
 
   const headerOptions = [
@@ -18,7 +17,7 @@ function Header() {
     },
     {
       title: "How it works?",
-      href: "#howitworks",
+      href: "/#howitworks",
     },
     {
       title: "Blogs",
@@ -56,8 +55,7 @@ function Header() {
                 </a>
               ))}
 
-              <Tools/>
-
+              <Tools />
             </div>
           </div>
           {PortfolioButton()}
@@ -66,18 +64,23 @@ function Header() {
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
         <div className="bg-Layouttrans  rounded-xl mb-10 mx-10">
           {headerOptions.map((option, index) => (
-            <a
+            <div
               key={index}
               title={option.title}
-              href={option.href}
+              onClick={() => {
+                setIsOpen(false);
+                window.location.href = option.href;
+              }}
               className="about text-sm font-semibold text-white hover:text-black  rounded-xl  hover:bg-Layoutneon h-[3rem] px-6 flex items-center justify-center"
             >
               {option.title}
-            </a>
+            </div>
           ))}
-           <div className="ml-6"><Tools/></div>
+          <div className="ml-6">
+            <Tools />
+          </div>
         </div>
-        <div className="flex items-center justify-center w-full">
+        <div className="flex items-center justify-center  w-full">
           {PortfolioButton()}
         </div>
       </Drawer>

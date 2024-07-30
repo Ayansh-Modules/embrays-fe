@@ -9,6 +9,7 @@ import HowItWorks from "./HowItWorks";
 import Services from "./Services";
 import WhyUs from "./WhyUs";
 import Snackbar from "../Components/Snackbar";
+
 function Root() {
   // const[openSnackbar,setOpenSnackbar]= useState(false)
   // function handleClick(){
@@ -20,7 +21,7 @@ function Root() {
 
   return (
     <div>
-     
+
      <AboutUs />
       <Services />
       <HowItWorks />

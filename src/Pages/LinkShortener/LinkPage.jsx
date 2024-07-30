@@ -1,65 +1,62 @@
-import React, { useState } from "react";
+import React from "react";
 import { RiLinkM } from "react-icons/ri";
-import Button from "../../Components/Button";
 import baseAssets from "../../assets/baseAssets";
-import {validateURL} from "../../Utility/CommonFunctions"
-import {useLinkShortContext} from "../../Context/LinkShortContext"
+import Button from "../../Components/Button";
+import { useLinkShortContext } from "../../Context/LinkShortContext";
 function LinkPage() {
-  // const {} = useLinkShortContext()
-  
-  console.log ()
-  const [openShortURL, setOpenShortURL] = useState(false);
-  const [url , setUrl]= useState("")
-  const [error,setError]= useState(false)
-  const [copyUrlValue,setCopyUrlValue]=useState(true)
+  const {
+    shortUrl,
+    setUserUrl,
+    error,
+    handleClick,
+    copyShortURL,
+    copied,
+    generateShortLinkQR,
+    loading
+  } = useLinkShortContext();
+
   const pattern = baseAssets.pattern;
 
-function handleClick (){
- const result =  validateURL(url)
- if(result == true){
-   setOpenShortURL(true)
-   setError(false)
- }
- else {
-  setError(true)
- }
-}
-
-
   return (
-    <div className="w-full  flex flex-col items-center justify-center">
-       {/* <img
-          src={pattern}
-          alt=""
-          srcset=""
-          className="absolute top-24 left-0 size-24"
-        />
-        <img
+    <div className="w-full  flex flex-col items-center justify-center ">
+     {/*  <img
+        src={pattern}
+        alt=""
+        srcset=""
+        className="absolute top-24 left-0 size-24"
+      />
+      <img
           src={pattern}
           alt=""
           srcset=""
           className="absolute bottom-0 right-0 size-24"
-        /> */}
+        />  */}
       <div className="text-4xl max-md:text-3xl font-semibold text-Layoutblue mt-5 ">
-       
         Link Shortener
       </div>
       <div
-        className=" w-[70vw] max-md:w-full max-md:border-none border-2 border-black rounded-lg flex my-10 "
-        style={{
-          boxShadow:
-            "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
-        }}
+        className=" w-[80vw] max-md:w-full shadow-custom max-md:shadow-none max-md:border-none border-2 border-black rounded-lg flex my-10 "
+        
       >
-        <div className="border-2 rounded-lg m-5 w-full">
-          <div className="btnshortURL flex items-center border-b-2 bg-gray-200">
-            <div className="btn p-2 rounded-md bg-gray-300 m-5 ml-10 border-2 hover:border-Layoutblue flex items-center justify-center text-sm font-semibold hover:text-Layoutblue focus:ring-Layoutblue cursor-pointer">
+        <div className="border-2 rounded-lg m-5 w-full flex-col flex max-md:items-center max-md:justify-center">
+          <div className="btnshortURL flex max-md:justify-center  items-center  max-md:w-full border-b-2 bg-gray-200">
+            <a
+              href={shortUrl}
+              target="_blank"
+              className="btn p-2 max-md:px-5 rounded-md   bg-gray-300 m-5 ml-10 max-md:ml-0 border-2 hover:border-Layoutblue flex items-center justify-center text-sm font-semibold hover:text-Layoutblue focus:ring-Layoutblue cursor-pointer"
+            >
               <RiLinkM size={20} className="mr-2" />
               Short URL
-            </div>
+            </a>
+         
+            {shortUrl && (
+              <p className="mt-2 text-sm text-Layoutblue font-semibold dark:text-Layoutblue ">
+                <span className="font-medium">Click To Visit !</span>
+              </p>
+            )}
           </div>
 
-          <div className="longurl p-5 ml-5">
+          <div className="longurl p-5 ml-5 max-md:ml-0 max-md:pl-0">
             <label
               htmlFor="success"
               className="block mb-2 text-sm text-Layoutblue font-semibold"
@@ -69,22 +66,28 @@ function handleClick (){
             <input
               type="text"
               id="success"
-              placeholder="ex : EmbraysTechnologies.com"
-              onChange={(e)=>{setUrl(e.target.value)}}
-              className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue focus:border-Layoutblue block w-[97%] p-3 "
+              placeholder="EmbraysTechnologies.com"
+              onChange={(e) => {
+                setUserUrl(e.target.value);
+              }}
+              className="bg-gray-200 border max-md:w-[70vw]  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue focus:border-Layoutblue block w-[60vw] p-3 "
             />
-            {error && <p className="mt-2 text-sm text-red-600 dark:text-red-600">
-              <span className="font-medium">Paste a Valid URL !</span> 
-            </p>}
+            {error && (
+              <p className="mt-2 text-sm text-red-600 dark:text-red-600">
+                <span className="font-medium">Paste a Valid URL !</span>
+              </p>
+            )}
             <Button
               text={"Shorten URL"}
-              onClick={() => { handleClick() }}
+              onClick={() => {
+                handleClick();
+              }}
             />
           </div>
-
-          {openShortURL && (
+               {loading && <div className="flex items-center justify-center p-2">Loading...</div>}
+          {shortUrl !== "" && (
             <div className="shortURL border-t-2">
-              <div className="container p-5 ml-5 ">
+              <div className="container p-5 ml-5 max-md:ml-0  max-md:pl-0 ">
                 <label
                   htmlFor="success"
                   className="block mb-2 text-sm text-Layoutblue font-semibold"
@@ -94,18 +97,37 @@ function handleClick (){
                 <input
                   type="text"
                   id="success"
-                  onChange={()=>{setCopyUrlValue()}}
-                  className="bg-gray-200 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[95%] p-3 "
+                  value={shortUrl}
+                  readOnly
+                  className="bg-gray-200 border max-md:w-[70vw] text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[60vw] p-3 "
                 />
-                {copyUrlValue && <p className="mt-2 text-sm text-green-600 dark:text-green-600">
-                  <span className="font-medium">Copy The Short URL</span> 
-                </p>}
+                {
+                  <p className="mt-2 text-sm text-green-600 dark:text-green-600">
+                    <span className="font-medium">Copy The Short URL</span>
+                  </p>
+                }
+
                 <div className="flex items-center max-md:flex-col max-md:items-start">
-                  <Button text={"Copy URL"} />{" "}
+                  <Button
+                    text={"Copy URL"}
+                    onClick={() => {
+                      copyShortURL();
+                    }}
+                  />{" "}
                   <span className="ml-5 max-md:ml-0">
-                    <Button text={"Generate QR"} />
+                    <Button
+                      text={"Generate QR"}
+                      onClick={() => {
+                        generateShortLinkQR();
+                      }}
+                    />
                   </span>
                 </div>
+                {copied && (
+                  <p className="mt-2 text-sm text-green-600 dark:text-green-600">
+                    <span className="font-medium">Copied Successfully !!</span>
+                  </p>
+                )}
               </div>
             </div>
           )}

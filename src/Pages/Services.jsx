@@ -7,13 +7,14 @@ import { layoutColors } from "../Utility/Colors";
 function Services() {
   const boxParam = getBoxData();
   return (
+    
     <div
       id="services"
       className="flex-col flex items-center justify-center  w-full  max-md:pt-[10vh] py-20 overflow-hidden"
     
     >
       <div
-        className="title flex-col items-center justify-center pb-10 max-md:pr-5"
+        className="title flex-col items-center justify-center pb-10 max-md:pr-5 w-full"
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-easing="ease"
@@ -28,12 +29,12 @@ function Services() {
             className="h-20 w-20 max-md:h-14 max-md:w-14"
           />
         </div>
-        <p className="text-6xl max-md:text-3xl font-semibold text-Layoutpink pl-[20rem] max-md:pl-[5rem]">
+        <p className="text-6xl max-md:text-3xl text-center  font-semibold text-Layoutpink pl-64 max-md:pl-[5rem]">
           UNLEASHED
         </p>
       </div>
 
-      <div className="services pt-20">
+      <div className="services pt-20 ">
         <div
           className="flex-row max-md:flex-col flex "
           data-aos="fade-up"
@@ -55,7 +56,7 @@ function Services() {
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-easing="ease"
-          data-aos-duration="2500"
+          data-aos-duration="2000"
           data-aos-anchor-placement="center-bottom"
         >
           <ServiceBox boxData={boxParam[2]} />

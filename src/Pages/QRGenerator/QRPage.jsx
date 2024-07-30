@@ -20,7 +20,7 @@ function QRPage() {
     { text: "Email", icon: <FiMail size={16} className="mr-2" /> },
     { text: "Text", icon: <GrDocumentText className="mr-2" /> },
     { text: "SMS", icon: <MdOutlineTextsms size={16} className="mr-2" /> },
-    { text: "PDF", icon: <FaRegFilePdf className="mr-2" /> },
+    // { text: "PDF", icon: <FaRegFilePdf className="mr-2" /> },
   ];
   const pattern = baseAssets.pattern;
   const [currentTab, setCurrentTab] = useState(0);
@@ -49,14 +49,10 @@ function QRPage() {
       <div className="text-4xl max-md:text-3xl font-semibold text-Layoutblue mt-5">
         QR GENERATOR
       </div>
-      
-      
+
       <div
-        className="w-[75vw] max-md:w-full max-md:border-none max-md:items-center max-md:justify-center border-2 border-black rounded-lg flex my-10 max-md:flex-col-reverse"
-        style={{
-          boxShadow:
-            "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
-        }}
+        className="w-[75vw] shadow-custom max-md:shadow-none max-md:w-full max-md:border-none max-md:items-center max-md:justify-center border-2 border-black rounded-lg flex my-10 max-md:flex-col-reverse"
+       
       >
         <div className="w-[50vw] border-2 rounded-l-lg m-5 max-md:m-0 mr-0 max-md:w-[90vw] max-md:mb-10">
           {/* tools */}
@@ -68,6 +64,7 @@ function QRPage() {
                   onClick={() => setCurrentTab(index)}
                   text={value.text}
                   icon={value.icon}
+                  isSelect={currentTab === index}
                 />
               );
             })}
@@ -136,11 +133,14 @@ function QRPage() {
   );
 }
 
-function QRPageButton({ text, icon, onClick }) {
+function QRPageButton({ text, icon, onClick, isSelect }) {
   return (
     <button
       onClick={onClick}
-      className="url focus:ring-2  focus:ring-Layoutblue cursor-pointer h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue"
+      style={{
+        borderColor: `${isSelect ? "#3A0CA3" : ""}`,
+      }}
+      className="url  cursor-pointer h-10 w-28 border-2 hover:border-Layoutblue rounded-lg flex items-center justify-center text-sm font-semibold hover:text-Layoutblue"
     >
       {icon}
       {text}

@@ -18,7 +18,7 @@ function ClientReview() {
       data-aos-duration="1000"
     >
        
-      <div className="title  flex-col flex items-center justify-center pt-[3rem] ">
+      <div className="title  flex-col flex items-center justify-center pt-[3rem] max-md:w-[90vw]">
         <div
           className="title  text-4xl max-md:text-xl  text-center font-bold mb-[2rem] text-Layoutblue "
           data-aos="fade-up"
@@ -52,7 +52,7 @@ function ClientReview() {
             0: {
               slidesPerView: 1,
             },
-            640: {
+            611: {
               slidesPerView: 2,
             },
             768: {

@@ -7,7 +7,7 @@ function HowItWorks() {
   return (
     <div
       id="howitworks"
-      className="  bg-Layoutblue flex-col flex items-center justify-center py-[10vh] overflow-hidden"
+      className="  bg-Layoutblue flex-col  flex items-center justify-center py-[10vh] overflow-hidden"
     >
       <div
         className="title max-md:text-4xl text-6xl py-[50px] font-semibold flex-col flex items-center justify-center text-Layoutneon "
@@ -45,7 +45,7 @@ function HowItWorks() {
           {content.map((content, index) => {
             return (
               <div
-                className="flex mb-10"
+                className="flex mt-10 lg:ml-20 text-justify "
                 key={index}
                 data-aos="fade-up"
                 data-aos-offset="200"
@@ -53,16 +53,16 @@ function HowItWorks() {
                 data-aos-duration="3000"
                 data-aos-anchor-placement="center-bottom"
               >
-                <div className="flex">
-                  <div className="point one mr-6 text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">
+                <div className="flex ">
+                  <div className="point one mr-6 max-md:mr-[2vw] max-md:mt-1 text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] max-md:size-[1.5rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">
                     {index + 1}
                   </div>
                 </div>
                 <div className="one">
-                  <div className="title text-Layoutyellow font-semibold text-3xl mb-2">
+                  <div className="title text-Layoutyellow font-semibold text-3xl max-md:text-xl mb-2">
                     {content.title}
                   </div>
-                  <div className="testimonial text-white text-base w-[40vw] max-md:w-[80vw]">
+                  <div className="testimonial  text-white text-base w-[40vw] flex items-start justify-start max-lg:w-[80vw]">
                     {content.testimonial}
                   </div>
                 </div>
