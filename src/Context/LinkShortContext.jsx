@@ -17,7 +17,7 @@ function LinkShortContextProvider({ children }) {
   const [copied, setCopied] = useState(false);
   const[loading,setLoading] = useState(false)
   const BASE_URL =
-    "https://gnc114i9rg.execute-api.ap-south-1.amazonaws.com/dev/api/v1/shrink";
+    "https://zgwy7rdhne.execute-api.ap-south-1.amazonaws.com/prod/api/v1/shrink";
 
   async function LinkShortener() {
     setLoading(true)
@@ -32,7 +32,7 @@ function LinkShortContextProvider({ children }) {
         console.log(data);
         const urlId = data.shrinkedUrl.urlId;
         console.log(urlId);
-        const shortURLLink = `${BASE_URL}/go/${urlId}`;
+        const shortURLLink = `https://embraystechnologies.com/url/${urlId}`; // BASE URL should be configured via env file. This will not work on staging envs for now.
         console.log(shortURLLink);
         setShortUrl(shortURLLink);
        setLoading(false)
