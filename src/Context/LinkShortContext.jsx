@@ -15,30 +15,33 @@ function LinkShortContextProvider({ children }) {
   const [openShortURL, setOpenShortURL] = useState(false);
   const [error, setError] = useState(false);
   const [copied, setCopied] = useState(false);
-  const[loading,setLoading] = useState(false)
-  const BASE_URL =
+  const [loading, setLoading] = useState(false);
+  const { setUrlValue, setQRlink, setQRColor } = useQRContext();
+
+  const LINK_SHORTENER_BASE_URL =
     "https://gnc114i9rg.execute-api.ap-south-1.amazonaws.com/dev/api/v1/shrink";
+  const WEBSITE_BASE_URL = "http://localhost:5173";
 
   async function LinkShortener() {
-    setLoading(true)
+    setLoading(true);
     let body = {
       url: `${userUrl}`,
     };
     try {
-      const response = await axios.post(BASE_URL, body);
+      const response = await axios.post(LINK_SHORTENER_BASE_URL, body);
       console.log(response);
       if (response.status == 200) {
         const data = response.data;
         console.log(data);
         const urlId = data.shrinkedUrl.urlId;
         console.log(urlId);
-        const shortURLLink = `${BASE_URL}/go/${urlId}`;
+        const shortURLLink = `${WEBSITE_BASE_URL}/go/${urlId}`;
         console.log(shortURLLink);
         setShortUrl(shortURLLink);
-       setLoading(false)
+        setLoading(false);
       }
     } catch (error) {}
-    setLoading(false)
+    setLoading(false);
   }
 
   function handleClick() {
@@ -55,11 +58,10 @@ function LinkShortContextProvider({ children }) {
     setCopied(true);
   }
 
-  const { setUrlValue , setQRlink,setQRColor} = useQRContext();
   function generateShortLinkQR() {
     setUrlValue(shortUrl);
-    setQRlink(shortUrl)
-    setQRColor("black")
+    setQRlink(shortUrl);
+    setQRColor("black");
     navigate("/qr-generator");
   }
 
@@ -75,7 +77,8 @@ function LinkShortContextProvider({ children }) {
     copyShortURL,
     copied,
     generateShortLinkQR,
-    loading
+    loading,
+    LINK_SHORTENER_BASE_URL,
   };
   return (
     <LinkShortenerContext.Provider value={value}>

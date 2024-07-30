@@ -15,6 +15,7 @@ import QRPage from "./Pages/QRGenerator/QRPage";
 import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
+import RedirectHandler from "./Components/RedirectHandler";
 function App() {
   const { getBlogs } = useBlogContext();
   const location = useLocation();
@@ -43,6 +44,7 @@ function App() {
               <Route path="/allblog" element={<ViewAllBlog />}></Route>
               <Route path="/qr-generator" element={<QRPage />}></Route>
               <Route path="/link-shortener" element={<LinkPage />}></Route>
+              <Route path="/go/:shortCode" element={<RedirectHandler />} />
             </Routes>
             <Footer2 />
           </LinkShortContextProvider>
