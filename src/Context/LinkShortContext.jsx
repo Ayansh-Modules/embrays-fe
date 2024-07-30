@@ -55,9 +55,11 @@ function LinkShortContextProvider({ children }) {
     setCopied(true);
   }
 
-  const { setUrlValue } = useQRContext();
+  const { setUrlValue , setQRlink,setQRColor} = useQRContext();
   function generateShortLinkQR() {
     setUrlValue(shortUrl);
+    setQRlink(shortUrl)
+    setQRColor("black")
     navigate("/qr-generator");
   }
 
