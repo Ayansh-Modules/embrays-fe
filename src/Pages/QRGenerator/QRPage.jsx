@@ -20,7 +20,7 @@ function QRPage() {
     { text: "Email", icon: <FiMail size={16} className="mr-2" /> },
     { text: "Text", icon: <GrDocumentText className="mr-2" /> },
     { text: "SMS", icon: <MdOutlineTextsms size={16} className="mr-2" /> },
-    { text: "PDF", icon: <FaRegFilePdf className="mr-2" /> },
+    // { text: "PDF", icon: <FaRegFilePdf className="mr-2" /> },
   ];
   const pattern = baseAssets.pattern;
   const [currentTab, setCurrentTab] = useState(0);

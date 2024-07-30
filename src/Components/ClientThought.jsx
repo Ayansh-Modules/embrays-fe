@@ -7,7 +7,7 @@ function ClientThought(props) {
         <h5 className="mb-[0.7vh] text-lg font-semibold tracking-tight text-black ">
           {data.company}
         </h5>
-        <p className="  text-start text-black font-medium text-sm max-md:text-xs lg:text-xs leading-relaxed md:text-xs pb-5">
+        <p className="  text-start text-black font-medium text-sm max-md:text-xs lg:text-xs xl:text-sm leading-relaxed md:text-xs pb-5">
           {data.review}
         </p>
       </div>
