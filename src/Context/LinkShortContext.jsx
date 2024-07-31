@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { validateURL } from "../Utility/CommonFunctions";
 import { useQRContext } from "./QRContext";
+
 const LinkShortenerContext = createContext();
 export const useLinkShortContext = () => {
   return useContext(LinkShortenerContext);
@@ -15,12 +16,11 @@ function LinkShortContextProvider({ children }) {
   const [openShortURL, setOpenShortURL] = useState(false);
   const [error, setError] = useState(false);
   const [copied, setCopied] = useState(false);
-  const[loading,setLoading] = useState(false)
-  const BASE_URL =
-    "https://zgwy7rdhne.execute-api.ap-south-1.amazonaws.com/prod/api/v1/shrink";
+  const [loading, setLoading] = useState(false);
+  const BASE_URL =import.meta.env.VITE_BASE_URL
 
   async function LinkShortener() {
-    setLoading(true)
+    setLoading(true);
     let body = {
       url: `${userUrl}`,
     };
@@ -35,10 +35,10 @@ function LinkShortContextProvider({ children }) {
         const shortURLLink = `https://embraystechnologies.com/url/${urlId}`; // BASE URL should be configured via env file. This will not work on staging envs for now.
         console.log(shortURLLink);
         setShortUrl(shortURLLink);
-       setLoading(false)
+        setLoading(false);
       }
     } catch (error) {}
-    setLoading(false)
+    setLoading(false);
   }
 
   function handleClick() {
@@ -55,11 +55,11 @@ function LinkShortContextProvider({ children }) {
     setCopied(true);
   }
 
-  const { setUrlValue , setQRlink,setQRColor} = useQRContext();
+  const { setUrlValue, setQRlink, setQRColor } = useQRContext();
   function generateShortLinkQR() {
     setUrlValue(shortUrl);
-    setQRlink(shortUrl)
-    setQRColor("black")
+    setQRlink(shortUrl);
+    setQRColor("black");
     navigate("/qr-generator");
   }
 
@@ -75,7 +75,7 @@ function LinkShortContextProvider({ children }) {
     copyShortURL,
     copied,
     generateShortLinkQR,
-    loading
+    loading,
   };
   return (
     <LinkShortenerContext.Provider value={value}>
