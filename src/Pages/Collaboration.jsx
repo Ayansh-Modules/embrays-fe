@@ -26,7 +26,10 @@ function Collaboration() {
       <div
         className="tile text-6xl max-md:text-3xl py-20 max-md:font-bold  font-semibold text-Layoutblue  flex-row flex items-center justify-center text-center"
         style={{ textShadow: "white 5px 5px" }}
-      >
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="ease"
+        data-aos-duration="1000">
         {data.title}
       </div>
       <div className="cards h-[80vh]  w-full">

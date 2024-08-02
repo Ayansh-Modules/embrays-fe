@@ -2,11 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { RiArrowDownSLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
 
-const Tools = () => {
+const Tools = ({onClick}) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
-
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
@@ -14,6 +13,7 @@ const Tools = () => {
   const handleNavigate = (path) => {
     setIsOpen(false);
     navigate(path);
+    onClick()
   };
 
   const handleClickOutside = (event) => {
