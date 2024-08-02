@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { validateURL } from "../Utility/CommonFunctions";
 import { useQRContext } from "./QRContext";
@@ -17,7 +17,7 @@ function LinkShortContextProvider({ children }) {
   const [error, setError] = useState(false);
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
-  const BASE_URL =import.meta.env.VITE_BASE_URL
+  const BASE_URL = import.meta.env.VITE_BASE_URL;
 
   async function LinkShortener() {
     setLoading(true);
@@ -26,18 +26,19 @@ function LinkShortContextProvider({ children }) {
     };
     try {
       const response = await axios.post(BASE_URL, body);
-      console.log(response);
+
       if (response.status == 200) {
         const data = response.data;
-        console.log(data);
+
         const urlId = data.shrinkedUrl.urlId;
-        console.log(urlId);
+
         const shortURLLink = `https://embraystechnologies.com/url/${urlId}`; // BASE URL should be configured via env file. This will not work on staging envs for now.
-        console.log(shortURLLink);
         setShortUrl(shortURLLink);
         setLoading(false);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
     setLoading(false);
   }
 

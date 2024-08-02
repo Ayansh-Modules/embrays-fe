@@ -23,7 +23,7 @@ function URL() {
       <div className="p-5 ml-5 ">
         <label
           for="success"
-          class="block mb-2 text-sm text-Layoutblue font-semibold"
+          className="block mb-2 text-sm text-Layoutblue font-semibold"
         >
           Website URL
         </label>
@@ -41,11 +41,11 @@ function URL() {
             }
           }}
           value={urlValue}
-          class="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue block w-[97%] p-3 "
+          className="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layring-Layoutblue block w-[97%] p-3 "
         />
         {error && (
-          <p class="mt-2 text-sm text-red-600 dark:text-red-600">
-            <span class="font-medium">Paste a Valid URL </span>
+          <p className="mt-2 text-sm text-red-600 dark:text-red-600">
+            <span className="font-medium">Paste a Valid URL </span>
           </p>
         )}{" "}
         <Button

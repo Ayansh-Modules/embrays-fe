@@ -18,42 +18,6 @@ function Footer2() {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleValidation = (form) => {
-    const name = form.elements.name.value.trim();
-    const email = form.elements.email.value.trim();
-    const message = form.elements.message.value.trim();
-
-    if (!name || !email || !message) {
-      setErrorMessage("Please fill in all fields.");
-      setTimeout(() => {
-        setErrorMessage("");
-      }, 1000);
-      return false;
-    }
-
-    return true;
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const form = event.target.closest("form");
-
-    if (!form) {
-      console.error("Form element not found.");
-      return;
-    }
-
-    if (!handleValidation(form)) {
-      return;
-    }
-
-    setPopupVisible(true);
-    form.reset();
-    setTimeout(() => {
-      setPopupVisible(false);
-    }, 2500);
-  };
-
   return (
     <div
       className="bg-Layoutblue w-full text-xs rounded-t-md overflow-hidden"
@@ -190,8 +154,15 @@ function Footer2() {
         <div>
           <NetlifyForm name="contact" action="/thanks" honeypotName="bot-field">
             {({ handleChange, success, error }) => (
-              <form onSubmit={handleSubmit}>
+              <>
                 <Honeypot />
+                {success && <p>Thanks for contacting us!</p>}
+                {error && (
+                  <p>
+                    Sorry, we could not reach our servers. Please try again
+                    later.
+                  </p>
+                )}
 
                 <div className="flex max-md:flex-col">
                   <div className="Name mr-5 py-4">
@@ -257,7 +228,7 @@ function Footer2() {
                     </div>
                   )}
                 </div>
-              </form>
+              </>
             )}
           </NetlifyForm>
         </div>

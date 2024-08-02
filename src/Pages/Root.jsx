@@ -1,14 +1,12 @@
-import { useState } from "react";
 import React from "react";
 import Partnership from "../Components/Partnership";
 import AboutUs from "./AboutUs";
 import ClientReview from "./ClientReview";
 import Collaboration from "./Collaboration";
-import Posts from "./Posts";
 import HowItWorks from "./HowItWorks";
+import Posts from "./Posts";
 import Services from "./Services";
 import WhyUs from "./WhyUs";
-import Snackbar from "../Components/Snackbar";
 
 function Root() {
   // const[openSnackbar,setOpenSnackbar]= useState(false)
@@ -21,14 +19,13 @@ function Root() {
 
   return (
     <div>
-
-     <AboutUs />
+      <AboutUs />
       <Services />
       <HowItWorks />
       <WhyUs />
       <Collaboration />
       <ClientReview />
-      <Partnership />  
+      <Partnership />
       <Posts />
     </div>
   );
