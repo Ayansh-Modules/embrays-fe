@@ -80,7 +80,7 @@ function Footer2() {
           <div className="flex justify-between max-md:my-5 max-md:w-[90vw]">
             <div className="flex-col h-[11rem] flex justify-evenly">
               <p className="font-semibold hover:text-Layoutneon">EXPLORE</p>
-              <p className="hover:text-Layoutneon">
+              <p className="hover:text-Layoutneon cursor-pointer">
                 <div
                   onClick={() => {
                     navigate("/#aboutus");
