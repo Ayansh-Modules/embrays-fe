@@ -23,9 +23,8 @@ function HowItWorks() {
         <div className="flex items-center justify-center ">
           <div
             className="rocketgif rounded-full h-[23rem] w-[23rem] bg-Layoutring felx flex items-center justify-center p-[10px] 
-            max-md:h-[17rem] max-md:w-[17rem] 
-            "
-            style={{ boxShadow: "0rem 0 10rem 6rem rgba(175, 69, 201, 0.88)" }}
+            max-md:h-[17rem] max-md:w-[17rem]"
+            style={{ boxShadow: "0rem 0 10rem 6rem rgba(175, 69, 201, 0.88)"}}
           >
             <img
               alt="rocketgif"
