@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { GrInstagram } from "react-icons/gr";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { TbMailFilled } from "react-icons/tb";
 import { TfiLinkedin } from "react-icons/tfi";
-import { Honeypot, NetlifyForm } from "react-netlify-forms";
 import { useNavigate } from "react-router-dom";
 import { appData } from "../Data/AppData";
 
@@ -17,6 +16,25 @@ function Footer2() {
   const [popupVisible, setPopupVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.querySelector("form").addEventListener("submit", handleSubmit);
+  }, []);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  };
 
   return (
     <div
@@ -80,7 +98,7 @@ function Footer2() {
           <div className="flex justify-between max-md:my-5 max-md:w-[90vw]">
             <div className="flex-col h-[11rem] flex justify-evenly">
               <p className="font-semibold hover:text-Layoutneon">EXPLORE</p>
-              <p className="hover:text-Layoutneon">
+              <p className="hover:text-Layoutneon cursor-pointer">
                 <div
                   onClick={() => {
                     navigate("/#aboutus");
@@ -152,85 +170,69 @@ function Footer2() {
         </div>
 
         <div>
-          <NetlifyForm name="contact" action="/thanks" honeypotName="bot-field">
-            {({ handleChange, success, error }) => (
-              <>
-                <Honeypot />
-                {success && <p>Thanks for contacting us!</p>}
-                {error && (
-                  <p>
-                    Sorry, we could not reach our servers. Please try again
-                    later.
-                  </p>
-                )}
-
-                <div className="flex max-md:flex-col">
-                  <div className="Name mr-5 py-4">
-                    <input
-                      placeholder="Your Name"
-                      type="text"
-                      name="name"
-                      id="default-input"
-                      className="bg-white max-md:w-[80vw] max-lg:w-[40vw] text-black text-sm rounded-lg block w-[15vw] p-[15px]"
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div className="Mail py-4">
-                    <input
-                      placeholder="Your Mail id"
-                      type="text"
-                      name="email"
-                      id="default-input"
-                      className="max-md:w-[80vw] max-lg:w-[40vw] text-black text-sm rounded-lg w-[15vw] p-[15px]"
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
+          <form name="contact" method="POST" netlify>
+            <div className="flex max-md:flex-col">
+              <div className="Name mr-5 py-4">
+                <input
+                  placeholder="Your Name"
+                  type="text"
+                  name="name"
+                  id="default-input"
+                  className="bg-white max-md:w-[80vw] max-lg:w-[40vw] text-black text-sm rounded-lg block w-[15vw] p-[15px]"
+                  required
+                />
+              </div>
+              <div className="Mail py-4">
+                <input
+                  placeholder="Your Mail id"
+                  type="text"
+                  name="email"
+                  id="default-input"
+                  className="max-md:w-[80vw] max-lg:w-[40vw] text-black text-sm rounded-lg w-[15vw] p-[15px]"
+                  required
+                />
+              </div>
+            </div>
+            <div className="Message pt-1">
+              <textarea
+                placeholder="Message for us"
+                name="message"
+                id="message"
+                rows="4"
+                className="w-[31vw] max-md:w-[80vw] max-lg:w-[82vw] text-black text-sm rounded-lg h-[20vh] p-[15px]"
+                required
+              ></textarea>
+            </div>
+            <div className="mt-[-10px] flex items-center">
+              {errorMessage ? (
+                <div className="popup my-5 p-4 bg-red-500 text-white rounded-lg w-[31vw] max-md:w-[80vw] max-lg:w-[82vw]">
+                  {errorMessage}
                 </div>
-                <div className="Message pt-1">
-                  <textarea
-                    placeholder="Message for us"
-                    name="message"
-                    id="message"
-                    rows="4"
-                    className="w-[31vw] max-md:w-[80vw] max-lg:w-[82vw] text-black text-sm rounded-lg h-[20vh] p-[15px]"
-                    onChange={handleChange}
-                    required
-                  ></textarea>
+              ) : popupVisible ? (
+                <div
+                  id="popup"
+                  className="popup my-5 p-4 bg-green-500 text-white rounded-lg w-[31vw] max-md:w-[80vw] max-lg:w-[82vw]"
+                >
+                  Form submitted successfully!
                 </div>
-                <div className="mt-[-10px] flex items-center">
-                  {errorMessage ? (
-                    <div className="popup my-5 p-4 bg-red-500 text-white rounded-lg w-[31vw] max-md:w-[80vw] max-lg:w-[82vw]">
-                      {errorMessage}
-                    </div>
-                  ) : popupVisible ? (
-                    <div
-                      id="popup"
-                      className="popup my-5 p-4 bg-green-500 text-white rounded-lg w-[31vw] max-md:w-[80vw] max-lg:w-[82vw]"
-                    >
-                      Form submitted successfully!
-                    </div>
-                  ) : (
-                    <div className="btn">
-                      <button
-                        type="submit"
-                        className="connectbtn  z-10 drop-shadow-lg font-semibold text-white mt-[5vh] focus:ring-2  focus:ring-pink-300 "
-                      >
-                        <span className="flex-row flex items-center justify-center text-sm">
-                          Let's Connect
-                          <IoIosArrowRoundForward
-                            size={20}
-                            className=" ml-[-10px]"
-                          />
-                        </span>
-                      </button>
-                    </div>
-                  )}
+              ) : (
+                <div className="btn">
+                  <button
+                    type="submit"
+                    className="connectbtn  z-10 drop-shadow-lg font-semibold text-white mt-[5vh] focus:ring-2  focus:ring-pink-300 "
+                  >
+                    <span className="flex-row flex items-center justify-center text-sm">
+                      Let's Connect
+                      <IoIosArrowRoundForward
+                        size={20}
+                        className=" ml-[-10px]"
+                      />
+                    </span>
+                  </button>
                 </div>
-              </>
-            )}
-          </NetlifyForm>
+              )}
+            </div>
+          </form>
         </div>
       </div>
     </div>

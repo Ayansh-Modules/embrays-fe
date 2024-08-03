@@ -18,6 +18,7 @@ function LinkShortContextProvider({ children }) {
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
   const BASE_URL = import.meta.env.VITE_BASE_URL;
+  const CLIENT_BASE_URL = import.meta.env.VITE_CLIENT_BASE_URL;
 
   async function LinkShortener() {
     setLoading(true);
@@ -31,8 +32,9 @@ function LinkShortContextProvider({ children }) {
         const data = response.data;
 
         const urlId = data.shrinkedUrl.urlId;
-
-        const shortURLLink = `https://embraystechnologies.com/url/${urlId}`; // BASE URL should be configured via env file. This will not work on staging envs for now.
+        console.log(CLIENT_BASE_URL);
+        console.log(BASE_URL);
+        const shortURLLink = `${CLIENT_BASE_URL}/url/${urlId}`; // BASE URL should be configured via env file. This will not work on staging envs for now.
         setShortUrl(shortURLLink);
         setLoading(false);
       }
