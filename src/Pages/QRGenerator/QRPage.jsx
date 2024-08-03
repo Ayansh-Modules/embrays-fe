@@ -1,6 +1,5 @@
 import { QRCodeSVG } from "qrcode.react";
 import React, { useState } from "react";
-import { FaRegFilePdf } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { GrDocumentText } from "react-icons/gr";
 import { IoIosGlobe } from "react-icons/io";
@@ -50,10 +49,7 @@ function QRPage() {
         QR GENERATOR
       </div>
 
-      <div
-        className="w-[75vw] shadow-custom max-md:shadow-none max-md:w-full max-md:border-none max-md:items-center max-md:justify-center border-2 border-black rounded-lg flex my-10 max-md:flex-col-reverse"
-       
-      >
+      <div className="w-[75vw] shadow-custom max-md:shadow-none max-md:w-full max-md:border-none max-md:items-center max-md:justify-center border-2 border-black rounded-lg flex my-10 max-md:flex-col-reverse">
         <div className="w-[50vw] border-2 rounded-l-lg m-5 max-md:m-0 mr-0 max-md:w-[90vw] max-md:mb-10">
           {/* tools */}
           <div className="Tools max-md:grid-cols-2 max-md:gap-5 max-md:grid flex items-center justify-evenly p-5 border-b-2 bg-gray-100">
@@ -122,7 +118,7 @@ function QRPage() {
             onClick={() => {
               downloadQrCode();
             }}
-            class="bg-Layoutblue focus:ring-2 focus:ring-Layoutpink hover:bg-Layoutneon text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between"
+            className="bg-Layoutblue focus:ring-2 focus:ring-Layoutpink hover:bg-Layoutneon text-white hover:text-black font-semibold my-5 py-3 px-5 rounded-xl inline-flex items-center justify-between"
           >
             <span className="text-sm">Download QR</span>
             <IoDownloadOutline className="size-[20px] ml-2 stroke-2" />

@@ -11,7 +11,7 @@ function HowItWorks() {
     >
       <div
         className="title max-md:text-4xl text-6xl py-[50px] font-semibold flex-col flex items-center justify-center text-Layoutneon "
-        style={{ textShadow: "gray -5px -5px" }}
+        // style={{ textShadow: "gray -5px -5px" }}
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-easing="ease"
@@ -54,12 +54,12 @@ function HowItWorks() {
                 data-aos-anchor-placement="center-bottom"
               >
                 <div className="flex ">
-                  <div className="point one mr-6 max-md:mr-[2vw] max-md:mt-1 text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] max-md:size-[1.5rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">
+                  <div className="point one mr-6 max-md:mr-[2vw] max-sm:mr-[1rem] max-md:mt-1 text-black rounded-full bg-Layoutyellow w-[2.2rem] h-[2.2rem] max-md:size-[1.5rem] text-center flex items-center justify-center font-semibold border-[3px] border-white">
                     {index + 1}
                   </div>
                 </div>
                 <div className="one">
-                  <div className="title text-Layoutyellow font-semibold text-3xl max-md:text-xl mb-2">
+                  <div className="title text-Layoutyellow font-medium text-3xl max-md:text-xl mb-2">
                     {content.title}
                   </div>
                   <div className="testimonial  text-white text-base w-[40vw] flex items-start justify-start max-lg:w-[80vw]">

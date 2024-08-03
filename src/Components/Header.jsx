@@ -77,7 +77,7 @@ function Header() {
             </div>
           ))}
           <div className="ml-6">
-            <Tools />
+            <Tools onClick={()=>{setIsOpen(false)}}/>
           </div>
         </div>
         <div className="flex items-center justify-center  w-full">
