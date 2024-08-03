@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
-import { Honeypot, NetlifyForm } from "react-netlify-forms";
 import baseAssets from "../assets/baseAssets";
 
 function LetsConnect({ onClose }) {
@@ -13,6 +12,24 @@ function LetsConnect({ onClose }) {
     }
   };
 
+  useEffect(() => {
+    document.querySelector("form").addEventListener("submit", handleSubmit);
+  }, []);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  };
   return (
     <div
       ref={modalRef}
@@ -36,76 +53,61 @@ function LetsConnect({ onClose }) {
             </span>
           </div>
 
-          <NetlifyForm name="contact" action="/thanks" honeypotName="bot-field">
-            {({ handleChange, success, error }) => (
-              <>
-                <Honeypot />
-                {success && <p>Thanks for contacting us!</p>}
-                {error && (
-                  <p>
-                    Sorry, we could not reach our servers. Please try again
-                    later.
-                  </p>
-                )}
-                <div className="Name px-5 py-2">
-                  <label
-                    htmlFor="default-input"
-                    className="block mb-2 text-sm font-medium text-black"
-                  >
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="default-input"
-                    className="bg-black border-2 max-md:w-[80vw] md:w-[30rem] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="Mail px-5 py-2">
-                  <label
-                    htmlFor="default-input"
-                    className="block mb-2 text-sm font-medium text-black"
-                  >
-                    Your Mail id
-                  </label>
-                  <input
-                    type="text"
-                    name="email"
-                    id="default-input"
-                    className="bg-black border-2 max-md:w-[80vw] md:w-[30rem] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="Message px-5 py-2">
-                  <label
-                    htmlFor="default-input"
-                    className="block mb-2 text-sm font-medium text-black"
-                  >
-                    Message for Us
-                  </label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows="4"
-                    className="mb-[10px] w-[30vw] md:w-[30rem] max-md:w-[80vw] bg-black border-2 border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    onChange={handleChange}
-                    required
-                  ></textarea>
-                </div>
-                <div className="p-5 flex items-center justify-center">
-                  <button
-                    type="submit"
-                    className="max-md:w-[80vw] md:w-[30rem] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[30vw]"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </>
-            )}
-          </NetlifyForm>
+          <form name="contact" method="POST" netlify>
+            <div className="Name px-5 py-2">
+              <label
+                htmlFor="default-input"
+                className="block mb-2 text-sm font-medium text-black"
+              >
+                Your Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="default-input"
+                className="bg-black border-2 max-md:w-[80vw] md:w-[30rem] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              />
+            </div>
+            <div className="Mail px-5 py-2">
+              <label
+                htmlFor="default-input"
+                className="block mb-2 text-sm font-medium text-black"
+              >
+                Your Mail id
+              </label>
+              <input
+                type="text"
+                name="email"
+                id="default-input"
+                className="bg-black border-2 max-md:w-[80vw] md:w-[30rem] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              />
+            </div>
+            <div className="Message px-5 py-2">
+              <label
+                htmlFor="default-input"
+                className="block mb-2 text-sm font-medium text-black"
+              >
+                Message for Us
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                className="mb-[10px] w-[30vw] md:w-[30rem] max-md:w-[80vw] bg-black border-2 border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required
+              ></textarea>
+            </div>
+            <div className="p-5 flex items-center justify-center">
+              <button
+                type="submit"
+                className="max-md:w-[80vw] md:w-[30rem] text-white bg-gradient-to-r from-pink-500 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-[30vw]"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 

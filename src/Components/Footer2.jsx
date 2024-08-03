@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { GrInstagram } from "react-icons/gr";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -17,6 +17,10 @@ function Footer2() {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
+  useEffect(() => {
+    document.querySelector("form").addEventListener("submit", handleSubmit);
+  }, []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -31,8 +35,6 @@ function Footer2() {
       .then(() => console.log("Form successfully submitted"))
       .catch((error) => alert(error));
   };
-
-  document.querySelector("form").addEventListener("submit", handleSubmit);
 
   return (
     <div
