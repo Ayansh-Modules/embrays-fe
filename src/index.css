@@ -5,7 +5,22 @@
 
 * {
   font-family: "Montserrat", sans-serif;
-  
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #AAAAAA;
+  border-radius: 20rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BBBBBB;
 }
 
 /* scrollbar-width: thin;

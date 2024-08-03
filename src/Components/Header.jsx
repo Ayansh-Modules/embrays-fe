@@ -76,11 +76,11 @@ function Header() {
               {option.title}
             </div>
           ))}
-          <div className="ml-6">
-            <Tools />
+          <div className=" hover:bg-Layoutneon rounded-2xl hover:text-black">
+           <Tools onClick={()=>{setIsOpen(false)}}/>
           </div>
         </div>
-        <div className="flex items-center justify-center  w-full">
+        <div className="flex items-center justify-center   max-sm:ml-4 sm:ml-[5vw]">
           {PortfolioButton()}
         </div>
       </Drawer>

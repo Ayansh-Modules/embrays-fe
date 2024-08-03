@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useState } from "react";
 import baseAssets from "../assets/baseAssets";
-import {formatDate} from "../Utility/CommonFunctions"
+import { formatDate } from "../Utility/CommonFunctions";
 const BlogsContext = createContext();
 export const useBlogContext = () => {
   return useContext(BlogsContext);
@@ -27,7 +27,6 @@ function BlogContextProvider({ children }) {
   async function getBlogs() {
     setLoading(true);
     try {
-      console.log(after);
       const response = await axios.post(HASHNODE_URL, {
         query,
 
@@ -77,12 +76,9 @@ function BlogContextProvider({ children }) {
       finalData.push(data);
       setPosts(finalData);
       setLoading(false);
-      console.log(finalData);
-      console.log(loading);
 
       //it will have all the blogs
     } catch (error) {
-      console.log(error);
       setLoading(false);
     }
     setLoading(false);

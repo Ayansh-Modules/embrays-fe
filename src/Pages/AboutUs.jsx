@@ -21,7 +21,7 @@ function AboutUs() {
           data-aos-easing="ease"
           data-aos-duration="1000"
         >
-          <div className="title text-5xl font-semibold max-lg:text-3xl  max-md:w-[90vw] mb-[5vh] max-md:text-2xl">
+          <div className="title text-5xl font-semibold max-lg:text-3xl max-sm:w-[85vw] max-md:w-[90vw] mb-[5vh] max-md:text-2xl">
             Empowering you with sleek
             <span className="text-Layoutneon font-light"> user-centered </span>
             solutions for success

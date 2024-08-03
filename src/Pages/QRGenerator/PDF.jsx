@@ -6,24 +6,24 @@ function PDF() {
     <div className="p-5 ml-5 ">
       <label
         for="success"
-        class="block my-2 text-sm text-Layoutblue font-semibold"
+        className="block my-2 text-sm text-Layoutblue font-semibold"
       >
         Name
       </label>
       <input
         type="text"
         id="success"
-        class="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[97%] p-3 "
+        className="bg-gray-100 border  text-sm rounded-lg focus:ring-Layoutblue focus:border-Layoutblue block w-[97%] p-3 "
       />
 
       <label
-        class="block my-3 text-sm  text-Layoutblue font-semibold "
+        className="block my-3 text-sm  text-Layoutblue font-semibold "
         for="multiple_files"
       >
         Upload PDF file
       </label>
       <input
-        class="block w-[97%] p-3 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-100 font-medium focus:outline-Layoutblue "
+        className="block w-[97%] p-3 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-100 font-medium focus:outline-Layoutblue "
         id="multiple_files"
         type="file"
         multiple

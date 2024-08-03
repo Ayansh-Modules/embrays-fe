@@ -6,15 +6,16 @@ function Partnership() {
       <div className="container flex-col flex items-center justify-center">
         <div
           className="title_group text_center"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-easing="ease"
-          data-aos-duration="1000"
+         
         >
           <h2 className="title text-2xl font-bold">Our Top Partners</h2>
         </div>
 
-        <div className=" flex-row flex items-center justify-evenly  mt-[20px] max-md:flex-col w-full">
+        <div className=" flex-row flex items-center justify-evenly  mt-[20px] max-md:flex-col w-full"
+         data-aos="fade-up"
+         data-aos-offset="200"
+         data-aos-easing="ease"
+         data-aos-duration="1000">
           <div className="flex items-center justify-evenly w-[50vw] max-md:w-full  max-md:pt-[20px]  max-md:pb-[20px]">
             <img src={baseAssets.stripe} alt="stripe" />
             <img src={baseAssets.vercel} alt="vercel" />

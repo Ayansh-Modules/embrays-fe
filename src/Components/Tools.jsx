@@ -2,11 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { RiArrowDownSLine } from 'react-icons/ri';
 import { useNavigate } from 'react-router-dom';
 
-const Tools = () => {
+const Tools = ({onClick}) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
-
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
@@ -14,6 +13,7 @@ const Tools = () => {
   const handleNavigate = (path) => {
     setIsOpen(false);
     navigate(path);
+    onClick()
   };
 
   const handleClickOutside = (event) => {
@@ -36,10 +36,10 @@ const Tools = () => {
         <div>
           <button
             type="button"
-            className="inline-flex justify-center items-center w-full py-2 font-semibold focus:outline-none text-sm h-[3rem] px-6 hover:bg-Layoutneon rounded-xl text-white hover:text-black"
+            className="inline-flex justify-center max-sm:hover:text-black items-center w-full py-2 font-semibold focus:outline-none text-sm h-[3rem] px-6 max-sm:w-full hover:bg-Layoutneon rounded-xl text-white hover:text-black"
             onClick={toggleDropdown}
           >
-            Tools
+            <span className='max-sm:ml-4 sm:ml-[3vw] md:ml-0'>Tools</span>
             <RiArrowDownSLine size={20} className="ml-1" />
           </button>
           {isOpen && (

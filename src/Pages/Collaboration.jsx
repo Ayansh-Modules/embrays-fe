@@ -26,7 +26,10 @@ function Collaboration() {
       <div
         className="tile text-6xl max-md:text-3xl py-20 max-md:font-bold  font-semibold text-Layoutblue  flex-row flex items-center justify-center text-center"
         style={{ textShadow: "white 5px 5px" }}
-      >
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="ease"
+        data-aos-duration="1000">
         {data.title}
       </div>
       <div className="cards h-[80vh]  w-full">
@@ -34,9 +37,9 @@ function Collaboration() {
           className="sample-slider"
           modules={[Navigation, Autoplay]}
           loop={true}
-          autoplay={{ delay: 1000 }}
+          autoplay={{ delay: 500 }}
           slidesPerView={2.8}
-          speed={3000}
+          speed={2000}
           spaceBetween={80}
           navigation={true}
           centeredSlides={true}

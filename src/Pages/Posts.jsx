@@ -7,8 +7,6 @@ import BlogCardSkeleton from "./Blogs/BlogCardSkeleton";
 function Posts() {
   const navigate = useNavigate();
   const { posts, loading } = useBlogContext();
-  console.log(!loading);
-  console.log(posts.length >= 3);
 
   return (
     <div
