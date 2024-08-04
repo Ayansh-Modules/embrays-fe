@@ -19,7 +19,7 @@ import Embrays_Helmet from "./Utility/Embrays_Helmet";
 function App() {
   const { getBlogs } = useBlogContext();
   const location = useLocation();
-  useEffect(() => {
+  useEffect(async () => {
     AOS.init();
     AOS.refresh();
     if (location.hash) {
@@ -28,7 +28,14 @@ function App() {
     if (location.pathname.includes("/url/")) {
       const shortCode = location.pathname.split("/")[2];
       const VITE_BASE_URL = import.meta.env.VITE_BASE_URL;
-      window.location.href = VITE_BASE_URL + "/go/" + shortCode;
+      let res = await fetch(VITE_BASE_URL + "/go/" + shortCode, {
+          method: "GET"
+      });
+      if(res.status === 200)
+      {
+          const data = await res.json();
+          window.location.href = data.url;
+      }
     }
 
     getBlogs();
