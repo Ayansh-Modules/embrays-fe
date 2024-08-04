@@ -18,8 +18,30 @@ function Footer2() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.querySelector("form").addEventListener("submit", handleSubmit);
+    const form = document.querySelector("form");
+    form.addEventListener("submit", handleSubmit);
+    return () => form.removeEventListener("submit", handleSubmit);
   }, []);
+
+  useEffect(() => {
+    let timer;
+    if (popupVisible) {
+      timer = setTimeout(() => {
+        setPopupVisible(false);
+      }, 3000); // Hide the popup after 3 seconds
+    }
+    return () => clearTimeout(timer);
+  }, [popupVisible]);
+
+  useEffect(() => {
+    let timer;
+    if (errorMessage) {
+      timer = setTimeout(() => {
+        setErrorMessage("");
+      }, 3000); // Hide the error message after 3 seconds
+    }
+    return () => clearTimeout(timer);
+  }, [errorMessage]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,8 +54,18 @@ function Footer2() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
+      .then((response) => {
+        if (response.ok) {
+          setPopupVisible(true);
+          setErrorMessage("");
+        } else {
+          throw new Error("Form submission failed");
+        }
+      })
+      .catch((error) => {
+        setPopupVisible(false);
+        setErrorMessage(error.message);
+      });
   };
 
   return (
@@ -170,7 +202,7 @@ function Footer2() {
         </div>
 
         <div>
-          <form name="contact" method="POST" netlify>
+          <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
             <div className="flex max-md:flex-col">
               <div className="Name mr-5 py-4">
                 <input
@@ -185,7 +217,7 @@ function Footer2() {
               <div className="Mail py-4">
                 <input
                   placeholder="Your Mail id"
-                  type="text"
+                  type="email"
                   name="email"
                   id="default-input"
                   className="max-md:w-[80vw] max-lg:w-[40vw] text-black text-sm rounded-lg w-[15vw] p-[15px]"
@@ -204,35 +236,29 @@ function Footer2() {
               ></textarea>
             </div>
             <div className="mt-[-10px] flex items-center">
-              {errorMessage ? (
-                <div className="popup my-5 p-4 bg-red-500 text-white rounded-lg w-[31vw] max-md:w-[80vw] max-lg:w-[82vw]">
-                  {errorMessage}
-                </div>
-              ) : popupVisible ? (
-                <div
-                  id="popup"
-                  className="popup my-5 p-4 bg-green-500 text-white rounded-lg w-[31vw] max-md:w-[80vw] max-lg:w-[82vw]"
+              <div className="btn">
+                <button
+                  type="submit"
+                  className="connectbtn z-10 drop-shadow-lg font-semibold text-white mt-[5vh] focus:ring-2 focus:ring-pink-300"
                 >
-                  Form submitted successfully!
-                </div>
-              ) : (
-                <div className="btn">
-                  <button
-                    type="submit"
-                    className="connectbtn  z-10 drop-shadow-lg font-semibold text-white mt-[5vh] focus:ring-2  focus:ring-pink-300 "
-                  >
-                    <span className="flex-row flex items-center justify-center text-sm">
-                      Let's Connect
-                      <IoIosArrowRoundForward
-                        size={20}
-                        className=" ml-[-10px]"
-                      />
-                    </span>
-                  </button>
-                </div>
-              )}
+                  <span className="flex-row flex items-center justify-center text-sm">
+                    Let's Connect
+                    <IoIosArrowRoundForward size={20} className="ml-[-10px]" />
+                  </span>
+                </button>
+              </div>
             </div>
           </form>
+          {errorMessage && (
+            <div className="fixed bottom-5 right-5 bg-red-500 text-white p-3 rounded-lg shadow-lg">
+              {errorMessage}
+            </div>
+          )}
+          {popupVisible && (
+            <div className="fixed bottom-5 right-5 bg-green-500 text-white p-3 rounded-lg shadow-lg">
+              Form submitted successfully!
+            </div>
+          )}
         </div>
       </div>
     </div>
