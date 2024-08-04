@@ -5,6 +5,8 @@ import baseAssets from "../assets/baseAssets";
 function LetsConnect({ onClose }) {
   const modalRef = useRef();
   const [popupVisible, setPopupVisible] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+  const [popupType, setPopupType] = useState(""); // 'success' or 'error'
 
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
@@ -14,6 +16,10 @@ function LetsConnect({ onClose }) {
 
   useEffect(() => {
     document.querySelector("form").addEventListener("submit", handleSubmit);
+
+    return () => {
+      document.querySelector("form").removeEventListener("submit", handleSubmit);
+    };
   }, []);
 
   const handleSubmit = (event) => {
@@ -27,9 +33,20 @@ function LetsConnect({ onClose }) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
+      .then(() => {
+        setPopupMessage("Form submitted successfully!");
+        setPopupType("success");
+        setPopupVisible(true);
+        setTimeout(() => setPopupVisible(false), 3000); // Hide after 3 seconds
+      })
+      .catch((error) => {
+        setPopupMessage("An error occurred. Please try again.");
+        setPopupType("error");
+        setPopupVisible(true);
+        setTimeout(() => setPopupVisible(false), 3000); // Hide after 3 seconds
+      });
   };
+
   return (
     <div
       ref={modalRef}
@@ -38,7 +55,7 @@ function LetsConnect({ onClose }) {
     >
       <div>
         <div
-          className="lg:h-[90vh] md:w-[40rem] form  rounded-2xl flex-col flex items-center justify-center"
+          className="lg:h-[90vh] md:w-[40rem] form rounded-2xl flex-col flex items-center justify-center"
           style={{
             backgroundImage: `url(${baseAssets.connect_form})`,
             backgroundPosition: "center",
@@ -53,7 +70,7 @@ function LetsConnect({ onClose }) {
             </span>
           </div>
 
-          <form name="contact" method="POST" netlify>
+          <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
             <div className="Name px-5 py-2">
               <label
                 htmlFor="default-input"
@@ -77,7 +94,7 @@ function LetsConnect({ onClose }) {
                 Your Mail id
               </label>
               <input
-                type="text"
+                type="email"
                 name="email"
                 id="default-input"
                 className="bg-black border-2 max-md:w-[80vw] md:w-[30rem] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -114,9 +131,11 @@ function LetsConnect({ onClose }) {
       {popupVisible && (
         <div
           id="popup"
-          className="popup fixed top-4 border-2 border-Layoutblue py-4 px-10 bg-green-500 text-white rounded-lg"
+          className={`popup fixed top-4 right-4 border-2 py-4 px-10 rounded-lg ${
+            popupType === "success" ? "bg-green-500 text-white" : "bg-red-500 text-white"
+          }`}
         >
-          Form submitted successfully!
+          {popupMessage}
         </div>
       )}
     </div>
