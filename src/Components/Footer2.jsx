@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { GrInstagram } from "react-icons/gr";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -13,28 +13,75 @@ function Footer2() {
   const contact = appData.contact;
   const linkedin = appData.urls.linkedin;
   const instagram = appData.urls.instagram;
-  const [popupVisible, setPopupVisible] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
-
-  useEffect(() => {
-    document.querySelector("form").addEventListener("submit", handleSubmit);
-  }, []);
+  const [isLoading, setIsLoading] = useState(false);
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [popUpState, setPopUpState] = useState({
+    visible: false,
+    message: "",
+    type: "",
+  });
 
   const handleSubmit = (event) => {
+    setIsLoading(true);
     event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: encodeFormData({
+        "form-name": "contact",
+        ...formState,
+      }),
     })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
+      .then((res) => {
+        if (res.status == 200) {
+          setIsLoading(false);
+          setPopUpState({
+            visible: true,
+            message: "Form submission successful",
+            type: "success",
+          });
+          resetPopup();
+          setFormState({
+            name: "",
+            email: "",
+            message: "",
+          });
+        } else {
+          throw new Error("Something Went wrong");
+        }
+      })
+      .catch((err) => {
+        setPopUpState({
+          visible: true,
+          message: "Something Went wrong",
+          type: "error",
+        });
+        resetPopup();
+      });
   };
+
+  const encodeFormData = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+  function resetPopup() {
+    setTimeout(() => {
+      setPopUpState({
+        visible: false,
+        message: "",
+        type: "",
+      });
+    }, [2500]);
+  }
 
   return (
     <div
@@ -170,11 +217,15 @@ function Footer2() {
         </div>
 
         <div>
-          <form name="contact" method="POST" netlify>
+          <form onSubmit={handleSubmit}>
             <div className="flex max-md:flex-col">
               <div className="Name mr-5 py-4">
                 <input
                   placeholder="Your Name"
+                  onChange={(e) =>
+                    setFormState({ ...formState, name: e.target.value })
+                  }
+                  value={formState.name}
                   type="text"
                   name="name"
                   id="default-input"
@@ -185,8 +236,12 @@ function Footer2() {
               <div className="Mail py-4">
                 <input
                   placeholder="Your Mail id"
-                  type="text"
+                  type="email"
                   name="email"
+                  onChange={(e) =>
+                    setFormState({ ...formState, email: e.target.value })
+                  }
+                  value={formState.email}
                   id="default-input"
                   className="max-md:w-[80vw] max-lg:w-[40vw] text-black text-sm rounded-lg w-[15vw] p-[15px]"
                   required
@@ -198,41 +253,41 @@ function Footer2() {
                 placeholder="Message for us"
                 name="message"
                 id="message"
+                onChange={(e) =>
+                  setFormState({ ...formState, message: e.target.value })
+                }
+                value={formState.message}
                 rows="4"
                 className="w-[31vw] max-md:w-[80vw] max-lg:w-[82vw] text-black text-sm rounded-lg h-[20vh] p-[15px]"
                 required
               ></textarea>
             </div>
             <div className="mt-[-10px] flex items-center">
-              {errorMessage ? (
-                <div className="popup my-5 p-4 bg-red-500 text-white rounded-lg w-[31vw] max-md:w-[80vw] max-lg:w-[82vw]">
-                  {errorMessage}
-                </div>
-              ) : popupVisible ? (
-                <div
-                  id="popup"
-                  className="popup my-5 p-4 bg-green-500 text-white rounded-lg w-[31vw] max-md:w-[80vw] max-lg:w-[82vw]"
+              <div className="btn">
+                <button
+                  type="submit"
+                  className="connectbtn z-10 drop-shadow-lg font-semibold text-white mt-[5vh] focus:ring-2 focus:ring-pink-300"
                 >
-                  Form submitted successfully!
-                </div>
-              ) : (
-                <div className="btn">
-                  <button
-                    type="submit"
-                    className="connectbtn  z-10 drop-shadow-lg font-semibold text-white mt-[5vh] focus:ring-2  focus:ring-pink-300 "
-                  >
-                    <span className="flex-row flex items-center justify-center text-sm">
-                      Let's Connect
-                      <IoIosArrowRoundForward
-                        size={20}
-                        className=" ml-[-10px]"
-                      />
-                    </span>
-                  </button>
-                </div>
-              )}
+                  <span className="flex-row flex items-center justify-center text-sm">
+                    Let's Connect
+                    <IoIosArrowRoundForward size={20} className="ml-[-10px]" />
+                  </span>
+                </button>
+              </div>
             </div>
           </form>
+
+          {popUpState.visible && (
+            <div
+              className={`fixed bottom-5 right-5 ${
+                popUpState.type === "success"
+                  ? "bg-green-500 text-white"
+                  : "bg-red-500 text-white"
+              } text-white p-3 rounded-lg shadow-lg`}
+            >
+              {popUpState.message}
+            </div>
+          )}
         </div>
       </div>
     </div>
