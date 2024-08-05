@@ -13,60 +13,77 @@ function Footer2() {
   const contact = appData.contact;
   const linkedin = appData.urls.linkedin;
   const instagram = appData.urls.instagram;
-  const [popupVisible, setPopupVisible] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [popUpState, setPopUpState] = useState({
+    visible: false,
+    message: "",
+    type: "",
+  });
   useEffect(() => {
-    const form = document.querySelector("form");
-    form.addEventListener("submit", handleSubmit);
-    return () => form.removeEventListener("submit", handleSubmit);
+    document.querySelector("form").addEventListener("submit", handleSubmit);
   }, []);
-
-  useEffect(() => {
-    let timer;
-    if (popupVisible) {
-      timer = setTimeout(() => {
-        setPopupVisible(false);
-      }, 3000); // Hide the popup after 3 seconds
-    }
-    return () => clearTimeout(timer);
-  }, [popupVisible]);
-
-  useEffect(() => {
-    let timer;
-    if (errorMessage) {
-      timer = setTimeout(() => {
-        setErrorMessage("");
-      }, 3000); // Hide the error message after 3 seconds
-    }
-    return () => clearTimeout(timer);
-  }, [errorMessage]);
-
   const handleSubmit = (event) => {
+    setIsLoading(true);
     event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: encodeFormData({
+        "form-name": "contact",
+        ...formState,
+      }),
     })
-      .then((response) => {
-        if (response.ok) {
-          setPopupVisible(true);
-          setErrorMessage("");
+      .then((res) => {
+        if (res.status == 200) {
+          setIsLoading(false);
+          setPopUpState({
+            visible: true,
+            message: "Form submission successful",
+            type: "success",
+          });
+          resetPopup();
+          setFormState({
+            name: "",
+            email: "",
+            message: "",
+          });
         } else {
-          throw new Error("Form submission failed");
+          throw new Error("Something Went wrong");
         }
       })
-      .catch((error) => {
-        setPopupVisible(false);
-        setErrorMessage(error.message);
+      .catch((err) => {
+        setPopUpState({
+          visible: true,
+          message: "Something Went wrong",
+          type: "error",
+        });
+        resetPopup();
       });
   };
+ 
+  const encodeFormData = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+  function resetPopup() {
+    setTimeout(() => {
+      setPopUpState({
+        visible: false,
+        message: "",
+        type: "",
+      });
+    }, [2500]);
+  }
 
   return (
     <div
@@ -202,11 +219,20 @@ function Footer2() {
         </div>
 
         <div>
-          <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
+          <form
+            name="contact"
+            method="POST"
+            netlify
+            netlify-honeypot="bot-field"
+          >
             <div className="flex max-md:flex-col">
               <div className="Name mr-5 py-4">
                 <input
                   placeholder="Your Name"
+                  onChange={(e) =>
+                    setFormState({ ...formState, name: e.target.value })
+                  }
+                  value={formState.name}
                   type="text"
                   name="name"
                   id="default-input"
@@ -219,6 +245,10 @@ function Footer2() {
                   placeholder="Your Mail id"
                   type="email"
                   name="email"
+                  onChange={(e) =>
+                    setFormState({ ...formState, email: e.target.value })
+                  }
+                  value={formState.email}
                   id="default-input"
                   className="max-md:w-[80vw] max-lg:w-[40vw] text-black text-sm rounded-lg w-[15vw] p-[15px]"
                   required
@@ -230,6 +260,10 @@ function Footer2() {
                 placeholder="Message for us"
                 name="message"
                 id="message"
+                onChange={(e) =>
+                  setFormState({ ...formState, message: e.target.value })
+                }
+                value={formState.message}
                 rows="4"
                 className="w-[31vw] max-md:w-[80vw] max-lg:w-[82vw] text-black text-sm rounded-lg h-[20vh] p-[15px]"
                 required
@@ -249,14 +283,16 @@ function Footer2() {
               </div>
             </div>
           </form>
-          {errorMessage && (
-            <div className="fixed bottom-5 right-5 bg-red-500 text-white p-3 rounded-lg shadow-lg">
-              {errorMessage}
-            </div>
-          )}
-          {popupVisible && (
-            <div className="fixed bottom-5 right-5 bg-green-500 text-white p-3 rounded-lg shadow-lg">
-              Form submitted successfully!
+
+          {popUpState.visible && (
+            <div
+              className={`fixed bottom-5 right-5 ${
+                popUpState.type === "success"
+                  ? "bg-green-500 text-white"
+                  : "bg-red-500 text-white"
+              } text-white p-3 rounded-lg shadow-lg`}
+            >
+              {popUpState.message}
             </div>
           )}
         </div>
