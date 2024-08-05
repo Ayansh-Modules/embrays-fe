@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { GrInstagram } from "react-icons/gr";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -25,9 +25,7 @@ function Footer2() {
     message: "",
     type: "",
   });
-  useEffect(() => {
-    document.querySelector("form").addEventListener("submit", handleSubmit);
-  }, []);
+
   const handleSubmit = (event) => {
     setIsLoading(true);
     event.preventDefault();
@@ -67,7 +65,7 @@ function Footer2() {
         resetPopup();
       });
   };
- 
+
   const encodeFormData = (data) => {
     return Object.keys(data)
       .map(
@@ -219,12 +217,7 @@ function Footer2() {
         </div>
 
         <div>
-          <form
-            name="contact"
-            method="POST"
-            netlify
-            netlify-honeypot="bot-field"
-          >
+          <form onSubmit={handleSubmit}>
             <div className="flex max-md:flex-col">
               <div className="Name mr-5 py-4">
                 <input

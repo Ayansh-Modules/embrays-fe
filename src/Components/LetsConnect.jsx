@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import baseAssets from "../assets/baseAssets";
 
@@ -22,9 +22,6 @@ function LetsConnect({ onClose }) {
     }
   };
 
-  useEffect(() => {
-    document.querySelector("form").addEventListener("submit", handleSubmit);
-  }, []);
   const encodeFormData = (data) => {
     return Object.keys(data)
       .map(
