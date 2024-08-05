@@ -4,6 +4,12 @@ import baseAssets from "../assets/baseAssets";
 
 function LetsConnect({ onClose }) {
   const modalRef = useRef();
+  const [isLoading, setIsLoading] = useState(false);
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: ""
+  })
   const [popupVisible, setPopupVisible] = useState(false);
 
   const closeModal = (e) => {
@@ -16,21 +22,48 @@ function LetsConnect({ onClose }) {
     document.querySelector("form").addEventListener("submit", handleSubmit);
   }, []);
 
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+
+  //   const myForm = event.target;
+  //   const formData = new FormData(myForm);
+
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: new URLSearchParams(formData).toString(),
+  //   })
+  //     .then(() => console.log("Form successfully submitted"))
+  //     .catch((error) => alert(error));
+  // };
+  const encodeFormData = (data) => {
+    return Object.keys(data).map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
+  }
   const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
+    setIsLoading(true);
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      body: encodeFormData({
+        "form-name": "contact",
+        ...formState
+      })
+    }).then(() => {
+      setIsLoading(false);
+      alert("Form submission successful");
+      setFormState({
+        name: "",
+        email: "",
+        message: ""
+      })
+    }).catch(err => {
+      alert(err);
     })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
-  };
+    event.preventDefault();
+  }
   return (
+    <>
+    {isLoading && <h1 align="center">Form submission in progress...</h1>}
     <div
       ref={modalRef}
       onClick={closeModal}
@@ -53,7 +86,7 @@ function LetsConnect({ onClose }) {
             </span>
           </div>
 
-          <form name="contact" method="POST" netlify>
+          <form onSubmit={handleSubmit}>
             <div className="Name px-5 py-2">
               <label
                 htmlFor="default-input"
@@ -63,6 +96,8 @@ function LetsConnect({ onClose }) {
               </label>
               <input
                 type="text"
+                onChange={(e) => setFormState({...formState, name: e.target.value})}
+                value={formState.name}
                 name="name"
                 id="default-input"
                 className="bg-black border-2 max-md:w-[80vw] md:w-[30rem] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -78,6 +113,8 @@ function LetsConnect({ onClose }) {
               </label>
               <input
                 type="text"
+                onChange={(e) => setFormState({...formState, email: e.target.value})}
+                value={formState.email}
                 name="email"
                 id="default-input"
                 className="bg-black border-2 max-md:w-[80vw] md:w-[30rem] border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30vw] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -93,6 +130,8 @@ function LetsConnect({ onClose }) {
               </label>
               <textarea
                 name="message"
+                onChange={(e) => setFormState({...formState, message: e.target.value})}
+                value={formState.message}
                 id="message"
                 rows="4"
                 className="mb-[10px] w-[30vw] md:w-[30rem] max-md:w-[80vw] bg-black border-2 border-black text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-[20vh] p-2.5 dark:bg-white dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -120,6 +159,7 @@ function LetsConnect({ onClose }) {
         </div>
       )}
     </div>
+    </>
   );
 }
 
