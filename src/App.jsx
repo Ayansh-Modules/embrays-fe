@@ -16,6 +16,7 @@ import QRPage from "./Pages/QRGenerator/QRPage";
 import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
+import React, { lazy, Suspense } from 'react';
 function App() {
   const { getBlogs } = useBlogContext();
   const location = useLocation();
