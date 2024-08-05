@@ -39,7 +39,6 @@ function HowItWorks() {
               className="flex mt-10 lg:ml-20 text-justify"
               key={index}
               data-aos="fade-left"
-              data-aos-offset="200"
               data-aos-easing="ease"
               data-aos-duration="1000"
               data-aos-anchor-placement="center-bottom"
