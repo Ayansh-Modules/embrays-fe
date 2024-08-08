@@ -7,11 +7,9 @@ import { layoutColors } from "../Utility/Colors";
 function Services() {
   const boxParam = getBoxData();
   return (
-    
     <div
       id="services"
       className="flex-col flex items-center justify-center  w-full  max-md:pt-[10vh] py-20 overflow-hidden"
-    
     >
       <div
         className="title flex-col items-center justify-center pb-10 max-md:pr-5 w-full"
@@ -38,11 +36,9 @@ function Services() {
         <div
           className="flex-row max-md:flex-col flex "
           data-aos="fade-up"
-          data-aos-offset="200"
           data-aos-easing="ease"
-          data-aos-duration="1000"
+          data-aos-duration="2000"
           data-aos-anchor-placement="center-bottom"
-          
         >
           <ServiceBox boxData={boxParam[0]} />
 
@@ -54,7 +50,6 @@ function Services() {
         <div
           className="flex-row max-md:flex-col flex  max-md:mt-10 mt-[0]"
           data-aos="fade-up"
-          data-aos-offset="200"
           data-aos-easing="ease"
           data-aos-duration="2000"
           data-aos-anchor-placement="center-bottom"

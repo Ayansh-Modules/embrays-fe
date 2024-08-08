@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { GrInstagram } from "react-icons/gr";
 import { IoIosArrowRoundForward } from "react-icons/io";

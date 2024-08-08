@@ -9,8 +9,8 @@ function ViewAllBlog() {
   return (
     <>
       <p className=" flex-col flex justify-start px-20 mt-5 max-md:w-full  max-md:items-center max-md:justify-center">
-        <p className="text-3xl font-bold text-Layoutblue max-md:w-[90vw]  text-center">Latest Blog</p>
-        <p className="text-xl pt-5 max-md:w-[90vw] text-center ">
+        <p className="text-3xl font-bold text-Layoutblue max-md:w-[90vw]  text-start">Latest Blog</p>
+        <p className="text-xl pt-5 max-md:w-[90vw] text-start ">
           The latest industry news , interviews , tecnologies and resources
         </p>
       </p>
