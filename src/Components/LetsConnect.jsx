@@ -88,7 +88,7 @@ function LetsConnect({ onClose }) {
       >
         <div>
           <div
-            className="lg:h-[600px] p-2 md:w-[40rem] form rounded-2xl flex-col flex items-center justify-center"
+            className="lg:h-[1/2] py-2 md:w-[40rem] form rounded-2xl flex-col flex items-center justify-center"
             style={{
               backgroundImage: `url(${baseAssets.connect_form})`,
               backgroundPosition: "center",
