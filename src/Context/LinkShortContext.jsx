@@ -26,14 +26,12 @@ function LinkShortContextProvider({ children }) {
       url: `${userUrl}`,
     };
     try {
-      const response = await axios.post(BASE_URL, body);
+      const response = await axios.post(`${BASE_URL}/api/v1/shrink`, body);
 
       if (response.status == 200) {
         const data = response.data;
 
         const urlId = data.shrinkedUrl.urlId;
-        console.log(CLIENT_BASE_URL);
-        console.log(BASE_URL);
         const shortURLLink = `${BASE_URL}/${urlId}`; // BASE URL should be configured via env file. This will not work on staging envs for now.
         setShortUrl(shortURLLink);
         setLoading(false);
