@@ -9,14 +9,6 @@ import Services from "./Services";
 import WhyUs from "./WhyUs";
 
 function Root() {
-  // const[openSnackbar,setOpenSnackbar]= useState(false)
-  // function handleClick(){
-  //   setOpenSnackbar(true)
-  //   setTimeout(()=>{
-  //     setOpenSnackbar(false)
-  //   },4000)
-  // }
-
   return (
     <div>
       <AboutUs />
@@ -32,5 +24,3 @@ function Root() {
 }
 
 export default Root;
-// OpenSnackbar={handleClick()} onClose={setOpenSnackbar(false)}
-// OpenSnackbar={handleClick()} onClose={setOpenSnackbar(false)}

@@ -16,30 +16,34 @@ import QRPage from "./Pages/QRGenerator/QRPage";
 import Root from "./Pages/Root";
 import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
+import React, { lazy, Suspense } from 'react';
 function App() {
   const { getBlogs } = useBlogContext();
   const location = useLocation();
-  useEffect(async () => {
+  useEffect(() => {
     AOS.init();
     AOS.refresh();
     if (location.hash) {
       window.location.href = location.hash;
     }
+
+    redirectUrl();
+    getBlogs();
+  }, [location]);
+  //redirect to the original url
+  async function redirectUrl() {
     if (location.pathname.includes("/url/")) {
       const shortCode = location.pathname.split("/")[2];
       const VITE_BASE_URL = import.meta.env.VITE_BASE_URL;
       let res = await fetch(VITE_BASE_URL + "/go/" + shortCode, {
-          method: "GET"
+        method: "GET",
       });
-      if(res.status === 200)
-      {
-          const data = await res.json();
-          window.location.href = data.url;
+      if (res.status === 200) {
+        const data = await res.json();
+        window.location.href = data.url;
       }
     }
-
-    getBlogs();
-  }, [location]);
+  }
 
   return (
     <>

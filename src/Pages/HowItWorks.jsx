@@ -12,11 +12,10 @@ function HowItWorks() {
       className="bg-Layoutblue flex flex-col items-center justify-center py-[10vh] overflow-hidden"
     >
       <div
-        className="title text-6xl max-md:text-4xl py-[50px] font-semibold flex flex-col items-center justify-center text-Layoutneon"
+        className="title text-6xl max-md:text-4xl pt-[50px] font-semibold flex flex-col items-center justify-center text-Layoutneon"
         data-aos="fade-up"
-        data-aos-offset="200"
         data-aos-easing="ease"
-        data-aos-duration="3000"
+        data-aos-duration="1000"
       >
         {data.title}
       </div>
@@ -36,10 +35,9 @@ function HowItWorks() {
         <div className="max-md:pt-[20vw]">
           {content.map((content, index) => (
             <div
-              className="flex mt-10 lg:ml-20 text-justify"
+              className="flex mt-5 lg:ml-20 text-justify"
               key={index}
               data-aos="fade-left"
-              data-aos-offset="200"
               data-aos-easing="ease"
               data-aos-duration="1000"
               data-aos-anchor-placement="center-bottom"
@@ -50,7 +48,7 @@ function HowItWorks() {
                 </div>
               </div>
               <div className="one">
-                <div className="title text-Layoutyellow font-medium text-3xl max-md:text-xl mb-2">
+                <div className="title text-Layoutyellow font-medium text-2xl max-md:text-xl ">
                   {content.title}
                 </div>
                 <div className="testimonial max-sm:text-sm max-sm:w-[70vw] text-white text-base w-[40vw] flex items-start justify-start max-lg:w-[80vw]">
