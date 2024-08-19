@@ -34,7 +34,7 @@ function LinkShortContextProvider({ children }) {
         const urlId = data.shrinkedUrl.urlId;
         console.log(CLIENT_BASE_URL);
         console.log(BASE_URL);
-        const shortURLLink = `${CLIENT_BASE_URL}/url/${urlId}`; // BASE URL should be configured via env file. This will not work on staging envs for now.
+        const shortURLLink = `${BASE_URL}/${urlId}`; // BASE URL should be configured via env file. This will not work on staging envs for now.
         setShortUrl(shortURLLink);
         setLoading(false);
       }
