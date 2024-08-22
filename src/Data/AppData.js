@@ -4,7 +4,7 @@ const appData = {
     website_URL: "https://embraystechnologies.com/",
     mailto:
       "mailto:info@embraystechnologies.com?subject=Hello Embrays Technologies &body=Description",
-    cellto: "tel:+919954088224",
+    cellto: "tel:+917896186388",
      linkedin:"https://www.linkedin.com/in/embrays-technologies-124270229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
      instagram : "https://www.instagram.com/embrays_technologies?igsh=czV0a3NzeHo4bW54"
   },
@@ -178,7 +178,7 @@ const appData = {
     primary: "Let's Talk.",
     secondary: "Let's Create Experiences!",
     mail: "info@embraystechnologies.com",
-    cell: "+91-9954088224",
+    cell: "+91-7896186388",
   },
 };
 
