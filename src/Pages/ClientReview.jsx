@@ -17,7 +17,6 @@ function ClientReview() {
       data-aos-easing="ease"
       data-aos-duration="1000"
     >
-       
       <div className="title  flex-col flex items-center justify-center pt-[3rem] max-md:w-[90vw]">
         <div
           className="title  text-4xl max-md:text-xl  text-center font-bold mb-[2rem] text-Layoutblue "
@@ -52,14 +51,32 @@ function ClientReview() {
             0: {
               slidesPerView: 1,
             },
+            320: {
+              slidesPerView: 0.9,
+            },
+            335: {
+              slidesPerView: 0.9,
+            },
+            340: {
+              slidesPerView: 0.95,
+            },
+            380: {
+              slidesPerView: 1.1,
+            },
+            425: {
+              slidesPerView: 0.9,
+            },
             611: {
               slidesPerView: 2,
             },
-            768: {
+            800: {
+              slidesPerView: 2.5,
+            },
+            1000: {
               slidesPerView: 3,
             },
             1024: {
-              slidesPerView: 3.5,
+              slidesPerView: 3.2,
             },
           }}
         >
