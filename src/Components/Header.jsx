@@ -19,10 +19,10 @@ function Header() {
       title: "How it works?",
       href: "/#howitworks",
     },
-    {
-      title: "Blogs",
-      href: "/#blogs",
-    },
+    // {
+    //   title: "Blogs",
+    //   href: "/#blogs",
+    // },
   ];
   return (
     <>
@@ -77,7 +77,11 @@ function Header() {
             </div>
           ))}
           <div className=" hover:bg-Layoutneon rounded-2xl hover:text-black">
-           <Tools onClick={()=>{setIsOpen(false)}}/>
+            <Tools
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            />
           </div>
         </div>
         <div className="flex items-center justify-center   max-sm:ml-4 sm:ml-[5vw]">
