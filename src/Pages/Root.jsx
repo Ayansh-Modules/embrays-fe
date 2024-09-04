@@ -18,7 +18,8 @@ function Root() {
       <Collaboration />
       <ClientReview />
       <Partnership />
-      <Posts />
+      <div className="bg-white h-[7rem] w-full"></div>
+      {/* <Posts /> */}
     </div>
   );
 }
