@@ -86,7 +86,9 @@ function Footer2() {
   return (
     <div
       className="bg-Layoutblue w-full text-xs rounded-t-md overflow-hidden"
-      style={{ boxShadow: "0px -4px 8px, 0px 0px 0px #ffffff" }}
+      style={{
+        boxShadow: "0px -6px 8px rgba(229, 231, 235)",
+      }}
     >
       <div className="flex-row flex max-lg:flex-col text-white justify-evenly items-start p-10 max-md:flex-col">
         <div className="flex max-md:flex-col">
