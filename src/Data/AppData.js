@@ -99,11 +99,11 @@ const appData = {
   
           comp_url: "https://www.figma.com/design/7bYEetwxc3ztX3pgYZtkX1/Compliant-Labs?node-id=0-1",
         },
-        {
-          company: "TrueUser",
-          testimonial: "TrueUser is a platform that instantly spot scammers and bots. We allow users to send verification requests to individuals to verify if the user is genuine."
-          ,comp_url: "https://www.trueuser.io/",
-        },
+        // {
+        //   company: "TrueUser",
+        //   testimonial: "TrueUser is a platform that instantly spot scammers and bots. We allow users to send verification requests to individuals to verify if the user is genuine."
+        //   ,comp_url: "https://www.trueuser.io/",
+        // },
         {
           company: "SkillMitra",
           testimonial: "SkillMithra is an online learning portal. Our goal is to help people everywhere learn new things. We make learning easy and fun."
@@ -148,10 +148,10 @@ const appData = {
           company: "Compliant Labs",
           review: "Embrays Technologies was instrumental in helping us bring TrueUser to life. Their technical expertise and commitment to delivering a high-quality product were evident throughout the development process. We're extremely satisfied with the outcome and would highly recommend their services to others!"
         },
-        {
-          company: "TrueUser",
-          review: "We're incredibly grateful to Embrays Technologies for their expertise and support in developing our compliance solutions at Compliant Labs. Their technical proficiency and commitment to delivering a high-quality product were evident throughout the process. We would highly recommend their services to anyone in need of top-notch development expertise!"
-        },
+        // {
+        //   company: "TrueUser",
+        //   review: "We're incredibly grateful to Embrays Technologies for their expertise and support in developing our compliance solutions at Compliant Labs. Their technical proficiency and commitment to delivering a high-quality product were evident throughout the process. We would highly recommend their services to anyone in need of top-notch development expertise!"
+        // },
         {
           company: "SkillMitra",
           review: "Embrays Technologies played a crucial role in the development of our SkillMitra platform. Their technical proficiency and dedication to delivering a high-quality product were evident from start to finish. We're extremely satisfied with the platform they helped us create and would highly recommend their services to others!"
