@@ -24,12 +24,13 @@ function Collaboration() {
       }}
     >
       <div
-        className="tile text-6xl max-md:text-3xl py-20 max-md:font-bold  font-semibold text-Layoutblue  flex-row flex items-center justify-center text-center"
+        className="tile text-6xl max-md:text-3xl py-20  max-md:font-bold  font-semibold text-Layoutblue  flex-row flex items-center justify-center text-center"
         style={{ textShadow: "white 5px 5px" }}
         data-aos="fade-up"
         data-aos-offset="200"
         data-aos-easing="ease"
-        data-aos-duration="1000">
+        data-aos-duration="1000"
+      >
         {data.title}
       </div>
       <div className="cards h-[80vh]  w-full">
@@ -124,45 +125,45 @@ function getCollabData() {
       background: baseAssets.collaborationCompliantLabsMain,
       popUpImage: baseAssets.collaborationCompliantLabsPopUp,
     },
+    // {
+    //   company: content[2].company,
+    //   testimonial: content[2].testimonial,
+    //   link: content[2].comp_url,
+    //   background: baseAssets.collaborationTrueuserMain,
+    //   popUpImage: baseAssets.collaborationTrueuserPopUp,
+    // },
     {
       company: content[2].company,
       testimonial: content[2].testimonial,
       link: content[2].comp_url,
-      background: baseAssets.collaborationTrueuserMain,
-      popUpImage: baseAssets.collaborationTrueuserPopUp,
+      background: baseAssets.collaborationSkillmitraMain,
+      popUpImage: baseAssets.collaborationSkillmitraPopUp,
     },
     {
       company: content[3].company,
       testimonial: content[3].testimonial,
       link: content[3].comp_url,
-      background: baseAssets.collaborationSkillmitraMain,
-      popUpImage: baseAssets.collaborationSkillmitraPopUp,
+      background: baseAssets.collaborationStockdaddyMain,
+      popUpImage: baseAssets.collaborationStockdaddyPopUp,
     },
     {
       company: content[4].company,
       testimonial: content[4].testimonial,
       link: content[4].comp_url,
-      background: baseAssets.collaborationStockdaddyMain,
-      popUpImage: baseAssets.collaborationStockdaddyPopUp,
+      background: baseAssets.collaborationSettlersMain,
+      popUpImage: baseAssets.collaborationSettlersPopUp,
     },
     {
       company: content[5].company,
       testimonial: content[5].testimonial,
       link: content[5].comp_url,
-      background: baseAssets.collaborationSettlersMain,
-      popUpImage: baseAssets.collaborationSettlersPopUp,
-    },
-    {
-      company: content[6].company,
-      testimonial: content[6].testimonial,
-      link: content[6].comp_url,
       background: baseAssets.collaborationTutionbudMain,
       popUpImage: baseAssets.collaborationTutionbudPopUp,
     },
     {
-      company: content[7].company,
-      link: content[7].comp_url,
-      testimonial: content[7].testimonial,
+      company: content[6].company,
+      link: content[6].comp_url,
+      testimonial: content[6].testimonial,
       background: baseAssets.collaborationIamrapidMain,
       popUpImage: baseAssets.collaborationIamrapidPopUp,
     },
