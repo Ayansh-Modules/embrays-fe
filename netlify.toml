@@ -1,3 +1,10 @@
+# Redirect for /blogs path
+[[redirects]]
+  from = "/blogs"
+  to = "/Blogs/index.html"
+  status = 200
+
+# Redirect for all other paths
 [[redirects]]
   from = "/*"
   to = "/index.html"
