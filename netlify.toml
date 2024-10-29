@@ -1,7 +1,7 @@
 # Redirect for /blogs path
 [[redirects]]
   from = "/blogs"
-  to = "/Blogs/index.html"
+  to = "/blogs/index.html"
   status = 200
 
 # Redirect for all other paths
