@@ -1,0 +1,37 @@
+name: Update Hugo Blog in React App
+
+# Trigger this workflow on a push to the main branch
+on:
+  repository_dispatch:
+    types: [hugo_update]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the React repository
+      - name: Checkout React Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Clone the Hugo repository into a subfolder
+      - name: Clone Hugo Repository
+        run: |
+          git clone https://github.com/Ayansh-Modules/embrays-blogs.git hugo  # Replace with your actual Hugo repo
+
+      # Step 5: Copy the Hugo output to the React app's public/blogs folder
+      - name: Copy Hugo Output to React Public Folder
+        run: |
+          rm -rf public/blogs/*         # Clear the existing blogs folder
+          mkdir -p public/blogs          # Create the blogs folder if it doesn't exist
+          cp -r hugo/public/* public/blogs/   # Copy the built Hugo site to React public/blogs
+          rm -rf hugo
+
+      # Step 6: Commit and push the changes back to the React repository
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add .
+          git commit -m "Update blogs from Hugo"
+          git push origin main
