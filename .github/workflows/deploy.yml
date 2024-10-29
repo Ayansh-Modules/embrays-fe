@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the dev branch of the React repository
+      # Step 1: Checkout the jayshreedev branch of the React repository
       - name: Checkout React Repository
         uses: actions/checkout@v3
         with:
-          ref: dev # Specify the dev branch
+          ref: jayshreedev # Specify the jayshreedev branch
 
       # Step 2: Clone the Hugo repository into a subfolder
       - name: Clone Hugo Repository
@@ -29,11 +29,11 @@ jobs:
           cp -r hugo/public/* public/blogs/   # Copy the built Hugo site to React public/blogs
           rm -rf hugo
 
-      # Step 4: Commit and push the changes to the dev branch
+      # Step 4: Commit and push the changes to the jayshreedev branch
       - name: Commit and Push Changes
         run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           git add .
           git commit -m "Update blogs from Hugo"
-          git push origin dev  # Push to dev branch
+          git push origin jayshreedev  # Push to dev branch
