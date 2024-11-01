@@ -6,10 +6,8 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Footer2 from "./Components/Footer2";
 import Header from "./Components/Header";
-import { useBlogContext } from "./Context/BlogContext";
 import LinkShortContextProvider from "./Context/LinkShortContext";
 import QRContextProvider from "./Context/QRContext";
-import ViewAllBlog from "./Pages/Blogs/ViewAllBlog";
 import LinkPage from "./Pages/LinkShortener/LinkPage";
 import VisitShortUrl from "./Pages/LinkShortener/VisitShortUrl";
 import QRPage from "./Pages/QRGenerator/QRPage";
@@ -18,7 +16,6 @@ import TermsAndCondition from "./Pages/TermsAndCondition";
 import Embrays_Helmet from "./Utility/Embrays_Helmet";
 import React, { lazy, Suspense } from "react";
 function App() {
-  // const { getBlogs } = useBlogContext();
   const location = useLocation();
   useEffect(() => {
     AOS.init();
@@ -28,7 +25,6 @@ function App() {
     }
 
     redirectUrl();
-    // getBlogs();
   }, [location]);
   //redirect to the original url
   async function redirectUrl() {
@@ -58,7 +54,6 @@ function App() {
                 path="/terms-and-conditions"
                 element={<TermsAndCondition />}
               ></Route>
-              {/* <Route path="/allblog" element={<ViewAllBlog />}></Route> */}
               <Route path="/qr-generator" element={<QRPage />}></Route>
               <Route path="/link-shortener" element={<LinkPage />}></Route>
               <Route path="/url/:shortCode" element={<VisitShortUrl />}></Route>
