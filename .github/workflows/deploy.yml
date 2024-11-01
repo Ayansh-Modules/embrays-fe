@@ -1,6 +1,6 @@
 name: Update Hugo Blog in React App
 
-# Trigger this workflow on a repository dispatch eventt
+# Trigger this workflow on a repository dispatch event
 on:
   repository_dispatch:
     types: [hugo_update]
@@ -16,10 +16,12 @@ jobs:
         with:
           ref: jayshreedev # Specify the dev branch
 
-      # Step 2: Clone the Hugo repository into a subfolder
+      # Step 2: Clone the Hugo repository into a subfolder using the ET_GT_TOKEN secret
       - name: Clone Hugo Repository
+        env:
+          GH_TOKEN: ${{ secrets.ET_GT_TOKEN }} # Set the token as an environment variable
         run: |
-          git clone https://github.com/Ayansh-Modules/embrays-blogs.git hugo  # Replace with your actual Hugo repo
+          git clone https://x-access-token:${GH_TOKEN}@github.com/Ayansh-Modules/embrays-blogs.git hugo
 
       # Step 3: Copy the Hugo output to the React app's public/blogs folder
       - name: Copy Hugo Output to React Public Folder
