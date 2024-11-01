@@ -14,7 +14,7 @@ jobs:
       - name: Checkout React Repository
         uses: actions/checkout@v3
         with:
-          ref: dev # Specify the dev branch
+          ref: jayshreedev # Specify the dev branch
 
       # Step 2: Clone the Hugo repository into a subfolder using the ET_GT_TOKEN secret
       - name: Clone Hugo Repository
@@ -38,4 +38,4 @@ jobs:
           git config --local user.email "actions@github.com"
           git add .
           git commit -m "Update blogs from Hugo"
-          git push origin dev  # Push to dev branch
+          git push origin jayshreedev  # Push to dev branch
