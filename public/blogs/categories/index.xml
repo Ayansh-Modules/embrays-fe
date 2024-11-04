@@ -6,20 +6,13 @@
     <description>Recent content in Categories on Embrays Technologies Blogs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Oct 2023 22:11:36 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2024 10:00:00 +0000</lastBuildDate>
     <atom:link href="/blogs/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Astronomy</title>
-      <link>/blogs/categories/astronomy/</link>
-      <pubDate>Wed, 04 Oct 2023 22:11:36 +0700</pubDate>
-      <guid>/blogs/categories/astronomy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Space</title>
-      <link>/blogs/categories/space/</link>
-      <pubDate>Sun, 24 Sep 2023 11:15:17 +0700</pubDate>
-      <guid>/blogs/categories/space/</guid>
+      <title>Technology</title>
+      <link>/blogs/categories/technology/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/categories/technology/</guid>
       <description></description>
     </item>
   </channel>
