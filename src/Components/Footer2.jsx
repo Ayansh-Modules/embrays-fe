@@ -156,6 +156,9 @@ function Footer2() {
                   HOME
                 </div>
               </p>
+              <p className="hover:text-Layoutneon cursor-pointer">
+                <a href="https://embraystechnologies.com/blogs/">BLOGS</a>
+              </p>
               <p className="hover:text-Layoutneon">
                 <a
                   href="https://drive.google.com/file/d/18h3hVuQdIT1MQV0vWzqDUvj03J1yIx9D/view?usp=drive_link"
