@@ -19,10 +19,10 @@ function Header() {
       title: "How it works?",
       href: "/#howitworks",
     },
-    // {
-    //   title: "Blogs",
-    //   href: "/#blogs",
-    // },
+    {
+      title: "Blogs",
+      href: "https://embraystechnologies.com/blogs/",
+    },
   ];
   return (
     <>
