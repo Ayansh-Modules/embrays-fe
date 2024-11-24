@@ -21,7 +21,7 @@ function Header() {
     },
     {
       title: "Blogs",
-      href: "https://embraystechnologies.com/blogs/",
+      href: "/blogs",
     },
   ];
   return (
