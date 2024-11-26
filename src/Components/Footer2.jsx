@@ -157,7 +157,7 @@ function Footer2() {
                 </div>
               </p>
               <p className="hover:text-Layoutneon cursor-pointer">
-                <a href="https://embraystechnologies.com/blogs/">BLOGS</a>
+                <a href="/blogs">BLOGS</a>
               </p>
               <p className="hover:text-Layoutneon">
                 <a
