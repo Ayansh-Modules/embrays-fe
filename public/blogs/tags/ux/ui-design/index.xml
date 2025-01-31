@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>UX/UI Design on Embrays Technologies Blogs</title>
-    <link>/blogs/tags/ux/ui-design/</link>
+    <link>https://embrays.tech/blogs/tags/ux/ui-design/</link>
     <description>Recent content in UX/UI Design on Embrays Technologies Blogs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Nov 2024 10:00:00 +0000</lastBuildDate>
-    <atom:link href="/blogs/tags/ux/ui-design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://embrays.tech/blogs/tags/ux/ui-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Best Practices for Building Accessible Websites</title>
-      <link>/blogs/posts/accessible-website-guide/</link>
+      <link>https://embrays.tech/blogs/posts/accessible-website-guide/</link>
       <pubDate>Sat, 23 Nov 2024 10:00:00 +0000</pubDate>
-      <guid>/blogs/posts/accessible-website-guide/</guid>
+      <guid>https://embrays.tech/blogs/posts/accessible-website-guide/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this fast-paced digital era, a website needs to serve every user irrespective of their bodies or minds, be it an ethical responsibility or intelligent business sense. Accessible websites ensure inclusivity, enhance user experience, and boost a brand&amp;rsquo;s reputation. This blog explores the significance of web accessibility standards, their impact on users, and best practices for creating inclusive websites. We&amp;rsquo;ll also discuss how Embrays Technologies empowers businesses to design websites that meet accessibility standards effectively.&lt;/p&gt;</description>
     </item>
   </channel>
