@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Embrays Technologies Blogs</title>
-    <link>//localhost:1313///blogs/categories/</link>
+    <link>/blogs/categories/</link>
     <description>Recent content in Categories on Embrays Technologies Blogs</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Nov 2024 10:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313///blogs/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/blogs/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Technology</title>
-      <link>//localhost:1313///blogs/categories/technology/</link>
+      <link>/blogs/categories/technology/</link>
       <pubDate>Sat, 23 Nov 2024 10:00:00 +0000</pubDate>
-      <guid>//localhost:1313///blogs/categories/technology/</guid>
+      <guid>/blogs/categories/technology/</guid>
       <description></description>
     </item>
   </channel>
