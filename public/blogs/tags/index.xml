@@ -9,34 +9,6 @@
     <lastBuildDate>Sat, 23 Nov 2024 10:00:00 +0000</lastBuildDate>
     <atom:link href="/blogs/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI Chatbots</title>
-      <link>/blogs/tags/ai-chatbots/</link>
-      <pubDate>Sat, 23 Nov 2024 10:00:00 +0000</pubDate>
-      <guid>/blogs/tags/ai-chatbots/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Artificial Intelligence</title>
-      <link>/blogs/tags/artificial-intelligence/</link>
-      <pubDate>Sat, 23 Nov 2024 10:00:00 +0000</pubDate>
-      <guid>/blogs/tags/artificial-intelligence/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Automation</title>
-      <link>/blogs/tags/automation/</link>
-      <pubDate>Sat, 23 Nov 2024 10:00:00 +0000</pubDate>
-      <guid>/blogs/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Customer Engagement</title>
-      <link>/blogs/tags/customer-engagement/</link>
-      <pubDate>Sat, 23 Nov 2024 10:00:00 +0000</pubDate>
-      <guid>/blogs/tags/customer-engagement/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Inclusive Design</title>
       <link>/blogs/tags/inclusive-design/</link>
       <pubDate>Sat, 23 Nov 2024 10:00:00 +0000</pubDate>
@@ -58,10 +30,10 @@
       <description></description>
     </item>
     <item>
-      <title>Web Development</title>
-      <link>/blogs/tags/web-development/</link>
-      <pubDate>Sat, 23 Nov 2024 10:00:00 +0000</pubDate>
-      <guid>/blogs/tags/web-development/</guid>
+      <title>AI</title>
+      <link>/blogs/tags/ai/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -72,6 +44,13 @@
       <description></description>
     </item>
     <item>
+      <title>Blockchain</title>
+      <link>/blogs/tags/blockchain/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Business Development</title>
       <link>/blogs/tags/business-development/</link>
       <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
@@ -79,10 +58,101 @@
       <description></description>
     </item>
     <item>
+      <title>Chatbots</title>
+      <link>/blogs/tags/chatbots/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/chatbots/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud Infrastructure</title>
+      <link>/blogs/tags/cloud-infrastructure/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/cloud-infrastructure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Content Strategy</title>
+      <link>/blogs/tags/content-strategy/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/content-strategy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Digital Marketing</title>
+      <link>/blogs/tags/digital-marketing/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/digital-marketing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Digital Transformation</title>
+      <link>/blogs/tags/digital-transformation/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/digital-transformation/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Mobile Apps</title>
       <link>/blogs/tags/mobile-apps/</link>
       <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
       <guid>/blogs/tags/mobile-apps/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mobile-First Design</title>
+      <link>/blogs/tags/mobile-first-design/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/mobile-first-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scalability</title>
+      <link>/blogs/tags/scalability/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/scalability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trends</title>
+      <link>/blogs/tags/trends/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/trends/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>User Experience</title>
+      <link>/blogs/tags/user-experience/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/user-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web 3.0</title>
+      <link>/blogs/tags/web-3.0/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/web-3.0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Analytics</title>
+      <link>/blogs/tags/web-analytics/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/web-analytics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>/blogs/tags/web-development/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Website Launch</title>
+      <link>/blogs/tags/website-launch/</link>
+      <pubDate>Sun, 03 Nov 2024 10:00:00 +0000</pubDate>
+      <guid>/blogs/tags/website-launch/</guid>
       <description></description>
     </item>
   </channel>
