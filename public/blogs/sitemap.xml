@@ -2,16 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/blogs/posts/accessible-website-guide/</loc>
+    <lastmod>2024-11-23T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/categories/</loc>
+    <lastmod>2024-11-23T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/</loc>
+    <lastmod>2024-11-23T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/inclusive-design/</loc>
+    <lastmod>2024-11-23T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/posts/</loc>
+    <lastmod>2024-11-23T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/</loc>
+    <lastmod>2024-11-23T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/categories/technology/</loc>
+    <lastmod>2024-11-23T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/ux/ui-design/</loc>
+    <lastmod>2024-11-23T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/web-accessibility/</loc>
+    <lastmod>2024-11-23T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/posts/web-analytics-guide/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/ai/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
     <loc>/blogs/tags/app-development/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/blockchain/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/posts/content-strategy-guide/</loc>
     <lastmod>2024-11-03T10:00:00+00:00</lastmod>
   </url><url>
     <loc>/blogs/tags/business-development/</loc>
     <lastmod>2024-11-03T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blogs/categories/</loc>
+    <loc>/blogs/tags/chatbots/</loc>
     <lastmod>2024-11-03T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blogs/</loc>
+    <loc>/blogs/tags/cloud-infrastructure/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/posts/website-launch-mistakes/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/content-strategy/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/digital-marketing/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/digital-transformation/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/posts/cloud-infrastructure-guide/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/posts/ai-chatbots-web-development/</loc>
     <lastmod>2024-11-03T10:00:00+00:00</lastmod>
   </url><url>
     <loc>/blogs/posts/mobile-app-development-guide/</loc>
@@ -20,13 +77,37 @@
     <loc>/blogs/tags/mobile-apps/</loc>
     <lastmod>2024-11-03T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blogs/posts/</loc>
+    <loc>/blogs/tags/mobile-first-design/</loc>
     <lastmod>2024-11-03T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blogs/tags/</loc>
+    <loc>/blogs/tags/scalability/</loc>
     <lastmod>2024-11-03T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blogs/categories/technology/</loc>
+    <loc>/blogs/posts/mobile-first-design/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/posts/web-development-trends-2024/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/trends/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/user-experience/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/web-3.0/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/web-analytics/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/web-development/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/tags/website-launch/</loc>
+    <lastmod>2024-11-03T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blogs/posts/what-is-web-3-0/</loc>
     <lastmod>2024-11-03T10:00:00+00:00</lastmod>
   </url><url>
     <loc>/blogs/about/</loc>
